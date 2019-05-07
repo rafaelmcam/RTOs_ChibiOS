@@ -1,0 +1,645 @@
+GAS LISTING /tmp/ccsytfmC.s 			page 1
+
+
+   1               		.file	"usart_rx.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.stabs	"/home/rcampello/Desktop/UFPE/6p/RTOs/5aula/",100,0,2,.Ltext0
+   8               		.stabs	"usart_rx.c",100,0,2,.Ltext0
+   9               		.text
+  10               	.Ltext0:
+  11               		.stabs	"gcc2_compiled.",60,0,0,0
+  12               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  13               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  14               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  15               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  16               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  17               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  18               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,0,0
+  19               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  20               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,0,0
+  21               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  22               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  23               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  24               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  25               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"short _Fract:t(0,15)=r(0,1);1;0;",128,0,0,0
+  27               		.stabs	"_Fract:t(0,16)=r(0,1);2;0;",128,0,0,0
+  28               		.stabs	"long _Fract:t(0,17)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"long long _Fract:t(0,18)=r(0,1);8;0;",128,0,0,0
+  30               		.stabs	"unsigned short _Fract:t(0,19)=r(0,1);1;0;",128,0,0,0
+  31               		.stabs	"unsigned _Fract:t(0,20)=r(0,1);2;0;",128,0,0,0
+  32               		.stabs	"unsigned long _Fract:t(0,21)=r(0,1);4;0;",128,0,0,0
+  33               		.stabs	"unsigned long long _Fract:t(0,22)=r(0,1);8;0;",128,0,0,0
+  34               		.stabs	"_Sat short _Fract:t(0,23)=r(0,1);1;0;",128,0,0,0
+  35               		.stabs	"_Sat _Fract:t(0,24)=r(0,1);2;0;",128,0,0,0
+  36               		.stabs	"_Sat long _Fract:t(0,25)=r(0,1);4;0;",128,0,0,0
+  37               		.stabs	"_Sat long long _Fract:t(0,26)=r(0,1);8;0;",128,0,0,0
+  38               		.stabs	"_Sat unsigned short _Fract:t(0,27)=r(0,1);1;0;",128,0,0,0
+  39               		.stabs	"_Sat unsigned _Fract:t(0,28)=r(0,1);2;0;",128,0,0,0
+  40               		.stabs	"_Sat unsigned long _Fract:t(0,29)=r(0,1);4;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned long long _Fract:t(0,30)=r(0,1);8;0;",128,0,0,0
+  42               		.stabs	"short _Accum:t(0,31)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Accum:t(0,32)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"long _Accum:t(0,33)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"long long _Accum:t(0,34)=r(0,1);8;0;",128,0,0,0
+  46               		.stabs	"unsigned short _Accum:t(0,35)=r(0,1);2;0;",128,0,0,0
+  47               		.stabs	"unsigned _Accum:t(0,36)=r(0,1);4;0;",128,0,0,0
+  48               		.stabs	"unsigned long _Accum:t(0,37)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned long long _Accum:t(0,38)=r(0,1);8;0;",128,0,0,0
+  50               		.stabs	"_Sat short _Accum:t(0,39)=r(0,1);2;0;",128,0,0,0
+  51               		.stabs	"_Sat _Accum:t(0,40)=r(0,1);4;0;",128,0,0,0
+  52               		.stabs	"_Sat long _Accum:t(0,41)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat long long _Accum:t(0,42)=r(0,1);8;0;",128,0,0,0
+  54               		.stabs	"_Sat unsigned short _Accum:t(0,43)=r(0,1);2;0;",128,0,0,0
+  55               		.stabs	"_Sat unsigned _Accum:t(0,44)=r(0,1);4;0;",128,0,0,0
+  56               		.stabs	"_Sat unsigned long _Accum:t(0,45)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned long long _Accum:t(0,46)=r(0,1);8;0;",128,0,0,0
+GAS LISTING /tmp/ccsytfmC.s 			page 2
+
+
+  58               		.stabs	"void:t(0,47)=(0,47)",128,0,0,0
+  59               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+  60               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
+  61               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  62               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stdint.h",130,0,0,0
+  63               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  64               		.stabs	"int8_t:t(5,1)=(0,10)",128,0,121,0
+  65               		.stabs	"uint8_t:t(5,2)=(0,11)",128,0,122,0
+  66               		.stabs	"int16_t:t(5,3)=(0,1)",128,0,123,0
+  67               		.stabs	"uint16_t:t(5,4)=(0,4)",128,0,124,0
+  68               		.stabs	"int32_t:t(5,5)=(0,3)",128,0,125,0
+  69               		.stabs	"uint32_t:t(5,6)=(0,5)",128,0,126,0
+  70               		.stabs	"int64_t:t(5,7)=(0,6)",128,0,128,0
+  71               		.stabs	"uint64_t:t(5,8)=(0,7)",128,0,129,0
+  72               		.stabs	"intptr_t:t(5,9)=(5,3)",128,0,142,0
+  73               		.stabs	"uintptr_t:t(5,10)=(5,4)",128,0,147,0
+  74               		.stabs	"int_least8_t:t(5,11)=(5,1)",128,0,159,0
+  75               		.stabs	"uint_least8_t:t(5,12)=(5,2)",128,0,164,0
+  76               		.stabs	"int_least16_t:t(5,13)=(5,3)",128,0,169,0
+  77               		.stabs	"uint_least16_t:t(5,14)=(5,4)",128,0,174,0
+  78               		.stabs	"int_least32_t:t(5,15)=(5,5)",128,0,179,0
+  79               		.stabs	"uint_least32_t:t(5,16)=(5,6)",128,0,184,0
+  80               		.stabs	"int_least64_t:t(5,17)=(5,7)",128,0,192,0
+  81               		.stabs	"uint_least64_t:t(5,18)=(5,8)",128,0,199,0
+  82               		.stabs	"int_fast8_t:t(5,19)=(5,1)",128,0,213,0
+  83               		.stabs	"uint_fast8_t:t(5,20)=(5,2)",128,0,218,0
+  84               		.stabs	"int_fast16_t:t(5,21)=(5,3)",128,0,223,0
+  85               		.stabs	"uint_fast16_t:t(5,22)=(5,4)",128,0,228,0
+  86               		.stabs	"int_fast32_t:t(5,23)=(5,5)",128,0,233,0
+  87               		.stabs	"uint_fast32_t:t(5,24)=(5,6)",128,0,238,0
+  88               		.stabs	"int_fast64_t:t(5,25)=(5,7)",128,0,246,0
+  89               		.stabs	"uint_fast64_t:t(5,26)=(5,8)",128,0,253,0
+  90               		.stabs	"intmax_t:t(5,27)=(5,7)",128,0,273,0
+  91               		.stabs	"uintmax_t:t(5,28)=(5,8)",128,0,278,0
+  92               		.stabn	162,0,0,0
+  93               		.stabn	162,0,0,0
+  94               		.stabs	"int_farptr_t:t(3,1)=(5,5)",128,0,77,0
+  95               		.stabs	"uint_farptr_t:t(3,2)=(5,6)",128,0,81,0
+  96               		.stabn	162,0,0,0
+  97               		.stabn	162,0,0,0
+  98               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+  99               		.stabs	"__fuse_t:t(6,1)=(6,2)=s3low:(0,11),0,8;high:(0,11),8,8;extended:(0,11),16,8;;",128,0,244,0
+ 100               		.stabn	162,0,0,0
+ 101               		.stabn	162,0,0,0
+ 102               		.stabs	"setup_usart:F(0,47)",36,0,19,setup_usart
+ 103               	.global	setup_usart
+ 104               		.type	setup_usart, @function
+ 105               	setup_usart:
+ 106               		.stabd	46,0,0
+   1:usart_rx.c    **** #include <avr/io.h>
+   2:usart_rx.c    **** #include <avr/cpufunc.h>
+   3:usart_rx.c    **** #include <avr/interrupt.h>
+   4:usart_rx.c    **** 
+   5:usart_rx.c    **** 
+   6:usart_rx.c    **** /* 
+   7:usart_rx.c    ****  * Constantes utilizadas no código 
+   8:usart_rx.c    ****  */
+GAS LISTING /tmp/ccsytfmC.s 			page 3
+
+
+   9:usart_rx.c    **** #define FOSC 16000000ul  /* velocidade do relógio */
+  10:usart_rx.c    **** #define BAUD 115200      /* velocidade desejada para a serial */
+  11:usart_rx.c    **** #define MYUBRR (FOSC/(8*BAUD) - 1)  /* valor de 12 bits para configurar o clock da USART */
+  12:usart_rx.c    **** 
+  13:usart_rx.c    **** #define BUFFER_SIZE 20   /* Tamanho do buffer da USART */
+  14:usart_rx.c    **** 
+  15:usart_rx.c    **** 
+  16:usart_rx.c    **** /* 
+  17:usart_rx.c    ****  * Definição de funções 
+  18:usart_rx.c    ****  */
+  19:usart_rx.c    **** void setup_usart(void)
+  20:usart_rx.c    **** {
+ 107               		.stabn	68,0,20,.LM0-.LFBB1
+ 108               	.LM0:
+ 109               	.LFBB1:
+ 110               	/* prologue: function */
+ 111               	/* frame size = 0 */
+ 112               	/* stack size = 0 */
+ 113               	.L__stack_usage = 0
+  21:usart_rx.c    ****     /*
+  22:usart_rx.c    ****      * Para as macros abaixo e outras, veja o arquivo
+  23:usart_rx.c    ****      * /usr/lib/avr/include/avr/iom328p.h
+  24:usart_rx.c    ****      */
+  25:usart_rx.c    ****     /*
+  26:usart_rx.c    ****      * Primeiro setamos a direção certa para os pinos RX e TX
+  27:usart_rx.c    ****      */
+  28:usart_rx.c    ****     DDRD &= ~(1 << PD0);  /* USART RX bit para a placa Nano */
+ 114               		.stabn	68,0,28,.LM1-.LFBB1
+ 115               	.LM1:
+ 116 0000 5098      		cbi 0xa,0
+  29:usart_rx.c    ****     DDRD |= (1 << PD1);  /* USART TX bit para a placa Nano */
+ 117               		.stabn	68,0,29,.LM2-.LFBB1
+ 118               	.LM2:
+ 119 0002 519A      		sbi 0xa,1
+  30:usart_rx.c    ****     
+  31:usart_rx.c    ****     /*
+  32:usart_rx.c    ****      * Agora configuramos a USART
+  33:usart_rx.c    ****      */
+  34:usart_rx.c    ****     UBRR0H = (MYUBRR >> 8) & 0xF;
+ 120               		.stabn	68,0,34,.LM3-.LFBB1
+ 121               	.LM3:
+ 122 0004 1092 C500 		sts 197,__zero_reg__
+  35:usart_rx.c    ****     UBRR0L = MYUBRR & 0xFF;
+ 123               		.stabn	68,0,35,.LM4-.LFBB1
+ 124               	.LM4:
+ 125 0008 80E1      		ldi r24,lo8(16)
+ 126 000a 8093 C400 		sts 196,r24
+  36:usart_rx.c    ****     UCSR0A = (1 << U2X0); /* double speed */
+ 127               		.stabn	68,0,36,.LM5-.LFBB1
+ 128               	.LM5:
+ 129 000e 82E0      		ldi r24,lo8(2)
+ 130 0010 8093 C000 		sts 192,r24
+  37:usart_rx.c    ****     UCSR0B = (1 << RXCIE0) | (1 << RXEN0);
+ 131               		.stabn	68,0,37,.LM6-.LFBB1
+ 132               	.LM6:
+ 133 0014 80E9      		ldi r24,lo8(-112)
+ 134 0016 8093 C100 		sts 193,r24
+GAS LISTING /tmp/ccsytfmC.s 			page 4
+
+
+  38:usart_rx.c    ****     UCSR0C = (1 << UCSZ00) | (1 << UCSZ01);  /* Asynchronous, 8-N-1 */
+ 135               		.stabn	68,0,38,.LM7-.LFBB1
+ 136               	.LM7:
+ 137 001a 86E0      		ldi r24,lo8(6)
+ 138 001c 8093 C200 		sts 194,r24
+ 139 0020 0895      		ret
+ 140               		.size	setup_usart, .-setup_usart
+ 141               	.Lscope1:
+ 142               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 143               		.stabd	78,0,0
+ 144               		.stabs	"setup_main:F(0,47)",36,0,42,setup_main
+ 145               	.global	setup_main
+ 146               		.type	setup_main, @function
+ 147               	setup_main:
+ 148               		.stabd	46,0,0
+  39:usart_rx.c    **** }
+  40:usart_rx.c    **** 
+  41:usart_rx.c    **** /* -------------------------------------*/
+  42:usart_rx.c    **** void setup_main(void)
+  43:usart_rx.c    **** {
+ 149               		.stabn	68,0,43,.LM8-.LFBB2
+ 150               	.LM8:
+ 151               	.LFBB2:
+ 152               	/* prologue: function */
+ 153               	/* frame size = 0 */
+ 154               	/* stack size = 0 */
+ 155               	.L__stack_usage = 0
+  44:usart_rx.c    ****     LED_DDR |= (1 << LED_PINNBR);
+ 156               		.stabn	68,0,44,.LM9-.LFBB2
+ 157               	.LM9:
+ 158 0022 259A      		sbi 0x4,5
+  45:usart_rx.c    ****     /* Start transmitting */
+  46:usart_rx.c    ****     UDR0 = 0;
+ 159               		.stabn	68,0,46,.LM10-.LFBB2
+ 160               	.LM10:
+ 161 0024 1092 C600 		sts 198,__zero_reg__
+  47:usart_rx.c    ****     sei(); /* Seta flag principal de habilitação de interrupções */
+ 162               		.stabn	68,0,47,.LM11-.LFBB2
+ 163               	.LM11:
+ 164               	/* #APP */
+ 165               	 ;  47 "usart_rx.c" 1
+ 166 0028 7894      		sei
+ 167               	 ;  0 "" 2
+ 168               	/* #NOAPP */
+ 169 002a 0895      		ret
+ 170               		.size	setup_main, .-setup_main
+ 171               	.Lscope2:
+ 172               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 173               		.stabd	78,0,0
+ 174               		.stabs	"delay_ms:F(0,47)",36,0,51,delay_ms
+ 175               		.stabs	"ms:P(5,4)",64,0,51,24
+ 176               	.global	delay_ms
+ 177               		.type	delay_ms, @function
+ 178               	delay_ms:
+ 179               		.stabd	46,0,0
+  48:usart_rx.c    **** }
+  49:usart_rx.c    **** 
+GAS LISTING /tmp/ccsytfmC.s 			page 5
+
+
+  50:usart_rx.c    **** /* -------------------------------------*/
+  51:usart_rx.c    **** void delay_ms(uint16_t ms)
+  52:usart_rx.c    **** {
+ 180               		.stabn	68,0,52,.LM12-.LFBB3
+ 181               	.LM12:
+ 182               	.LFBB3:
+ 183               	/* prologue: function */
+ 184               	/* frame size = 0 */
+ 185               	/* stack size = 0 */
+ 186               	.L__stack_usage = 0
+  53:usart_rx.c    ****     uint16_t i, j;
+  54:usart_rx.c    ****     for(i=0; i<ms; i++)
+ 187               		.stabn	68,0,54,.LM13-.LFBB3
+ 188               	.LM13:
+ 189 002c 20E0      		ldi r18,0
+ 190 002e 30E0      		ldi r19,0
+ 191               	.L4:
+ 192               		.stabn	68,0,54,.LM14-.LFBB3
+ 193               	.LM14:
+ 194 0030 2817      		cp r18,r24
+ 195 0032 3907      		cpc r19,r25
+ 196 0034 01F0      		breq .L9
+ 197 0036 40EA      		ldi r20,lo8(-96)
+ 198 0038 5FE0      		ldi r21,lo8(15)
+ 199               	.L5:
+  55:usart_rx.c    ****         for(j=0; j<4000; j++)
+  56:usart_rx.c    ****             _NOP();
+ 200               		.stabn	68,0,56,.LM15-.LFBB3
+ 201               	.LM15:
+ 202               	/* #APP */
+ 203               	 ;  56 "usart_rx.c" 1
+ 204 003a 0000      		nop
+ 205               	 ;  0 "" 2
+ 206               	/* #NOAPP */
+ 207 003c 4150      		subi r20,1
+ 208 003e 5109      		sbc r21,__zero_reg__
+  55:usart_rx.c    ****         for(j=0; j<4000; j++)
+ 209               		.stabn	68,0,55,.LM16-.LFBB3
+ 210               	.LM16:
+ 211 0040 01F4      		brne .L5
+  54:usart_rx.c    ****         for(j=0; j<4000; j++)
+ 212               		.stabn	68,0,54,.LM17-.LFBB3
+ 213               	.LM17:
+ 214 0042 2F5F      		subi r18,-1
+ 215 0044 3F4F      		sbci r19,-1
+ 216 0046 00C0      		rjmp .L4
+ 217               	.L9:
+ 218               	/* epilogue start */
+  57:usart_rx.c    **** }
+ 219               		.stabn	68,0,57,.LM18-.LFBB3
+ 220               	.LM18:
+ 221 0048 0895      		ret
+ 222               		.size	delay_ms, .-delay_ms
+ 223               		.stabs	"i:r(5,4)",64,0,53,18
+ 224               		.stabn	192,0,0,.LFBB3-.LFBB3
+ 225               		.stabn	224,0,0,.Lscope3-.LFBB3
+ 226               	.Lscope3:
+GAS LISTING /tmp/ccsytfmC.s 			page 6
+
+
+ 227               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 228               		.stabd	78,0,0
+ 229               		.stabs	"write:F(5,2)",36,0,64,write
+ 230               		.stabs	"c:P(5,2)",64,0,64,24
+ 231               	.global	write
+ 232               		.type	write, @function
+ 233               	write:
+ 234               		.stabd	46,0,0
+  58:usart_rx.c    **** 
+  59:usart_rx.c    **** /* -------------------------------------*/
+  60:usart_rx.c    **** uint16_t tx_buffer[BUFFER_SIZE];     /* buffer para transmissão */
+  61:usart_rx.c    **** uint8_t tx_head, tx_tail;   /* ponteiros para o buffer circular */
+  62:usart_rx.c    **** uint8_t usart_transmitting;
+  63:usart_rx.c    **** 
+  64:usart_rx.c    **** uint8_t write(uint8_t c)
+  65:usart_rx.c    **** {
+ 235               		.stabn	68,0,65,.LM19-.LFBB4
+ 236               	.LM19:
+ 237               	.LFBB4:
+ 238               	/* prologue: function */
+ 239               	/* frame size = 0 */
+ 240               	/* stack size = 0 */
+ 241               	.L__stack_usage = 0
+  66:usart_rx.c    ****     uint8_t rc = 0;
+  67:usart_rx.c    **** 
+  68:usart_rx.c    ****     cli();
+ 242               		.stabn	68,0,68,.LM20-.LFBB4
+ 243               	.LM20:
+ 244               	/* #APP */
+ 245               	 ;  68 "usart_rx.c" 1
+ 246 004a F894      		cli
+ 247               	 ;  0 "" 2
+  69:usart_rx.c    ****     if (!usart_transmitting) {
+ 248               		.stabn	68,0,69,.LM21-.LFBB4
+ 249               	.LM21:
+ 250               	/* #NOAPP */
+ 251 004c 9091 0000 		lds r25,usart_transmitting
+ 252 0050 9111      		cpse r25,__zero_reg__
+ 253 0052 00C0      		rjmp .L11
+  70:usart_rx.c    ****         UDR0 = c;
+ 254               		.stabn	68,0,70,.LM22-.LFBB4
+ 255               	.LM22:
+ 256 0054 8093 C600 		sts 198,r24
+  71:usart_rx.c    ****         UCSR0B |= (1 << UDRIE0);
+ 257               		.stabn	68,0,71,.LM23-.LFBB4
+ 258               	.LM23:
+ 259 0058 8091 C100 		lds r24,193
+ 260 005c 8062      		ori r24,lo8(32)
+ 261 005e 8093 C100 		sts 193,r24
+  72:usart_rx.c    ****         usart_transmitting = 1;
+ 262               		.stabn	68,0,72,.LM24-.LFBB4
+ 263               	.LM24:
+ 264 0062 81E0      		ldi r24,lo8(1)
+ 265 0064 8093 0000 		sts usart_transmitting,r24
+ 266 0068 00C0      		rjmp .L15
+ 267               	.L11:
+ 268               	.LBB2:
+GAS LISTING /tmp/ccsytfmC.s 			page 7
+
+
+  73:usart_rx.c    ****     } else {
+  74:usart_rx.c    ****         uint8_t next = tx_head + 1;
+ 269               		.stabn	68,0,74,.LM25-.LFBB4
+ 270               	.LM25:
+ 271 006a E091 0000 		lds r30,tx_head
+ 272 006e 91E0      		ldi r25,lo8(1)
+ 273 0070 9E0F      		add r25,r30
+  75:usart_rx.c    ****         if (next >= BUFFER_SIZE)
+ 274               		.stabn	68,0,75,.LM26-.LFBB4
+ 275               	.LM26:
+ 276 0072 9431      		cpi r25,lo8(20)
+ 277 0074 00F0      		brlo .L13
+  76:usart_rx.c    ****             next = 0;
+ 278               		.stabn	68,0,76,.LM27-.LFBB4
+ 279               	.LM27:
+ 280 0076 90E0      		ldi r25,0
+ 281               	.L13:
+  77:usart_rx.c    ****         if (next != tx_tail) { /* buffer cheio */
+ 282               		.stabn	68,0,77,.LM28-.LFBB4
+ 283               	.LM28:
+ 284 0078 2091 0000 		lds r18,tx_tail
+ 285 007c 9217      		cp r25,r18
+ 286 007e 01F0      		breq .L14
+  78:usart_rx.c    ****             tx_buffer[tx_head] = c;
+ 287               		.stabn	68,0,78,.LM29-.LFBB4
+ 288               	.LM29:
+ 289 0080 F0E0      		ldi r31,0
+ 290 0082 EE0F      		lsl r30
+ 291 0084 FF1F      		rol r31
+ 292 0086 E050      		subi r30,lo8(-(tx_buffer))
+ 293 0088 F040      		sbci r31,hi8(-(tx_buffer))
+ 294 008a 282F      		mov r18,r24
+ 295 008c 30E0      		ldi r19,0
+ 296 008e 3183      		std Z+1,r19
+ 297 0090 2083      		st Z,r18
+  79:usart_rx.c    ****             tx_head = next;
+ 298               		.stabn	68,0,79,.LM30-.LFBB4
+ 299               	.LM30:
+ 300 0092 9093 0000 		sts tx_head,r25
+ 301               	.L15:
+ 302               	.LBE2:
+  66:usart_rx.c    **** 
+ 303               		.stabn	68,0,66,.LM31-.LFBB4
+ 304               	.LM31:
+ 305 0096 80E0      		ldi r24,0
+ 306               	.LBB3:
+ 307 0098 00C0      		rjmp .L12
+ 308               	.L14:
+  80:usart_rx.c    ****         } else
+  81:usart_rx.c    ****             rc = 1;
+ 309               		.stabn	68,0,81,.LM32-.LFBB4
+ 310               	.LM32:
+ 311 009a 81E0      		ldi r24,lo8(1)
+ 312               	.L12:
+ 313               	.LBE3:
+  82:usart_rx.c    ****     }
+  83:usart_rx.c    ****     sei();
+GAS LISTING /tmp/ccsytfmC.s 			page 8
+
+
+ 314               		.stabn	68,0,83,.LM33-.LFBB4
+ 315               	.LM33:
+ 316               	/* #APP */
+ 317               	 ;  83 "usart_rx.c" 1
+ 318 009c 7894      		sei
+ 319               	 ;  0 "" 2
+  84:usart_rx.c    ****     return rc;
+  85:usart_rx.c    **** }
+ 320               		.stabn	68,0,85,.LM34-.LFBB4
+ 321               	.LM34:
+ 322               	/* #NOAPP */
+ 323 009e 0895      		ret
+ 324               		.size	write, .-write
+ 325               		.stabs	"rc:r(5,2)",64,0,66,24
+ 326               		.stabn	192,0,0,.LFBB4-.LFBB4
+ 327               		.stabs	"next:r(5,2)",64,0,74,25
+ 328               		.stabn	192,0,0,.LBB2-.LFBB4
+ 329               		.stabn	224,0,0,.LBE2-.LFBB4
+ 330               		.stabs	"next:r(5,2)",64,0,74,25
+ 331               		.stabn	192,0,0,.LBB3-.LFBB4
+ 332               		.stabn	224,0,0,.LBE3-.LFBB4
+ 333               		.stabn	224,0,0,.Lscope4-.LFBB4
+ 334               	.Lscope4:
+ 335               		.stabs	"",36,0,0,.Lscope4-.LFBB4
+ 336               		.stabd	78,0,0
+ 337               		.stabs	"__vector_18:F(0,47)",36,0,94,__vector_18
+ 338               	.global	__vector_18
+ 339               		.type	__vector_18, @function
+ 340               	__vector_18:
+ 341               		.stabd	46,0,0
+  86:usart_rx.c    **** 
+  87:usart_rx.c    **** /* -------------------------------------*/
+  88:usart_rx.c    **** /*
+  89:usart_rx.c    ****  * Interrupt handlers devem ser definidos com a macros
+  90:usart_rx.c    ****  * ISR(), que é definida no arquivo avr/interrupt.h.
+  91:usart_rx.c    ****  * Veja também a página
+  92:usart_rx.c    ****  * http://www.nongnu.org/avr-libc/user-manual/group__avr__interrupts.html
+  93:usart_rx.c    ****  */
+  94:usart_rx.c    **** ISR(USART_RX_vect)
+  95:usart_rx.c    **** {
+ 342               		.stabn	68,0,95,.LM35-.LFBB5
+ 343               	.LM35:
+ 344               	.LFBB5:
+ 345 00a0 1F92      		push r1
+ 346 00a2 0F92      		push r0
+ 347 00a4 0FB6      		in r0,__SREG__
+ 348 00a6 0F92      		push r0
+ 349 00a8 1124      		clr __zero_reg__
+ 350 00aa 8F93      		push r24
+ 351               	/* prologue: Signal */
+ 352               	/* frame size = 0 */
+ 353               	/* stack size = 4 */
+ 354               	.L__stack_usage = 4
+  96:usart_rx.c    ****     if (UDR0 == 0xAA) {
+ 355               		.stabn	68,0,96,.LM36-.LFBB5
+ 356               	.LM36:
+ 357 00ac 8091 C600 		lds r24,198
+GAS LISTING /tmp/ccsytfmC.s 			page 9
+
+
+ 358               	/* epilogue start */
+  97:usart_rx.c    ****     }
+  98:usart_rx.c    **** }
+ 359               		.stabn	68,0,98,.LM37-.LFBB5
+ 360               	.LM37:
+ 361 00b0 8F91      		pop r24
+ 362 00b2 0F90      		pop r0
+ 363 00b4 0FBE      		out __SREG__,r0
+ 364 00b6 0F90      		pop r0
+ 365 00b8 1F90      		pop r1
+ 366 00ba 1895      		reti
+ 367               		.size	__vector_18, .-__vector_18
+ 368               	.Lscope5:
+ 369               		.stabs	"",36,0,0,.Lscope5-.LFBB5
+ 370               		.stabd	78,0,0
+ 371               		.section	.rodata.str1.1,"aMS",@progbits,1
+ 372               	.LC0:
+ 373 0000 4865 6C6C 		.string	"Hello, world\n"
+ 373      6F2C 2077 
+ 373      6F72 6C64 
+ 373      0A00 
+ 374               		.section	.text.startup,"ax",@progbits
+ 375               		.stabs	"main:F(0,1)",36,0,101,main
+ 376               	.global	main
+ 377               		.type	main, @function
+ 378               	main:
+ 379               		.stabd	46,0,0
+  99:usart_rx.c    **** 
+ 100:usart_rx.c    **** /* -------------------------------------*/
+ 101:usart_rx.c    **** int main(void)
+ 102:usart_rx.c    **** {
+ 380               		.stabn	68,0,102,.LM38-.LFBB6
+ 381               	.LM38:
+ 382               	.LFBB6:
+ 383 0000 CF93      		push r28
+ 384 0002 DF93      		push r29
+ 385 0004 CDB7      		in r28,__SP_L__
+ 386 0006 DEB7      		in r29,__SP_H__
+ 387 0008 2E97      		sbiw r28,14
+ 388 000a 0FB6      		in __tmp_reg__,__SREG__
+ 389 000c F894      		cli
+ 390 000e DEBF      		out __SP_H__,r29
+ 391 0010 0FBE      		out __SREG__,__tmp_reg__
+ 392 0012 CDBF      		out __SP_L__,r28
+ 393               	/* prologue: function */
+ 394               	/* frame size = 14 */
+ 395               	/* stack size = 16 */
+ 396               	.L__stack_usage = 16
+ 103:usart_rx.c    ****     char msg[] = "Hello, world\n";
+ 397               		.stabn	68,0,103,.LM39-.LFBB6
+ 398               	.LM39:
+ 399 0014 8EE0      		ldi r24,lo8(14)
+ 400 0016 E0E0      		ldi r30,lo8(.LC0)
+ 401 0018 F0E0      		ldi r31,hi8(.LC0)
+ 402 001a 8E01      		movw r16,r28
+ 403 001c 0F5F      		subi r16,-1
+ 404 001e 1F4F      		sbci r17,-1
+GAS LISTING /tmp/ccsytfmC.s 			page 10
+
+
+ 405 0020 D801      		movw r26,r16
+ 406               		0:
+ 407 0022 0190      		ld r0,Z+
+ 408 0024 0D92      		st X+,r0
+ 409 0026 8A95      		dec r24
+ 410 0028 01F4      		brne 0b
+ 104:usart_rx.c    ****     uint8_t i;
+ 105:usart_rx.c    **** 
+ 106:usart_rx.c    ****     setup_usart();
+ 411               		.stabn	68,0,106,.LM40-.LFBB6
+ 412               	.LM40:
+ 413 002a 0E94 0000 		call setup_usart
+ 107:usart_rx.c    ****     setup_main();
+ 414               		.stabn	68,0,107,.LM41-.LFBB6
+ 415               	.LM41:
+ 416 002e 0E94 0000 		call setup_main
+ 417 0032 8EE0      		ldi r24,lo8(14)
+ 418 0034 D82E      		mov r13,r24
+ 419 0036 D00E      		add r13,r16
+ 420               	.L20:
+ 102:usart_rx.c    ****     char msg[] = "Hello, world\n";
+ 421               		.stabn	68,0,102,.LM42-.LFBB6
+ 422               	.LM42:
+ 423 0038 7801      		movw r14,r16
+ 424               	.L19:
+ 108:usart_rx.c    **** 
+ 109:usart_rx.c    ****     while(1) {
+ 110:usart_rx.c    ****         for(i=0; i<sizeof(msg); i++)
+ 111:usart_rx.c    ****             if(write(msg[i]))
+ 425               		.stabn	68,0,111,.LM43-.LFBB6
+ 426               	.LM43:
+ 427 003a F701      		movw r30,r14
+ 428 003c 8191      		ld r24,Z+
+ 429 003e 7F01      		movw r14,r30
+ 430 0040 0E94 0000 		call write
+ 431 0044 8111      		cpse r24,__zero_reg__
+ 432 0046 00C0      		rjmp .L18
+ 110:usart_rx.c    ****             if(write(msg[i]))
+ 433               		.stabn	68,0,110,.LM44-.LFBB6
+ 434               	.LM44:
+ 435 0048 DE10      		cpse r13,r14
+ 436 004a 00C0      		rjmp .L19
+ 437               	.L18:
+ 112:usart_rx.c    ****                 break;
+ 113:usart_rx.c    ****             delay_ms(1500);
+ 438               		.stabn	68,0,113,.LM45-.LFBB6
+ 439               	.LM45:
+ 440 004c 8CED      		ldi r24,lo8(-36)
+ 441 004e 95E0      		ldi r25,lo8(5)
+ 442 0050 0E94 0000 		call delay_ms
+ 114:usart_rx.c    ****     }
+ 443               		.stabn	68,0,114,.LM46-.LFBB6
+ 444               	.LM46:
+ 445 0054 00C0      		rjmp .L20
+ 446               		.size	main, .-main
+ 447               		.stabs	"msg:(0,48)=ar(0,49)=r(0,49);0;0177777;;0;13;(0,2)",128,0,103,1
+ 448               		.stabn	192,0,0,.LFBB6-.LFBB6
+GAS LISTING /tmp/ccsytfmC.s 			page 11
+
+
+ 449               		.stabn	224,0,0,.Lscope6-.LFBB6
+ 450               	.Lscope6:
+ 451               		.stabs	"",36,0,0,.Lscope6-.LFBB6
+ 452               		.stabd	78,0,0
+ 453               		.comm	usart_transmitting,1,1
+ 454               		.comm	tx_tail,1,1
+ 455               		.comm	tx_head,1,1
+ 456               		.comm	tx_buffer,40,1
+ 457               		.stabs	"tx_buffer:G(0,50)=ar(0,49);0;19;(5,4)",32,0,60,0
+ 458               		.stabs	"tx_head:G(5,2)",32,0,61,0
+ 459               		.stabs	"tx_tail:G(5,2)",32,0,61,0
+ 460               		.stabs	"usart_transmitting:G(5,2)",32,0,62,0
+ 461               		.text
+ 462               		.stabs	"",100,0,0,.Letext0
+ 463               	.Letext0:
+ 464               		.ident	"GCC: (GNU) 4.9.2"
+ 465               	.global __do_copy_data
+ 466               	.global __do_clear_bss
+GAS LISTING /tmp/ccsytfmC.s 			page 12
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 usart_rx.c
+     /tmp/ccsytfmC.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccsytfmC.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccsytfmC.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccsytfmC.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccsytfmC.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccsytfmC.s:105    .text:0000000000000000 setup_usart
+     /tmp/ccsytfmC.s:147    .text:0000000000000022 setup_main
+     /tmp/ccsytfmC.s:178    .text:000000000000002c delay_ms
+     /tmp/ccsytfmC.s:233    .text:000000000000004a write
+                            *COM*:0000000000000001 usart_transmitting
+                            *COM*:0000000000000001 tx_head
+                            *COM*:0000000000000001 tx_tail
+                            *COM*:0000000000000028 tx_buffer
+     /tmp/ccsytfmC.s:340    .text:00000000000000a0 __vector_18
+     /tmp/ccsytfmC.s:378    .text.startup:0000000000000000 main
+
+UNDEFINED SYMBOLS
+__do_copy_data
+__do_clear_bss

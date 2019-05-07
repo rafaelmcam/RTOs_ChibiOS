@@ -1,0 +1,333 @@
+GAS LISTING /tmp/cckClWCh.s 			page 1
+
+
+   1               		.file	"blinky2.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.stabs	"/home/aluno/RTOs - N apagar, \343\201\217\343\201\240\343\201\225\343\201\204/9aula/",100,
+   8               		.stabs	"blinky2.c",100,0,2,.Ltext0
+   9               		.text
+  10               	.Ltext0:
+  11               		.stabs	"gcc2_compiled.",60,0,0,0
+  12               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  13               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  14               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  15               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  16               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  17               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  18               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,0,0
+  19               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  20               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,0,0
+  21               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  22               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  23               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  24               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  25               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"short _Fract:t(0,15)=r(0,1);1;0;",128,0,0,0
+  27               		.stabs	"_Fract:t(0,16)=r(0,1);2;0;",128,0,0,0
+  28               		.stabs	"long _Fract:t(0,17)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"long long _Fract:t(0,18)=r(0,1);8;0;",128,0,0,0
+  30               		.stabs	"unsigned short _Fract:t(0,19)=r(0,1);1;0;",128,0,0,0
+  31               		.stabs	"unsigned _Fract:t(0,20)=r(0,1);2;0;",128,0,0,0
+  32               		.stabs	"unsigned long _Fract:t(0,21)=r(0,1);4;0;",128,0,0,0
+  33               		.stabs	"unsigned long long _Fract:t(0,22)=r(0,1);8;0;",128,0,0,0
+  34               		.stabs	"_Sat short _Fract:t(0,23)=r(0,1);1;0;",128,0,0,0
+  35               		.stabs	"_Sat _Fract:t(0,24)=r(0,1);2;0;",128,0,0,0
+  36               		.stabs	"_Sat long _Fract:t(0,25)=r(0,1);4;0;",128,0,0,0
+  37               		.stabs	"_Sat long long _Fract:t(0,26)=r(0,1);8;0;",128,0,0,0
+  38               		.stabs	"_Sat unsigned short _Fract:t(0,27)=r(0,1);1;0;",128,0,0,0
+  39               		.stabs	"_Sat unsigned _Fract:t(0,28)=r(0,1);2;0;",128,0,0,0
+  40               		.stabs	"_Sat unsigned long _Fract:t(0,29)=r(0,1);4;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned long long _Fract:t(0,30)=r(0,1);8;0;",128,0,0,0
+  42               		.stabs	"short _Accum:t(0,31)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Accum:t(0,32)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"long _Accum:t(0,33)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"long long _Accum:t(0,34)=r(0,1);8;0;",128,0,0,0
+  46               		.stabs	"unsigned short _Accum:t(0,35)=r(0,1);2;0;",128,0,0,0
+  47               		.stabs	"unsigned _Accum:t(0,36)=r(0,1);4;0;",128,0,0,0
+  48               		.stabs	"unsigned long _Accum:t(0,37)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned long long _Accum:t(0,38)=r(0,1);8;0;",128,0,0,0
+  50               		.stabs	"_Sat short _Accum:t(0,39)=r(0,1);2;0;",128,0,0,0
+  51               		.stabs	"_Sat _Accum:t(0,40)=r(0,1);4;0;",128,0,0,0
+  52               		.stabs	"_Sat long _Accum:t(0,41)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat long long _Accum:t(0,42)=r(0,1);8;0;",128,0,0,0
+  54               		.stabs	"_Sat unsigned short _Accum:t(0,43)=r(0,1);2;0;",128,0,0,0
+  55               		.stabs	"_Sat unsigned _Accum:t(0,44)=r(0,1);4;0;",128,0,0,0
+  56               		.stabs	"_Sat unsigned long _Accum:t(0,45)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned long long _Accum:t(0,46)=r(0,1);8;0;",128,0,0,0
+GAS LISTING /tmp/cckClWCh.s 			page 2
+
+
+  58               		.stabs	"void:t(0,47)=(0,47)",128,0,0,0
+  59               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+  60               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
+  61               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  62               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stdint.h",130,0,0,0
+  63               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  64               		.stabs	"int8_t:t(5,1)=(0,10)",128,0,121,0
+  65               		.stabs	"uint8_t:t(5,2)=(0,11)",128,0,122,0
+  66               		.stabs	"int16_t:t(5,3)=(0,1)",128,0,123,0
+  67               		.stabs	"uint16_t:t(5,4)=(0,4)",128,0,124,0
+  68               		.stabs	"int32_t:t(5,5)=(0,3)",128,0,125,0
+  69               		.stabs	"uint32_t:t(5,6)=(0,5)",128,0,126,0
+  70               		.stabs	"int64_t:t(5,7)=(0,6)",128,0,128,0
+  71               		.stabs	"uint64_t:t(5,8)=(0,7)",128,0,129,0
+  72               		.stabs	"intptr_t:t(5,9)=(5,3)",128,0,142,0
+  73               		.stabs	"uintptr_t:t(5,10)=(5,4)",128,0,147,0
+  74               		.stabs	"int_least8_t:t(5,11)=(5,1)",128,0,159,0
+  75               		.stabs	"uint_least8_t:t(5,12)=(5,2)",128,0,164,0
+  76               		.stabs	"int_least16_t:t(5,13)=(5,3)",128,0,169,0
+  77               		.stabs	"uint_least16_t:t(5,14)=(5,4)",128,0,174,0
+  78               		.stabs	"int_least32_t:t(5,15)=(5,5)",128,0,179,0
+  79               		.stabs	"uint_least32_t:t(5,16)=(5,6)",128,0,184,0
+  80               		.stabs	"int_least64_t:t(5,17)=(5,7)",128,0,192,0
+  81               		.stabs	"uint_least64_t:t(5,18)=(5,8)",128,0,199,0
+  82               		.stabs	"int_fast8_t:t(5,19)=(5,1)",128,0,213,0
+  83               		.stabs	"uint_fast8_t:t(5,20)=(5,2)",128,0,218,0
+  84               		.stabs	"int_fast16_t:t(5,21)=(5,3)",128,0,223,0
+  85               		.stabs	"uint_fast16_t:t(5,22)=(5,4)",128,0,228,0
+  86               		.stabs	"int_fast32_t:t(5,23)=(5,5)",128,0,233,0
+  87               		.stabs	"uint_fast32_t:t(5,24)=(5,6)",128,0,238,0
+  88               		.stabs	"int_fast64_t:t(5,25)=(5,7)",128,0,246,0
+  89               		.stabs	"uint_fast64_t:t(5,26)=(5,8)",128,0,253,0
+  90               		.stabs	"intmax_t:t(5,27)=(5,7)",128,0,273,0
+  91               		.stabs	"uintmax_t:t(5,28)=(5,8)",128,0,278,0
+  92               		.stabn	162,0,0,0
+  93               		.stabn	162,0,0,0
+  94               		.stabs	"int_farptr_t:t(3,1)=(5,5)",128,0,77,0
+  95               		.stabs	"uint_farptr_t:t(3,2)=(5,6)",128,0,81,0
+  96               		.stabn	162,0,0,0
+  97               		.stabn	162,0,0,0
+  98               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+  99               		.stabs	"__fuse_t:t(6,1)=(6,2)=s3low:(0,11),0,8;high:(0,11),8,8;extended:(0,11),16,8;;",128,0,244,0
+ 100               		.stabn	162,0,0,0
+ 101               		.stabn	162,0,0,0
+ 102               		.stabs	"delay_ms:F(0,47)",36,0,9,delay_ms
+ 103               		.stabs	"ms:P(5,4)",64,0,9,24
+ 104               	.global	delay_ms
+ 105               		.type	delay_ms, @function
+ 106               	delay_ms:
+ 107               		.stabd	46,0,0
+   1:blinky2.c     **** #include <avr/io.h>
+   2:blinky2.c     **** #include <avr/cpufunc.h>
+   3:blinky2.c     **** 
+   4:blinky2.c     **** 
+   5:blinky2.c     **** volatile uint16_t intervalo1= 1000;
+   6:blinky2.c     **** volatile uint16_t intervalo2= 300;
+   7:blinky2.c     **** 
+GAS LISTING /tmp/cckClWCh.s 			page 3
+
+
+   8:blinky2.c     **** 
+   9:blinky2.c     **** void delay_ms(uint16_t ms)
+  10:blinky2.c     **** {
+ 108               		.stabn	68,0,10,.LM0-.LFBB1
+ 109               	.LM0:
+ 110               	.LFBB1:
+ 111               	/* prologue: function */
+ 112               	/* frame size = 0 */
+ 113               	/* stack size = 0 */
+ 114               	.L__stack_usage = 0
+  11:blinky2.c     ****     uint16_t i, j;
+  12:blinky2.c     ****     for(i=0; i<ms; i++)
+ 115               		.stabn	68,0,12,.LM1-.LFBB1
+ 116               	.LM1:
+ 117 0000 20E0      		ldi r18,0
+ 118 0002 30E0      		ldi r19,0
+ 119               	.L2:
+ 120               		.stabn	68,0,12,.LM2-.LFBB1
+ 121               	.LM2:
+ 122 0004 2817      		cp r18,r24
+ 123 0006 3907      		cpc r19,r25
+ 124 0008 01F0      		breq .L7
+ 125 000a 40EA      		ldi r20,lo8(-96)
+ 126 000c 5FE0      		ldi r21,lo8(15)
+ 127               	.L3:
+  13:blinky2.c     ****         for(j=0; j<4000; j++)
+  14:blinky2.c     ****             _NOP();
+ 128               		.stabn	68,0,14,.LM3-.LFBB1
+ 129               	.LM3:
+ 130               	/* #APP */
+ 131               	 ;  14 "blinky2.c" 1
+ 132 000e 0000      		nop
+ 133               	 ;  0 "" 2
+ 134               	/* #NOAPP */
+ 135 0010 4150      		subi r20,1
+ 136 0012 5109      		sbc r21,__zero_reg__
+  13:blinky2.c     ****         for(j=0; j<4000; j++)
+ 137               		.stabn	68,0,13,.LM4-.LFBB1
+ 138               	.LM4:
+ 139 0014 01F4      		brne .L3
+  12:blinky2.c     ****         for(j=0; j<4000; j++)
+ 140               		.stabn	68,0,12,.LM5-.LFBB1
+ 141               	.LM5:
+ 142 0016 2F5F      		subi r18,-1
+ 143 0018 3F4F      		sbci r19,-1
+ 144 001a 00C0      		rjmp .L2
+ 145               	.L7:
+ 146               	/* epilogue start */
+  15:blinky2.c     **** }
+ 147               		.stabn	68,0,15,.LM6-.LFBB1
+ 148               	.LM6:
+ 149 001c 0895      		ret
+ 150               		.size	delay_ms, .-delay_ms
+ 151               		.stabs	"i:r(5,4)",64,0,11,18
+ 152               		.stabn	192,0,0,.LFBB1-.LFBB1
+ 153               		.stabn	224,0,0,.Lscope1-.LFBB1
+ 154               	.Lscope1:
+GAS LISTING /tmp/cckClWCh.s 			page 4
+
+
+ 155               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 156               		.stabd	78,0,0
+ 157               		.section	.text.startup,"ax",@progbits
+ 158               		.stabs	"main:F(0,1)",36,0,22,main
+ 159               	.global	main
+ 160               		.type	main, @function
+ 161               	main:
+ 162               		.stabd	46,0,0
+  16:blinky2.c     **** 
+  17:blinky2.c     **** 
+  18:blinky2.c     **** 
+  19:blinky2.c     **** 
+  20:blinky2.c     **** uint8_t contar = 0;
+  21:blinky2.c     **** 
+  22:blinky2.c     **** int main(void)
+  23:blinky2.c     **** {
+ 163               		.stabn	68,0,23,.LM7-.LFBB2
+ 164               	.LM7:
+ 165               	.LFBB2:
+ 166               	/* prologue: function */
+ 167               	/* frame size = 0 */
+ 168               	/* stack size = 0 */
+ 169               	.L__stack_usage = 0
+  24:blinky2.c     ****    // DDRC |= _BV(DDC2);
+  25:blinky2.c     ****     
+  26:blinky2.c     ****     DDRB |= (1<<LED_PINNBR);
+ 170               		.stabn	68,0,26,.LM8-.LFBB2
+ 171               	.LM8:
+ 172 0000 259A      		sbi 0x4,5
+  27:blinky2.c     ****     DDRD |= (1<<PD7);
+ 173               		.stabn	68,0,27,.LM9-.LFBB2
+ 174               	.LM9:
+ 175 0002 579A      		sbi 0xa,7
+ 176               	.L10:
+  28:blinky2.c     ****     
+  29:blinky2.c     ****     while(1) {
+  30:blinky2.c     ****         
+  31:blinky2.c     ****         
+  32:blinky2.c     ****         
+  33:blinky2.c     ****         delay_ms(100);
+ 177               		.stabn	68,0,33,.LM10-.LFBB2
+ 178               	.LM10:
+ 179 0004 84E6      		ldi r24,lo8(100)
+ 180 0006 90E0      		ldi r25,0
+ 181 0008 0E94 0000 		call delay_ms
+  34:blinky2.c     ****         contar++;
+ 182               		.stabn	68,0,34,.LM11-.LFBB2
+ 183               	.LM11:
+ 184 000c 8091 0000 		lds r24,contar
+ 185 0010 8F5F      		subi r24,lo8(-(1))
+ 186 0012 8093 0000 		sts contar,r24
+  35:blinky2.c     ****         
+  36:blinky2.c     ****         if ((contar*100)%intervalo2 == 0){
+ 187               		.stabn	68,0,36,.LM12-.LFBB2
+ 188               	.LM12:
+ 189 0016 6091 0000 		lds r22,intervalo2
+ 190 001a 7091 0000 		lds r23,intervalo2+1
+GAS LISTING /tmp/cckClWCh.s 			page 5
+
+
+ 191 001e 24E6      		ldi r18,lo8(100)
+ 192 0020 829F      		mul r24,r18
+ 193 0022 C001      		movw r24,r0
+ 194 0024 1124      		clr __zero_reg__
+ 195 0026 0E94 0000 		call __udivmodhi4
+ 196 002a 892B      		or r24,r25
+ 197 002c 01F4      		brne .L9
+  37:blinky2.c     ****           //  mudar estado de um led
+  38:blinky2.c     ****             
+  39:blinky2.c     ****             PIND |= (1<<PD7);
+ 198               		.stabn	68,0,39,.LM13-.LFBB2
+ 199               	.LM13:
+ 200 002e 4F9A      		sbi 0x9,7
+ 201               	.L9:
+  40:blinky2.c     ****             
+  41:blinky2.c     ****         } 
+  42:blinky2.c     ****         
+  43:blinky2.c     ****         
+  44:blinky2.c     ****         if ((contar*100)%intervalo1 == 0){
+ 202               		.stabn	68,0,44,.LM14-.LFBB2
+ 203               	.LM14:
+ 204 0030 8091 0000 		lds r24,contar
+ 205 0034 6091 0000 		lds r22,intervalo1
+ 206 0038 7091 0000 		lds r23,intervalo1+1
+ 207 003c 24E6      		ldi r18,lo8(100)
+ 208 003e 829F      		mul r24,r18
+ 209 0040 C001      		movw r24,r0
+ 210 0042 1124      		clr __zero_reg__
+ 211 0044 0E94 0000 		call __udivmodhi4
+ 212 0048 892B      		or r24,r25
+ 213 004a 01F4      		brne .L10
+  45:blinky2.c     ****           //  mudar estado de um led
+  46:blinky2.c     ****             PINB |= (1<<LED_PINNBR);
+ 214               		.stabn	68,0,46,.LM15-.LFBB2
+ 215               	.LM15:
+ 216 004c 1D9A      		sbi 0x3,5
+ 217 004e 00C0      		rjmp .L10
+ 218               		.size	main, .-main
+ 219               	.Lscope2:
+ 220               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 221               		.stabd	78,0,0
+ 222               	.global	contar
+ 223               		.section .bss
+ 224               		.type	contar, @object
+ 225               		.size	contar, 1
+ 226               	contar:
+ 227 0000 00        		.zero	1
+ 228               	.global	intervalo2
+ 229               		.data
+ 230               		.type	intervalo2, @object
+ 231               		.size	intervalo2, 2
+ 232               	intervalo2:
+ 233 0000 2C01      		.word	300
+ 234               	.global	intervalo1
+ 235               		.type	intervalo1, @object
+ 236               		.size	intervalo1, 2
+ 237               	intervalo1:
+GAS LISTING /tmp/cckClWCh.s 			page 6
+
+
+ 238 0002 E803      		.word	1000
+ 239               		.stabs	"intervalo1:G(0,48)=B(5,4)",32,0,5,0
+ 240               		.stabs	"intervalo2:G(0,48)",32,0,6,0
+ 241               		.stabs	"contar:G(5,2)",32,0,20,0
+ 242               		.text
+ 243               		.stabs	"",100,0,0,.Letext0
+ 244               	.Letext0:
+ 245               		.ident	"GCC: (GNU) 4.9.2"
+ 246               	.global __do_copy_data
+ 247               	.global __do_clear_bss
+GAS LISTING /tmp/cckClWCh.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 blinky2.c
+     /tmp/cckClWCh.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/cckClWCh.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/cckClWCh.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/cckClWCh.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/cckClWCh.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/cckClWCh.s:106    .text:0000000000000000 delay_ms
+     /tmp/cckClWCh.s:161    .text.startup:0000000000000000 main
+     /tmp/cckClWCh.s:226    .bss:0000000000000000 contar
+     /tmp/cckClWCh.s:232    .data:0000000000000000 intervalo2
+     /tmp/cckClWCh.s:237    .data:0000000000000002 intervalo1
+
+UNDEFINED SYMBOLS
+__udivmodhi4
+__do_copy_data
+__do_clear_bss

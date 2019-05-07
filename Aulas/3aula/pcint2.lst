@@ -1,0 +1,372 @@
+GAS LISTING /tmp/cczwgVDU.s 			page 1
+
+
+   1               		.file	"pcint2.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.stabs	"/home/rcampello/Desktop/UFPE/6p/RTOs/3aula/",100,0,2,.Ltext0
+   8               		.stabs	"pcint2.c",100,0,2,.Ltext0
+   9               		.text
+  10               	.Ltext0:
+  11               		.stabs	"gcc2_compiled.",60,0,0,0
+  12               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  13               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  14               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  15               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  16               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  17               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  18               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,0,0
+  19               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  20               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,0,0
+  21               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  22               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  23               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  24               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  25               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"short _Fract:t(0,15)=r(0,1);1;0;",128,0,0,0
+  27               		.stabs	"_Fract:t(0,16)=r(0,1);2;0;",128,0,0,0
+  28               		.stabs	"long _Fract:t(0,17)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"long long _Fract:t(0,18)=r(0,1);8;0;",128,0,0,0
+  30               		.stabs	"unsigned short _Fract:t(0,19)=r(0,1);1;0;",128,0,0,0
+  31               		.stabs	"unsigned _Fract:t(0,20)=r(0,1);2;0;",128,0,0,0
+  32               		.stabs	"unsigned long _Fract:t(0,21)=r(0,1);4;0;",128,0,0,0
+  33               		.stabs	"unsigned long long _Fract:t(0,22)=r(0,1);8;0;",128,0,0,0
+  34               		.stabs	"_Sat short _Fract:t(0,23)=r(0,1);1;0;",128,0,0,0
+  35               		.stabs	"_Sat _Fract:t(0,24)=r(0,1);2;0;",128,0,0,0
+  36               		.stabs	"_Sat long _Fract:t(0,25)=r(0,1);4;0;",128,0,0,0
+  37               		.stabs	"_Sat long long _Fract:t(0,26)=r(0,1);8;0;",128,0,0,0
+  38               		.stabs	"_Sat unsigned short _Fract:t(0,27)=r(0,1);1;0;",128,0,0,0
+  39               		.stabs	"_Sat unsigned _Fract:t(0,28)=r(0,1);2;0;",128,0,0,0
+  40               		.stabs	"_Sat unsigned long _Fract:t(0,29)=r(0,1);4;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned long long _Fract:t(0,30)=r(0,1);8;0;",128,0,0,0
+  42               		.stabs	"short _Accum:t(0,31)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Accum:t(0,32)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"long _Accum:t(0,33)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"long long _Accum:t(0,34)=r(0,1);8;0;",128,0,0,0
+  46               		.stabs	"unsigned short _Accum:t(0,35)=r(0,1);2;0;",128,0,0,0
+  47               		.stabs	"unsigned _Accum:t(0,36)=r(0,1);4;0;",128,0,0,0
+  48               		.stabs	"unsigned long _Accum:t(0,37)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned long long _Accum:t(0,38)=r(0,1);8;0;",128,0,0,0
+  50               		.stabs	"_Sat short _Accum:t(0,39)=r(0,1);2;0;",128,0,0,0
+  51               		.stabs	"_Sat _Accum:t(0,40)=r(0,1);4;0;",128,0,0,0
+  52               		.stabs	"_Sat long _Accum:t(0,41)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat long long _Accum:t(0,42)=r(0,1);8;0;",128,0,0,0
+  54               		.stabs	"_Sat unsigned short _Accum:t(0,43)=r(0,1);2;0;",128,0,0,0
+  55               		.stabs	"_Sat unsigned _Accum:t(0,44)=r(0,1);4;0;",128,0,0,0
+  56               		.stabs	"_Sat unsigned long _Accum:t(0,45)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned long long _Accum:t(0,46)=r(0,1);8;0;",128,0,0,0
+GAS LISTING /tmp/cczwgVDU.s 			page 2
+
+
+  58               		.stabs	"void:t(0,47)=(0,47)",128,0,0,0
+  59               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+  60               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
+  61               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  62               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stdint.h",130,0,0,0
+  63               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  64               		.stabs	"int8_t:t(5,1)=(0,10)",128,0,121,0
+  65               		.stabs	"uint8_t:t(5,2)=(0,11)",128,0,122,0
+  66               		.stabs	"int16_t:t(5,3)=(0,1)",128,0,123,0
+  67               		.stabs	"uint16_t:t(5,4)=(0,4)",128,0,124,0
+  68               		.stabs	"int32_t:t(5,5)=(0,3)",128,0,125,0
+  69               		.stabs	"uint32_t:t(5,6)=(0,5)",128,0,126,0
+  70               		.stabs	"int64_t:t(5,7)=(0,6)",128,0,128,0
+  71               		.stabs	"uint64_t:t(5,8)=(0,7)",128,0,129,0
+  72               		.stabs	"intptr_t:t(5,9)=(5,3)",128,0,142,0
+  73               		.stabs	"uintptr_t:t(5,10)=(5,4)",128,0,147,0
+  74               		.stabs	"int_least8_t:t(5,11)=(5,1)",128,0,159,0
+  75               		.stabs	"uint_least8_t:t(5,12)=(5,2)",128,0,164,0
+  76               		.stabs	"int_least16_t:t(5,13)=(5,3)",128,0,169,0
+  77               		.stabs	"uint_least16_t:t(5,14)=(5,4)",128,0,174,0
+  78               		.stabs	"int_least32_t:t(5,15)=(5,5)",128,0,179,0
+  79               		.stabs	"uint_least32_t:t(5,16)=(5,6)",128,0,184,0
+  80               		.stabs	"int_least64_t:t(5,17)=(5,7)",128,0,192,0
+  81               		.stabs	"uint_least64_t:t(5,18)=(5,8)",128,0,199,0
+  82               		.stabs	"int_fast8_t:t(5,19)=(5,1)",128,0,213,0
+  83               		.stabs	"uint_fast8_t:t(5,20)=(5,2)",128,0,218,0
+  84               		.stabs	"int_fast16_t:t(5,21)=(5,3)",128,0,223,0
+  85               		.stabs	"uint_fast16_t:t(5,22)=(5,4)",128,0,228,0
+  86               		.stabs	"int_fast32_t:t(5,23)=(5,5)",128,0,233,0
+  87               		.stabs	"uint_fast32_t:t(5,24)=(5,6)",128,0,238,0
+  88               		.stabs	"int_fast64_t:t(5,25)=(5,7)",128,0,246,0
+  89               		.stabs	"uint_fast64_t:t(5,26)=(5,8)",128,0,253,0
+  90               		.stabs	"intmax_t:t(5,27)=(5,7)",128,0,273,0
+  91               		.stabs	"uintmax_t:t(5,28)=(5,8)",128,0,278,0
+  92               		.stabn	162,0,0,0
+  93               		.stabn	162,0,0,0
+  94               		.stabs	"int_farptr_t:t(3,1)=(5,5)",128,0,77,0
+  95               		.stabs	"uint_farptr_t:t(3,2)=(5,6)",128,0,81,0
+  96               		.stabn	162,0,0,0
+  97               		.stabn	162,0,0,0
+  98               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+  99               		.stabs	"__fuse_t:t(6,1)=(6,2)=s3low:(0,11),0,8;high:(0,11),8,8;extended:(0,11),16,8;;",128,0,244,0
+ 100               		.stabn	162,0,0,0
+ 101               		.stabn	162,0,0,0
+ 102               		.stabs	"setup_pcint2:F(0,47)",36,0,8,setup_pcint2
+ 103               	.global	setup_pcint2
+ 104               		.type	setup_pcint2, @function
+ 105               	setup_pcint2:
+ 106               		.stabd	46,0,0
+   1:pcint2.c      **** #include <avr/io.h>
+   2:pcint2.c      **** #include <avr/interrupt.h>
+   3:pcint2.c      **** 
+   4:pcint2.c      **** 
+   5:pcint2.c      **** /* -------------------------------------*/
+   6:pcint2.c      **** uint8_t state;
+   7:pcint2.c      **** 
+   8:pcint2.c      **** void setup_pcint2(void)
+GAS LISTING /tmp/cczwgVDU.s 			page 3
+
+
+   9:pcint2.c      **** {
+ 107               		.stabn	68,0,9,.LM0-.LFBB1
+ 108               	.LM0:
+ 109               	.LFBB1:
+ 110               	/* prologue: function */
+ 111               	/* frame size = 0 */
+ 112               	/* stack size = 0 */
+ 113               	.L__stack_usage = 0
+  10:pcint2.c      ****     /*
+  11:pcint2.c      ****      * Para as macros abaixo e outras, veja o arquivo
+  12:pcint2.c      ****      * usr/lib/avr/include/avr/iom328p.h
+  13:pcint2.c      ****      */
+  14:pcint2.c      ****     PCICR = (1 << PCIE2);
+ 114               		.stabn	68,0,14,.LM1-.LFBB1
+ 115               	.LM1:
+ 116 0000 84E0      		ldi r24,lo8(4)
+ 117 0002 8093 6800 		sts 104,r24
+  15:pcint2.c      ****     PCIFR = (1 << PCIF2);
+ 118               		.stabn	68,0,15,.LM2-.LFBB1
+ 119               	.LM2:
+ 120 0006 8BBB      		out 0x1b,r24
+  16:pcint2.c      ****     PCMSK2 = (1 << PCINT20);
+ 121               		.stabn	68,0,16,.LM3-.LFBB1
+ 122               	.LM3:
+ 123 0008 EDE6      		ldi r30,lo8(109)
+ 124 000a F0E0      		ldi r31,0
+ 125 000c 80E1      		ldi r24,lo8(16)
+ 126 000e 8083      		st Z,r24
+  17:pcint2.c      **** 
+  18:pcint2.c      ****     
+  19:pcint2.c      ****     state = PIND & PCMSK2;
+ 127               		.stabn	68,0,19,.LM4-.LFBB1
+ 128               	.LM4:
+ 129 0010 89B1      		in r24,0x9
+ 130 0012 9081      		ld r25,Z
+ 131 0014 8923      		and r24,r25
+ 132 0016 8093 0000 		sts state,r24
+ 133 001a 0895      		ret
+ 134               		.size	setup_pcint2, .-setup_pcint2
+ 135               	.Lscope1:
+ 136               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 137               		.stabd	78,0,0
+ 138               		.stabs	"setup_main:F(0,47)",36,0,23,setup_main
+ 139               	.global	setup_main
+ 140               		.type	setup_main, @function
+ 141               	setup_main:
+ 142               		.stabd	46,0,0
+  20:pcint2.c      **** }
+  21:pcint2.c      **** 
+  22:pcint2.c      **** /* -------------------------------------*/
+  23:pcint2.c      **** void setup_main(void)
+  24:pcint2.c      **** {
+ 143               		.stabn	68,0,24,.LM5-.LFBB2
+ 144               	.LM5:
+ 145               	.LFBB2:
+ 146               	/* prologue: function */
+ 147               	/* frame size = 0 */
+GAS LISTING /tmp/cczwgVDU.s 			page 4
+
+
+ 148               	/* stack size = 0 */
+ 149               	.L__stack_usage = 0
+  25:pcint2.c      ****     LED_DDR |= (1 << LED_PINNBR);
+ 150               		.stabn	68,0,25,.LM6-.LFBB2
+ 151               	.LM6:
+ 152 001c 259A      		sbi 0x4,5
+  26:pcint2.c      **** 
+  27:pcint2.c      ****     DDRD &= ~(1<<PD4);
+ 153               		.stabn	68,0,27,.LM7-.LFBB2
+ 154               	.LM7:
+ 155 001e 5498      		cbi 0xa,4
+  28:pcint2.c      ****     PORTD |= (1<<PD4);
+ 156               		.stabn	68,0,28,.LM8-.LFBB2
+ 157               	.LM8:
+ 158 0020 5C9A      		sbi 0xb,4
+  29:pcint2.c      **** 
+  30:pcint2.c      **** 
+  31:pcint2.c      **** 
+  32:pcint2.c      ****     sei(); /* Seta flag global de habilitação de interrupções */
+ 159               		.stabn	68,0,32,.LM9-.LFBB2
+ 160               	.LM9:
+ 161               	/* #APP */
+ 162               	 ;  32 "pcint2.c" 1
+ 163 0022 7894      		sei
+ 164               	 ;  0 "" 2
+ 165               	/* #NOAPP */
+ 166 0024 0895      		ret
+ 167               		.size	setup_main, .-setup_main
+ 168               	.Lscope2:
+ 169               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 170               		.stabd	78,0,0
+ 171               		.stabs	"__vector_5:F(0,47)",36,0,38,__vector_5
+ 172               	.global	__vector_5
+ 173               		.type	__vector_5, @function
+ 174               	__vector_5:
+ 175               		.stabd	46,0,0
+  33:pcint2.c      **** }
+  34:pcint2.c      **** 
+  35:pcint2.c      **** /* -------------------------------------*/
+  36:pcint2.c      **** volatile uint8_t has_changed;
+  37:pcint2.c      **** 
+  38:pcint2.c      **** ISR(PCINT2_vect)
+  39:pcint2.c      **** {
+ 176               		.stabn	68,0,39,.LM10-.LFBB3
+ 177               	.LM10:
+ 178               	.LFBB3:
+ 179 0026 1F92      		push r1
+ 180 0028 0F92      		push r0
+ 181 002a 0FB6      		in r0,__SREG__
+ 182 002c 0F92      		push r0
+ 183 002e 1124      		clr __zero_reg__
+ 184 0030 8F93      		push r24
+ 185               	/* prologue: Signal */
+ 186               	/* frame size = 0 */
+ 187               	/* stack size = 4 */
+ 188               	.L__stack_usage = 4
+  40:pcint2.c      ****     has_changed = 1;
+GAS LISTING /tmp/cczwgVDU.s 			page 5
+
+
+ 189               		.stabn	68,0,40,.LM11-.LFBB3
+ 190               	.LM11:
+ 191 0032 81E0      		ldi r24,lo8(1)
+ 192 0034 8093 0000 		sts has_changed,r24
+ 193               	/* epilogue start */
+  41:pcint2.c      **** }
+ 194               		.stabn	68,0,41,.LM12-.LFBB3
+ 195               	.LM12:
+ 196 0038 8F91      		pop r24
+ 197 003a 0F90      		pop r0
+ 198 003c 0FBE      		out __SREG__,r0
+ 199 003e 0F90      		pop r0
+ 200 0040 1F90      		pop r1
+ 201 0042 1895      		reti
+ 202               		.size	__vector_5, .-__vector_5
+ 203               	.Lscope3:
+ 204               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 205               		.stabd	78,0,0
+ 206               		.section	.text.startup,"ax",@progbits
+ 207               		.stabs	"main:F(0,1)",36,0,44,main
+ 208               	.global	main
+ 209               		.type	main, @function
+ 210               	main:
+ 211               		.stabd	46,0,0
+  42:pcint2.c      **** 
+  43:pcint2.c      **** /* -------------------------------------*/
+  44:pcint2.c      **** int main(void)
+  45:pcint2.c      **** {
+ 212               		.stabn	68,0,45,.LM13-.LFBB4
+ 213               	.LM13:
+ 214               	.LFBB4:
+ 215               	/* prologue: function */
+ 216               	/* frame size = 0 */
+ 217               	/* stack size = 0 */
+ 218               	.L__stack_usage = 0
+  46:pcint2.c      ****     setup_pcint2();
+ 219               		.stabn	68,0,46,.LM14-.LFBB4
+ 220               	.LM14:
+ 221 0000 0E94 0000 		call setup_pcint2
+  47:pcint2.c      ****     setup_main();
+ 222               		.stabn	68,0,47,.LM15-.LFBB4
+ 223               	.LM15:
+ 224 0004 0E94 0000 		call setup_main
+  48:pcint2.c      **** 
+  49:pcint2.c      ****     uint8_t new_state, changed;
+  50:pcint2.c      **** 
+  51:pcint2.c      ****     PORTB |= (1<<LED_PINNBR);
+ 225               		.stabn	68,0,51,.LM16-.LFBB4
+ 226               	.LM16:
+ 227 0008 2D9A      		sbi 0x5,5
+ 228               	.L5:
+  52:pcint2.c      **** 
+  53:pcint2.c      ****     while(1){
+  54:pcint2.c      ****     	if (has_changed==1){
+ 229               		.stabn	68,0,54,.LM17-.LFBB4
+ 230               	.LM17:
+ 231 000a 8091 0000 		lds r24,has_changed
+GAS LISTING /tmp/cczwgVDU.s 			page 6
+
+
+ 232 000e 8130      		cpi r24,lo8(1)
+ 233 0010 01F4      		brne .L5
+  55:pcint2.c      ****     		new_state = PIND & PCMSK2;
+ 234               		.stabn	68,0,55,.LM18-.LFBB4
+ 235               	.LM18:
+ 236 0012 89B1      		in r24,0x9
+ 237 0014 9091 6D00 		lds r25,109
+ 238 0018 8923      		and r24,r25
+  56:pcint2.c      ****   		    changed = new_state ^ state;
+ 239               		.stabn	68,0,56,.LM19-.LFBB4
+ 240               	.LM19:
+ 241 001a 9091 0000 		lds r25,state
+ 242 001e 9827      		eor r25,r24
+  57:pcint2.c      ****     		state = new_state;
+ 243               		.stabn	68,0,57,.LM20-.LFBB4
+ 244               	.LM20:
+ 245 0020 8093 0000 		sts state,r24
+  58:pcint2.c      **** 
+  59:pcint2.c      ****     		if (changed & (1<<PD4)){
+ 246               		.stabn	68,0,59,.LM21-.LFBB4
+ 247               	.LM21:
+ 248 0024 94FD      		sbrc r25,4
+  60:pcint2.c      ****     			LED_PIN |= (1<<LED_PINNBR);
+ 249               		.stabn	68,0,60,.LM22-.LFBB4
+ 250               	.LM22:
+ 251 0026 1D9A      		sbi 0x3,5
+ 252               	.L6:
+  61:pcint2.c      **** 		    }
+  62:pcint2.c      ****     		has_changed=0;
+ 253               		.stabn	68,0,62,.LM23-.LFBB4
+ 254               	.LM23:
+ 255 0028 1092 0000 		sts has_changed,__zero_reg__
+ 256 002c 00C0      		rjmp .L5
+ 257               		.size	main, .-main
+ 258               		.stabs	"new_state:r(5,2)",64,0,49,24
+ 259               		.stabs	"changed:r(5,2)",64,0,49,25
+ 260               		.stabn	192,0,0,.LFBB4-.LFBB4
+ 261               		.stabn	224,0,0,.Lscope4-.LFBB4
+ 262               	.Lscope4:
+ 263               		.stabs	"",36,0,0,.Lscope4-.LFBB4
+ 264               		.stabd	78,0,0
+ 265               		.comm	has_changed,1,1
+ 266               		.comm	state,1,1
+ 267               		.stabs	"state:G(5,2)",32,0,6,0
+ 268               		.stabs	"has_changed:G(0,48)=B(5,2)",32,0,36,0
+ 269               		.text
+ 270               		.stabs	"",100,0,0,.Letext0
+ 271               	.Letext0:
+ 272               		.ident	"GCC: (GNU) 4.9.2"
+ 273               	.global __do_clear_bss
+GAS LISTING /tmp/cczwgVDU.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 pcint2.c
+     /tmp/cczwgVDU.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/cczwgVDU.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/cczwgVDU.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/cczwgVDU.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/cczwgVDU.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/cczwgVDU.s:105    .text:0000000000000000 setup_pcint2
+                            *COM*:0000000000000001 state
+     /tmp/cczwgVDU.s:141    .text:000000000000001c setup_main
+     /tmp/cczwgVDU.s:174    .text:0000000000000026 __vector_5
+                            *COM*:0000000000000001 has_changed
+     /tmp/cczwgVDU.s:210    .text.startup:0000000000000000 main
+
+UNDEFINED SYMBOLS
+__do_clear_bss

@@ -1,0 +1,1512 @@
+GAS LISTING /tmp/ccssgBNH.s 			page 1
+
+
+   1               		.file	"exercicio_sm.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.stabs	"/home/aluno/RTOs - N apagar, \343\201\217\343\201\240\343\201\225\343\201\204/11aula/",100
+   8               		.stabs	"exercicio_sm.c",100,0,2,.Ltext0
+   9               		.text
+  10               	.Ltext0:
+  11               		.stabs	"gcc2_compiled.",60,0,0,0
+  12               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  13               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  14               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  15               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  16               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  17               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  18               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,0,0
+  19               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  20               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,0,0
+  21               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  22               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  23               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  24               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  25               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"short _Fract:t(0,15)=r(0,1);1;0;",128,0,0,0
+  27               		.stabs	"_Fract:t(0,16)=r(0,1);2;0;",128,0,0,0
+  28               		.stabs	"long _Fract:t(0,17)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"long long _Fract:t(0,18)=r(0,1);8;0;",128,0,0,0
+  30               		.stabs	"unsigned short _Fract:t(0,19)=r(0,1);1;0;",128,0,0,0
+  31               		.stabs	"unsigned _Fract:t(0,20)=r(0,1);2;0;",128,0,0,0
+  32               		.stabs	"unsigned long _Fract:t(0,21)=r(0,1);4;0;",128,0,0,0
+  33               		.stabs	"unsigned long long _Fract:t(0,22)=r(0,1);8;0;",128,0,0,0
+  34               		.stabs	"_Sat short _Fract:t(0,23)=r(0,1);1;0;",128,0,0,0
+  35               		.stabs	"_Sat _Fract:t(0,24)=r(0,1);2;0;",128,0,0,0
+  36               		.stabs	"_Sat long _Fract:t(0,25)=r(0,1);4;0;",128,0,0,0
+  37               		.stabs	"_Sat long long _Fract:t(0,26)=r(0,1);8;0;",128,0,0,0
+  38               		.stabs	"_Sat unsigned short _Fract:t(0,27)=r(0,1);1;0;",128,0,0,0
+  39               		.stabs	"_Sat unsigned _Fract:t(0,28)=r(0,1);2;0;",128,0,0,0
+  40               		.stabs	"_Sat unsigned long _Fract:t(0,29)=r(0,1);4;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned long long _Fract:t(0,30)=r(0,1);8;0;",128,0,0,0
+  42               		.stabs	"short _Accum:t(0,31)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Accum:t(0,32)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"long _Accum:t(0,33)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"long long _Accum:t(0,34)=r(0,1);8;0;",128,0,0,0
+  46               		.stabs	"unsigned short _Accum:t(0,35)=r(0,1);2;0;",128,0,0,0
+  47               		.stabs	"unsigned _Accum:t(0,36)=r(0,1);4;0;",128,0,0,0
+  48               		.stabs	"unsigned long _Accum:t(0,37)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned long long _Accum:t(0,38)=r(0,1);8;0;",128,0,0,0
+  50               		.stabs	"_Sat short _Accum:t(0,39)=r(0,1);2;0;",128,0,0,0
+  51               		.stabs	"_Sat _Accum:t(0,40)=r(0,1);4;0;",128,0,0,0
+  52               		.stabs	"_Sat long _Accum:t(0,41)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat long long _Accum:t(0,42)=r(0,1);8;0;",128,0,0,0
+  54               		.stabs	"_Sat unsigned short _Accum:t(0,43)=r(0,1);2;0;",128,0,0,0
+  55               		.stabs	"_Sat unsigned _Accum:t(0,44)=r(0,1);4;0;",128,0,0,0
+  56               		.stabs	"_Sat unsigned long _Accum:t(0,45)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned long long _Accum:t(0,46)=r(0,1);8;0;",128,0,0,0
+GAS LISTING /tmp/ccssgBNH.s 			page 2
+
+
+  58               		.stabs	"void:t(0,47)=(0,47)",128,0,0,0
+  59               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+  60               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
+  61               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  62               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stdint.h",130,0,0,0
+  63               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  64               		.stabs	"int8_t:t(5,1)=(0,10)",128,0,121,0
+  65               		.stabs	"uint8_t:t(5,2)=(0,11)",128,0,122,0
+  66               		.stabs	"int16_t:t(5,3)=(0,1)",128,0,123,0
+  67               		.stabs	"uint16_t:t(5,4)=(0,4)",128,0,124,0
+  68               		.stabs	"int32_t:t(5,5)=(0,3)",128,0,125,0
+  69               		.stabs	"uint32_t:t(5,6)=(0,5)",128,0,126,0
+  70               		.stabs	"int64_t:t(5,7)=(0,6)",128,0,128,0
+  71               		.stabs	"uint64_t:t(5,8)=(0,7)",128,0,129,0
+  72               		.stabs	"intptr_t:t(5,9)=(5,3)",128,0,142,0
+  73               		.stabs	"uintptr_t:t(5,10)=(5,4)",128,0,147,0
+  74               		.stabs	"int_least8_t:t(5,11)=(5,1)",128,0,159,0
+  75               		.stabs	"uint_least8_t:t(5,12)=(5,2)",128,0,164,0
+  76               		.stabs	"int_least16_t:t(5,13)=(5,3)",128,0,169,0
+  77               		.stabs	"uint_least16_t:t(5,14)=(5,4)",128,0,174,0
+  78               		.stabs	"int_least32_t:t(5,15)=(5,5)",128,0,179,0
+  79               		.stabs	"uint_least32_t:t(5,16)=(5,6)",128,0,184,0
+  80               		.stabs	"int_least64_t:t(5,17)=(5,7)",128,0,192,0
+  81               		.stabs	"uint_least64_t:t(5,18)=(5,8)",128,0,199,0
+  82               		.stabs	"int_fast8_t:t(5,19)=(5,1)",128,0,213,0
+  83               		.stabs	"uint_fast8_t:t(5,20)=(5,2)",128,0,218,0
+  84               		.stabs	"int_fast16_t:t(5,21)=(5,3)",128,0,223,0
+  85               		.stabs	"uint_fast16_t:t(5,22)=(5,4)",128,0,228,0
+  86               		.stabs	"int_fast32_t:t(5,23)=(5,5)",128,0,233,0
+  87               		.stabs	"uint_fast32_t:t(5,24)=(5,6)",128,0,238,0
+  88               		.stabs	"int_fast64_t:t(5,25)=(5,7)",128,0,246,0
+  89               		.stabs	"uint_fast64_t:t(5,26)=(5,8)",128,0,253,0
+  90               		.stabs	"intmax_t:t(5,27)=(5,7)",128,0,273,0
+  91               		.stabs	"uintmax_t:t(5,28)=(5,8)",128,0,278,0
+  92               		.stabn	162,0,0,0
+  93               		.stabn	162,0,0,0
+  94               		.stabs	"int_farptr_t:t(3,1)=(5,5)",128,0,77,0
+  95               		.stabs	"uint_farptr_t:t(3,2)=(5,6)",128,0,81,0
+  96               		.stabn	162,0,0,0
+  97               		.stabn	162,0,0,0
+  98               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+  99               		.stabs	"__fuse_t:t(6,1)=(6,2)=s3low:(0,11),0,8;high:(0,11),8,8;extended:(0,11),16,8;;",128,0,244,0
+ 100               		.stabn	162,0,0,0
+ 101               		.stabn	162,0,0,0
+ 102               		.stabs	"/usr/lib/avr/include/stdio.h",130,0,0,0
+ 103               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stdarg.h",130,0,0,0
+ 104               		.stabs	"__gnuc_va_list:t(8,1)=(8,2)=*(0,47)",128,0,40,0
+ 105               		.stabs	"va_list:t(8,3)=(8,1)",128,0,98,0
+ 106               		.stabn	162,0,0,0
+ 107               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stddef.h",130,0,0,0
+ 108               		.stabs	"size_t:t(9,1)=(0,4)",128,0,212,0
+ 109               		.stabn	162,0,0,0
+ 110               		.stabs	"__file:T(7,1)=s14buf:(7,2)=*(0,2),0,16;unget:(0,11),16,8;flags:(5,2),24,8;size:(0,1),32,16
+ 111               		.stabn	162,0,0,0
+ 112               		.stabs	"event_t:t(0,48)=(5,4)",128,0,21,0
+ 113               		.stabs	" :T(0,49)=eEVENT0:1,EVENT1:2,EVENT2:4,EVENT3:8,EVENT4:16,EVENT5:32,EVENT6:64,EVENT7:128,EV
+ 114               		.stabs	" :T(0,50)=@s8;eestado1:0,estado2:1,estado3:2,estado4:3,;",128,0,0,0
+GAS LISTING /tmp/ccssgBNH.s 			page 3
+
+
+ 115               		.stabs	"estados:t(0,51)=(0,50)",128,0,269,0
+ 116               		.stabs	" :T(0,52)=@s8;esaida1:0,saida2:1,saida3:2,saida4:3,;",128,0,0,0
+ 117               		.stabs	"saidas:t(0,53)=(0,52)",128,0,273,0
+ 118               		.stabs	"setup_main:F(0,47)",36,0,51,setup_main
+ 119               	.global	setup_main
+ 120               		.type	setup_main, @function
+ 121               	setup_main:
+ 122               		.stabd	46,0,0
+   1:exercicio_sm.c **** #include <avr/io.h>
+   2:exercicio_sm.c **** #include <avr/cpufunc.h>
+   3:exercicio_sm.c **** #include <avr/interrupt.h>
+   4:exercicio_sm.c **** #include <stdio.h>
+   5:exercicio_sm.c **** 
+   6:exercicio_sm.c **** 
+   7:exercicio_sm.c **** 
+   8:exercicio_sm.c **** 
+   9:exercicio_sm.c **** 
+  10:exercicio_sm.c **** #define FOSC 16000000ul  /* velocidade do relógio */
+  11:exercicio_sm.c **** #define BAUD 115200      /* velocidade desejada para a serial */
+  12:exercicio_sm.c **** #define MYUBRR (FOSC/(8*BAUD) - 1)  /* valor de 12 bits para configurar o clock da USART */
+  13:exercicio_sm.c **** 
+  14:exercicio_sm.c **** #define BUFFER_SIZE 20   /* Tamanho do buffer da USART */
+  15:exercicio_sm.c **** 
+  16:exercicio_sm.c **** 
+  17:exercicio_sm.c **** 
+  18:exercicio_sm.c **** #define MAX_EVENTS 16
+  19:exercicio_sm.c **** 
+  20:exercicio_sm.c **** 
+  21:exercicio_sm.c **** typedef uint16_t event_t;
+  22:exercicio_sm.c **** volatile event_t events;
+  23:exercicio_sm.c **** 
+  24:exercicio_sm.c **** enum {
+  25:exercicio_sm.c ****     EVENT0  = 0X0001,
+  26:exercicio_sm.c ****     EVENT1  = 0X0002,
+  27:exercicio_sm.c ****     EVENT2  = 0X0004,
+  28:exercicio_sm.c ****     EVENT3  = 0X0008,
+  29:exercicio_sm.c ****     EVENT4  = 0X0010,
+  30:exercicio_sm.c ****     EVENT5  = 0X0020,
+  31:exercicio_sm.c ****     EVENT6  = 0X0040,
+  32:exercicio_sm.c ****     EVENT7  = 0X0080,
+  33:exercicio_sm.c ****     EVENT8  = 0X0100,
+  34:exercicio_sm.c ****     EVENT9  = 0X0200,
+  35:exercicio_sm.c ****     EVENT10 = 0X0400,
+  36:exercicio_sm.c ****     EVENT11 = 0X0800,
+  37:exercicio_sm.c ****     EVENT12 = 0X1000,
+  38:exercicio_sm.c ****     EVENT13 = 0X2000,
+  39:exercicio_sm.c ****     EVENT14 = 0X4000,
+  40:exercicio_sm.c ****     EVENT15 = 0X8000
+  41:exercicio_sm.c **** };
+  42:exercicio_sm.c **** 
+  43:exercicio_sm.c **** 
+  44:exercicio_sm.c **** 
+  45:exercicio_sm.c **** 
+  46:exercicio_sm.c **** 
+  47:exercicio_sm.c **** 
+  48:exercicio_sm.c **** 
+  49:exercicio_sm.c **** 
+GAS LISTING /tmp/ccssgBNH.s 			page 4
+
+
+  50:exercicio_sm.c **** /* -------------------------------------*/
+  51:exercicio_sm.c **** void setup_main(void)
+  52:exercicio_sm.c **** {
+ 123               		.stabn	68,0,52,.LM0-.LFBB1
+ 124               	.LM0:
+ 125               	.LFBB1:
+ 126               	/* prologue: function */
+ 127               	/* frame size = 0 */
+ 128               	/* stack size = 0 */
+ 129               	.L__stack_usage = 0
+  53:exercicio_sm.c ****     LED_DDR |= (1 << LED_PINNBR);
+ 130               		.stabn	68,0,53,.LM1-.LFBB1
+ 131               	.LM1:
+ 132 0000 259A      		sbi 0x4,5
+  54:exercicio_sm.c ****   //  LED_PORT |= (1 << LED_PINNBR);
+  55:exercicio_sm.c **** 
+  56:exercicio_sm.c ****     DDRB  &= ~(1<<PB0);
+ 133               		.stabn	68,0,56,.LM2-.LFBB1
+ 134               	.LM2:
+ 135 0002 2098      		cbi 0x4,0
+  57:exercicio_sm.c ****     PORTB |= (1<<PB0);
+ 136               		.stabn	68,0,57,.LM3-.LFBB1
+ 137               	.LM3:
+ 138 0004 289A      		sbi 0x5,0
+  58:exercicio_sm.c **** 
+  59:exercicio_sm.c ****     sei(); 
+ 139               		.stabn	68,0,59,.LM4-.LFBB1
+ 140               	.LM4:
+ 141               	/* #APP */
+ 142               	 ;  59 "exercicio_sm.c" 1
+ 143 0006 7894      		sei
+ 144               	 ;  0 "" 2
+ 145               	/* #NOAPP */
+ 146 0008 0895      		ret
+ 147               		.size	setup_main, .-setup_main
+ 148               	.Lscope1:
+ 149               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 150               		.stabd	78,0,0
+ 151               		.stabs	"setup_usart:F(0,47)",36,0,62,setup_usart
+ 152               	.global	setup_usart
+ 153               		.type	setup_usart, @function
+ 154               	setup_usart:
+ 155               		.stabd	46,0,0
+  60:exercicio_sm.c **** }
+  61:exercicio_sm.c **** 
+  62:exercicio_sm.c **** void setup_usart(void)
+  63:exercicio_sm.c **** {
+ 156               		.stabn	68,0,63,.LM5-.LFBB2
+ 157               	.LM5:
+ 158               	.LFBB2:
+ 159               	/* prologue: function */
+ 160               	/* frame size = 0 */
+ 161               	/* stack size = 0 */
+ 162               	.L__stack_usage = 0
+  64:exercicio_sm.c ****     /*
+  65:exercicio_sm.c ****      * Para as macros abaixo e outras, veja o arquivo
+  66:exercicio_sm.c ****      * /usr/lib/avr/include/avr/iom328p.h
+GAS LISTING /tmp/ccssgBNH.s 			page 5
+
+
+  67:exercicio_sm.c ****      */
+  68:exercicio_sm.c ****     /*
+  69:exercicio_sm.c ****      * Primeiro setamos a direção certa para os pinos RX e TX
+  70:exercicio_sm.c ****      */
+  71:exercicio_sm.c ****     DDRD &= ~(1 << PD0);  /* USART RX bit para a placa Nano */
+ 163               		.stabn	68,0,71,.LM6-.LFBB2
+ 164               	.LM6:
+ 165 000a 5098      		cbi 0xa,0
+  72:exercicio_sm.c ****     DDRD |= (1 << PD1);  /* USART TX bit para a placa Nano */
+ 166               		.stabn	68,0,72,.LM7-.LFBB2
+ 167               	.LM7:
+ 168 000c 519A      		sbi 0xa,1
+  73:exercicio_sm.c ****     
+  74:exercicio_sm.c ****     /*
+  75:exercicio_sm.c ****      * Agora configuramos a USART
+  76:exercicio_sm.c ****      */
+  77:exercicio_sm.c ****     UBRR0H = (MYUBRR >> 8) & 0xF;
+ 169               		.stabn	68,0,77,.LM8-.LFBB2
+ 170               	.LM8:
+ 171 000e 1092 C500 		sts 197,__zero_reg__
+  78:exercicio_sm.c ****     UBRR0L = MYUBRR & 0xFF;
+ 172               		.stabn	68,0,78,.LM9-.LFBB2
+ 173               	.LM9:
+ 174 0012 80E1      		ldi r24,lo8(16)
+ 175 0014 8093 C400 		sts 196,r24
+  79:exercicio_sm.c ****     UCSR0A = (1 << U2X0); /* double speed */
+ 176               		.stabn	68,0,79,.LM10-.LFBB2
+ 177               	.LM10:
+ 178 0018 82E0      		ldi r24,lo8(2)
+ 179 001a 8093 C000 		sts 192,r24
+  80:exercicio_sm.c ****     UCSR0B = (1 << TXEN0); /* habilita a transmissão mas não a interrupção (não ainda) */
+ 180               		.stabn	68,0,80,.LM11-.LFBB2
+ 181               	.LM11:
+ 182 001e 88E0      		ldi r24,lo8(8)
+ 183 0020 8093 C100 		sts 193,r24
+  81:exercicio_sm.c ****     UCSR0C = (1 << UCSZ00) | (1 << UCSZ01);  /* Asynchronous, 8-N-1 */
+ 184               		.stabn	68,0,81,.LM12-.LFBB2
+ 185               	.LM12:
+ 186 0024 86E0      		ldi r24,lo8(6)
+ 187 0026 8093 C200 		sts 194,r24
+ 188 002a 0895      		ret
+ 189               		.size	setup_usart, .-setup_usart
+ 190               	.Lscope2:
+ 191               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 192               		.stabd	78,0,0
+ 193               		.stabs	"delay_ms:F(0,47)",36,0,84,delay_ms
+ 194               		.stabs	"ms:P(5,4)",64,0,84,24
+ 195               	.global	delay_ms
+ 196               		.type	delay_ms, @function
+ 197               	delay_ms:
+ 198               		.stabd	46,0,0
+  82:exercicio_sm.c **** }
+  83:exercicio_sm.c **** 
+  84:exercicio_sm.c **** void delay_ms(uint16_t ms)
+  85:exercicio_sm.c **** {
+ 199               		.stabn	68,0,85,.LM13-.LFBB3
+ 200               	.LM13:
+GAS LISTING /tmp/ccssgBNH.s 			page 6
+
+
+ 201               	.LFBB3:
+ 202               	/* prologue: function */
+ 203               	/* frame size = 0 */
+ 204               	/* stack size = 0 */
+ 205               	.L__stack_usage = 0
+  86:exercicio_sm.c ****     uint16_t i, j;
+  87:exercicio_sm.c ****     for(i=0; i<ms; i++)
+ 206               		.stabn	68,0,87,.LM14-.LFBB3
+ 207               	.LM14:
+ 208 002c 20E0      		ldi r18,0
+ 209 002e 30E0      		ldi r19,0
+ 210               	.L4:
+ 211               		.stabn	68,0,87,.LM15-.LFBB3
+ 212               	.LM15:
+ 213 0030 2817      		cp r18,r24
+ 214 0032 3907      		cpc r19,r25
+ 215 0034 01F0      		breq .L9
+ 216 0036 40EA      		ldi r20,lo8(-96)
+ 217 0038 5FE0      		ldi r21,lo8(15)
+ 218               	.L5:
+  88:exercicio_sm.c ****         for(j=0; j<4000; j++)
+  89:exercicio_sm.c ****             _NOP();
+ 219               		.stabn	68,0,89,.LM16-.LFBB3
+ 220               	.LM16:
+ 221               	/* #APP */
+ 222               	 ;  89 "exercicio_sm.c" 1
+ 223 003a 0000      		nop
+ 224               	 ;  0 "" 2
+ 225               	/* #NOAPP */
+ 226 003c 4150      		subi r20,1
+ 227 003e 5109      		sbc r21,__zero_reg__
+  88:exercicio_sm.c ****         for(j=0; j<4000; j++)
+ 228               		.stabn	68,0,88,.LM17-.LFBB3
+ 229               	.LM17:
+ 230 0040 01F4      		brne .L5
+  87:exercicio_sm.c ****         for(j=0; j<4000; j++)
+ 231               		.stabn	68,0,87,.LM18-.LFBB3
+ 232               	.LM18:
+ 233 0042 2F5F      		subi r18,-1
+ 234 0044 3F4F      		sbci r19,-1
+ 235 0046 00C0      		rjmp .L4
+ 236               	.L9:
+ 237               	/* epilogue start */
+  90:exercicio_sm.c **** }
+ 238               		.stabn	68,0,90,.LM19-.LFBB3
+ 239               	.LM19:
+ 240 0048 0895      		ret
+ 241               		.size	delay_ms, .-delay_ms
+ 242               		.stabs	"i:r(5,4)",64,0,86,18
+ 243               		.stabn	192,0,0,.LFBB3-.LFBB3
+ 244               		.stabn	224,0,0,.Lscope3-.LFBB3
+ 245               	.Lscope3:
+ 246               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 247               		.stabd	78,0,0
+ 248               		.stabs	"write:F(5,2)",36,0,97,write
+ 249               		.stabs	"c:P(5,2)",64,0,97,24
+ 250               	.global	write
+GAS LISTING /tmp/ccssgBNH.s 			page 7
+
+
+ 251               		.type	write, @function
+ 252               	write:
+ 253               		.stabd	46,0,0
+  91:exercicio_sm.c **** 
+  92:exercicio_sm.c **** 
+  93:exercicio_sm.c **** uint16_t tx_buffer[BUFFER_SIZE];     /* buffer para transmissão */
+  94:exercicio_sm.c **** uint8_t tx_head, tx_tail;   /* ponteiros para o buffer circular */
+  95:exercicio_sm.c **** uint8_t usart_transmitting=0;
+  96:exercicio_sm.c **** 
+  97:exercicio_sm.c **** uint8_t write(uint8_t c)
+  98:exercicio_sm.c **** {
+ 254               		.stabn	68,0,98,.LM20-.LFBB4
+ 255               	.LM20:
+ 256               	.LFBB4:
+ 257               	/* prologue: function */
+ 258               	/* frame size = 0 */
+ 259               	/* stack size = 0 */
+ 260               	.L__stack_usage = 0
+  99:exercicio_sm.c ****     uint8_t rc = 0;
+ 100:exercicio_sm.c **** 
+ 101:exercicio_sm.c ****     cli();
+ 261               		.stabn	68,0,101,.LM21-.LFBB4
+ 262               	.LM21:
+ 263               	/* #APP */
+ 264               	 ;  101 "exercicio_sm.c" 1
+ 265 004a F894      		cli
+ 266               	 ;  0 "" 2
+ 102:exercicio_sm.c ****     // primeiro if inicialmente sempre executado pois usart_transmitting começa 0, habilita a inte
+ 103:exercicio_sm.c ****     if (!usart_transmitting) {
+ 267               		.stabn	68,0,103,.LM22-.LFBB4
+ 268               	.LM22:
+ 269               	/* #NOAPP */
+ 270 004c 9091 0000 		lds r25,usart_transmitting
+ 271 0050 9111      		cpse r25,__zero_reg__
+ 272 0052 00C0      		rjmp .L11
+ 104:exercicio_sm.c ****         UDR0 = c;
+ 273               		.stabn	68,0,104,.LM23-.LFBB4
+ 274               	.LM23:
+ 275 0054 8093 C600 		sts 198,r24
+ 105:exercicio_sm.c ****         UCSR0B |= (1 << UDRIE0);
+ 276               		.stabn	68,0,105,.LM24-.LFBB4
+ 277               	.LM24:
+ 278 0058 8091 C100 		lds r24,193
+ 279 005c 8062      		ori r24,lo8(32)
+ 280 005e 8093 C100 		sts 193,r24
+ 106:exercicio_sm.c ****         usart_transmitting = 1;
+ 281               		.stabn	68,0,106,.LM25-.LFBB4
+ 282               	.LM25:
+ 283 0062 81E0      		ldi r24,lo8(1)
+ 284 0064 8093 0000 		sts usart_transmitting,r24
+ 285 0068 00C0      		rjmp .L15
+ 286               	.L11:
+ 287               	.LBB2:
+ 107:exercicio_sm.c ****     } else {
+ 108:exercicio_sm.c ****         uint8_t next = tx_head + 1;
+ 288               		.stabn	68,0,108,.LM26-.LFBB4
+ 289               	.LM26:
+GAS LISTING /tmp/ccssgBNH.s 			page 8
+
+
+ 290 006a E091 0000 		lds r30,tx_head
+ 291 006e 91E0      		ldi r25,lo8(1)
+ 292 0070 9E0F      		add r25,r30
+ 109:exercicio_sm.c ****         if (next >= BUFFER_SIZE)
+ 293               		.stabn	68,0,109,.LM27-.LFBB4
+ 294               	.LM27:
+ 295 0072 9431      		cpi r25,lo8(20)
+ 296 0074 00F0      		brlo .L13
+ 110:exercicio_sm.c ****             next = 0;
+ 297               		.stabn	68,0,110,.LM28-.LFBB4
+ 298               	.LM28:
+ 299 0076 90E0      		ldi r25,0
+ 300               	.L13:
+ 111:exercicio_sm.c ****         if (next != tx_tail) { /* buffer cheio */
+ 301               		.stabn	68,0,111,.LM29-.LFBB4
+ 302               	.LM29:
+ 303 0078 2091 0000 		lds r18,tx_tail
+ 304 007c 9217      		cp r25,r18
+ 305 007e 01F0      		breq .L14
+ 112:exercicio_sm.c ****             tx_buffer[tx_head] = c;
+ 306               		.stabn	68,0,112,.LM30-.LFBB4
+ 307               	.LM30:
+ 308 0080 F0E0      		ldi r31,0
+ 309 0082 EE0F      		lsl r30
+ 310 0084 FF1F      		rol r31
+ 311 0086 E050      		subi r30,lo8(-(tx_buffer))
+ 312 0088 F040      		sbci r31,hi8(-(tx_buffer))
+ 313 008a 282F      		mov r18,r24
+ 314 008c 30E0      		ldi r19,0
+ 315 008e 3183      		std Z+1,r19
+ 316 0090 2083      		st Z,r18
+ 113:exercicio_sm.c ****             tx_head = next;
+ 317               		.stabn	68,0,113,.LM31-.LFBB4
+ 318               	.LM31:
+ 319 0092 9093 0000 		sts tx_head,r25
+ 320               	.L15:
+ 321               	.LBE2:
+  99:exercicio_sm.c **** 
+ 322               		.stabn	68,0,99,.LM32-.LFBB4
+ 323               	.LM32:
+ 324 0096 80E0      		ldi r24,0
+ 325               	.LBB3:
+ 326 0098 00C0      		rjmp .L12
+ 327               	.L14:
+ 114:exercicio_sm.c ****         } else
+ 115:exercicio_sm.c ****             rc = 1;
+ 328               		.stabn	68,0,115,.LM33-.LFBB4
+ 329               	.LM33:
+ 330 009a 81E0      		ldi r24,lo8(1)
+ 331               	.L12:
+ 332               	.LBE3:
+ 116:exercicio_sm.c ****     }
+ 117:exercicio_sm.c ****     sei();
+ 333               		.stabn	68,0,117,.LM34-.LFBB4
+ 334               	.LM34:
+ 335               	/* #APP */
+ 336               	 ;  117 "exercicio_sm.c" 1
+GAS LISTING /tmp/ccssgBNH.s 			page 9
+
+
+ 337 009c 7894      		sei
+ 338               	 ;  0 "" 2
+ 118:exercicio_sm.c ****     return rc;
+ 119:exercicio_sm.c **** }
+ 339               		.stabn	68,0,119,.LM35-.LFBB4
+ 340               	.LM35:
+ 341               	/* #NOAPP */
+ 342 009e 0895      		ret
+ 343               		.size	write, .-write
+ 344               		.stabs	"rc:r(5,2)",64,0,99,24
+ 345               		.stabn	192,0,0,.LFBB4-.LFBB4
+ 346               		.stabs	"next:r(5,2)",64,0,108,25
+ 347               		.stabn	192,0,0,.LBB2-.LFBB4
+ 348               		.stabn	224,0,0,.LBE2-.LFBB4
+ 349               		.stabs	"next:r(5,2)",64,0,108,25
+ 350               		.stabn	192,0,0,.LBB3-.LFBB4
+ 351               		.stabn	224,0,0,.LBE3-.LFBB4
+ 352               		.stabn	224,0,0,.Lscope4-.LFBB4
+ 353               	.Lscope4:
+ 354               		.stabs	"",36,0,0,.Lscope4-.LFBB4
+ 355               		.stabd	78,0,0
+ 356               		.stabs	"__vector_19:F(0,47)",36,0,121,__vector_19
+ 357               	.global	__vector_19
+ 358               		.type	__vector_19, @function
+ 359               	__vector_19:
+ 360               		.stabd	46,0,0
+ 120:exercicio_sm.c **** 
+ 121:exercicio_sm.c **** ISR(USART_UDRE_vect)
+ 122:exercicio_sm.c **** {
+ 361               		.stabn	68,0,122,.LM36-.LFBB5
+ 362               	.LM36:
+ 363               	.LFBB5:
+ 364 00a0 1F92      		push r1
+ 365 00a2 0F92      		push r0
+ 366 00a4 0FB6      		in r0,__SREG__
+ 367 00a6 0F92      		push r0
+ 368 00a8 1124      		clr __zero_reg__
+ 369 00aa 8F93      		push r24
+ 370 00ac EF93      		push r30
+ 371 00ae FF93      		push r31
+ 372               	/* prologue: Signal */
+ 373               	/* frame size = 0 */
+ 374               	/* stack size = 6 */
+ 375               	.L__stack_usage = 6
+ 123:exercicio_sm.c ****     if (tx_head == tx_tail) {
+ 376               		.stabn	68,0,123,.LM37-.LFBB5
+ 377               	.LM37:
+ 378 00b0 E091 0000 		lds r30,tx_tail
+ 379 00b4 8091 0000 		lds r24,tx_head
+ 380 00b8 8E13      		cpse r24,r30
+ 381 00ba 00C0      		rjmp .L17
+ 124:exercicio_sm.c ****         UCSR0B &= ~(1 << UDRIE0);
+ 382               		.stabn	68,0,124,.LM38-.LFBB5
+ 383               	.LM38:
+ 384 00bc 8091 C100 		lds r24,193
+ 385 00c0 8F7D      		andi r24,lo8(-33)
+ 386 00c2 8093 C100 		sts 193,r24
+GAS LISTING /tmp/ccssgBNH.s 			page 10
+
+
+ 125:exercicio_sm.c ****         usart_transmitting = 0;
+ 387               		.stabn	68,0,125,.LM39-.LFBB5
+ 388               	.LM39:
+ 389 00c6 1092 0000 		sts usart_transmitting,__zero_reg__
+ 390 00ca 00C0      		rjmp .L16
+ 391               	.L17:
+ 126:exercicio_sm.c ****     } else {
+ 127:exercicio_sm.c ****         UDR0 = tx_buffer[tx_tail];
+ 392               		.stabn	68,0,127,.LM40-.LFBB5
+ 393               	.LM40:
+ 394 00cc F0E0      		ldi r31,0
+ 395 00ce EE0F      		lsl r30
+ 396 00d0 FF1F      		rol r31
+ 397 00d2 E050      		subi r30,lo8(-(tx_buffer))
+ 398 00d4 F040      		sbci r31,hi8(-(tx_buffer))
+ 399 00d6 8081      		ld r24,Z
+ 400 00d8 8093 C600 		sts 198,r24
+ 128:exercicio_sm.c ****         if (++tx_tail >= BUFFER_SIZE)
+ 401               		.stabn	68,0,128,.LM41-.LFBB5
+ 402               	.LM41:
+ 403 00dc 8091 0000 		lds r24,tx_tail
+ 404 00e0 8F5F      		subi r24,lo8(-(1))
+ 405 00e2 8431      		cpi r24,lo8(20)
+ 406 00e4 00F4      		brsh .L19
+ 407 00e6 8093 0000 		sts tx_tail,r24
+ 408 00ea 00C0      		rjmp .L16
+ 409               	.L19:
+ 129:exercicio_sm.c ****             tx_tail = 0;
+ 410               		.stabn	68,0,129,.LM42-.LFBB5
+ 411               	.LM42:
+ 412 00ec 1092 0000 		sts tx_tail,__zero_reg__
+ 413               	.L16:
+ 414               	/* epilogue start */
+ 130:exercicio_sm.c ****     }
+ 131:exercicio_sm.c **** }
+ 415               		.stabn	68,0,131,.LM43-.LFBB5
+ 416               	.LM43:
+ 417 00f0 FF91      		pop r31
+ 418 00f2 EF91      		pop r30
+ 419 00f4 8F91      		pop r24
+ 420 00f6 0F90      		pop r0
+ 421 00f8 0FBE      		out __SREG__,r0
+ 422 00fa 0F90      		pop r0
+ 423 00fc 1F90      		pop r1
+ 424 00fe 1895      		reti
+ 425               		.size	__vector_19, .-__vector_19
+ 426               	.Lscope5:
+ 427               		.stabs	"",36,0,0,.Lscope5-.LFBB5
+ 428               		.stabd	78,0,0
+ 429               		.stabs	"wait_for_events:F(0,48)",36,0,144,wait_for_events
+ 430               	.global	wait_for_events
+ 431               		.type	wait_for_events, @function
+ 432               	wait_for_events:
+ 433               		.stabd	46,0,0
+ 132:exercicio_sm.c **** 
+ 133:exercicio_sm.c **** 
+ 134:exercicio_sm.c **** 
+GAS LISTING /tmp/ccssgBNH.s 			page 11
+
+
+ 135:exercicio_sm.c **** 
+ 136:exercicio_sm.c **** 
+ 137:exercicio_sm.c **** 
+ 138:exercicio_sm.c **** //precisa mesmo da usart????
+ 139:exercicio_sm.c **** 
+ 140:exercicio_sm.c **** 
+ 141:exercicio_sm.c **** 
+ 142:exercicio_sm.c **** 
+ 143:exercicio_sm.c **** 
+ 144:exercicio_sm.c **** event_t wait_for_events(void)
+ 145:exercicio_sm.c **** {
+ 434               		.stabn	68,0,145,.LM44-.LFBB6
+ 435               	.LM44:
+ 436               	.LFBB6:
+ 437               	/* prologue: function */
+ 438               	/* frame size = 0 */
+ 439               	/* stack size = 0 */
+ 440               	.L__stack_usage = 0
+ 441               	.L21:
+ 146:exercicio_sm.c ****     uint8_t ev;
+ 147:exercicio_sm.c ****     event_t copy;
+ 148:exercicio_sm.c **** 
+ 149:exercicio_sm.c ****     while(!events)
+ 442               		.stabn	68,0,149,.LM45-.LFBB6
+ 443               	.LM45:
+ 444 0100 8091 0000 		lds r24,events
+ 445 0104 9091 0000 		lds r25,events+1
+ 446 0108 892B      		or r24,r25
+ 447 010a 01F0      		breq .L21
+ 150:exercicio_sm.c ****         ;
+ 151:exercicio_sm.c **** 
+ 152:exercicio_sm.c ****     for(ev=0, copy=events; ev<MAX_EVENTS && copy; ev++, copy>>=1)
+ 448               		.stabn	68,0,152,.LM46-.LFBB6
+ 449               	.LM46:
+ 450 010c 2091 0000 		lds r18,events
+ 451 0110 3091 0000 		lds r19,events+1
+ 452 0114 80E0      		ldi r24,0
+ 453               	.L22:
+ 454               		.stabn	68,0,152,.LM47-.LFBB6
+ 455               	.LM47:
+ 456 0116 2115      		cp r18,__zero_reg__
+ 457 0118 3105      		cpc r19,__zero_reg__
+ 458 011a 01F0      		breq .L24
+ 153:exercicio_sm.c ****         if (copy & 0x1) {
+ 459               		.stabn	68,0,153,.LM48-.LFBB6
+ 460               	.LM48:
+ 461 011c 20FF      		sbrs r18,0
+ 462 011e 00C0      		rjmp .L23
+ 154:exercicio_sm.c ****             cli();
+ 463               		.stabn	68,0,154,.LM49-.LFBB6
+ 464               	.LM49:
+ 465               	/* #APP */
+ 466               	 ;  154 "exercicio_sm.c" 1
+ 467 0120 F894      		cli
+ 468               	 ;  0 "" 2
+ 155:exercicio_sm.c ****             events &= ~_BV(ev);
+ 469               		.stabn	68,0,155,.LM50-.LFBB6
+GAS LISTING /tmp/ccssgBNH.s 			page 12
+
+
+ 470               	.LM50:
+ 471               	/* #NOAPP */
+ 472 0122 4091 0000 		lds r20,events
+ 473 0126 5091 0000 		lds r21,events+1
+ 474 012a 21E0      		ldi r18,lo8(1)
+ 475 012c 30E0      		ldi r19,0
+ 476 012e 082E      		mov r0,r24
+ 477 0130 00C0      		rjmp 2f
+ 478               		1:
+ 479 0132 220F      		lsl r18
+ 480 0134 331F      		rol r19
+ 481               		2:
+ 482 0136 0A94      		dec r0
+ 483 0138 02F4      		brpl 1b
+ 484 013a 2095      		com r18
+ 485 013c 3095      		com r19
+ 486 013e 2423      		and r18,r20
+ 487 0140 3523      		and r19,r21
+ 488 0142 3093 0000 		sts events+1,r19
+ 489 0146 2093 0000 		sts events,r18
+ 156:exercicio_sm.c ****             sei();
+ 490               		.stabn	68,0,156,.LM51-.LFBB6
+ 491               	.LM51:
+ 492               	/* #APP */
+ 493               	 ;  156 "exercicio_sm.c" 1
+ 494 014a 7894      		sei
+ 495               	 ;  0 "" 2
+ 157:exercicio_sm.c ****             break;
+ 496               		.stabn	68,0,157,.LM52-.LFBB6
+ 497               	.LM52:
+ 498               	/* #NOAPP */
+ 499 014c 00C0      		rjmp .L24
+ 500               	.L23:
+ 152:exercicio_sm.c ****         if (copy & 0x1) {
+ 501               		.stabn	68,0,152,.LM53-.LFBB6
+ 502               	.LM53:
+ 503 014e 8F5F      		subi r24,lo8(-(1))
+ 504 0150 3695      		lsr r19
+ 505 0152 2795      		ror r18
+ 506 0154 8031      		cpi r24,lo8(16)
+ 507 0156 01F4      		brne .L22
+ 508               	.L24:
+ 158:exercicio_sm.c ****         }
+ 159:exercicio_sm.c ****     
+ 160:exercicio_sm.c ****     return ev;
+ 161:exercicio_sm.c **** }
+ 509               		.stabn	68,0,161,.LM54-.LFBB6
+ 510               	.LM54:
+ 511 0158 90E0      		ldi r25,0
+ 512 015a 0895      		ret
+ 513               		.size	wait_for_events, .-wait_for_events
+ 514               		.stabs	"copy:r(0,48)",64,0,147,18
+ 515               		.stabn	192,0,0,.LFBB6-.LFBB6
+ 516               		.stabn	224,0,0,.Lscope6-.LFBB6
+ 517               	.Lscope6:
+ 518               		.stabs	"",36,0,0,.Lscope6-.LFBB6
+ 519               		.stabd	78,0,0
+GAS LISTING /tmp/ccssgBNH.s 			page 13
+
+
+ 520               		.stabs	"setup_timer1:F(0,47)",36,0,181,setup_timer1
+ 521               	.global	setup_timer1
+ 522               		.type	setup_timer1, @function
+ 523               	setup_timer1:
+ 524               		.stabd	46,0,0
+ 162:exercicio_sm.c **** 
+ 163:exercicio_sm.c **** 
+ 164:exercicio_sm.c **** 
+ 165:exercicio_sm.c **** 
+ 166:exercicio_sm.c **** 
+ 167:exercicio_sm.c **** 
+ 168:exercicio_sm.c **** 
+ 169:exercicio_sm.c **** volatile uint8_t byte_high=0;
+ 170:exercicio_sm.c **** volatile uint8_t byte_low=0;
+ 171:exercicio_sm.c **** volatile uint16_t byte_geral, t2, t1, delta;
+ 172:exercicio_sm.c **** volatile uint32_t temp;
+ 173:exercicio_sm.c **** 
+ 174:exercicio_sm.c **** 
+ 175:exercicio_sm.c **** 
+ 176:exercicio_sm.c **** volatile uint8_t flag = 0;
+ 177:exercicio_sm.c **** 
+ 178:exercicio_sm.c **** 
+ 179:exercicio_sm.c **** 
+ 180:exercicio_sm.c **** 
+ 181:exercicio_sm.c **** void setup_timer1(void)
+ 182:exercicio_sm.c **** {
+ 525               		.stabn	68,0,182,.LM55-.LFBB7
+ 526               	.LM55:
+ 527               	.LFBB7:
+ 528               	/* prologue: function */
+ 529               	/* frame size = 0 */
+ 530               	/* stack size = 0 */
+ 531               	.L__stack_usage = 0
+ 183:exercicio_sm.c ****   
+ 184:exercicio_sm.c **** 
+ 185:exercicio_sm.c **** 	//  OCR1A = 0xFFFF;
+ 186:exercicio_sm.c **** 
+ 187:exercicio_sm.c ****     //TCCR1A = 0; NÃO FAZER ISSO! TEM BITS RESERVADOS, QUE VC NAO PODE DIZER QUE É 0
+ 188:exercicio_sm.c **** 
+ 189:exercicio_sm.c ****    
+ 190:exercicio_sm.c ****     TCCR1B = (1 << CS11) | (1<<ICES1);
+ 532               		.stabn	68,0,190,.LM56-.LFBB7
+ 533               	.LM56:
+ 534 015c 82E4      		ldi r24,lo8(66)
+ 535 015e 8093 8100 		sts 129,r24
+ 191:exercicio_sm.c ****     
+ 192:exercicio_sm.c ****     
+ 193:exercicio_sm.c ****     //testar com cancelador de noise
+ 194:exercicio_sm.c ****    // TCCR1B = (1<<ICNC1) | (1 << CS11) | (1<<ICES1);
+ 195:exercicio_sm.c ****     
+ 196:exercicio_sm.c ****     
+ 197:exercicio_sm.c ****     
+ 198:exercicio_sm.c ****     TIMSK1 |= (1<<ICIE1);
+ 536               		.stabn	68,0,198,.LM57-.LFBB7
+ 537               	.LM57:
+ 538 0162 EFE6      		ldi r30,lo8(111)
+ 539 0164 F0E0      		ldi r31,0
+GAS LISTING /tmp/ccssgBNH.s 			page 14
+
+
+ 540 0166 8081      		ld r24,Z
+ 541 0168 8062      		ori r24,lo8(32)
+ 542 016a 8083      		st Z,r24
+ 199:exercicio_sm.c ****     sei();
+ 543               		.stabn	68,0,199,.LM58-.LFBB7
+ 544               	.LM58:
+ 545               	/* #APP */
+ 546               	 ;  199 "exercicio_sm.c" 1
+ 547 016c 7894      		sei
+ 548               	 ;  0 "" 2
+ 549               	/* #NOAPP */
+ 550 016e 0895      		ret
+ 551               		.size	setup_timer1, .-setup_timer1
+ 552               	.Lscope7:
+ 553               		.stabs	"",36,0,0,.Lscope7-.LFBB7
+ 554               		.stabd	78,0,0
+ 555               		.stabs	"__vector_10:F(0,47)",36,0,206,__vector_10
+ 556               	.global	__vector_10
+ 557               		.type	__vector_10, @function
+ 558               	__vector_10:
+ 559               		.stabd	46,0,0
+ 200:exercicio_sm.c **** }
+ 201:exercicio_sm.c **** 
+ 202:exercicio_sm.c **** 
+ 203:exercicio_sm.c **** 
+ 204:exercicio_sm.c **** 
+ 205:exercicio_sm.c **** 
+ 206:exercicio_sm.c **** ISR(TIMER1_CAPT_vect){
+ 560               		.stabn	68,0,206,.LM59-.LFBB8
+ 561               	.LM59:
+ 562               	.LFBB8:
+ 563 0170 1F92      		push r1
+ 564 0172 0F92      		push r0
+ 565 0174 0FB6      		in r0,__SREG__
+ 566 0176 0F92      		push r0
+ 567 0178 1124      		clr __zero_reg__
+ 568 017a 2F93      		push r18
+ 569 017c 3F93      		push r19
+ 570 017e 8F93      		push r24
+ 571 0180 9F93      		push r25
+ 572               	/* prologue: Signal */
+ 573               	/* frame size = 0 */
+ 574               	/* stack size = 7 */
+ 575               	.L__stack_usage = 7
+ 207:exercicio_sm.c **** 
+ 208:exercicio_sm.c ****     TCCR1B ^= (1<<ICES1);
+ 576               		.stabn	68,0,208,.LM60-.LFBB8
+ 577               	.LM60:
+ 578 0182 9091 8100 		lds r25,129
+ 579 0186 80E4      		ldi r24,lo8(64)
+ 580 0188 8927      		eor r24,r25
+ 581 018a 8093 8100 		sts 129,r24
+ 209:exercicio_sm.c ****     byte_geral = ICR1;
+ 582               		.stabn	68,0,209,.LM61-.LFBB8
+ 583               	.LM61:
+ 584 018e 8091 8600 		lds r24,134
+ 585 0192 9091 8700 		lds r25,134+1
+GAS LISTING /tmp/ccssgBNH.s 			page 15
+
+
+ 586 0196 9093 0000 		sts byte_geral+1,r25
+ 587 019a 8093 0000 		sts byte_geral,r24
+ 210:exercicio_sm.c **** 
+ 211:exercicio_sm.c **** 
+ 212:exercicio_sm.c **** 
+ 213:exercicio_sm.c ****     byte_high = (byte_geral>>8);
+ 588               		.stabn	68,0,213,.LM62-.LFBB8
+ 589               	.LM62:
+ 590 019e 8091 0000 		lds r24,byte_geral
+ 591 01a2 9091 0000 		lds r25,byte_geral+1
+ 592 01a6 9093 0000 		sts byte_high,r25
+ 214:exercicio_sm.c ****     byte_low = byte_geral & 0xFF;
+ 593               		.stabn	68,0,214,.LM63-.LFBB8
+ 594               	.LM63:
+ 595 01aa 8091 0000 		lds r24,byte_geral
+ 596 01ae 9091 0000 		lds r25,byte_geral+1
+ 597 01b2 8093 0000 		sts byte_low,r24
+ 215:exercicio_sm.c ****     
+ 216:exercicio_sm.c **** 
+ 217:exercicio_sm.c ****     
+ 218:exercicio_sm.c ****    // LED_PIN |= (1<<LED_PINNBR);
+ 219:exercicio_sm.c **** 
+ 220:exercicio_sm.c ****     
+ 221:exercicio_sm.c ****     
+ 222:exercicio_sm.c ****     if(!flag){
+ 598               		.stabn	68,0,222,.LM64-.LFBB8
+ 599               	.LM64:
+ 600 01b6 8091 0000 		lds r24,flag
+ 223:exercicio_sm.c ****         t1 = (byte_high<<8)|byte_low;
+ 601               		.stabn	68,0,223,.LM65-.LFBB8
+ 602               	.LM65:
+ 603 01ba 2091 0000 		lds r18,byte_high
+ 222:exercicio_sm.c ****         t1 = (byte_high<<8)|byte_low;
+ 604               		.stabn	68,0,222,.LM66-.LFBB8
+ 605               	.LM66:
+ 606 01be 8111      		cpse r24,__zero_reg__
+ 607 01c0 00C0      		rjmp .L33
+ 608               		.stabn	68,0,223,.LM67-.LFBB8
+ 609               	.LM67:
+ 610 01c2 8091 0000 		lds r24,byte_low
+ 611 01c6 90E0      		ldi r25,0
+ 612 01c8 922B      		or r25,r18
+ 613 01ca 9093 0000 		sts t1+1,r25
+ 614 01ce 8093 0000 		sts t1,r24
+ 224:exercicio_sm.c ****         flag = 1;
+ 615               		.stabn	68,0,224,.LM68-.LFBB8
+ 616               	.LM68:
+ 617 01d2 81E0      		ldi r24,lo8(1)
+ 618 01d4 8093 0000 		sts flag,r24
+ 225:exercicio_sm.c ****         return;
+ 619               		.stabn	68,0,225,.LM69-.LFBB8
+ 620               	.LM69:
+ 621 01d8 00C0      		rjmp .L32
+ 622               	.L33:
+ 226:exercicio_sm.c ****     }
+ 227:exercicio_sm.c ****     
+ 228:exercicio_sm.c ****     
+GAS LISTING /tmp/ccssgBNH.s 			page 16
+
+
+ 229:exercicio_sm.c ****     t2 = (byte_high<<8)|byte_low;
+ 623               		.stabn	68,0,229,.LM70-.LFBB8
+ 624               	.LM70:
+ 625 01da 8091 0000 		lds r24,byte_low
+ 626 01de 90E0      		ldi r25,0
+ 627 01e0 922B      		or r25,r18
+ 628 01e2 9093 0000 		sts t2+1,r25
+ 629 01e6 8093 0000 		sts t2,r24
+ 230:exercicio_sm.c ****     if (t2<t1)
+ 630               		.stabn	68,0,230,.LM71-.LFBB8
+ 631               	.LM71:
+ 632 01ea 2091 0000 		lds r18,t2
+ 633 01ee 3091 0000 		lds r19,t2+1
+ 634 01f2 8091 0000 		lds r24,t1
+ 635 01f6 9091 0000 		lds r25,t1+1
+ 636 01fa 2817      		cp r18,r24
+ 637 01fc 3907      		cpc r19,r25
+ 638 01fe 00F4      		brsh .L35
+ 231:exercicio_sm.c ****         delta = (1<<16)+t2-t1;
+ 639               		.stabn	68,0,231,.LM72-.LFBB8
+ 640               	.LM72:
+ 641 0200 8091 0000 		lds r24,t2
+ 642 0204 9091 0000 		lds r25,t2+1
+ 643 0208 2091 0000 		lds r18,t1
+ 644 020c 3091 0000 		lds r19,t1+1
+ 645 0210 821B      		sub r24,r18
+ 646 0212 930B      		sbc r25,r19
+ 647 0214 9093 0000 		sts delta+1,r25
+ 648 0218 8093 0000 		sts delta,r24
+ 649               	.L35:
+ 232:exercicio_sm.c ****     
+ 233:exercicio_sm.c ****     if (t1<t2)
+ 650               		.stabn	68,0,233,.LM73-.LFBB8
+ 651               	.LM73:
+ 652 021c 2091 0000 		lds r18,t1
+ 653 0220 3091 0000 		lds r19,t1+1
+ 654 0224 8091 0000 		lds r24,t2
+ 655 0228 9091 0000 		lds r25,t2+1
+ 234:exercicio_sm.c ****         delta = (uint32_t)(1<<16)+t2-t1;
+ 235:exercicio_sm.c ****     else
+ 236:exercicio_sm.c ****         delta = t2 - t1;
+ 656               		.stabn	68,0,236,.LM74-.LFBB8
+ 657               	.LM74:
+ 658 022c 8091 0000 		lds r24,t2
+ 659 0230 9091 0000 		lds r25,t2+1
+ 660 0234 2091 0000 		lds r18,t1
+ 661 0238 3091 0000 		lds r19,t1+1
+ 662 023c 821B      		sub r24,r18
+ 663 023e 930B      		sbc r25,r19
+ 664 0240 9093 0000 		sts delta+1,r25
+ 665 0244 8093 0000 		sts delta,r24
+ 237:exercicio_sm.c ****     
+ 238:exercicio_sm.c ****     if ((delta>14400)&&(delta<21600)&&!(TCCR1B&&(1<<ICES1)))
+ 666               		.stabn	68,0,238,.LM75-.LFBB8
+ 667               	.LM75:
+ 668 0248 8091 0000 		lds r24,delta
+ 669 024c 9091 0000 		lds r25,delta+1
+GAS LISTING /tmp/ccssgBNH.s 			page 17
+
+
+ 670 0250 8134      		cpi r24,65
+ 671 0252 9843      		sbci r25,56
+ 672 0254 00F0      		brlo .L38
+ 673               		.stabn	68,0,238,.LM76-.LFBB8
+ 674               	.LM76:
+ 675 0256 8091 0000 		lds r24,delta
+ 676 025a 9091 0000 		lds r25,delta+1
+ 677 025e 8036      		cpi r24,96
+ 678 0260 9445      		sbci r25,84
+ 679 0262 00F4      		brsh .L38
+ 680               		.stabn	68,0,238,.LM77-.LFBB8
+ 681               	.LM77:
+ 682 0264 8091 8100 		lds r24,129
+ 683 0268 8111      		cpse r24,__zero_reg__
+ 684 026a 00C0      		rjmp .L38
+ 239:exercicio_sm.c ****         events |= EVENT1;
+ 685               		.stabn	68,0,239,.LM78-.LFBB8
+ 686               	.LM78:
+ 687 026c 8091 0000 		lds r24,events
+ 688 0270 9091 0000 		lds r25,events+1
+ 689 0274 8260      		ori r24,2
+ 690 0276 00C0      		rjmp .L60
+ 691               	.L38:
+ 240:exercicio_sm.c ****     else if ((delta>7200)&&(delta<10800)&&(TCCR1B&&(1<<ICES1)))
+ 692               		.stabn	68,0,240,.LM79-.LFBB8
+ 693               	.LM79:
+ 694 0278 8091 0000 		lds r24,delta
+ 695 027c 9091 0000 		lds r25,delta+1
+ 696 0280 8132      		cpi r24,33
+ 697 0282 9C41      		sbci r25,28
+ 698 0284 00F0      		brlo .L40
+ 699               		.stabn	68,0,240,.LM80-.LFBB8
+ 700               	.LM80:
+ 701 0286 8091 0000 		lds r24,delta
+ 702 028a 9091 0000 		lds r25,delta+1
+ 703 028e 8033      		cpi r24,48
+ 704 0290 9A42      		sbci r25,42
+ 705 0292 00F4      		brsh .L40
+ 706               		.stabn	68,0,240,.LM81-.LFBB8
+ 707               	.LM81:
+ 708 0294 8091 8100 		lds r24,129
+ 709 0298 8823      		tst r24
+ 710 029a 01F0      		breq .L40
+ 241:exercicio_sm.c ****         events |= EVENT2;
+ 711               		.stabn	68,0,241,.LM82-.LFBB8
+ 712               	.LM82:
+ 713 029c 8091 0000 		lds r24,events
+ 714 02a0 9091 0000 		lds r25,events+1
+ 715 02a4 8460      		ori r24,4
+ 716 02a6 00C0      		rjmp .L60
+ 717               	.L40:
+ 242:exercicio_sm.c ****     else if ((delta>1760)&&(delta<2640)&&!(TCCR1B&&(1<<ICES1)))
+ 718               		.stabn	68,0,242,.LM83-.LFBB8
+ 719               	.LM83:
+ 720 02a8 8091 0000 		lds r24,delta
+ 721 02ac 9091 0000 		lds r25,delta+1
+ 722 02b0 813E      		cpi r24,-31
+GAS LISTING /tmp/ccssgBNH.s 			page 18
+
+
+ 723 02b2 9640      		sbci r25,6
+ 724 02b4 00F0      		brlo .L41
+ 725               		.stabn	68,0,242,.LM84-.LFBB8
+ 726               	.LM84:
+ 727 02b6 8091 0000 		lds r24,delta
+ 728 02ba 9091 0000 		lds r25,delta+1
+ 729 02be 8035      		cpi r24,80
+ 730 02c0 9A40      		sbci r25,10
+ 731 02c2 00F4      		brsh .L41
+ 732               		.stabn	68,0,242,.LM85-.LFBB8
+ 733               	.LM85:
+ 734 02c4 8091 8100 		lds r24,129
+ 735 02c8 8111      		cpse r24,__zero_reg__
+ 736 02ca 00C0      		rjmp .L41
+ 243:exercicio_sm.c ****         events |= EVENT3;
+ 737               		.stabn	68,0,243,.LM86-.LFBB8
+ 738               	.LM86:
+ 739 02cc 8091 0000 		lds r24,events
+ 740 02d0 9091 0000 		lds r25,events+1
+ 741 02d4 8860      		ori r24,8
+ 742 02d6 00C0      		rjmp .L60
+ 743               	.L41:
+ 244:exercicio_sm.c ****     else if ((delta>1760)&&(delta<2640)&&(TCCR1B&&(1<<ICES1)))
+ 744               		.stabn	68,0,244,.LM87-.LFBB8
+ 745               	.LM87:
+ 746 02d8 8091 0000 		lds r24,delta
+ 747 02dc 9091 0000 		lds r25,delta+1
+ 748 02e0 813E      		cpi r24,-31
+ 749 02e2 9640      		sbci r25,6
+ 750 02e4 00F0      		brlo .L42
+ 751               		.stabn	68,0,244,.LM88-.LFBB8
+ 752               	.LM88:
+ 753 02e6 8091 0000 		lds r24,delta
+ 754 02ea 9091 0000 		lds r25,delta+1
+ 755 02ee 8035      		cpi r24,80
+ 756 02f0 9A40      		sbci r25,10
+ 757 02f2 00F4      		brsh .L42
+ 758               		.stabn	68,0,244,.LM89-.LFBB8
+ 759               	.LM89:
+ 760 02f4 8091 8100 		lds r24,129
+ 761 02f8 8823      		tst r24
+ 762 02fa 01F0      		breq .L42
+ 245:exercicio_sm.c ****         events |= EVENT4;
+ 763               		.stabn	68,0,245,.LM90-.LFBB8
+ 764               	.LM90:
+ 765 02fc 8091 0000 		lds r24,events
+ 766 0300 9091 0000 		lds r25,events+1
+ 767 0304 8061      		ori r24,16
+ 768 0306 00C0      		rjmp .L60
+ 769               	.L42:
+ 246:exercicio_sm.c ****     else if ((delta>800)&&(delta<1200)&&(TCCR1B&&(1<<ICES1)))
+ 770               		.stabn	68,0,246,.LM91-.LFBB8
+ 771               	.LM91:
+ 772 0308 8091 0000 		lds r24,delta
+ 773 030c 9091 0000 		lds r25,delta+1
+ 774 0310 8132      		cpi r24,33
+ 775 0312 9340      		sbci r25,3
+GAS LISTING /tmp/ccssgBNH.s 			page 19
+
+
+ 776 0314 00F0      		brlo .L43
+ 777               		.stabn	68,0,246,.LM92-.LFBB8
+ 778               	.LM92:
+ 779 0316 8091 0000 		lds r24,delta
+ 780 031a 9091 0000 		lds r25,delta+1
+ 781 031e 803B      		cpi r24,-80
+ 782 0320 9440      		sbci r25,4
+ 783 0322 00F4      		brsh .L43
+ 784               		.stabn	68,0,246,.LM93-.LFBB8
+ 785               	.LM93:
+ 786 0324 8091 8100 		lds r24,129
+ 787 0328 8823      		tst r24
+ 788 032a 01F0      		breq .L43
+ 247:exercicio_sm.c ****         events |= EVENT5;
+ 789               		.stabn	68,0,247,.LM94-.LFBB8
+ 790               	.LM94:
+ 791 032c 8091 0000 		lds r24,events
+ 792 0330 9091 0000 		lds r25,events+1
+ 793 0334 8062      		ori r24,32
+ 794 0336 00C0      		rjmp .L60
+ 795               	.L43:
+ 248:exercicio_sm.c ****     else if ((delta>40000)&&(delta<60000)&&(TCCR1B&&(1<<ICES1)))
+ 796               		.stabn	68,0,248,.LM95-.LFBB8
+ 797               	.LM95:
+ 798 0338 8091 0000 		lds r24,delta
+ 799 033c 9091 0000 		lds r25,delta+1
+ 800 0340 8134      		cpi r24,65
+ 801 0342 9C49      		sbci r25,-100
+ 802 0344 00F0      		brlo .L44
+ 803               		.stabn	68,0,248,.LM96-.LFBB8
+ 804               	.LM96:
+ 805 0346 8091 0000 		lds r24,delta
+ 806 034a 9091 0000 		lds r25,delta+1
+ 807 034e 8036      		cpi r24,96
+ 808 0350 9A4E      		sbci r25,-22
+ 809 0352 00F4      		brsh .L44
+ 810               		.stabn	68,0,248,.LM97-.LFBB8
+ 811               	.LM97:
+ 812 0354 8091 8100 		lds r24,129
+ 813 0358 8823      		tst r24
+ 814 035a 01F0      		breq .L44
+ 249:exercicio_sm.c ****         events |= EVENT6;
+ 815               		.stabn	68,0,249,.LM98-.LFBB8
+ 816               	.LM98:
+ 817 035c 8091 0000 		lds r24,events
+ 818 0360 9091 0000 		lds r25,events+1
+ 819 0364 8064      		ori r24,64
+ 820 0366 00C0      		rjmp .L60
+ 821               	.L44:
+ 250:exercicio_sm.c ****     else if ((delta>62000)&&(TCCR1B&&(1<<ICES1)))
+ 822               		.stabn	68,0,250,.LM99-.LFBB8
+ 823               	.LM99:
+ 824 0368 8091 0000 		lds r24,delta
+ 825 036c 9091 0000 		lds r25,delta+1
+ 826 0370 8133      		cpi r24,49
+ 827 0372 924F      		sbci r25,-14
+ 828 0374 00F0      		brlo .L39
+GAS LISTING /tmp/ccssgBNH.s 			page 20
+
+
+ 829               		.stabn	68,0,250,.LM100-.LFBB8
+ 830               	.LM100:
+ 831 0376 8091 8100 		lds r24,129
+ 832 037a 8823      		tst r24
+ 833 037c 01F0      		breq .L39
+ 251:exercicio_sm.c ****         events |= EVENT7;
+ 834               		.stabn	68,0,251,.LM101-.LFBB8
+ 835               	.LM101:
+ 836 037e 8091 0000 		lds r24,events
+ 837 0382 9091 0000 		lds r25,events+1
+ 838 0386 8068      		ori r24,128
+ 839               	.L60:
+ 840 0388 9093 0000 		sts events+1,r25
+ 841 038c 8093 0000 		sts events,r24
+ 842               	.L39:
+ 252:exercicio_sm.c ****     
+ 253:exercicio_sm.c ****     
+ 254:exercicio_sm.c ****     
+ 255:exercicio_sm.c ****     t1 = t2;
+ 843               		.stabn	68,0,255,.LM102-.LFBB8
+ 844               	.LM102:
+ 845 0390 8091 0000 		lds r24,t2
+ 846 0394 9091 0000 		lds r25,t2+1
+ 847 0398 9093 0000 		sts t1+1,r25
+ 848 039c 8093 0000 		sts t1,r24
+ 256:exercicio_sm.c ****     flag = 0;
+ 849               		.stabn	68,0,256,.LM103-.LFBB8
+ 850               	.LM103:
+ 851 03a0 1092 0000 		sts flag,__zero_reg__
+ 852               	.L32:
+ 853               	/* epilogue start */
+ 257:exercicio_sm.c **** }
+ 854               		.stabn	68,0,257,.LM104-.LFBB8
+ 855               	.LM104:
+ 856 03a4 9F91      		pop r25
+ 857 03a6 8F91      		pop r24
+ 858 03a8 3F91      		pop r19
+ 859 03aa 2F91      		pop r18
+ 860 03ac 0F90      		pop r0
+ 861 03ae 0FBE      		out __SREG__,r0
+ 862 03b0 0F90      		pop r0
+ 863 03b2 1F90      		pop r1
+ 864 03b4 1895      		reti
+ 865               		.size	__vector_10, .-__vector_10
+ 866               	.Lscope8:
+ 867               		.stabs	"",36,0,0,.Lscope8-.LFBB8
+ 868               		.stabd	78,0,0
+ 869               		.section	.text.startup,"ax",@progbits
+ 870               		.stabs	"main:F(0,1)",36,0,278,main
+ 871               	.global	main
+ 872               		.type	main, @function
+ 873               	main:
+ 874               		.stabd	46,0,0
+ 258:exercicio_sm.c **** 
+ 259:exercicio_sm.c **** 
+ 260:exercicio_sm.c **** 
+ 261:exercicio_sm.c **** 
+GAS LISTING /tmp/ccssgBNH.s 			page 21
+
+
+ 262:exercicio_sm.c **** 
+ 263:exercicio_sm.c **** 
+ 264:exercicio_sm.c **** 
+ 265:exercicio_sm.c **** typedef enum{
+ 266:exercicio_sm.c ****     
+ 267:exercicio_sm.c ****     estado1 = 0, estado2, estado3, estado4
+ 268:exercicio_sm.c **** 
+ 269:exercicio_sm.c **** }estados;
+ 270:exercicio_sm.c **** 
+ 271:exercicio_sm.c **** typedef enum{
+ 272:exercicio_sm.c ****     saida1 = 0, saida2, saida3, saida4
+ 273:exercicio_sm.c **** }saidas;
+ 274:exercicio_sm.c **** 
+ 275:exercicio_sm.c **** 
+ 276:exercicio_sm.c **** 
+ 277:exercicio_sm.c **** 
+ 278:exercicio_sm.c **** int main(){
+ 875               		.stabn	68,0,278,.LM105-.LFBB9
+ 876               	.LM105:
+ 877               	.LFBB9:
+ 878               	/* prologue: function */
+ 879               	/* frame size = 0 */
+ 880               	/* stack size = 0 */
+ 881               	.L__stack_usage = 0
+ 279:exercicio_sm.c **** 
+ 280:exercicio_sm.c ****     estados state = estado1;
+ 882               		.stabn	68,0,280,.LM106-.LFBB9
+ 883               	.LM106:
+ 884 0000 C0E0      		ldi r28,0
+ 885               	.L71:
+ 281:exercicio_sm.c ****     
+ 282:exercicio_sm.c ****     //inputs input = input1, input2, input3, input4, input5, input6, input7;
+ 283:exercicio_sm.c ****     saidas saida;
+ 284:exercicio_sm.c ****     
+ 285:exercicio_sm.c ****    while(1){
+ 286:exercicio_sm.c ****             
+ 287:exercicio_sm.c ****             events = wait_for_events();
+ 886               		.stabn	68,0,287,.LM107-.LFBB9
+ 887               	.LM107:
+ 888 0002 0E94 0000 		call wait_for_events
+ 889 0006 9093 0000 		sts events+1,r25
+ 890 000a 8093 0000 		sts events,r24
+ 288:exercicio_sm.c ****             
+ 289:exercicio_sm.c ****             switch(state){
+ 891               		.stabn	68,0,289,.LM108-.LFBB9
+ 892               	.LM108:
+ 893 000e C130      		cpi r28,lo8(1)
+ 894 0010 01F0      		breq .L63
+ 895 0012 00F0      		brlo .L64
+ 896 0014 C230      		cpi r28,lo8(2)
+ 897 0016 01F0      		breq .L65
+ 898 0018 C330      		cpi r28,lo8(3)
+ 899 001a 01F0      		breq .L66
+ 900 001c 00C0      		rjmp .L62
+ 901               	.L64:
+ 290:exercicio_sm.c ****                 
+ 291:exercicio_sm.c ****                 case estado1:
+GAS LISTING /tmp/ccssgBNH.s 			page 22
+
+
+ 292:exercicio_sm.c ****                     switch (events){
+ 902               		.stabn	68,0,292,.LM109-.LFBB9
+ 903               	.LM109:
+ 904 001e 8091 0000 		lds r24,events
+ 905 0022 9091 0000 		lds r25,events+1
+ 906 0026 0297      		sbiw r24,2
+ 907 0028 01F4      		brne .L62
+ 293:exercicio_sm.c ****                         case EVENT1:{
+ 294:exercicio_sm.c ****                             state = estado2;
+ 908               		.stabn	68,0,294,.LM110-.LFBB9
+ 909               	.LM110:
+ 910 002a C1E0      		ldi r28,lo8(1)
+ 911 002c 00C0      		rjmp .L62
+ 912               	.L63:
+ 295:exercicio_sm.c ****                             break;
+ 296:exercicio_sm.c ****                     }
+ 297:exercicio_sm.c ****                         default:
+ 298:exercicio_sm.c ****                             {
+ 299:exercicio_sm.c ****                                 state = estado1;
+ 300:exercicio_sm.c ****                                 break;
+ 301:exercicio_sm.c ****                             }
+ 302:exercicio_sm.c ****                     }       
+ 303:exercicio_sm.c ****                     break;
+ 304:exercicio_sm.c ****                 
+ 305:exercicio_sm.c ****                 
+ 306:exercicio_sm.c ****                     
+ 307:exercicio_sm.c ****                 case estado2:
+ 308:exercicio_sm.c ****                     switch (events){
+ 913               		.stabn	68,0,308,.LM111-.LFBB9
+ 914               	.LM111:
+ 915 002e 8091 0000 		lds r24,events
+ 916 0032 9091 0000 		lds r25,events+1
+ 917 0036 0497      		sbiw r24,4
+ 918 0038 01F0      		breq .L75
+ 919 003a 00C0      		rjmp .L86
+ 920               	.L65:
+ 309:exercicio_sm.c ****                         case EVENT2:{
+ 310:exercicio_sm.c ****                             state = estado3;
+ 311:exercicio_sm.c ****                             break;
+ 312:exercicio_sm.c ****                     }
+ 313:exercicio_sm.c ****                         default:
+ 314:exercicio_sm.c ****                             {
+ 315:exercicio_sm.c ****                                 state = estado1;
+ 316:exercicio_sm.c ****                                 break;
+ 317:exercicio_sm.c ****                             }
+ 318:exercicio_sm.c ****                     }       
+ 319:exercicio_sm.c ****                     break;
+ 320:exercicio_sm.c ****                 
+ 321:exercicio_sm.c ****                 
+ 322:exercicio_sm.c ****                 
+ 323:exercicio_sm.c ****                 case estado3:
+ 324:exercicio_sm.c ****                     switch (events){
+ 921               		.stabn	68,0,324,.LM112-.LFBB9
+ 922               	.LM112:
+ 923 003c 8091 0000 		lds r24,events
+ 924 0040 9091 0000 		lds r25,events+1
+ 925 0044 0897      		sbiw r24,8
+GAS LISTING /tmp/ccssgBNH.s 			page 23
+
+
+ 926 0046 01F0      		breq .L74
+ 927 0048 00C0      		rjmp .L86
+ 928               	.L66:
+ 325:exercicio_sm.c ****                         case EVENT3:{
+ 326:exercicio_sm.c ****                             state = estado4;
+ 327:exercicio_sm.c ****                             break;
+ 328:exercicio_sm.c ****                     }
+ 329:exercicio_sm.c ****                         default:
+ 330:exercicio_sm.c ****                             {
+ 331:exercicio_sm.c ****                                 state = estado1;
+ 332:exercicio_sm.c ****                                 break;
+ 333:exercicio_sm.c ****                             }
+ 334:exercicio_sm.c ****                     }       
+ 335:exercicio_sm.c ****                     break;
+ 336:exercicio_sm.c ****                 
+ 337:exercicio_sm.c ****                 
+ 338:exercicio_sm.c ****                     
+ 339:exercicio_sm.c ****                 case estado4:
+ 340:exercicio_sm.c ****                     switch (events){
+ 929               		.stabn	68,0,340,.LM113-.LFBB9
+ 930               	.LM113:
+ 931 004a 8091 0000 		lds r24,events
+ 932 004e 9091 0000 		lds r25,events+1
+ 933 0052 8032      		cpi r24,32
+ 934 0054 9105      		cpc r25,__zero_reg__
+ 935 0056 01F0      		breq .L75
+ 936 0058 8034      		cpi r24,64
+ 937 005a 9105      		cpc r25,__zero_reg__
+ 938 005c 01F0      		breq .L75
+ 939 005e 4097      		sbiw r24,16
+ 940 0060 01F0      		breq .L75
+ 941               	.L86:
+ 341:exercicio_sm.c ****                         case EVENT4:{
+ 342:exercicio_sm.c ****                             state = estado3;
+ 343:exercicio_sm.c ****                             saida = saida1;
+ 344:exercicio_sm.c ****                             break;
+ 345:exercicio_sm.c ****                     }
+ 346:exercicio_sm.c ****                         case EVENT5:{
+ 347:exercicio_sm.c ****                             state = estado3;
+ 348:exercicio_sm.c ****                             saida = saida2;
+ 349:exercicio_sm.c ****                             break;
+ 350:exercicio_sm.c ****                         }
+ 351:exercicio_sm.c ****                         case EVENT6:{
+ 352:exercicio_sm.c ****                             state = estado3;
+ 353:exercicio_sm.c ****                             saida = saida3;
+ 354:exercicio_sm.c ****                             break;
+ 355:exercicio_sm.c ****                         }
+ 356:exercicio_sm.c ****                         case EVENT7:{
+ 357:exercicio_sm.c ****                             state = estado1;
+ 942               		.stabn	68,0,357,.LM114-.LFBB9
+ 943               	.LM114:
+ 944 0062 C0E0      		ldi r28,0
+ 945 0064 00C0      		rjmp .L62
+ 946               	.L74:
+ 326:exercicio_sm.c ****                             break;
+ 947               		.stabn	68,0,326,.LM115-.LFBB9
+ 948               	.LM115:
+GAS LISTING /tmp/ccssgBNH.s 			page 24
+
+
+ 949 0066 C3E0      		ldi r28,lo8(3)
+ 950 0068 00C0      		rjmp .L62
+ 951               	.L75:
+ 342:exercicio_sm.c ****                             saida = saida1;
+ 952               		.stabn	68,0,342,.LM116-.LFBB9
+ 953               	.LM116:
+ 954 006a C2E0      		ldi r28,lo8(2)
+ 955               	.L62:
+ 358:exercicio_sm.c ****                             saida = saida4;
+ 359:exercicio_sm.c ****                             break;
+ 360:exercicio_sm.c ****                         }
+ 361:exercicio_sm.c ****                         
+ 362:exercicio_sm.c ****                         default:
+ 363:exercicio_sm.c ****                             {
+ 364:exercicio_sm.c ****                             state = estado1;
+ 365:exercicio_sm.c ****                             break;
+ 366:exercicio_sm.c ****                             }
+ 367:exercicio_sm.c ****                     }       
+ 368:exercicio_sm.c ****                     break;
+ 369:exercicio_sm.c ****                 
+ 370:exercicio_sm.c ****                 
+ 371:exercicio_sm.c ****                 
+ 372:exercicio_sm.c ****             }
+ 373:exercicio_sm.c ****             
+ 374:exercicio_sm.c ****             
+ 375:exercicio_sm.c ****             write(state);
+ 956               		.stabn	68,0,375,.LM117-.LFBB9
+ 957               	.LM117:
+ 958 006c 8C2F      		mov r24,r28
+ 959 006e 0E94 0000 		call write
+ 376:exercicio_sm.c ****     
+ 377:exercicio_sm.c ****     //chave do while
+ 378:exercicio_sm.c ****    }
+ 960               		.stabn	68,0,378,.LM118-.LFBB9
+ 961               	.LM118:
+ 962 0072 00C0      		rjmp .L71
+ 963               		.size	main, .-main
+ 964               		.stabs	"state:r(0,51)",64,0,280,28
+ 965               		.stabn	192,0,0,.LFBB9-.LFBB9
+ 966               		.stabn	224,0,0,.Lscope9-.LFBB9
+ 967               	.Lscope9:
+ 968               		.stabs	"",36,0,0,.Lscope9-.LFBB9
+ 969               		.stabd	78,0,0
+ 970               	.global	flag
+ 971               		.section .bss
+ 972               		.type	flag, @object
+ 973               		.size	flag, 1
+ 974               	flag:
+ 975 0000 00        		.zero	1
+ 976               		.comm	temp,4,1
+ 977               		.comm	delta,2,1
+ 978               		.comm	t1,2,1
+ 979               		.comm	t2,2,1
+ 980               		.comm	byte_geral,2,1
+ 981               	.global	byte_low
+ 982               		.type	byte_low, @object
+ 983               		.size	byte_low, 1
+GAS LISTING /tmp/ccssgBNH.s 			page 25
+
+
+ 984               	byte_low:
+ 985 0001 00        		.zero	1
+ 986               	.global	byte_high
+ 987               		.type	byte_high, @object
+ 988               		.size	byte_high, 1
+ 989               	byte_high:
+ 990 0002 00        		.zero	1
+ 991               	.global	usart_transmitting
+ 992               		.type	usart_transmitting, @object
+ 993               		.size	usart_transmitting, 1
+ 994               	usart_transmitting:
+ 995 0003 00        		.zero	1
+ 996               		.comm	tx_tail,1,1
+ 997               		.comm	tx_head,1,1
+ 998               		.comm	tx_buffer,40,1
+ 999               		.comm	events,2,1
+ 1000               		.stabs	"events:G(0,54)=B(0,48)",32,0,22,0
+ 1001               		.stabs	"tx_buffer:G(0,55)=ar(0,56)=r(0,56);0;0177777;;0;19;(5,4)",32,0,93,0
+ 1002               		.stabs	"tx_head:G(5,2)",32,0,94,0
+ 1003               		.stabs	"tx_tail:G(5,2)",32,0,94,0
+ 1004               		.stabs	"usart_transmitting:G(5,2)",32,0,95,0
+ 1005               		.stabs	"byte_high:G(0,57)=B(5,2)",32,0,169,0
+ 1006               		.stabs	"byte_low:G(0,57)",32,0,170,0
+ 1007               		.stabs	"byte_geral:G(0,58)=B(5,4)",32,0,171,0
+ 1008               		.stabs	"t2:G(0,58)",32,0,171,0
+ 1009               		.stabs	"t1:G(0,58)",32,0,171,0
+ 1010               		.stabs	"delta:G(0,58)",32,0,171,0
+ 1011               		.stabs	"temp:G(0,59)=B(5,6)",32,0,172,0
+ 1012               		.stabs	"flag:G(0,57)",32,0,176,0
+ 1013               		.text
+ 1014               		.stabs	"",100,0,0,.Letext0
+ 1015               	.Letext0:
+ 1016               		.ident	"GCC: (GNU) 4.9.2"
+ 1017               	.global __do_clear_bss
+GAS LISTING /tmp/ccssgBNH.s 			page 26
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 exercicio_sm.c
+     /tmp/ccssgBNH.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccssgBNH.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccssgBNH.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccssgBNH.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccssgBNH.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccssgBNH.s:121    .text:0000000000000000 setup_main
+     /tmp/ccssgBNH.s:154    .text:000000000000000a setup_usart
+     /tmp/ccssgBNH.s:197    .text:000000000000002c delay_ms
+     /tmp/ccssgBNH.s:252    .text:000000000000004a write
+     /tmp/ccssgBNH.s:994    .bss:0000000000000003 usart_transmitting
+                            *COM*:0000000000000001 tx_head
+                            *COM*:0000000000000001 tx_tail
+                            *COM*:0000000000000028 tx_buffer
+     /tmp/ccssgBNH.s:359    .text:00000000000000a0 __vector_19
+     /tmp/ccssgBNH.s:432    .text:0000000000000100 wait_for_events
+                            *COM*:0000000000000002 events
+     /tmp/ccssgBNH.s:523    .text:000000000000015c setup_timer1
+     /tmp/ccssgBNH.s:558    .text:0000000000000170 __vector_10
+                            *COM*:0000000000000002 byte_geral
+     /tmp/ccssgBNH.s:989    .bss:0000000000000002 byte_high
+     /tmp/ccssgBNH.s:984    .bss:0000000000000001 byte_low
+     /tmp/ccssgBNH.s:974    .bss:0000000000000000 flag
+                            *COM*:0000000000000002 t1
+                            *COM*:0000000000000002 t2
+                            *COM*:0000000000000002 delta
+     /tmp/ccssgBNH.s:873    .text.startup:0000000000000000 main
+                            *COM*:0000000000000004 temp
+
+UNDEFINED SYMBOLS
+__do_clear_bss

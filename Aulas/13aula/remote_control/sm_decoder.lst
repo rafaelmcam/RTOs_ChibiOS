@@ -1,0 +1,947 @@
+GAS LISTING /tmp/cc1dU6OL.s 			page 1
+
+
+   1               		.file	"sm_decoder.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.stabs	"/home/aluno/RTOs - N apagar, \343\201\217\343\201\240\343\201\225\343\201\204/13aula/remot
+   8               		.stabs	"sm_decoder.c",100,0,2,.Ltext0
+   9               		.text
+  10               	.Ltext0:
+  11               		.stabs	"gcc2_compiled.",60,0,0,0
+  12               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  13               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  14               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  15               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  16               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  17               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  18               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,0,0
+  19               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  20               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,0,0
+  21               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  22               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  23               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  24               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  25               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"short _Fract:t(0,15)=r(0,1);1;0;",128,0,0,0
+  27               		.stabs	"_Fract:t(0,16)=r(0,1);2;0;",128,0,0,0
+  28               		.stabs	"long _Fract:t(0,17)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"long long _Fract:t(0,18)=r(0,1);8;0;",128,0,0,0
+  30               		.stabs	"unsigned short _Fract:t(0,19)=r(0,1);1;0;",128,0,0,0
+  31               		.stabs	"unsigned _Fract:t(0,20)=r(0,1);2;0;",128,0,0,0
+  32               		.stabs	"unsigned long _Fract:t(0,21)=r(0,1);4;0;",128,0,0,0
+  33               		.stabs	"unsigned long long _Fract:t(0,22)=r(0,1);8;0;",128,0,0,0
+  34               		.stabs	"_Sat short _Fract:t(0,23)=r(0,1);1;0;",128,0,0,0
+  35               		.stabs	"_Sat _Fract:t(0,24)=r(0,1);2;0;",128,0,0,0
+  36               		.stabs	"_Sat long _Fract:t(0,25)=r(0,1);4;0;",128,0,0,0
+  37               		.stabs	"_Sat long long _Fract:t(0,26)=r(0,1);8;0;",128,0,0,0
+  38               		.stabs	"_Sat unsigned short _Fract:t(0,27)=r(0,1);1;0;",128,0,0,0
+  39               		.stabs	"_Sat unsigned _Fract:t(0,28)=r(0,1);2;0;",128,0,0,0
+  40               		.stabs	"_Sat unsigned long _Fract:t(0,29)=r(0,1);4;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned long long _Fract:t(0,30)=r(0,1);8;0;",128,0,0,0
+  42               		.stabs	"short _Accum:t(0,31)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Accum:t(0,32)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"long _Accum:t(0,33)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"long long _Accum:t(0,34)=r(0,1);8;0;",128,0,0,0
+  46               		.stabs	"unsigned short _Accum:t(0,35)=r(0,1);2;0;",128,0,0,0
+  47               		.stabs	"unsigned _Accum:t(0,36)=r(0,1);4;0;",128,0,0,0
+  48               		.stabs	"unsigned long _Accum:t(0,37)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned long long _Accum:t(0,38)=r(0,1);8;0;",128,0,0,0
+  50               		.stabs	"_Sat short _Accum:t(0,39)=r(0,1);2;0;",128,0,0,0
+  51               		.stabs	"_Sat _Accum:t(0,40)=r(0,1);4;0;",128,0,0,0
+  52               		.stabs	"_Sat long _Accum:t(0,41)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat long long _Accum:t(0,42)=r(0,1);8;0;",128,0,0,0
+  54               		.stabs	"_Sat unsigned short _Accum:t(0,43)=r(0,1);2;0;",128,0,0,0
+  55               		.stabs	"_Sat unsigned _Accum:t(0,44)=r(0,1);4;0;",128,0,0,0
+  56               		.stabs	"_Sat unsigned long _Accum:t(0,45)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned long long _Accum:t(0,46)=r(0,1);8;0;",128,0,0,0
+GAS LISTING /tmp/cc1dU6OL.s 			page 2
+
+
+  58               		.stabs	"void:t(0,47)=(0,47)",128,0,0,0
+  59               		.stabs	"timer.h",130,0,0,0
+  60               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+  61               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
+  62               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  63               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stdint.h",130,0,0,0
+  64               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  65               		.stabs	"int8_t:t(6,1)=(0,10)",128,0,121,0
+  66               		.stabs	"uint8_t:t(6,2)=(0,11)",128,0,122,0
+  67               		.stabs	"int16_t:t(6,3)=(0,1)",128,0,123,0
+  68               		.stabs	"uint16_t:t(6,4)=(0,4)",128,0,124,0
+  69               		.stabs	"int32_t:t(6,5)=(0,3)",128,0,125,0
+  70               		.stabs	"uint32_t:t(6,6)=(0,5)",128,0,126,0
+  71               		.stabs	"int64_t:t(6,7)=(0,6)",128,0,128,0
+  72               		.stabs	"uint64_t:t(6,8)=(0,7)",128,0,129,0
+  73               		.stabs	"intptr_t:t(6,9)=(6,3)",128,0,142,0
+  74               		.stabs	"uintptr_t:t(6,10)=(6,4)",128,0,147,0
+  75               		.stabs	"int_least8_t:t(6,11)=(6,1)",128,0,159,0
+  76               		.stabs	"uint_least8_t:t(6,12)=(6,2)",128,0,164,0
+  77               		.stabs	"int_least16_t:t(6,13)=(6,3)",128,0,169,0
+  78               		.stabs	"uint_least16_t:t(6,14)=(6,4)",128,0,174,0
+  79               		.stabs	"int_least32_t:t(6,15)=(6,5)",128,0,179,0
+  80               		.stabs	"uint_least32_t:t(6,16)=(6,6)",128,0,184,0
+  81               		.stabs	"int_least64_t:t(6,17)=(6,7)",128,0,192,0
+  82               		.stabs	"uint_least64_t:t(6,18)=(6,8)",128,0,199,0
+  83               		.stabs	"int_fast8_t:t(6,19)=(6,1)",128,0,213,0
+  84               		.stabs	"uint_fast8_t:t(6,20)=(6,2)",128,0,218,0
+  85               		.stabs	"int_fast16_t:t(6,21)=(6,3)",128,0,223,0
+  86               		.stabs	"uint_fast16_t:t(6,22)=(6,4)",128,0,228,0
+  87               		.stabs	"int_fast32_t:t(6,23)=(6,5)",128,0,233,0
+  88               		.stabs	"uint_fast32_t:t(6,24)=(6,6)",128,0,238,0
+  89               		.stabs	"int_fast64_t:t(6,25)=(6,7)",128,0,246,0
+  90               		.stabs	"uint_fast64_t:t(6,26)=(6,8)",128,0,253,0
+  91               		.stabs	"intmax_t:t(6,27)=(6,7)",128,0,273,0
+  92               		.stabs	"uintmax_t:t(6,28)=(6,8)",128,0,278,0
+  93               		.stabn	162,0,0,0
+  94               		.stabn	162,0,0,0
+  95               		.stabs	"int_farptr_t:t(4,1)=(6,5)",128,0,77,0
+  96               		.stabs	"uint_farptr_t:t(4,2)=(6,6)",128,0,81,0
+  97               		.stabn	162,0,0,0
+  98               		.stabn	162,0,0,0
+  99               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+ 100               		.stabs	"__fuse_t:t(7,1)=(7,2)=s3low:(0,11),0,8;high:(0,11),8,8;extended:(0,11),16,8;;",128,0,244,0
+ 101               		.stabn	162,0,0,0
+ 102               		.stabn	162,0,0,0
+ 103               		.stabn	162,0,0,0
+ 104               		.stabs	"event.h",130,0,0,0
+ 105               		.stabs	"event_t:t(8,1)=(6,4)",128,0,6,0
+ 106               		.stabs	" :T(8,2)=eEVENT0:1,EVENT1:2,EVENT2:4,EVENT3:8,EVENT4:16,EVENT5:32,EVENT6:64,EVENT7:128,EVE
+ 107               		.stabn	162,0,0,0
+ 108               		.stabs	"sm.h",130,0,0,0
+ 109               		.stabs	"cb_t:t(9,1)=(9,2)=*(9,3)=f(0,47)",128,0,6,0
+ 110               		.stabs	"state_t:t(9,4)=(6,2)",128,0,7,0
+ 111               		.stabn	162,0,0,0
+ 112               		.stabs	" :T(0,48)=@s8;eS1:0,S2:1,S3:2,S4:3,MAX_STATES:4,;",128,0,0,0
+ 113               		.stabs	"write_byte:F(0,47)",36,0,9,write_byte
+ 114               		.stabs	"n:P(6,2)",64,0,9,28
+GAS LISTING /tmp/cc1dU6OL.s 			page 3
+
+
+ 115               	.global	write_byte
+ 116               		.type	write_byte, @function
+ 117               	write_byte:
+ 118               		.stabd	46,0,0
+   1:sm_decoder.c  **** #include "timer.h"
+   2:sm_decoder.c  **** #include "usart.h"
+   3:sm_decoder.c  **** #include "event.h"
+   4:sm_decoder.c  **** #include "sm.h"
+   5:sm_decoder.c  **** #include "sm_decoder.h"
+   6:sm_decoder.c  **** #include "debug.h"
+   7:sm_decoder.c  **** 
+   8:sm_decoder.c  **** 
+   9:sm_decoder.c  **** void write_byte(uint8_t n)
+  10:sm_decoder.c  **** {
+ 119               		.stabn	68,0,10,.LM0-.LFBB1
+ 120               	.LM0:
+ 121               	.LFBB1:
+ 122 0000 CF93      		push r28
+ 123               	/* prologue: function */
+ 124               	/* frame size = 0 */
+ 125               	/* stack size = 1 */
+ 126               	.L__stack_usage = 1
+ 127 0002 C82F      		mov r28,r24
+  11:sm_decoder.c  **** 	uint8_t tmp;
+  12:sm_decoder.c  **** 
+  13:sm_decoder.c  **** 	tmp = (n >> 4) & 0xF;
+ 128               		.stabn	68,0,13,.LM1-.LFBB1
+ 129               	.LM1:
+ 130 0004 8295      		swap r24
+ 131 0006 8F70      		andi r24,lo8(15)
+  14:sm_decoder.c  **** 	write(tmp + (tmp > 9 ? 'A' - 10 : '0'));
+ 132               		.stabn	68,0,14,.LM2-.LFBB1
+ 133               	.LM2:
+ 134 0008 8A30      		cpi r24,lo8(10)
+ 135 000a 00F4      		brsh .L4
+ 136 000c 90E3      		ldi r25,lo8(48)
+ 137 000e 00C0      		rjmp .L2
+ 138               	.L4:
+ 139 0010 97E3      		ldi r25,lo8(55)
+ 140               	.L2:
+ 141               		.stabn	68,0,14,.LM3-.LFBB1
+ 142               	.LM3:
+ 143 0012 890F      		add r24,r25
+ 144 0014 0E94 0000 		call write
+  15:sm_decoder.c  **** 	tmp =  n       & 0xF;
+ 145               		.stabn	68,0,15,.LM4-.LFBB1
+ 146               	.LM4:
+ 147 0018 CF70      		andi r28,lo8(15)
+  16:sm_decoder.c  **** 	write(tmp + (tmp > 9 ? 'A' - 10 : '0'));
+ 148               		.stabn	68,0,16,.LM5-.LFBB1
+ 149               	.LM5:
+ 150 001a CA30      		cpi r28,lo8(10)
+ 151 001c 00F4      		brsh .L5
+ 152               		.stabn	68,0,16,.LM6-.LFBB1
+ 153               	.LM6:
+ 154 001e 80E3      		ldi r24,lo8(48)
+ 155 0020 00C0      		rjmp .L3
+GAS LISTING /tmp/cc1dU6OL.s 			page 4
+
+
+ 156               	.L5:
+ 157 0022 87E3      		ldi r24,lo8(55)
+ 158               	.L3:
+ 159               		.stabn	68,0,16,.LM7-.LFBB1
+ 160               	.LM7:
+ 161 0024 8C0F      		add r24,r28
+ 162               	/* epilogue start */
+  17:sm_decoder.c  **** }
+ 163               		.stabn	68,0,17,.LM8-.LFBB1
+ 164               	.LM8:
+ 165 0026 CF91      		pop r28
+  16:sm_decoder.c  **** 	write(tmp + (tmp > 9 ? 'A' - 10 : '0'));
+ 166               		.stabn	68,0,16,.LM9-.LFBB1
+ 167               	.LM9:
+ 168 0028 0C94 0000 		jmp write
+ 169               		.size	write_byte, .-write_byte
+ 170               	.Lscope1:
+ 171               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 172               		.stabd	78,0,0
+ 173               		.stabs	"write_word:F(0,47)",36,0,20,write_word
+ 174               	.global	write_word
+ 175               		.type	write_word, @function
+ 176               	write_word:
+ 177               		.stabd	46,0,0
+  18:sm_decoder.c  **** 
+  19:sm_decoder.c  **** 
+  20:sm_decoder.c  **** void write_word(uint16_t n)
+  21:sm_decoder.c  **** {
+ 178               		.stabn	68,0,21,.LM10-.LFBB2
+ 179               	.LM10:
+ 180               	.LFBB2:
+ 181 002c CF93      		push r28
+ 182               	/* prologue: function */
+ 183               	/* frame size = 0 */
+ 184               	/* stack size = 1 */
+ 185               	.L__stack_usage = 1
+ 186 002e C82F      		mov r28,r24
+  22:sm_decoder.c  **** 	write_byte(n >> 8);
+ 187               		.stabn	68,0,22,.LM11-.LFBB2
+ 188               	.LM11:
+ 189 0030 892F      		mov r24,r25
+ 190 0032 0E94 0000 		call write_byte
+  23:sm_decoder.c  **** 	write_byte(n);
+ 191               		.stabn	68,0,23,.LM12-.LFBB2
+ 192               	.LM12:
+ 193 0036 8C2F      		mov r24,r28
+ 194               	/* epilogue start */
+  24:sm_decoder.c  **** }
+ 195               		.stabn	68,0,24,.LM13-.LFBB2
+ 196               	.LM13:
+ 197 0038 CF91      		pop r28
+  23:sm_decoder.c  **** 	write_byte(n);
+ 198               		.stabn	68,0,23,.LM14-.LFBB2
+ 199               	.LM14:
+ 200 003a 0C94 0000 		jmp write_byte
+ 201               		.size	write_word, .-write_word
+ 202               	.Lscope2:
+GAS LISTING /tmp/cc1dU6OL.s 			page 5
+
+
+ 203               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 204               		.stabd	78,0,0
+ 205               		.section	.rodata.str1.1,"aMS",@progbits,1
+ 206               	.LC0:
+ 207 0000 5331 4531 		.string	"S1E1"
+ 207      00
+ 208               	.LC1:
+ 209 0005 5331 452A 		.string	"S1E*"
+ 209      00
+ 210               		.text
+ 211               		.stabs	"f1:F(0,47)",36,0,52,f1
+ 212               		.stabs	"ev:P(8,1)",64,0,52,28
+ 213               	.global	f1
+ 214               		.type	f1, @function
+ 215               	f1:
+ 216               		.stabd	46,0,0
+  25:sm_decoder.c  **** 
+  26:sm_decoder.c  **** 
+  27:sm_decoder.c  **** enum {S1, S2, S3, S4, MAX_STATES};
+  28:sm_decoder.c  **** 
+  29:sm_decoder.c  **** uint8_t _bytes[5];
+  30:sm_decoder.c  **** uint8_t _idx_byte, _idx_bit;
+  31:sm_decoder.c  **** 
+  32:sm_decoder.c  **** void push_bit(uint8_t bit){
+  33:sm_decoder.c  **** 	if (bit)
+  34:sm_decoder.c  **** 		_bytes[_idx_byte] |= _BV(_idx_bit);
+  35:sm_decoder.c  **** 	if (++_idx_bit >= 8) {
+  36:sm_decoder.c  **** 		_idx_byte++;
+  37:sm_decoder.c  **** 		_idx_bit = 0;
+  38:sm_decoder.c  **** 	}
+  39:sm_decoder.c  **** }
+  40:sm_decoder.c  **** 
+  41:sm_decoder.c  **** void send_bytes(void)
+  42:sm_decoder.c  **** {
+  43:sm_decoder.c  **** 	int8_t i;
+  44:sm_decoder.c  **** 
+  45:sm_decoder.c  **** 	for(i=sizeof(_bytes)-1; i>=0; i--) {
+  46:sm_decoder.c  **** 		write_byte(_bytes[i]);
+  47:sm_decoder.c  **** 		_bytes[i] = 0;
+  48:sm_decoder.c  **** 	}
+  49:sm_decoder.c  **** 	_idx_byte = _idx_bit = 0;
+  50:sm_decoder.c  **** }
+  51:sm_decoder.c  **** 
+  52:sm_decoder.c  **** void f1(event_t ev)
+  53:sm_decoder.c  **** {
+ 217               		.stabn	68,0,53,.LM15-.LFBB3
+ 218               	.LM15:
+ 219               	.LFBB3:
+ 220 003e CF93      		push r28
+ 221 0040 DF93      		push r29
+ 222               	/* prologue: function */
+ 223               	/* frame size = 0 */
+ 224               	/* stack size = 2 */
+ 225               	.L__stack_usage = 2
+ 226 0042 EC01      		movw r28,r24
+  54:sm_decoder.c  **** 	if (ev == EVENT1) {
+ 227               		.stabn	68,0,54,.LM16-.LFBB3
+GAS LISTING /tmp/cc1dU6OL.s 			page 6
+
+
+ 228               	.LM16:
+ 229 0044 8230      		cpi r24,2
+ 230 0046 9105      		cpc r25,__zero_reg__
+ 231 0048 01F4      		brne .L9
+ 232               	.LBB4:
+ 233               	.LBB5:
+  55:sm_decoder.c  **** 		DEBUG_WRITE_STATE("S1E1");
+ 234               		.stabn	68,0,55,.LM17-.LFBB3
+ 235               	.LM17:
+ 236 004a 80E0      		ldi r24,lo8(.LC0)
+ 237 004c 90E0      		ldi r25,hi8(.LC0)
+ 238 004e 0E94 0000 		call writeln
+ 239 0052 80E2      		ldi r24,lo8(32)
+ 240 0054 0E94 0000 		call write
+  56:sm_decoder.c  **** 		set_state(S2);
+ 241               		.stabn	68,0,56,.LM18-.LFBB3
+ 242               	.LM18:
+ 243 0058 81E0      		ldi r24,lo8(1)
+ 244 005a 8093 0000 		sts _state,r24
+ 245 005e 00C0      		rjmp .L8
+ 246               	.L9:
+ 247               	.LBE5:
+ 248               	.LBE4:
+  57:sm_decoder.c  **** 	} else if (ev == EVENT7)
+ 249               		.stabn	68,0,57,.LM19-.LFBB3
+ 250               	.LM19:
+ 251 0060 8038      		cpi r24,-128
+ 252 0062 9105      		cpc r25,__zero_reg__
+ 253 0064 01F0      		breq .L8
+  58:sm_decoder.c  **** 		;
+  59:sm_decoder.c  **** 	else
+  60:sm_decoder.c  **** 		DEBUG_WRITE_STATE_EVENT("S1E*", ev);
+ 254               		.stabn	68,0,60,.LM20-.LFBB3
+ 255               	.LM20:
+ 256 0066 80E0      		ldi r24,lo8(.LC1)
+ 257 0068 90E0      		ldi r25,hi8(.LC1)
+ 258 006a 0E94 0000 		call writeln
+ 259 006e 80E2      		ldi r24,lo8(32)
+ 260 0070 0E94 0000 		call write
+ 261 0074 CE01      		movw r24,r28
+ 262 0076 0E94 0000 		call write_word
+ 263 007a 8AE0      		ldi r24,lo8(10)
+ 264               	/* epilogue start */
+  61:sm_decoder.c  **** }
+ 265               		.stabn	68,0,61,.LM21-.LFBB3
+ 266               	.LM21:
+ 267 007c DF91      		pop r29
+ 268 007e CF91      		pop r28
+  60:sm_decoder.c  **** }
+ 269               		.stabn	68,0,60,.LM22-.LFBB3
+ 270               	.LM22:
+ 271 0080 0C94 0000 		jmp write
+ 272               	.L8:
+ 273               	/* epilogue start */
+ 274               		.stabn	68,0,61,.LM23-.LFBB3
+ 275               	.LM23:
+ 276 0084 DF91      		pop r29
+GAS LISTING /tmp/cc1dU6OL.s 			page 7
+
+
+ 277 0086 CF91      		pop r28
+ 278 0088 0895      		ret
+ 279               		.size	f1, .-f1
+ 280               	.Lscope3:
+ 281               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 282               		.stabd	78,0,0
+ 283               		.section	.rodata.str1.1
+ 284               	.LC2:
+ 285 000a 5332 4532 		.string	"S2E2"
+ 285      00
+ 286               	.LC3:
+ 287 000f 5332 452A 		.string	"S2E* "
+ 287      2000 
+ 288               		.text
+ 289               		.stabs	"f2:F(0,47)",36,0,63,f2
+ 290               		.stabs	"ev:P(8,1)",64,0,63,28
+ 291               	.global	f2
+ 292               		.type	f2, @function
+ 293               	f2:
+ 294               		.stabd	46,0,0
+  62:sm_decoder.c  **** 
+  63:sm_decoder.c  **** void f2(event_t ev)
+  64:sm_decoder.c  **** {
+ 295               		.stabn	68,0,64,.LM24-.LFBB4
+ 296               	.LM24:
+ 297               	.LFBB4:
+ 298 008a CF93      		push r28
+ 299 008c DF93      		push r29
+ 300               	/* prologue: function */
+ 301               	/* frame size = 0 */
+ 302               	/* stack size = 2 */
+ 303               	.L__stack_usage = 2
+ 304 008e EC01      		movw r28,r24
+  65:sm_decoder.c  **** 	if (ev == EVENT2) {
+ 305               		.stabn	68,0,65,.LM25-.LFBB4
+ 306               	.LM25:
+ 307 0090 0497      		sbiw r24,4
+ 308 0092 01F4      		brne .L15
+ 309               	.LBB8:
+ 310               	.LBB9:
+  66:sm_decoder.c  **** 		DEBUG_WRITE_STATE("S2E2");
+ 311               		.stabn	68,0,66,.LM26-.LFBB4
+ 312               	.LM26:
+ 313 0094 80E0      		ldi r24,lo8(.LC2)
+ 314 0096 90E0      		ldi r25,hi8(.LC2)
+ 315 0098 0E94 0000 		call writeln
+ 316 009c 80E2      		ldi r24,lo8(32)
+ 317 009e 0E94 0000 		call write
+  67:sm_decoder.c  **** 		set_state(S3);
+ 318               		.stabn	68,0,67,.LM27-.LFBB4
+ 319               	.LM27:
+ 320 00a2 82E0      		ldi r24,lo8(2)
+ 321 00a4 8093 0000 		sts _state,r24
+ 322 00a8 00C0      		rjmp .L14
+ 323               	.L15:
+ 324               	.LBE9:
+ 325               	.LBE8:
+GAS LISTING /tmp/cc1dU6OL.s 			page 8
+
+
+  68:sm_decoder.c  **** 	} else {
+  69:sm_decoder.c  **** 		DEBUG_WRITE_STATE_EVENT("S2E* ", ev);
+ 326               		.stabn	68,0,69,.LM28-.LFBB4
+ 327               	.LM28:
+ 328 00aa 80E0      		ldi r24,lo8(.LC3)
+ 329 00ac 90E0      		ldi r25,hi8(.LC3)
+ 330 00ae 0E94 0000 		call writeln
+ 331 00b2 80E2      		ldi r24,lo8(32)
+ 332 00b4 0E94 0000 		call write
+ 333 00b8 CE01      		movw r24,r28
+ 334 00ba 0E94 0000 		call write_word
+ 335 00be 8AE0      		ldi r24,lo8(10)
+ 336 00c0 0E94 0000 		call write
+  70:sm_decoder.c  **** 		set_state(S1);
+ 337               		.stabn	68,0,70,.LM29-.LFBB4
+ 338               	.LM29:
+ 339 00c4 1092 0000 		sts _state,__zero_reg__
+ 340               	.L14:
+ 341               	/* epilogue start */
+  71:sm_decoder.c  **** 	}
+  72:sm_decoder.c  **** }
+ 342               		.stabn	68,0,72,.LM30-.LFBB4
+ 343               	.LM30:
+ 344 00c8 DF91      		pop r29
+ 345 00ca CF91      		pop r28
+ 346 00cc 0895      		ret
+ 347               		.size	f2, .-f2
+ 348               	.Lscope4:
+ 349               		.stabs	"",36,0,0,.Lscope4-.LFBB4
+ 350               		.stabd	78,0,0
+ 351               		.section	.rodata.str1.1
+ 352               	.LC4:
+ 353 0015 5333 4533 		.string	"S3E3"
+ 353      00
+ 354               	.LC5:
+ 355 001a 5333 452A 		.string	"S3E*"
+ 355      00
+ 356               		.text
+ 357               		.stabs	"f3:F(0,47)",36,0,74,f3
+ 358               		.stabs	"ev:P(8,1)",64,0,74,28
+ 359               	.global	f3
+ 360               		.type	f3, @function
+ 361               	f3:
+ 362               		.stabd	46,0,0
+  73:sm_decoder.c  **** 
+  74:sm_decoder.c  **** void f3(event_t ev)
+  75:sm_decoder.c  **** {
+ 363               		.stabn	68,0,75,.LM31-.LFBB5
+ 364               	.LM31:
+ 365               	.LFBB5:
+ 366 00ce CF93      		push r28
+ 367 00d0 DF93      		push r29
+ 368               	/* prologue: function */
+ 369               	/* frame size = 0 */
+ 370               	/* stack size = 2 */
+ 371               	.L__stack_usage = 2
+ 372 00d2 EC01      		movw r28,r24
+GAS LISTING /tmp/cc1dU6OL.s 			page 9
+
+
+  76:sm_decoder.c  **** 	if (ev == EVENT3) {
+ 373               		.stabn	68,0,76,.LM32-.LFBB5
+ 374               	.LM32:
+ 375 00d4 0897      		sbiw r24,8
+ 376 00d6 01F4      		brne .L18
+ 377               	.LBB12:
+ 378               	.LBB13:
+  77:sm_decoder.c  **** 		DEBUG_WRITE_STATE("S3E3");
+ 379               		.stabn	68,0,77,.LM33-.LFBB5
+ 380               	.LM33:
+ 381 00d8 80E0      		ldi r24,lo8(.LC4)
+ 382 00da 90E0      		ldi r25,hi8(.LC4)
+ 383 00dc 0E94 0000 		call writeln
+ 384 00e0 80E2      		ldi r24,lo8(32)
+ 385 00e2 0E94 0000 		call write
+  78:sm_decoder.c  **** 		set_state(S4);
+ 386               		.stabn	68,0,78,.LM34-.LFBB5
+ 387               	.LM34:
+ 388 00e6 83E0      		ldi r24,lo8(3)
+ 389 00e8 8093 0000 		sts _state,r24
+ 390 00ec 00C0      		rjmp .L17
+ 391               	.L18:
+ 392               	.LBE13:
+ 393               	.LBE12:
+  79:sm_decoder.c  **** 	} else {
+  80:sm_decoder.c  **** 		DEBUG_WRITE_STATE_EVENT("S3E*", ev);
+ 394               		.stabn	68,0,80,.LM35-.LFBB5
+ 395               	.LM35:
+ 396 00ee 80E0      		ldi r24,lo8(.LC5)
+ 397 00f0 90E0      		ldi r25,hi8(.LC5)
+ 398 00f2 0E94 0000 		call writeln
+ 399 00f6 80E2      		ldi r24,lo8(32)
+ 400 00f8 0E94 0000 		call write
+ 401 00fc CE01      		movw r24,r28
+ 402 00fe 0E94 0000 		call write_word
+ 403 0102 8AE0      		ldi r24,lo8(10)
+ 404 0104 0E94 0000 		call write
+  81:sm_decoder.c  **** 		set_state(S1);
+ 405               		.stabn	68,0,81,.LM36-.LFBB5
+ 406               	.LM36:
+ 407 0108 1092 0000 		sts _state,__zero_reg__
+ 408               	.L17:
+ 409               	/* epilogue start */
+  82:sm_decoder.c  **** 	}
+  83:sm_decoder.c  **** }
+ 410               		.stabn	68,0,83,.LM37-.LFBB5
+ 411               	.LM37:
+ 412 010c DF91      		pop r29
+ 413 010e CF91      		pop r28
+ 414 0110 0895      		ret
+ 415               		.size	f3, .-f3
+ 416               	.Lscope5:
+ 417               		.stabs	"",36,0,0,.Lscope5-.LFBB5
+ 418               		.stabd	78,0,0
+ 419               		.stabs	"push_bit:F(0,47)",36,0,32,push_bit
+ 420               		.stabs	"bit:P(6,2)",64,0,32,24
+ 421               	.global	push_bit
+GAS LISTING /tmp/cc1dU6OL.s 			page 10
+
+
+ 422               		.type	push_bit, @function
+ 423               	push_bit:
+ 424               		.stabd	46,0,0
+  32:sm_decoder.c  **** 	if (bit)
+ 425               		.stabn	68,0,32,.LM38-.LFBB6
+ 426               	.LM38:
+ 427               	.LFBB6:
+ 428               	/* prologue: function */
+ 429               	/* frame size = 0 */
+ 430               	/* stack size = 0 */
+ 431               	.L__stack_usage = 0
+ 432 0112 9091 0000 		lds r25,_idx_bit
+  33:sm_decoder.c  **** 		_bytes[_idx_byte] |= _BV(_idx_bit);
+ 433               		.stabn	68,0,33,.LM39-.LFBB6
+ 434               	.LM39:
+ 435 0116 8823      		tst r24
+ 436 0118 01F0      		breq .L21
+  34:sm_decoder.c  **** 	if (++_idx_bit >= 8) {
+ 437               		.stabn	68,0,34,.LM40-.LFBB6
+ 438               	.LM40:
+ 439 011a E091 0000 		lds r30,_idx_byte
+ 440 011e F0E0      		ldi r31,0
+ 441 0120 E050      		subi r30,lo8(-(_bytes))
+ 442 0122 F040      		sbci r31,hi8(-(_bytes))
+ 443 0124 21E0      		ldi r18,lo8(1)
+ 444 0126 30E0      		ldi r19,0
+ 445 0128 092E      		mov r0,r25
+ 446 012a 00C0      		rjmp 2f
+ 447               		1:
+ 448 012c 220F      		lsl r18
+ 449               		2:
+ 450 012e 0A94      		dec r0
+ 451 0130 02F4      		brpl 1b
+ 452 0132 8081      		ld r24,Z
+ 453 0134 282B      		or r18,r24
+ 454 0136 2083      		st Z,r18
+ 455               	.L21:
+  35:sm_decoder.c  **** 		_idx_byte++;
+ 456               		.stabn	68,0,35,.LM41-.LFBB6
+ 457               	.LM41:
+ 458 0138 9F5F      		subi r25,lo8(-(1))
+ 459 013a 9093 0000 		sts _idx_bit,r25
+ 460 013e 9830      		cpi r25,lo8(8)
+ 461 0140 00F0      		brlo .L20
+ 462               	.LBB16:
+ 463               	.LBB17:
+  36:sm_decoder.c  **** 		_idx_bit = 0;
+ 464               		.stabn	68,0,36,.LM42-.LFBB6
+ 465               	.LM42:
+ 466 0142 8091 0000 		lds r24,_idx_byte
+ 467 0146 8F5F      		subi r24,lo8(-(1))
+ 468 0148 8093 0000 		sts _idx_byte,r24
+  37:sm_decoder.c  **** 	}
+ 469               		.stabn	68,0,37,.LM43-.LFBB6
+ 470               	.LM43:
+ 471 014c 1092 0000 		sts _idx_bit,__zero_reg__
+ 472               	.L20:
+GAS LISTING /tmp/cc1dU6OL.s 			page 11
+
+
+ 473 0150 0895      		ret
+ 474               	.LBE17:
+ 475               	.LBE16:
+ 476               		.size	push_bit, .-push_bit
+ 477               	.Lscope6:
+ 478               		.stabs	"",36,0,0,.Lscope6-.LFBB6
+ 479               		.stabd	78,0,0
+ 480               		.stabs	"send_bytes:F(0,47)",36,0,41,send_bytes
+ 481               	.global	send_bytes
+ 482               		.type	send_bytes, @function
+ 483               	send_bytes:
+ 484               		.stabd	46,0,0
+  42:sm_decoder.c  **** 	int8_t i;
+ 485               		.stabn	68,0,42,.LM44-.LFBB7
+ 486               	.LM44:
+ 487               	.LFBB7:
+ 488 0152 CF93      		push r28
+ 489 0154 DF93      		push r29
+ 490               	/* prologue: function */
+ 491               	/* frame size = 0 */
+ 492               	/* stack size = 2 */
+ 493               	.L__stack_usage = 2
+ 494 0156 C0E0      		ldi r28,lo8(_bytes+5)
+ 495 0158 D0E0      		ldi r29,hi8(_bytes+5)
+ 496               	.L27:
+  46:sm_decoder.c  **** 		_bytes[i] = 0;
+ 497               		.stabn	68,0,46,.LM45-.LFBB7
+ 498               	.LM45:
+ 499 015a 8A91      		ld r24,-Y
+ 500 015c 0E94 0000 		call write_byte
+  47:sm_decoder.c  **** 	}
+ 501               		.stabn	68,0,47,.LM46-.LFBB7
+ 502               	.LM46:
+ 503 0160 1882      		st Y,__zero_reg__
+  45:sm_decoder.c  **** 		write_byte(_bytes[i]);
+ 504               		.stabn	68,0,45,.LM47-.LFBB7
+ 505               	.LM47:
+ 506 0162 80E0      		ldi r24,hi8(_bytes)
+ 507 0164 C030      		cpi r28,lo8(_bytes)
+ 508 0166 D807      		cpc r29,r24
+ 509 0168 01F4      		brne .L27
+  49:sm_decoder.c  **** }
+ 510               		.stabn	68,0,49,.LM48-.LFBB7
+ 511               	.LM48:
+ 512 016a 1092 0000 		sts _idx_bit,__zero_reg__
+ 513 016e 1092 0000 		sts _idx_byte,__zero_reg__
+ 514               	/* epilogue start */
+  50:sm_decoder.c  **** 
+ 515               		.stabn	68,0,50,.LM49-.LFBB7
+ 516               	.LM49:
+ 517 0172 DF91      		pop r29
+ 518 0174 CF91      		pop r28
+ 519 0176 0895      		ret
+ 520               		.size	send_bytes, .-send_bytes
+ 521               	.Lscope7:
+ 522               		.stabs	"",36,0,0,.Lscope7-.LFBB7
+ 523               		.stabd	78,0,0
+GAS LISTING /tmp/cc1dU6OL.s 			page 12
+
+
+ 524               		.section	.rodata.str1.1
+ 525               	.LC6:
+ 526 001f 5334 4534 		.string	"S4E4"
+ 526      00
+ 527               	.LC7:
+ 528 0024 5334 4535 		.string	"S4E5"
+ 528      00
+ 529               	.LC8:
+ 530 0029 5334 4536 		.string	"S4E6"
+ 530      00
+ 531               	.LC9:
+ 532 002e 5334 4537 		.string	"S4E7"
+ 532      00
+ 533               	.LC10:
+ 534 0033 5334 452A 		.string	"S4E*"
+ 534      00
+ 535               		.text
+ 536               		.stabs	"f4:F(0,47)",36,0,85,f4
+ 537               		.stabs	"ev:P(8,1)",64,0,85,28
+ 538               	.global	f4
+ 539               		.type	f4, @function
+ 540               	f4:
+ 541               		.stabd	46,0,0
+  84:sm_decoder.c  **** 
+  85:sm_decoder.c  **** void f4(event_t ev)
+  86:sm_decoder.c  **** {
+ 542               		.stabn	68,0,86,.LM50-.LFBB8
+ 543               	.LM50:
+ 544               	.LFBB8:
+ 545 0178 CF93      		push r28
+ 546 017a DF93      		push r29
+ 547               	/* prologue: function */
+ 548               	/* frame size = 0 */
+ 549               	/* stack size = 2 */
+ 550               	.L__stack_usage = 2
+ 551 017c EC01      		movw r28,r24
+  87:sm_decoder.c  **** 	if (ev == EVENT4) {
+ 552               		.stabn	68,0,87,.LM51-.LFBB8
+ 553               	.LM51:
+ 554 017e 8031      		cpi r24,16
+ 555 0180 9105      		cpc r25,__zero_reg__
+ 556 0182 01F4      		brne .L30
+  88:sm_decoder.c  **** 		DEBUG_WRITE_STATE("S4E4");
+ 557               		.stabn	68,0,88,.LM52-.LFBB8
+ 558               	.LM52:
+ 559 0184 80E0      		ldi r24,lo8(.LC6)
+ 560 0186 90E0      		ldi r25,hi8(.LC6)
+ 561 0188 0E94 0000 		call writeln
+ 562 018c 80E2      		ldi r24,lo8(32)
+ 563 018e 0E94 0000 		call write
+  89:sm_decoder.c  **** 		push_bit(1);
+ 564               		.stabn	68,0,89,.LM53-.LFBB8
+ 565               	.LM53:
+ 566 0192 81E0      		ldi r24,lo8(1)
+ 567 0194 00C0      		rjmp .L36
+ 568               	.L30:
+  90:sm_decoder.c  **** 		set_state(S3);
+GAS LISTING /tmp/cc1dU6OL.s 			page 13
+
+
+  91:sm_decoder.c  **** 	} else if (ev == EVENT5) {
+ 569               		.stabn	68,0,91,.LM54-.LFBB8
+ 570               	.LM54:
+ 571 0196 8032      		cpi r24,32
+ 572 0198 9105      		cpc r25,__zero_reg__
+ 573 019a 01F4      		brne .L32
+  92:sm_decoder.c  **** 		DEBUG_WRITE_STATE("S4E5");
+ 574               		.stabn	68,0,92,.LM55-.LFBB8
+ 575               	.LM55:
+ 576 019c 80E0      		ldi r24,lo8(.LC7)
+ 577 019e 90E0      		ldi r25,hi8(.LC7)
+ 578 01a0 0E94 0000 		call writeln
+ 579 01a4 80E2      		ldi r24,lo8(32)
+ 580 01a6 0E94 0000 		call write
+  93:sm_decoder.c  **** 		push_bit(0);
+ 581               		.stabn	68,0,93,.LM56-.LFBB8
+ 582               	.LM56:
+ 583 01aa 80E0      		ldi r24,0
+ 584               	.L36:
+ 585 01ac 0E94 0000 		call push_bit
+ 586 01b0 00C0      		rjmp .L35
+ 587               	.L32:
+  94:sm_decoder.c  **** 		set_state(S3);
+  95:sm_decoder.c  **** 	} else if (ev == EVENT6) {
+ 588               		.stabn	68,0,95,.LM57-.LFBB8
+ 589               	.LM57:
+ 590 01b2 8034      		cpi r24,64
+ 591 01b4 9105      		cpc r25,__zero_reg__
+ 592 01b6 01F4      		brne .L33
+  96:sm_decoder.c  **** 		DEBUG_WRITE_STATE("S4E6");
+ 593               		.stabn	68,0,96,.LM58-.LFBB8
+ 594               	.LM58:
+ 595 01b8 80E0      		ldi r24,lo8(.LC8)
+ 596 01ba 90E0      		ldi r25,hi8(.LC8)
+ 597 01bc 0E94 0000 		call writeln
+ 598 01c0 80E2      		ldi r24,lo8(32)
+ 599 01c2 0E94 0000 		call write
+ 600               	.L35:
+  97:sm_decoder.c  **** 		set_state(S3);
+ 601               		.stabn	68,0,97,.LM59-.LFBB8
+ 602               	.LM59:
+ 603 01c6 82E0      		ldi r24,lo8(2)
+ 604 01c8 8093 0000 		sts _state,r24
+ 605 01cc 00C0      		rjmp .L29
+ 606               	.L33:
+  98:sm_decoder.c  **** 	} else if (ev == EVENT7) {
+ 607               		.stabn	68,0,98,.LM60-.LFBB8
+ 608               	.LM60:
+ 609 01ce 8038      		cpi r24,-128
+ 610 01d0 9105      		cpc r25,__zero_reg__
+ 611 01d2 01F4      		brne .L34
+ 612               	.LBB20:
+ 613               	.LBB21:
+  99:sm_decoder.c  **** 		DEBUG_WRITE_STATE("S4E7");
+ 614               		.stabn	68,0,99,.LM61-.LFBB8
+ 615               	.LM61:
+ 616 01d4 80E0      		ldi r24,lo8(.LC9)
+GAS LISTING /tmp/cc1dU6OL.s 			page 14
+
+
+ 617 01d6 90E0      		ldi r25,hi8(.LC9)
+ 618 01d8 0E94 0000 		call writeln
+ 619 01dc 80E2      		ldi r24,lo8(32)
+ 620 01de 0E94 0000 		call write
+ 100:sm_decoder.c  **** 		set_state(S1);
+ 621               		.stabn	68,0,100,.LM62-.LFBB8
+ 622               	.LM62:
+ 623 01e2 1092 0000 		sts _state,__zero_reg__
+ 101:sm_decoder.c  **** 		send_bytes();
+ 624               		.stabn	68,0,101,.LM63-.LFBB8
+ 625               	.LM63:
+ 626 01e6 0E94 0000 		call send_bytes
+ 102:sm_decoder.c  **** 		write('\n');
+ 627               		.stabn	68,0,102,.LM64-.LFBB8
+ 628               	.LM64:
+ 629 01ea 8AE0      		ldi r24,lo8(10)
+ 630               	/* epilogue start */
+ 631               	.LBE21:
+ 632               	.LBE20:
+ 103:sm_decoder.c  **** 	} else {
+ 104:sm_decoder.c  **** 		DEBUG_WRITE_STATE_EVENT("S4E*", ev);
+ 105:sm_decoder.c  **** 		set_state(S1);
+ 106:sm_decoder.c  **** 	}
+ 107:sm_decoder.c  **** }
+ 633               		.stabn	68,0,107,.LM65-.LFBB8
+ 634               	.LM65:
+ 635 01ec DF91      		pop r29
+ 636 01ee CF91      		pop r28
+ 637               	.LBB23:
+ 638               	.LBB22:
+ 102:sm_decoder.c  **** 		write('\n');
+ 639               		.stabn	68,0,102,.LM66-.LFBB8
+ 640               	.LM66:
+ 641 01f0 0C94 0000 		jmp write
+ 642               	.L34:
+ 643               	.LBE22:
+ 644               	.LBE23:
+ 104:sm_decoder.c  **** 		set_state(S1);
+ 645               		.stabn	68,0,104,.LM67-.LFBB8
+ 646               	.LM67:
+ 647 01f4 80E0      		ldi r24,lo8(.LC10)
+ 648 01f6 90E0      		ldi r25,hi8(.LC10)
+ 649 01f8 0E94 0000 		call writeln
+ 650 01fc 80E2      		ldi r24,lo8(32)
+ 651 01fe 0E94 0000 		call write
+ 652 0202 CE01      		movw r24,r28
+ 653 0204 0E94 0000 		call write_word
+ 654 0208 8AE0      		ldi r24,lo8(10)
+ 655 020a 0E94 0000 		call write
+ 105:sm_decoder.c  **** 	}
+ 656               		.stabn	68,0,105,.LM68-.LFBB8
+ 657               	.LM68:
+ 658 020e 1092 0000 		sts _state,__zero_reg__
+ 659               	.L29:
+ 660               	/* epilogue start */
+ 661               		.stabn	68,0,107,.LM69-.LFBB8
+ 662               	.LM69:
+GAS LISTING /tmp/cc1dU6OL.s 			page 15
+
+
+ 663 0212 DF91      		pop r29
+ 664 0214 CF91      		pop r28
+ 665 0216 0895      		ret
+ 666               		.size	f4, .-f4
+ 667               	.Lscope8:
+ 668               		.stabs	"",36,0,0,.Lscope8-.LFBB8
+ 669               		.stabd	78,0,0
+ 670               		.stabs	"init_machine:F(0,47)",36,0,111,init_machine
+ 671               	.global	init_machine
+ 672               		.type	init_machine, @function
+ 673               	init_machine:
+ 674               		.stabd	46,0,0
+ 108:sm_decoder.c  **** 
+ 109:sm_decoder.c  **** cb_t cb_array[MAX_STATES] = {f1, f2, f3, f4};
+ 110:sm_decoder.c  **** 
+ 111:sm_decoder.c  **** void init_machine(void)
+ 112:sm_decoder.c  **** {
+ 675               		.stabn	68,0,112,.LM70-.LFBB9
+ 676               	.LM70:
+ 677               	.LFBB9:
+ 678               	/* prologue: function */
+ 679               	/* frame size = 0 */
+ 680               	/* stack size = 0 */
+ 681               	.L__stack_usage = 0
+ 113:sm_decoder.c  **** 	init_base_machine(cb_array, MAX_STATES, 0, S1);
+ 682               		.stabn	68,0,113,.LM71-.LFBB9
+ 683               	.LM71:
+ 684 0218 20E0      		ldi r18,0
+ 685 021a 40E0      		ldi r20,0
+ 686 021c 50E0      		ldi r21,0
+ 687 021e 64E0      		ldi r22,lo8(4)
+ 688 0220 80E0      		ldi r24,lo8(cb_array)
+ 689 0222 90E0      		ldi r25,hi8(cb_array)
+ 690 0224 0E94 0000 		call init_base_machine
+ 114:sm_decoder.c  **** 	setup_usart();
+ 691               		.stabn	68,0,114,.LM72-.LFBB9
+ 692               	.LM72:
+ 693 0228 0E94 0000 		call setup_usart
+ 115:sm_decoder.c  **** 	setup_timer1_timer();
+ 694               		.stabn	68,0,115,.LM73-.LFBB9
+ 695               	.LM73:
+ 696 022c 0C94 0000 		jmp setup_timer1_timer
+ 697               		.size	init_machine, .-init_machine
+ 698               	.Lscope9:
+ 699               		.stabs	"",36,0,0,.Lscope9-.LFBB9
+ 700               		.stabd	78,0,0
+ 701               	.global	cb_array
+ 702               		.data
+ 703               		.type	cb_array, @object
+ 704               		.size	cb_array, 8
+ 705               	cb_array:
+ 706 0000 0000      		.word	gs(f1)
+ 707 0002 0000      		.word	gs(f2)
+ 708 0004 0000      		.word	gs(f3)
+ 709 0006 0000      		.word	gs(f4)
+ 710               		.comm	_idx_bit,1,1
+ 711               		.comm	_idx_byte,1,1
+GAS LISTING /tmp/cc1dU6OL.s 			page 16
+
+
+ 712               		.comm	_bytes,5,1
+ 713               		.stabs	"_bytes:G(0,49)=ar(0,50)=r(0,50);0;0177777;;0;4;(6,2)",32,0,29,0
+ 714               		.stabs	"_idx_byte:G(6,2)",32,0,30,0
+ 715               		.stabs	"_idx_bit:G(6,2)",32,0,30,0
+ 716               		.stabs	"cb_array:G(0,51)=ar(0,50);0;3;(9,1)",32,0,109,0
+ 717               		.text
+ 718               		.stabs	"",100,0,0,.Letext0
+ 719               	.Letext0:
+ 720               		.ident	"GCC: (GNU) 4.9.2"
+ 721               	.global __do_copy_data
+ 722               	.global __do_clear_bss
+GAS LISTING /tmp/cc1dU6OL.s 			page 17
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 sm_decoder.c
+     /tmp/cc1dU6OL.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/cc1dU6OL.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/cc1dU6OL.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/cc1dU6OL.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/cc1dU6OL.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/cc1dU6OL.s:117    .text:0000000000000000 write_byte
+     /tmp/cc1dU6OL.s:176    .text:000000000000002c write_word
+     /tmp/cc1dU6OL.s:215    .text:000000000000003e f1
+     /tmp/cc1dU6OL.s:293    .text:000000000000008a f2
+     /tmp/cc1dU6OL.s:361    .text:00000000000000ce f3
+     /tmp/cc1dU6OL.s:423    .text:0000000000000112 push_bit
+                            *COM*:0000000000000001 _idx_bit
+                            *COM*:0000000000000001 _idx_byte
+                            *COM*:0000000000000005 _bytes
+     /tmp/cc1dU6OL.s:483    .text:0000000000000152 send_bytes
+     /tmp/cc1dU6OL.s:540    .text:0000000000000178 f4
+     /tmp/cc1dU6OL.s:673    .text:0000000000000218 init_machine
+     /tmp/cc1dU6OL.s:705    .data:0000000000000000 cb_array
+
+UNDEFINED SYMBOLS
+write
+writeln
+_state
+init_base_machine
+setup_usart
+setup_timer1_timer
+__do_copy_data
+__do_clear_bss

@@ -1,0 +1,205 @@
+GAS LISTING /tmp/ccYQzWIo.s 			page 1
+
+
+   1               		.file	"decoder.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.stabs	"/home/aluno/RTOs - N apagar, \343\201\217\343\201\240\343\201\225\343\201\204/13aula/remot
+   8               		.stabs	"decoder.c",100,0,2,.Ltext0
+   9               		.text
+  10               	.Ltext0:
+  11               		.stabs	"gcc2_compiled.",60,0,0,0
+  12               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  13               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  14               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  15               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  16               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  17               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  18               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,0,0
+  19               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  20               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,0,0
+  21               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  22               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  23               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  24               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  25               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"short _Fract:t(0,15)=r(0,1);1;0;",128,0,0,0
+  27               		.stabs	"_Fract:t(0,16)=r(0,1);2;0;",128,0,0,0
+  28               		.stabs	"long _Fract:t(0,17)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"long long _Fract:t(0,18)=r(0,1);8;0;",128,0,0,0
+  30               		.stabs	"unsigned short _Fract:t(0,19)=r(0,1);1;0;",128,0,0,0
+  31               		.stabs	"unsigned _Fract:t(0,20)=r(0,1);2;0;",128,0,0,0
+  32               		.stabs	"unsigned long _Fract:t(0,21)=r(0,1);4;0;",128,0,0,0
+  33               		.stabs	"unsigned long long _Fract:t(0,22)=r(0,1);8;0;",128,0,0,0
+  34               		.stabs	"_Sat short _Fract:t(0,23)=r(0,1);1;0;",128,0,0,0
+  35               		.stabs	"_Sat _Fract:t(0,24)=r(0,1);2;0;",128,0,0,0
+  36               		.stabs	"_Sat long _Fract:t(0,25)=r(0,1);4;0;",128,0,0,0
+  37               		.stabs	"_Sat long long _Fract:t(0,26)=r(0,1);8;0;",128,0,0,0
+  38               		.stabs	"_Sat unsigned short _Fract:t(0,27)=r(0,1);1;0;",128,0,0,0
+  39               		.stabs	"_Sat unsigned _Fract:t(0,28)=r(0,1);2;0;",128,0,0,0
+  40               		.stabs	"_Sat unsigned long _Fract:t(0,29)=r(0,1);4;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned long long _Fract:t(0,30)=r(0,1);8;0;",128,0,0,0
+  42               		.stabs	"short _Accum:t(0,31)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Accum:t(0,32)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"long _Accum:t(0,33)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"long long _Accum:t(0,34)=r(0,1);8;0;",128,0,0,0
+  46               		.stabs	"unsigned short _Accum:t(0,35)=r(0,1);2;0;",128,0,0,0
+  47               		.stabs	"unsigned _Accum:t(0,36)=r(0,1);4;0;",128,0,0,0
+  48               		.stabs	"unsigned long _Accum:t(0,37)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned long long _Accum:t(0,38)=r(0,1);8;0;",128,0,0,0
+  50               		.stabs	"_Sat short _Accum:t(0,39)=r(0,1);2;0;",128,0,0,0
+  51               		.stabs	"_Sat _Accum:t(0,40)=r(0,1);4;0;",128,0,0,0
+  52               		.stabs	"_Sat long _Accum:t(0,41)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat long long _Accum:t(0,42)=r(0,1);8;0;",128,0,0,0
+  54               		.stabs	"_Sat unsigned short _Accum:t(0,43)=r(0,1);2;0;",128,0,0,0
+  55               		.stabs	"_Sat unsigned _Accum:t(0,44)=r(0,1);4;0;",128,0,0,0
+  56               		.stabs	"_Sat unsigned long _Accum:t(0,45)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned long long _Accum:t(0,46)=r(0,1);8;0;",128,0,0,0
+GAS LISTING /tmp/ccYQzWIo.s 			page 2
+
+
+  58               		.stabs	"void:t(0,47)=(0,47)",128,0,0,0
+  59               		.stabs	"sm_decoder.h",130,0,0,0
+  60               		.stabs	"sm.h",130,0,0,0
+  61               		.stabs	"event.h",130,0,0,0
+  62               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+  63               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
+  64               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  65               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stdint.h",130,0,0,0
+  66               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  67               		.stabs	"int8_t:t(8,1)=(0,10)",128,0,121,0
+  68               		.stabs	"uint8_t:t(8,2)=(0,11)",128,0,122,0
+  69               		.stabs	"int16_t:t(8,3)=(0,1)",128,0,123,0
+  70               		.stabs	"uint16_t:t(8,4)=(0,4)",128,0,124,0
+  71               		.stabs	"int32_t:t(8,5)=(0,3)",128,0,125,0
+  72               		.stabs	"uint32_t:t(8,6)=(0,5)",128,0,126,0
+  73               		.stabs	"int64_t:t(8,7)=(0,6)",128,0,128,0
+  74               		.stabs	"uint64_t:t(8,8)=(0,7)",128,0,129,0
+  75               		.stabs	"intptr_t:t(8,9)=(8,3)",128,0,142,0
+  76               		.stabs	"uintptr_t:t(8,10)=(8,4)",128,0,147,0
+  77               		.stabs	"int_least8_t:t(8,11)=(8,1)",128,0,159,0
+  78               		.stabs	"uint_least8_t:t(8,12)=(8,2)",128,0,164,0
+  79               		.stabs	"int_least16_t:t(8,13)=(8,3)",128,0,169,0
+  80               		.stabs	"uint_least16_t:t(8,14)=(8,4)",128,0,174,0
+  81               		.stabs	"int_least32_t:t(8,15)=(8,5)",128,0,179,0
+  82               		.stabs	"uint_least32_t:t(8,16)=(8,6)",128,0,184,0
+  83               		.stabs	"int_least64_t:t(8,17)=(8,7)",128,0,192,0
+  84               		.stabs	"uint_least64_t:t(8,18)=(8,8)",128,0,199,0
+  85               		.stabs	"int_fast8_t:t(8,19)=(8,1)",128,0,213,0
+  86               		.stabs	"uint_fast8_t:t(8,20)=(8,2)",128,0,218,0
+  87               		.stabs	"int_fast16_t:t(8,21)=(8,3)",128,0,223,0
+  88               		.stabs	"uint_fast16_t:t(8,22)=(8,4)",128,0,228,0
+  89               		.stabs	"int_fast32_t:t(8,23)=(8,5)",128,0,233,0
+  90               		.stabs	"uint_fast32_t:t(8,24)=(8,6)",128,0,238,0
+  91               		.stabs	"int_fast64_t:t(8,25)=(8,7)",128,0,246,0
+  92               		.stabs	"uint_fast64_t:t(8,26)=(8,8)",128,0,253,0
+  93               		.stabs	"intmax_t:t(8,27)=(8,7)",128,0,273,0
+  94               		.stabs	"uintmax_t:t(8,28)=(8,8)",128,0,278,0
+  95               		.stabn	162,0,0,0
+  96               		.stabn	162,0,0,0
+  97               		.stabs	"int_farptr_t:t(6,1)=(8,5)",128,0,77,0
+  98               		.stabs	"uint_farptr_t:t(6,2)=(8,6)",128,0,81,0
+  99               		.stabn	162,0,0,0
+ 100               		.stabn	162,0,0,0
+ 101               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+ 102               		.stabs	"__fuse_t:t(9,1)=(9,2)=s3low:(0,11),0,8;high:(0,11),8,8;extended:(0,11),16,8;;",128,0,244,0
+ 103               		.stabn	162,0,0,0
+ 104               		.stabn	162,0,0,0
+ 105               		.stabs	"event_t:t(3,1)=(8,4)",128,0,6,0
+ 106               		.stabs	" :T(3,2)=eEVENT0:1,EVENT1:2,EVENT2:4,EVENT3:8,EVENT4:16,EVENT5:32,EVENT6:64,EVENT7:128,EVE
+ 107               		.stabn	162,0,0,0
+ 108               		.stabs	"cb_t:t(2,1)=(2,2)=*(2,3)=f(0,47)",128,0,6,0
+ 109               		.stabs	"state_t:t(2,4)=(8,2)",128,0,7,0
+ 110               		.stabn	162,0,0,0
+ 111               		.stabn	162,0,0,0
+ 112               		.section	.rodata.str1.1,"aMS",@progbits,1
+ 113               	.LC0:
+ 114 0000 5374 6172 		.string	"Start!"
+GAS LISTING /tmp/ccYQzWIo.s 			page 3
+
+
+ 114      7421 00
+ 115               		.section	.text.startup,"ax",@progbits
+ 116               		.stabs	"main:F(0,1)",36,0,8,main
+ 117               	.global	main
+ 118               		.type	main, @function
+ 119               	main:
+ 120               		.stabd	46,0,0
+   1:decoder.c     **** #include "sm_decoder.h"
+   2:decoder.c     **** #include "event.h"
+   3:decoder.c     **** #include "usart.h"
+   4:decoder.c     **** #include "timer.h"
+   5:decoder.c     **** #include "debug.h"
+   6:decoder.c     **** 
+   7:decoder.c     **** 
+   8:decoder.c     **** int main(void) {
+ 121               		.stabn	68,0,8,.LM0-.LFBB1
+ 122               	.LM0:
+ 123               	.LFBB1:
+ 124               	/* prologue: function */
+ 125               	/* frame size = 0 */
+ 126               	/* stack size = 0 */
+ 127               	.L__stack_usage = 0
+   9:decoder.c     **** 	event_t ev;
+  10:decoder.c     **** 
+  11:decoder.c     **** 	init_machine();
+ 128               		.stabn	68,0,11,.LM1-.LFBB1
+ 129               	.LM1:
+ 130 0000 0E94 0000 		call init_machine
+  12:decoder.c     **** 	DEBUG_WRITE_START("Start!");
+ 131               		.stabn	68,0,12,.LM2-.LFBB1
+ 132               	.LM2:
+ 133 0004 80E0      		ldi r24,lo8(.LC0)
+ 134 0006 90E0      		ldi r25,hi8(.LC0)
+ 135 0008 0E94 0000 		call writeln
+ 136 000c 8AE0      		ldi r24,lo8(10)
+ 137 000e 0E94 0000 		call write
+ 138               	.L2:
+  13:decoder.c     **** 
+  14:decoder.c     **** 	while(1) {
+  15:decoder.c     **** 		ev = wait_for_events();
+ 139               		.stabn	68,0,15,.LM3-.LFBB1
+ 140               	.LM3:
+ 141 0012 0E94 0000 		call wait_for_events
+  16:decoder.c     **** 		dispatch_event(ev);
+ 142               		.stabn	68,0,16,.LM4-.LFBB1
+ 143               	.LM4:
+ 144 0016 0E94 0000 		call dispatch_event
+  17:decoder.c     **** 	}
+ 145               		.stabn	68,0,17,.LM5-.LFBB1
+ 146               	.LM5:
+ 147 001a 00C0      		rjmp .L2
+ 148               		.size	main, .-main
+ 149               	.Lscope1:
+ 150               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 151               		.stabd	78,0,0
+ 152               		.text
+ 153               		.stabs	"",100,0,0,.Letext0
+GAS LISTING /tmp/ccYQzWIo.s 			page 4
+
+
+ 154               	.Letext0:
+ 155               		.ident	"GCC: (GNU) 4.9.2"
+ 156               	.global __do_copy_data
+GAS LISTING /tmp/ccYQzWIo.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 decoder.c
+     /tmp/ccYQzWIo.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccYQzWIo.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccYQzWIo.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccYQzWIo.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccYQzWIo.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccYQzWIo.s:119    .text.startup:0000000000000000 main
+
+UNDEFINED SYMBOLS
+init_machine
+writeln
+write
+wait_for_events
+dispatch_event
+__do_copy_data

@@ -1,0 +1,451 @@
+GAS LISTING /tmp/ccNlkjke.s 			page 1
+
+
+   1               		.file	"timer.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.stabs	"/home/rcampello/Desktop/UFPE/6p/RTOs/treinos/7de19(m\303\241quinas_de_estados)/Professor/"
+   8               		.stabs	"timer.c",100,0,2,.Ltext0
+   9               		.text
+  10               	.Ltext0:
+  11               		.stabs	"gcc2_compiled.",60,0,0,0
+  12               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  13               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  14               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  15               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  16               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  17               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  18               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,0,0
+  19               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  20               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,0,0
+  21               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  22               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  23               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  24               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  25               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"short _Fract:t(0,15)=r(0,1);1;0;",128,0,0,0
+  27               		.stabs	"_Fract:t(0,16)=r(0,1);2;0;",128,0,0,0
+  28               		.stabs	"long _Fract:t(0,17)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"long long _Fract:t(0,18)=r(0,1);8;0;",128,0,0,0
+  30               		.stabs	"unsigned short _Fract:t(0,19)=r(0,1);1;0;",128,0,0,0
+  31               		.stabs	"unsigned _Fract:t(0,20)=r(0,1);2;0;",128,0,0,0
+  32               		.stabs	"unsigned long _Fract:t(0,21)=r(0,1);4;0;",128,0,0,0
+  33               		.stabs	"unsigned long long _Fract:t(0,22)=r(0,1);8;0;",128,0,0,0
+  34               		.stabs	"_Sat short _Fract:t(0,23)=r(0,1);1;0;",128,0,0,0
+  35               		.stabs	"_Sat _Fract:t(0,24)=r(0,1);2;0;",128,0,0,0
+  36               		.stabs	"_Sat long _Fract:t(0,25)=r(0,1);4;0;",128,0,0,0
+  37               		.stabs	"_Sat long long _Fract:t(0,26)=r(0,1);8;0;",128,0,0,0
+  38               		.stabs	"_Sat unsigned short _Fract:t(0,27)=r(0,1);1;0;",128,0,0,0
+  39               		.stabs	"_Sat unsigned _Fract:t(0,28)=r(0,1);2;0;",128,0,0,0
+  40               		.stabs	"_Sat unsigned long _Fract:t(0,29)=r(0,1);4;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned long long _Fract:t(0,30)=r(0,1);8;0;",128,0,0,0
+  42               		.stabs	"short _Accum:t(0,31)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Accum:t(0,32)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"long _Accum:t(0,33)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"long long _Accum:t(0,34)=r(0,1);8;0;",128,0,0,0
+  46               		.stabs	"unsigned short _Accum:t(0,35)=r(0,1);2;0;",128,0,0,0
+  47               		.stabs	"unsigned _Accum:t(0,36)=r(0,1);4;0;",128,0,0,0
+  48               		.stabs	"unsigned long _Accum:t(0,37)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned long long _Accum:t(0,38)=r(0,1);8;0;",128,0,0,0
+  50               		.stabs	"_Sat short _Accum:t(0,39)=r(0,1);2;0;",128,0,0,0
+  51               		.stabs	"_Sat _Accum:t(0,40)=r(0,1);4;0;",128,0,0,0
+  52               		.stabs	"_Sat long _Accum:t(0,41)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat long long _Accum:t(0,42)=r(0,1);8;0;",128,0,0,0
+  54               		.stabs	"_Sat unsigned short _Accum:t(0,43)=r(0,1);2;0;",128,0,0,0
+  55               		.stabs	"_Sat unsigned _Accum:t(0,44)=r(0,1);4;0;",128,0,0,0
+  56               		.stabs	"_Sat unsigned long _Accum:t(0,45)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned long long _Accum:t(0,46)=r(0,1);8;0;",128,0,0,0
+GAS LISTING /tmp/ccNlkjke.s 			page 2
+
+
+  58               		.stabs	"void:t(0,47)=(0,47)",128,0,0,0
+  59               		.stabs	"/usr/lib/avr/include/avr/interrupt.h",130,0,0,0
+  60               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+  61               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
+  62               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  63               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stdint.h",130,0,0,0
+  64               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  65               		.stabs	"int8_t:t(6,1)=(0,10)",128,0,121,0
+  66               		.stabs	"uint8_t:t(6,2)=(0,11)",128,0,122,0
+  67               		.stabs	"int16_t:t(6,3)=(0,1)",128,0,123,0
+  68               		.stabs	"uint16_t:t(6,4)=(0,4)",128,0,124,0
+  69               		.stabs	"int32_t:t(6,5)=(0,3)",128,0,125,0
+  70               		.stabs	"uint32_t:t(6,6)=(0,5)",128,0,126,0
+  71               		.stabs	"int64_t:t(6,7)=(0,6)",128,0,128,0
+  72               		.stabs	"uint64_t:t(6,8)=(0,7)",128,0,129,0
+  73               		.stabs	"intptr_t:t(6,9)=(6,3)",128,0,142,0
+  74               		.stabs	"uintptr_t:t(6,10)=(6,4)",128,0,147,0
+  75               		.stabs	"int_least8_t:t(6,11)=(6,1)",128,0,159,0
+  76               		.stabs	"uint_least8_t:t(6,12)=(6,2)",128,0,164,0
+  77               		.stabs	"int_least16_t:t(6,13)=(6,3)",128,0,169,0
+  78               		.stabs	"uint_least16_t:t(6,14)=(6,4)",128,0,174,0
+  79               		.stabs	"int_least32_t:t(6,15)=(6,5)",128,0,179,0
+  80               		.stabs	"uint_least32_t:t(6,16)=(6,6)",128,0,184,0
+  81               		.stabs	"int_least64_t:t(6,17)=(6,7)",128,0,192,0
+  82               		.stabs	"uint_least64_t:t(6,18)=(6,8)",128,0,199,0
+  83               		.stabs	"int_fast8_t:t(6,19)=(6,1)",128,0,213,0
+  84               		.stabs	"uint_fast8_t:t(6,20)=(6,2)",128,0,218,0
+  85               		.stabs	"int_fast16_t:t(6,21)=(6,3)",128,0,223,0
+  86               		.stabs	"uint_fast16_t:t(6,22)=(6,4)",128,0,228,0
+  87               		.stabs	"int_fast32_t:t(6,23)=(6,5)",128,0,233,0
+  88               		.stabs	"uint_fast32_t:t(6,24)=(6,6)",128,0,238,0
+  89               		.stabs	"int_fast64_t:t(6,25)=(6,7)",128,0,246,0
+  90               		.stabs	"uint_fast64_t:t(6,26)=(6,8)",128,0,253,0
+  91               		.stabs	"intmax_t:t(6,27)=(6,7)",128,0,273,0
+  92               		.stabs	"uintmax_t:t(6,28)=(6,8)",128,0,278,0
+  93               		.stabn	162,0,0,0
+  94               		.stabn	162,0,0,0
+  95               		.stabs	"int_farptr_t:t(4,1)=(6,5)",128,0,77,0
+  96               		.stabs	"uint_farptr_t:t(4,2)=(6,6)",128,0,81,0
+  97               		.stabn	162,0,0,0
+  98               		.stabn	162,0,0,0
+  99               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+ 100               		.stabs	"__fuse_t:t(7,1)=(7,2)=s3low:(0,11),0,8;high:(0,11),8,8;extended:(0,11),16,8;;",128,0,244,0
+ 101               		.stabn	162,0,0,0
+ 102               		.stabn	162,0,0,0
+ 103               		.stabn	162,0,0,0
+ 104               		.stabs	"event.h",130,0,0,0
+ 105               		.stabs	"event_t:t(8,1)=(6,4)",128,0,6,0
+ 106               		.stabs	" :T(8,2)=eEVENT0:1,EVENT1:2,EVENT2:4,EVENT3:8,EVENT4:16,EVENT5:32,EVENT6:64,EVENT7:128,EVE
+ 107               		.stabn	162,0,0,0
+ 108               		.stabs	"setup_timer0_timer:F(0,47)",36,0,10,setup_timer0_timer
+ 109               		.stabs	"ms:P(6,4)",64,0,10,24
+ 110               		.stabs	"is_periodic:P(6,2)",64,0,10,22
+ 111               	.global	setup_timer0_timer
+ 112               		.type	setup_timer0_timer, @function
+ 113               	setup_timer0_timer:
+ 114               		.stabd	46,0,0
+GAS LISTING /tmp/ccNlkjke.s 			page 3
+
+
+   1:timer.c       **** #include <avr/interrupt.h>
+   2:timer.c       **** #include "timer.h"
+   3:timer.c       **** #include "event.h"
+   4:timer.c       **** 
+   5:timer.c       **** 
+   6:timer.c       **** uint16_t ms0, ms2, ms0_set, ms2_set;
+   7:timer.c       **** 
+   8:timer.c       **** 
+   9:timer.c       **** /* -------------------------------------*/
+  10:timer.c       **** void setup_timer0_timer(uint16_t ms, uint8_t is_periodic)
+  11:timer.c       **** {
+ 115               		.stabn	68,0,11,.LM0-.LFBB1
+ 116               	.LM0:
+ 117               	.LFBB1:
+ 118               	/* prologue: function */
+ 119               	/* frame size = 0 */
+ 120               	/* stack size = 0 */
+ 121               	.L__stack_usage = 0
+  12:timer.c       ****     ms0 = ms;
+ 122               		.stabn	68,0,12,.LM1-.LFBB1
+ 123               	.LM1:
+ 124 0000 9093 0000 		sts ms0+1,r25
+ 125 0004 8093 0000 		sts ms0,r24
+  13:timer.c       ****     if(is_periodic)
+ 126               		.stabn	68,0,13,.LM2-.LFBB1
+ 127               	.LM2:
+ 128 0008 6623      		tst r22
+ 129 000a 01F0      		breq .L2
+  14:timer.c       ****         ms0_set = ms;
+ 130               		.stabn	68,0,14,.LM3-.LFBB1
+ 131               	.LM3:
+ 132 000c 9093 0000 		sts ms0_set+1,r25
+ 133 0010 8093 0000 		sts ms0_set,r24
+ 134 0014 00C0      		rjmp .L3
+ 135               	.L2:
+  15:timer.c       ****     else
+  16:timer.c       ****         ms0_set = 0;
+ 136               		.stabn	68,0,16,.LM4-.LFBB1
+ 137               	.LM4:
+ 138 0016 1092 0000 		sts ms0_set+1,__zero_reg__
+ 139 001a 1092 0000 		sts ms0_set,__zero_reg__
+ 140               	.L3:
+  17:timer.c       **** 
+  18:timer.c       ****     OCR0A  = 250;
+ 141               		.stabn	68,0,18,.LM5-.LFBB1
+ 142               	.LM5:
+ 143 001e 8AEF      		ldi r24,lo8(-6)
+ 144 0020 87BD      		out 0x27,r24
+  19:timer.c       ****     TCCR0A = (1 << WGM01);
+ 145               		.stabn	68,0,19,.LM6-.LFBB1
+ 146               	.LM6:
+ 147 0022 82E0      		ldi r24,lo8(2)
+ 148 0024 84BD      		out 0x24,r24
+  20:timer.c       ****     TCCR0B = (1 << CS01) | (1 << CS00);
+ 149               		.stabn	68,0,20,.LM7-.LFBB1
+ 150               	.LM7:
+ 151 0026 93E0      		ldi r25,lo8(3)
+GAS LISTING /tmp/ccNlkjke.s 			page 4
+
+
+ 152 0028 95BD      		out 0x25,r25
+  21:timer.c       ****     TIMSK0 = (1 << OCIE0A);
+ 153               		.stabn	68,0,21,.LM8-.LFBB1
+ 154               	.LM8:
+ 155 002a 8093 6E00 		sts 110,r24
+ 156 002e 0895      		ret
+ 157               		.size	setup_timer0_timer, .-setup_timer0_timer
+ 158               	.Lscope1:
+ 159               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 160               		.stabd	78,0,0
+ 161               		.stabs	"setup_timer2_timer:F(0,47)",36,0,26,setup_timer2_timer
+ 162               		.stabs	"ms:P(6,4)",64,0,26,24
+ 163               		.stabs	"is_periodic:P(6,2)",64,0,26,22
+ 164               	.global	setup_timer2_timer
+ 165               		.type	setup_timer2_timer, @function
+ 166               	setup_timer2_timer:
+ 167               		.stabd	46,0,0
+  22:timer.c       **** }
+  23:timer.c       **** 
+  24:timer.c       **** 
+  25:timer.c       **** /* -------------------------------------*/
+  26:timer.c       **** void setup_timer2_timer(uint16_t ms, uint8_t is_periodic)
+  27:timer.c       **** {
+ 168               		.stabn	68,0,27,.LM9-.LFBB2
+ 169               	.LM9:
+ 170               	.LFBB2:
+ 171               	/* prologue: function */
+ 172               	/* frame size = 0 */
+ 173               	/* stack size = 0 */
+ 174               	.L__stack_usage = 0
+  28:timer.c       ****     ms2 = ms;
+ 175               		.stabn	68,0,28,.LM10-.LFBB2
+ 176               	.LM10:
+ 177 0030 9093 0000 		sts ms2+1,r25
+ 178 0034 8093 0000 		sts ms2,r24
+  29:timer.c       ****     if(is_periodic)
+ 179               		.stabn	68,0,29,.LM11-.LFBB2
+ 180               	.LM11:
+ 181 0038 6623      		tst r22
+ 182 003a 01F0      		breq .L6
+  30:timer.c       ****         ms2_set = ms;
+ 183               		.stabn	68,0,30,.LM12-.LFBB2
+ 184               	.LM12:
+ 185 003c 9093 0000 		sts ms2_set+1,r25
+ 186 0040 8093 0000 		sts ms2_set,r24
+ 187 0044 00C0      		rjmp .L7
+ 188               	.L6:
+  31:timer.c       ****     else
+  32:timer.c       ****         ms2_set = 0;
+ 189               		.stabn	68,0,32,.LM13-.LFBB2
+ 190               	.LM13:
+ 191 0046 1092 0000 		sts ms2_set+1,__zero_reg__
+ 192 004a 1092 0000 		sts ms2_set,__zero_reg__
+ 193               	.L7:
+  33:timer.c       **** 
+  34:timer.c       ****     OCR2A  = 250;
+ 194               		.stabn	68,0,34,.LM14-.LFBB2
+GAS LISTING /tmp/ccNlkjke.s 			page 5
+
+
+ 195               	.LM14:
+ 196 004e 8AEF      		ldi r24,lo8(-6)
+ 197 0050 8093 B300 		sts 179,r24
+  35:timer.c       ****     TCCR2A = (1 << WGM21);
+ 198               		.stabn	68,0,35,.LM15-.LFBB2
+ 199               	.LM15:
+ 200 0054 82E0      		ldi r24,lo8(2)
+ 201 0056 8093 B000 		sts 176,r24
+  36:timer.c       ****     TCCR2B = (1 << CS22);
+ 202               		.stabn	68,0,36,.LM16-.LFBB2
+ 203               	.LM16:
+ 204 005a 94E0      		ldi r25,lo8(4)
+ 205 005c 9093 B100 		sts 177,r25
+  37:timer.c       ****     TIMSK2 = (1 << OCIE2A);
+ 206               		.stabn	68,0,37,.LM17-.LFBB2
+ 207               	.LM17:
+ 208 0060 8093 7000 		sts 112,r24
+ 209 0064 0895      		ret
+ 210               		.size	setup_timer2_timer, .-setup_timer2_timer
+ 211               	.Lscope2:
+ 212               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 213               		.stabd	78,0,0
+ 214               		.stabs	"__vector_14:F(0,47)",36,0,42,__vector_14
+ 215               	.global	__vector_14
+ 216               		.type	__vector_14, @function
+ 217               	__vector_14:
+ 218               		.stabd	46,0,0
+  38:timer.c       **** }
+  39:timer.c       **** 
+  40:timer.c       **** 
+  41:timer.c       **** /* -------------------------------------*/
+  42:timer.c       **** ISR(TIMER0_COMPA_vect)
+  43:timer.c       **** {
+ 219               		.stabn	68,0,43,.LM18-.LFBB3
+ 220               	.LM18:
+ 221               	.LFBB3:
+ 222 0066 1F92      		push r1
+ 223 0068 0F92      		push r0
+ 224 006a 0FB6      		in r0,__SREG__
+ 225 006c 0F92      		push r0
+ 226 006e 1124      		clr __zero_reg__
+ 227 0070 8F93      		push r24
+ 228 0072 9F93      		push r25
+ 229               	/* prologue: Signal */
+ 230               	/* frame size = 0 */
+ 231               	/* stack size = 5 */
+ 232               	.L__stack_usage = 5
+  44:timer.c       ****     if (ms0)
+ 233               		.stabn	68,0,44,.LM19-.LFBB3
+ 234               	.LM19:
+ 235 0074 8091 0000 		lds r24,ms0
+ 236 0078 9091 0000 		lds r25,ms0+1
+ 237 007c 0097      		sbiw r24,0
+ 238 007e 01F0      		breq .L8
+  45:timer.c       ****         if(!--ms0) {
+ 239               		.stabn	68,0,45,.LM20-.LFBB3
+ 240               	.LM20:
+GAS LISTING /tmp/ccNlkjke.s 			page 6
+
+
+ 241 0080 0197      		sbiw r24,1
+ 242 0082 9093 0000 		sts ms0+1,r25
+ 243 0086 8093 0000 		sts ms0,r24
+ 244 008a 892B      		or r24,r25
+ 245 008c 01F4      		brne .L8
+  46:timer.c       ****             ms0 = ms0_set;
+ 246               		.stabn	68,0,46,.LM21-.LFBB3
+ 247               	.LM21:
+ 248 008e 8091 0000 		lds r24,ms0_set
+ 249 0092 9091 0000 		lds r25,ms0_set+1
+ 250 0096 9093 0000 		sts ms0+1,r25
+ 251 009a 8093 0000 		sts ms0,r24
+  47:timer.c       ****             events |= EVENT0;
+ 252               		.stabn	68,0,47,.LM22-.LFBB3
+ 253               	.LM22:
+ 254 009e 8091 0000 		lds r24,events
+ 255 00a2 9091 0000 		lds r25,events+1
+ 256 00a6 8160      		ori r24,1
+ 257 00a8 9093 0000 		sts events+1,r25
+ 258 00ac 8093 0000 		sts events,r24
+ 259               	.L8:
+ 260               	/* epilogue start */
+  48:timer.c       ****         }
+  49:timer.c       **** }
+ 261               		.stabn	68,0,49,.LM23-.LFBB3
+ 262               	.LM23:
+ 263 00b0 9F91      		pop r25
+ 264 00b2 8F91      		pop r24
+ 265 00b4 0F90      		pop r0
+ 266 00b6 0FBE      		out __SREG__,r0
+ 267 00b8 0F90      		pop r0
+ 268 00ba 1F90      		pop r1
+ 269 00bc 1895      		reti
+ 270               		.size	__vector_14, .-__vector_14
+ 271               	.Lscope3:
+ 272               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 273               		.stabd	78,0,0
+ 274               		.stabs	"__vector_7:F(0,47)",36,0,53,__vector_7
+ 275               	.global	__vector_7
+ 276               		.type	__vector_7, @function
+ 277               	__vector_7:
+ 278               		.stabd	46,0,0
+  50:timer.c       **** 
+  51:timer.c       **** 
+  52:timer.c       **** /* -------------------------------------*/
+  53:timer.c       **** ISR(TIMER2_COMPA_vect)
+  54:timer.c       **** {
+ 279               		.stabn	68,0,54,.LM24-.LFBB4
+ 280               	.LM24:
+ 281               	.LFBB4:
+ 282 00be 1F92      		push r1
+ 283 00c0 0F92      		push r0
+ 284 00c2 0FB6      		in r0,__SREG__
+ 285 00c4 0F92      		push r0
+ 286 00c6 1124      		clr __zero_reg__
+ 287 00c8 8F93      		push r24
+ 288 00ca 9F93      		push r25
+GAS LISTING /tmp/ccNlkjke.s 			page 7
+
+
+ 289               	/* prologue: Signal */
+ 290               	/* frame size = 0 */
+ 291               	/* stack size = 5 */
+ 292               	.L__stack_usage = 5
+  55:timer.c       ****     if (ms2)
+ 293               		.stabn	68,0,55,.LM25-.LFBB4
+ 294               	.LM25:
+ 295 00cc 8091 0000 		lds r24,ms2
+ 296 00d0 9091 0000 		lds r25,ms2+1
+ 297 00d4 0097      		sbiw r24,0
+ 298 00d6 01F0      		breq .L12
+  56:timer.c       ****         if(!--ms2) {
+ 299               		.stabn	68,0,56,.LM26-.LFBB4
+ 300               	.LM26:
+ 301 00d8 0197      		sbiw r24,1
+ 302 00da 9093 0000 		sts ms2+1,r25
+ 303 00de 8093 0000 		sts ms2,r24
+ 304 00e2 892B      		or r24,r25
+ 305 00e4 01F4      		brne .L12
+  57:timer.c       ****             ms2 = ms2_set;
+ 306               		.stabn	68,0,57,.LM27-.LFBB4
+ 307               	.LM27:
+ 308 00e6 8091 0000 		lds r24,ms2_set
+ 309 00ea 9091 0000 		lds r25,ms2_set+1
+ 310 00ee 9093 0000 		sts ms2+1,r25
+ 311 00f2 8093 0000 		sts ms2,r24
+  58:timer.c       ****             events |= EVENT1;
+ 312               		.stabn	68,0,58,.LM28-.LFBB4
+ 313               	.LM28:
+ 314 00f6 8091 0000 		lds r24,events
+ 315 00fa 9091 0000 		lds r25,events+1
+ 316 00fe 8260      		ori r24,2
+ 317 0100 9093 0000 		sts events+1,r25
+ 318 0104 8093 0000 		sts events,r24
+ 319               	.L12:
+ 320               	/* epilogue start */
+  59:timer.c       ****         }
+  60:timer.c       **** }
+ 321               		.stabn	68,0,60,.LM29-.LFBB4
+ 322               	.LM29:
+ 323 0108 9F91      		pop r25
+ 324 010a 8F91      		pop r24
+ 325 010c 0F90      		pop r0
+ 326 010e 0FBE      		out __SREG__,r0
+ 327 0110 0F90      		pop r0
+ 328 0112 1F90      		pop r1
+ 329 0114 1895      		reti
+ 330               		.size	__vector_7, .-__vector_7
+ 331               	.Lscope4:
+ 332               		.stabs	"",36,0,0,.Lscope4-.LFBB4
+ 333               		.stabd	78,0,0
+ 334               		.comm	ms2_set,2,1
+ 335               		.comm	ms0_set,2,1
+ 336               		.comm	ms2,2,1
+ 337               		.comm	ms0,2,1
+ 338               		.stabs	"ms0:G(6,4)",32,0,6,0
+ 339               		.stabs	"ms2:G(6,4)",32,0,6,0
+GAS LISTING /tmp/ccNlkjke.s 			page 8
+
+
+ 340               		.stabs	"ms0_set:G(6,4)",32,0,6,0
+ 341               		.stabs	"ms2_set:G(6,4)",32,0,6,0
+ 342               		.stabs	"",100,0,0,.Letext0
+ 343               	.Letext0:
+ 344               		.ident	"GCC: (GNU) 4.9.2"
+ 345               	.global __do_clear_bss
+GAS LISTING /tmp/ccNlkjke.s 			page 9
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 timer.c
+     /tmp/ccNlkjke.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccNlkjke.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccNlkjke.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccNlkjke.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccNlkjke.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccNlkjke.s:113    .text:0000000000000000 setup_timer0_timer
+                            *COM*:0000000000000002 ms0
+                            *COM*:0000000000000002 ms0_set
+     /tmp/ccNlkjke.s:166    .text:0000000000000030 setup_timer2_timer
+                            *COM*:0000000000000002 ms2
+                            *COM*:0000000000000002 ms2_set
+     /tmp/ccNlkjke.s:217    .text:0000000000000066 __vector_14
+     /tmp/ccNlkjke.s:277    .text:00000000000000be __vector_7
+
+UNDEFINED SYMBOLS
+events
+__do_clear_bss

@@ -1,0 +1,837 @@
+GAS LISTING /tmp/ccPZzpVV.s 			page 1
+
+
+   1               		.file	"usart_tx.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.stabs	"/home/rcampello/Desktop/UFPE/6p/RTOs/5aula/",100,0,2,.Ltext0
+   8               		.stabs	"usart_tx.c",100,0,2,.Ltext0
+   9               		.text
+  10               	.Ltext0:
+  11               		.stabs	"gcc2_compiled.",60,0,0,0
+  12               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  13               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  14               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  15               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  16               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  17               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  18               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,0,0
+  19               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  20               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,0,0
+  21               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  22               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  23               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  24               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  25               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"short _Fract:t(0,15)=r(0,1);1;0;",128,0,0,0
+  27               		.stabs	"_Fract:t(0,16)=r(0,1);2;0;",128,0,0,0
+  28               		.stabs	"long _Fract:t(0,17)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"long long _Fract:t(0,18)=r(0,1);8;0;",128,0,0,0
+  30               		.stabs	"unsigned short _Fract:t(0,19)=r(0,1);1;0;",128,0,0,0
+  31               		.stabs	"unsigned _Fract:t(0,20)=r(0,1);2;0;",128,0,0,0
+  32               		.stabs	"unsigned long _Fract:t(0,21)=r(0,1);4;0;",128,0,0,0
+  33               		.stabs	"unsigned long long _Fract:t(0,22)=r(0,1);8;0;",128,0,0,0
+  34               		.stabs	"_Sat short _Fract:t(0,23)=r(0,1);1;0;",128,0,0,0
+  35               		.stabs	"_Sat _Fract:t(0,24)=r(0,1);2;0;",128,0,0,0
+  36               		.stabs	"_Sat long _Fract:t(0,25)=r(0,1);4;0;",128,0,0,0
+  37               		.stabs	"_Sat long long _Fract:t(0,26)=r(0,1);8;0;",128,0,0,0
+  38               		.stabs	"_Sat unsigned short _Fract:t(0,27)=r(0,1);1;0;",128,0,0,0
+  39               		.stabs	"_Sat unsigned _Fract:t(0,28)=r(0,1);2;0;",128,0,0,0
+  40               		.stabs	"_Sat unsigned long _Fract:t(0,29)=r(0,1);4;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned long long _Fract:t(0,30)=r(0,1);8;0;",128,0,0,0
+  42               		.stabs	"short _Accum:t(0,31)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Accum:t(0,32)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"long _Accum:t(0,33)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"long long _Accum:t(0,34)=r(0,1);8;0;",128,0,0,0
+  46               		.stabs	"unsigned short _Accum:t(0,35)=r(0,1);2;0;",128,0,0,0
+  47               		.stabs	"unsigned _Accum:t(0,36)=r(0,1);4;0;",128,0,0,0
+  48               		.stabs	"unsigned long _Accum:t(0,37)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned long long _Accum:t(0,38)=r(0,1);8;0;",128,0,0,0
+  50               		.stabs	"_Sat short _Accum:t(0,39)=r(0,1);2;0;",128,0,0,0
+  51               		.stabs	"_Sat _Accum:t(0,40)=r(0,1);4;0;",128,0,0,0
+  52               		.stabs	"_Sat long _Accum:t(0,41)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat long long _Accum:t(0,42)=r(0,1);8;0;",128,0,0,0
+  54               		.stabs	"_Sat unsigned short _Accum:t(0,43)=r(0,1);2;0;",128,0,0,0
+  55               		.stabs	"_Sat unsigned _Accum:t(0,44)=r(0,1);4;0;",128,0,0,0
+  56               		.stabs	"_Sat unsigned long _Accum:t(0,45)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned long long _Accum:t(0,46)=r(0,1);8;0;",128,0,0,0
+GAS LISTING /tmp/ccPZzpVV.s 			page 2
+
+
+  58               		.stabs	"void:t(0,47)=(0,47)",128,0,0,0
+  59               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+  60               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
+  61               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  62               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stdint.h",130,0,0,0
+  63               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  64               		.stabs	"int8_t:t(5,1)=(0,10)",128,0,121,0
+  65               		.stabs	"uint8_t:t(5,2)=(0,11)",128,0,122,0
+  66               		.stabs	"int16_t:t(5,3)=(0,1)",128,0,123,0
+  67               		.stabs	"uint16_t:t(5,4)=(0,4)",128,0,124,0
+  68               		.stabs	"int32_t:t(5,5)=(0,3)",128,0,125,0
+  69               		.stabs	"uint32_t:t(5,6)=(0,5)",128,0,126,0
+  70               		.stabs	"int64_t:t(5,7)=(0,6)",128,0,128,0
+  71               		.stabs	"uint64_t:t(5,8)=(0,7)",128,0,129,0
+  72               		.stabs	"intptr_t:t(5,9)=(5,3)",128,0,142,0
+  73               		.stabs	"uintptr_t:t(5,10)=(5,4)",128,0,147,0
+  74               		.stabs	"int_least8_t:t(5,11)=(5,1)",128,0,159,0
+  75               		.stabs	"uint_least8_t:t(5,12)=(5,2)",128,0,164,0
+  76               		.stabs	"int_least16_t:t(5,13)=(5,3)",128,0,169,0
+  77               		.stabs	"uint_least16_t:t(5,14)=(5,4)",128,0,174,0
+  78               		.stabs	"int_least32_t:t(5,15)=(5,5)",128,0,179,0
+  79               		.stabs	"uint_least32_t:t(5,16)=(5,6)",128,0,184,0
+  80               		.stabs	"int_least64_t:t(5,17)=(5,7)",128,0,192,0
+  81               		.stabs	"uint_least64_t:t(5,18)=(5,8)",128,0,199,0
+  82               		.stabs	"int_fast8_t:t(5,19)=(5,1)",128,0,213,0
+  83               		.stabs	"uint_fast8_t:t(5,20)=(5,2)",128,0,218,0
+  84               		.stabs	"int_fast16_t:t(5,21)=(5,3)",128,0,223,0
+  85               		.stabs	"uint_fast16_t:t(5,22)=(5,4)",128,0,228,0
+  86               		.stabs	"int_fast32_t:t(5,23)=(5,5)",128,0,233,0
+  87               		.stabs	"uint_fast32_t:t(5,24)=(5,6)",128,0,238,0
+  88               		.stabs	"int_fast64_t:t(5,25)=(5,7)",128,0,246,0
+  89               		.stabs	"uint_fast64_t:t(5,26)=(5,8)",128,0,253,0
+  90               		.stabs	"intmax_t:t(5,27)=(5,7)",128,0,273,0
+  91               		.stabs	"uintmax_t:t(5,28)=(5,8)",128,0,278,0
+  92               		.stabn	162,0,0,0
+  93               		.stabn	162,0,0,0
+  94               		.stabs	"int_farptr_t:t(3,1)=(5,5)",128,0,77,0
+  95               		.stabs	"uint_farptr_t:t(3,2)=(5,6)",128,0,81,0
+  96               		.stabn	162,0,0,0
+  97               		.stabn	162,0,0,0
+  98               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+  99               		.stabs	"__fuse_t:t(6,1)=(6,2)=s3low:(0,11),0,8;high:(0,11),8,8;extended:(0,11),16,8;;",128,0,244,0
+ 100               		.stabn	162,0,0,0
+ 101               		.stabn	162,0,0,0
+ 102               		.stabs	"setup_int0:F(0,47)",36,0,20,setup_int0
+ 103               	.global	setup_int0
+ 104               		.type	setup_int0, @function
+ 105               	setup_int0:
+ 106               		.stabd	46,0,0
+   1:usart_tx.c    **** #include <avr/io.h>
+   2:usart_tx.c    **** #include <avr/cpufunc.h>
+   3:usart_tx.c    **** #include <avr/interrupt.h>
+   4:usart_tx.c    **** 
+   5:usart_tx.c    **** 
+   6:usart_tx.c    **** /* 
+   7:usart_tx.c    ****  * Constantes utilizadas no código 
+   8:usart_tx.c    ****  */
+GAS LISTING /tmp/ccPZzpVV.s 			page 3
+
+
+   9:usart_tx.c    **** #define FOSC 16000000ul  /* velocidade do relógio */
+  10:usart_tx.c    **** #define BAUD 115200      /* velocidade desejada para a serial */
+  11:usart_tx.c    **** #define MYUBRR (FOSC/(8*BAUD) - 1)  /* valor de 12 bits para configurar o clock da USART */
+  12:usart_tx.c    **** 
+  13:usart_tx.c    **** #define BUFFER_SIZE 20   /* Tamanho do buffer da USART */
+  14:usart_tx.c    **** 
+  15:usart_tx.c    **** 
+  16:usart_tx.c    **** /* 
+  17:usart_tx.c    ****  * Definição de funções 
+  18:usart_tx.c    ****  */
+  19:usart_tx.c    **** 
+  20:usart_tx.c    **** void setup_int0(void)
+  21:usart_tx.c    **** {
+ 107               		.stabn	68,0,21,.LM0-.LFBB1
+ 108               	.LM0:
+ 109               	.LFBB1:
+ 110               	/* prologue: function */
+ 111               	/* frame size = 0 */
+ 112               	/* stack size = 0 */
+ 113               	.L__stack_usage = 0
+  22:usart_tx.c    ****     /*
+  23:usart_tx.c    ****      * Para as macros abaixo e outras, veja o arquivo
+  24:usart_tx.c    ****      * usr/lib/avr/include/avr/iom328p.h
+  25:usart_tx.c    ****      */
+  26:usart_tx.c    ****     EICRA = (1<< ISC00);
+ 114               		.stabn	68,0,26,.LM1-.LFBB1
+ 115               	.LM1:
+ 116 0000 81E0      		ldi r24,lo8(1)
+ 117 0002 8093 6900 		sts 105,r24
+  27:usart_tx.c    ****     EIMSK |= (1 << INT0);
+ 118               		.stabn	68,0,27,.LM2-.LFBB1
+ 119               	.LM2:
+ 120 0006 E89A      		sbi 0x1d,0
+  28:usart_tx.c    ****     EIFR  = (1 << INTF0);
+ 121               		.stabn	68,0,28,.LM3-.LFBB1
+ 122               	.LM3:
+ 123 0008 8CBB      		out 0x1c,r24
+ 124 000a 0895      		ret
+ 125               		.size	setup_int0, .-setup_int0
+ 126               	.Lscope1:
+ 127               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 128               		.stabd	78,0,0
+ 129               		.stabs	"setup_usart:F(0,47)",36,0,32,setup_usart
+ 130               	.global	setup_usart
+ 131               		.type	setup_usart, @function
+ 132               	setup_usart:
+ 133               		.stabd	46,0,0
+  29:usart_tx.c    **** }
+  30:usart_tx.c    **** 
+  31:usart_tx.c    **** 
+  32:usart_tx.c    **** void setup_usart(void)
+  33:usart_tx.c    **** {
+ 134               		.stabn	68,0,33,.LM4-.LFBB2
+ 135               	.LM4:
+ 136               	.LFBB2:
+ 137               	/* prologue: function */
+ 138               	/* frame size = 0 */
+GAS LISTING /tmp/ccPZzpVV.s 			page 4
+
+
+ 139               	/* stack size = 0 */
+ 140               	.L__stack_usage = 0
+  34:usart_tx.c    ****     /*
+  35:usart_tx.c    ****      * Para as macros abaixo e outras, veja o arquivo
+  36:usart_tx.c    ****      * /usr/lib/avr/include/avr/iom328p.h
+  37:usart_tx.c    ****      */
+  38:usart_tx.c    ****     /*
+  39:usart_tx.c    ****      * Primeiro setamos a direção certa para os pinos RX e TX
+  40:usart_tx.c    ****      */
+  41:usart_tx.c    ****     DDRD &= ~(1 << PD0);  /* USART RX bit para a placa Nano */
+ 141               		.stabn	68,0,41,.LM5-.LFBB2
+ 142               	.LM5:
+ 143 000c 5098      		cbi 0xa,0
+  42:usart_tx.c    ****     DDRD |= (1 << PD1);  /* USART TX bit para a placa Nano */
+ 144               		.stabn	68,0,42,.LM6-.LFBB2
+ 145               	.LM6:
+ 146 000e 519A      		sbi 0xa,1
+  43:usart_tx.c    ****     
+  44:usart_tx.c    ****     /*
+  45:usart_tx.c    ****      * Agora configuramos a USART
+  46:usart_tx.c    ****      */
+  47:usart_tx.c    ****     UBRR0H = (MYUBRR >> 8) & 0xF;
+ 147               		.stabn	68,0,47,.LM7-.LFBB2
+ 148               	.LM7:
+ 149 0010 1092 C500 		sts 197,__zero_reg__
+  48:usart_tx.c    ****     UBRR0L = MYUBRR & 0xFF;
+ 150               		.stabn	68,0,48,.LM8-.LFBB2
+ 151               	.LM8:
+ 152 0014 80E1      		ldi r24,lo8(16)
+ 153 0016 8093 C400 		sts 196,r24
+  49:usart_tx.c    ****     UCSR0A = (1 << U2X0); /* double speed */
+ 154               		.stabn	68,0,49,.LM9-.LFBB2
+ 155               	.LM9:
+ 156 001a 82E0      		ldi r24,lo8(2)
+ 157 001c 8093 C000 		sts 192,r24
+  50:usart_tx.c    ****     UCSR0B = (1 << TXEN0); /* habilita a transmissão mas não a interrupção (não ainda) */
+ 158               		.stabn	68,0,50,.LM10-.LFBB2
+ 159               	.LM10:
+ 160 0020 88E0      		ldi r24,lo8(8)
+ 161 0022 8093 C100 		sts 193,r24
+  51:usart_tx.c    ****     UCSR0C = (1 << UCSZ00) | (1 << UCSZ01);  /* Asynchronous, 8-N-1 */
+ 162               		.stabn	68,0,51,.LM11-.LFBB2
+ 163               	.LM11:
+ 164 0026 86E0      		ldi r24,lo8(6)
+ 165 0028 8093 C200 		sts 194,r24
+ 166 002c 0895      		ret
+ 167               		.size	setup_usart, .-setup_usart
+ 168               	.Lscope2:
+ 169               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 170               		.stabd	78,0,0
+ 171               		.stabs	"setup_main:F(0,47)",36,0,55,setup_main
+ 172               	.global	setup_main
+ 173               		.type	setup_main, @function
+ 174               	setup_main:
+ 175               		.stabd	46,0,0
+  52:usart_tx.c    **** }
+  53:usart_tx.c    **** 
+GAS LISTING /tmp/ccPZzpVV.s 			page 5
+
+
+  54:usart_tx.c    **** /* -------------------------------------*/
+  55:usart_tx.c    **** void setup_main(void)
+  56:usart_tx.c    **** {
+ 176               		.stabn	68,0,56,.LM12-.LFBB3
+ 177               	.LM12:
+ 178               	.LFBB3:
+ 179               	/* prologue: function */
+ 180               	/* frame size = 0 */
+ 181               	/* stack size = 0 */
+ 182               	.L__stack_usage = 0
+  57:usart_tx.c    ****     LED_DDR |= (1 << LED_PINNBR);
+ 183               		.stabn	68,0,57,.LM13-.LFBB3
+ 184               	.LM13:
+ 185 002e 259A      		sbi 0x4,5
+  58:usart_tx.c    **** ///////////////////////////////////////
+  59:usart_tx.c    ****     DDRD &= ~(1 << PD2);
+ 186               		.stabn	68,0,59,.LM14-.LFBB3
+ 187               	.LM14:
+ 188 0030 5298      		cbi 0xa,2
+  60:usart_tx.c    ****     PORTD |= (1 << PD2);
+ 189               		.stabn	68,0,60,.LM15-.LFBB3
+ 190               	.LM15:
+ 191 0032 5A9A      		sbi 0xb,2
+  61:usart_tx.c    **** ///////////////////////////////////////
+  62:usart_tx.c    **** 
+  63:usart_tx.c    **** 
+  64:usart_tx.c    ****     /* Start transmitting */
+  65:usart_tx.c    ****     UDR0 = 0;
+ 192               		.stabn	68,0,65,.LM16-.LFBB3
+ 193               	.LM16:
+ 194 0034 1092 C600 		sts 198,__zero_reg__
+  66:usart_tx.c    ****     sei(); /* Seta flag principal de habilitação de interrupções */
+ 195               		.stabn	68,0,66,.LM17-.LFBB3
+ 196               	.LM17:
+ 197               	/* #APP */
+ 198               	 ;  66 "usart_tx.c" 1
+ 199 0038 7894      		sei
+ 200               	 ;  0 "" 2
+ 201               	/* #NOAPP */
+ 202 003a 0895      		ret
+ 203               		.size	setup_main, .-setup_main
+ 204               	.Lscope3:
+ 205               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 206               		.stabd	78,0,0
+ 207               		.stabs	"delay_ms:F(0,47)",36,0,70,delay_ms
+ 208               		.stabs	"ms:P(5,4)",64,0,70,24
+ 209               	.global	delay_ms
+ 210               		.type	delay_ms, @function
+ 211               	delay_ms:
+ 212               		.stabd	46,0,0
+  67:usart_tx.c    **** }
+  68:usart_tx.c    **** 
+  69:usart_tx.c    **** /* -------------------------------------*/
+  70:usart_tx.c    **** void delay_ms(uint16_t ms)
+  71:usart_tx.c    **** {
+ 213               		.stabn	68,0,71,.LM18-.LFBB4
+ 214               	.LM18:
+GAS LISTING /tmp/ccPZzpVV.s 			page 6
+
+
+ 215               	.LFBB4:
+ 216               	/* prologue: function */
+ 217               	/* frame size = 0 */
+ 218               	/* stack size = 0 */
+ 219               	.L__stack_usage = 0
+  72:usart_tx.c    ****     uint16_t i, j;
+  73:usart_tx.c    ****     for(i=0; i<ms; i++)
+ 220               		.stabn	68,0,73,.LM19-.LFBB4
+ 221               	.LM19:
+ 222 003c 20E0      		ldi r18,0
+ 223 003e 30E0      		ldi r19,0
+ 224               	.L5:
+ 225               		.stabn	68,0,73,.LM20-.LFBB4
+ 226               	.LM20:
+ 227 0040 2817      		cp r18,r24
+ 228 0042 3907      		cpc r19,r25
+ 229 0044 01F0      		breq .L10
+ 230 0046 40EA      		ldi r20,lo8(-96)
+ 231 0048 5FE0      		ldi r21,lo8(15)
+ 232               	.L6:
+  74:usart_tx.c    ****         for(j=0; j<4000; j++)
+  75:usart_tx.c    ****             _NOP();
+ 233               		.stabn	68,0,75,.LM21-.LFBB4
+ 234               	.LM21:
+ 235               	/* #APP */
+ 236               	 ;  75 "usart_tx.c" 1
+ 237 004a 0000      		nop
+ 238               	 ;  0 "" 2
+ 239               	/* #NOAPP */
+ 240 004c 4150      		subi r20,1
+ 241 004e 5109      		sbc r21,__zero_reg__
+  74:usart_tx.c    ****         for(j=0; j<4000; j++)
+ 242               		.stabn	68,0,74,.LM22-.LFBB4
+ 243               	.LM22:
+ 244 0050 01F4      		brne .L6
+  73:usart_tx.c    ****         for(j=0; j<4000; j++)
+ 245               		.stabn	68,0,73,.LM23-.LFBB4
+ 246               	.LM23:
+ 247 0052 2F5F      		subi r18,-1
+ 248 0054 3F4F      		sbci r19,-1
+ 249 0056 00C0      		rjmp .L5
+ 250               	.L10:
+ 251               	/* epilogue start */
+  76:usart_tx.c    **** }
+ 252               		.stabn	68,0,76,.LM24-.LFBB4
+ 253               	.LM24:
+ 254 0058 0895      		ret
+ 255               		.size	delay_ms, .-delay_ms
+ 256               		.stabs	"i:r(5,4)",64,0,72,18
+ 257               		.stabn	192,0,0,.LFBB4-.LFBB4
+ 258               		.stabn	224,0,0,.Lscope4-.LFBB4
+ 259               	.Lscope4:
+ 260               		.stabs	"",36,0,0,.Lscope4-.LFBB4
+ 261               		.stabd	78,0,0
+ 262               		.stabs	"write:F(5,2)",36,0,83,write
+ 263               		.stabs	"c:P(5,2)",64,0,83,24
+ 264               	.global	write
+GAS LISTING /tmp/ccPZzpVV.s 			page 7
+
+
+ 265               		.type	write, @function
+ 266               	write:
+ 267               		.stabd	46,0,0
+  77:usart_tx.c    **** 
+  78:usart_tx.c    **** /* -------------------------------------*/
+  79:usart_tx.c    **** uint16_t tx_buffer[BUFFER_SIZE];     /* buffer para transmissão */
+  80:usart_tx.c    **** uint8_t tx_head, tx_tail;   /* ponteiros para o buffer circular */
+  81:usart_tx.c    **** uint8_t usart_transmitting=0;
+  82:usart_tx.c    **** 
+  83:usart_tx.c    **** uint8_t write(uint8_t c)
+  84:usart_tx.c    **** {
+ 268               		.stabn	68,0,84,.LM25-.LFBB5
+ 269               	.LM25:
+ 270               	.LFBB5:
+ 271               	/* prologue: function */
+ 272               	/* frame size = 0 */
+ 273               	/* stack size = 0 */
+ 274               	.L__stack_usage = 0
+  85:usart_tx.c    ****     uint8_t rc = 0;
+  86:usart_tx.c    **** 
+  87:usart_tx.c    ****     cli();
+ 275               		.stabn	68,0,87,.LM26-.LFBB5
+ 276               	.LM26:
+ 277               	/* #APP */
+ 278               	 ;  87 "usart_tx.c" 1
+ 279 005a F894      		cli
+ 280               	 ;  0 "" 2
+  88:usart_tx.c    ****     // primeiro if inicialmente sempre executado pois usart_transmitting começa 0, habilita a inte
+  89:usart_tx.c    ****     if (!usart_transmitting) {
+ 281               		.stabn	68,0,89,.LM27-.LFBB5
+ 282               	.LM27:
+ 283               	/* #NOAPP */
+ 284 005c 9091 0000 		lds r25,usart_transmitting
+ 285 0060 9111      		cpse r25,__zero_reg__
+ 286 0062 00C0      		rjmp .L12
+  90:usart_tx.c    ****         UDR0 = c;
+ 287               		.stabn	68,0,90,.LM28-.LFBB5
+ 288               	.LM28:
+ 289 0064 8093 C600 		sts 198,r24
+  91:usart_tx.c    ****         UCSR0B |= (1 << UDRIE0);
+ 290               		.stabn	68,0,91,.LM29-.LFBB5
+ 291               	.LM29:
+ 292 0068 8091 C100 		lds r24,193
+ 293 006c 8062      		ori r24,lo8(32)
+ 294 006e 8093 C100 		sts 193,r24
+  92:usart_tx.c    ****         usart_transmitting = 1;
+ 295               		.stabn	68,0,92,.LM30-.LFBB5
+ 296               	.LM30:
+ 297 0072 81E0      		ldi r24,lo8(1)
+ 298 0074 8093 0000 		sts usart_transmitting,r24
+ 299 0078 00C0      		rjmp .L16
+ 300               	.L12:
+ 301               	.LBB2:
+  93:usart_tx.c    ****     } else {
+  94:usart_tx.c    ****         uint8_t next = tx_head + 1;
+ 302               		.stabn	68,0,94,.LM31-.LFBB5
+ 303               	.LM31:
+GAS LISTING /tmp/ccPZzpVV.s 			page 8
+
+
+ 304 007a E091 0000 		lds r30,tx_head
+ 305 007e 91E0      		ldi r25,lo8(1)
+ 306 0080 9E0F      		add r25,r30
+  95:usart_tx.c    ****         if (next >= BUFFER_SIZE)
+ 307               		.stabn	68,0,95,.LM32-.LFBB5
+ 308               	.LM32:
+ 309 0082 9431      		cpi r25,lo8(20)
+ 310 0084 00F0      		brlo .L14
+  96:usart_tx.c    ****             next = 0;
+ 311               		.stabn	68,0,96,.LM33-.LFBB5
+ 312               	.LM33:
+ 313 0086 90E0      		ldi r25,0
+ 314               	.L14:
+  97:usart_tx.c    ****         if (next != tx_tail) { /* buffer cheio */
+ 315               		.stabn	68,0,97,.LM34-.LFBB5
+ 316               	.LM34:
+ 317 0088 2091 0000 		lds r18,tx_tail
+ 318 008c 9217      		cp r25,r18
+ 319 008e 01F0      		breq .L15
+  98:usart_tx.c    ****             tx_buffer[tx_head] = c;
+ 320               		.stabn	68,0,98,.LM35-.LFBB5
+ 321               	.LM35:
+ 322 0090 F0E0      		ldi r31,0
+ 323 0092 EE0F      		lsl r30
+ 324 0094 FF1F      		rol r31
+ 325 0096 E050      		subi r30,lo8(-(tx_buffer))
+ 326 0098 F040      		sbci r31,hi8(-(tx_buffer))
+ 327 009a 282F      		mov r18,r24
+ 328 009c 30E0      		ldi r19,0
+ 329 009e 3183      		std Z+1,r19
+ 330 00a0 2083      		st Z,r18
+  99:usart_tx.c    ****             tx_head = next;
+ 331               		.stabn	68,0,99,.LM36-.LFBB5
+ 332               	.LM36:
+ 333 00a2 9093 0000 		sts tx_head,r25
+ 334               	.L16:
+ 335               	.LBE2:
+  85:usart_tx.c    **** 
+ 336               		.stabn	68,0,85,.LM37-.LFBB5
+ 337               	.LM37:
+ 338 00a6 80E0      		ldi r24,0
+ 339               	.LBB3:
+ 340 00a8 00C0      		rjmp .L13
+ 341               	.L15:
+ 100:usart_tx.c    ****         } else
+ 101:usart_tx.c    ****             rc = 1;
+ 342               		.stabn	68,0,101,.LM38-.LFBB5
+ 343               	.LM38:
+ 344 00aa 81E0      		ldi r24,lo8(1)
+ 345               	.L13:
+ 346               	.LBE3:
+ 102:usart_tx.c    ****     }
+ 103:usart_tx.c    ****     sei();
+ 347               		.stabn	68,0,103,.LM39-.LFBB5
+ 348               	.LM39:
+ 349               	/* #APP */
+ 350               	 ;  103 "usart_tx.c" 1
+GAS LISTING /tmp/ccPZzpVV.s 			page 9
+
+
+ 351 00ac 7894      		sei
+ 352               	 ;  0 "" 2
+ 104:usart_tx.c    ****     return rc;
+ 105:usart_tx.c    **** }
+ 353               		.stabn	68,0,105,.LM40-.LFBB5
+ 354               	.LM40:
+ 355               	/* #NOAPP */
+ 356 00ae 0895      		ret
+ 357               		.size	write, .-write
+ 358               		.stabs	"rc:r(5,2)",64,0,85,24
+ 359               		.stabn	192,0,0,.LFBB5-.LFBB5
+ 360               		.stabs	"next:r(5,2)",64,0,94,25
+ 361               		.stabn	192,0,0,.LBB2-.LFBB5
+ 362               		.stabn	224,0,0,.LBE2-.LFBB5
+ 363               		.stabs	"next:r(5,2)",64,0,94,25
+ 364               		.stabn	192,0,0,.LBB3-.LFBB5
+ 365               		.stabn	224,0,0,.LBE3-.LFBB5
+ 366               		.stabn	224,0,0,.Lscope5-.LFBB5
+ 367               	.Lscope5:
+ 368               		.stabs	"",36,0,0,.Lscope5-.LFBB5
+ 369               		.stabd	78,0,0
+ 370               		.stabs	"__vector_19:F(0,47)",36,0,114,__vector_19
+ 371               	.global	__vector_19
+ 372               		.type	__vector_19, @function
+ 373               	__vector_19:
+ 374               		.stabd	46,0,0
+ 106:usart_tx.c    **** 
+ 107:usart_tx.c    **** /* -------------------------------------*/
+ 108:usart_tx.c    **** /*
+ 109:usart_tx.c    ****  * Interrupt handlers devem ser definidos com a macros
+ 110:usart_tx.c    ****  * ISR(), que é definida no arquivo avr/interrupt.h.
+ 111:usart_tx.c    ****  * Veja também a página
+ 112:usart_tx.c    ****  * http://www.nongnu.org/avr-libc/user-manual/group__avr__interrupts.html
+ 113:usart_tx.c    ****  */
+ 114:usart_tx.c    **** ISR(USART_UDRE_vect)
+ 115:usart_tx.c    **** {
+ 375               		.stabn	68,0,115,.LM41-.LFBB6
+ 376               	.LM41:
+ 377               	.LFBB6:
+ 378 00b0 1F92      		push r1
+ 379 00b2 0F92      		push r0
+ 380 00b4 0FB6      		in r0,__SREG__
+ 381 00b6 0F92      		push r0
+ 382 00b8 1124      		clr __zero_reg__
+ 383 00ba 8F93      		push r24
+ 384 00bc EF93      		push r30
+ 385 00be FF93      		push r31
+ 386               	/* prologue: Signal */
+ 387               	/* frame size = 0 */
+ 388               	/* stack size = 6 */
+ 389               	.L__stack_usage = 6
+ 116:usart_tx.c    ****     if (tx_head == tx_tail) {
+ 390               		.stabn	68,0,116,.LM42-.LFBB6
+ 391               	.LM42:
+ 392 00c0 E091 0000 		lds r30,tx_tail
+ 393 00c4 8091 0000 		lds r24,tx_head
+ 394 00c8 8E13      		cpse r24,r30
+GAS LISTING /tmp/ccPZzpVV.s 			page 10
+
+
+ 395 00ca 00C0      		rjmp .L18
+ 117:usart_tx.c    ****         UCSR0B &= ~(1 << UDRIE0);
+ 396               		.stabn	68,0,117,.LM43-.LFBB6
+ 397               	.LM43:
+ 398 00cc 8091 C100 		lds r24,193
+ 399 00d0 8F7D      		andi r24,lo8(-33)
+ 400 00d2 8093 C100 		sts 193,r24
+ 118:usart_tx.c    ****         usart_transmitting = 0;
+ 401               		.stabn	68,0,118,.LM44-.LFBB6
+ 402               	.LM44:
+ 403 00d6 1092 0000 		sts usart_transmitting,__zero_reg__
+ 404 00da 00C0      		rjmp .L17
+ 405               	.L18:
+ 119:usart_tx.c    ****     } else {
+ 120:usart_tx.c    ****         UDR0 = tx_buffer[tx_tail];
+ 406               		.stabn	68,0,120,.LM45-.LFBB6
+ 407               	.LM45:
+ 408 00dc F0E0      		ldi r31,0
+ 409 00de EE0F      		lsl r30
+ 410 00e0 FF1F      		rol r31
+ 411 00e2 E050      		subi r30,lo8(-(tx_buffer))
+ 412 00e4 F040      		sbci r31,hi8(-(tx_buffer))
+ 413 00e6 8081      		ld r24,Z
+ 414 00e8 8093 C600 		sts 198,r24
+ 121:usart_tx.c    ****         if (++tx_tail >= BUFFER_SIZE)
+ 415               		.stabn	68,0,121,.LM46-.LFBB6
+ 416               	.LM46:
+ 417 00ec 8091 0000 		lds r24,tx_tail
+ 418 00f0 8F5F      		subi r24,lo8(-(1))
+ 419 00f2 8431      		cpi r24,lo8(20)
+ 420 00f4 00F4      		brsh .L20
+ 421 00f6 8093 0000 		sts tx_tail,r24
+ 422 00fa 00C0      		rjmp .L17
+ 423               	.L20:
+ 122:usart_tx.c    ****             tx_tail = 0;
+ 424               		.stabn	68,0,122,.LM47-.LFBB6
+ 425               	.LM47:
+ 426 00fc 1092 0000 		sts tx_tail,__zero_reg__
+ 427               	.L17:
+ 428               	/* epilogue start */
+ 123:usart_tx.c    ****     }
+ 124:usart_tx.c    **** }
+ 429               		.stabn	68,0,124,.LM48-.LFBB6
+ 430               	.LM48:
+ 431 0100 FF91      		pop r31
+ 432 0102 EF91      		pop r30
+ 433 0104 8F91      		pop r24
+ 434 0106 0F90      		pop r0
+ 435 0108 0FBE      		out __SREG__,r0
+ 436 010a 0F90      		pop r0
+ 437 010c 1F90      		pop r1
+ 438 010e 1895      		reti
+ 439               		.size	__vector_19, .-__vector_19
+ 440               	.Lscope6:
+ 441               		.stabs	"",36,0,0,.Lscope6-.LFBB6
+ 442               		.stabd	78,0,0
+ 443               		.stabs	"__vector_1:F(0,47)",36,0,127,__vector_1
+GAS LISTING /tmp/ccPZzpVV.s 			page 11
+
+
+ 444               	.global	__vector_1
+ 445               		.type	__vector_1, @function
+ 446               	__vector_1:
+ 447               		.stabd	46,0,0
+ 125:usart_tx.c    **** 
+ 126:usart_tx.c    **** 
+ 127:usart_tx.c    **** ISR(INT0_vect)
+ 128:usart_tx.c    **** {
+ 448               		.stabn	68,0,128,.LM49-.LFBB7
+ 449               	.LM49:
+ 450               	.LFBB7:
+ 451 0110 1F92      		push r1
+ 452 0112 0F92      		push r0
+ 453 0114 0FB6      		in r0,__SREG__
+ 454 0116 0F92      		push r0
+ 455 0118 1124      		clr __zero_reg__
+ 456 011a 8F93      		push r24
+ 457               	/* prologue: Signal */
+ 458               	/* frame size = 0 */
+ 459               	/* stack size = 4 */
+ 460               	.L__stack_usage = 4
+ 129:usart_tx.c    **** 
+ 130:usart_tx.c    **** 	//disabilitando ou nao a transmição se conectar PD2 no terra e mesmo valor lógico no LED
+ 131:usart_tx.c    **** 	UCSR0B = (UCSR0B & (1<<TXEN0))?(UCSR0B & ~ (1<<TXEN0)):(UCSR0B|(1<<TXEN0));
+ 461               		.stabn	68,0,131,.LM50-.LFBB7
+ 462               	.LM50:
+ 463 011c 8091 C100 		lds r24,193
+ 464 0120 83FF      		sbrs r24,3
+ 465 0122 00C0      		rjmp .L22
+ 466               		.stabn	68,0,131,.LM51-.LFBB7
+ 467               	.LM51:
+ 468 0124 8091 C100 		lds r24,193
+ 469 0128 877F      		andi r24,lo8(-9)
+ 470 012a 00C0      		rjmp .L23
+ 471               	.L22:
+ 472               		.stabn	68,0,131,.LM52-.LFBB7
+ 473               	.LM52:
+ 474 012c 8091 C100 		lds r24,193
+ 475 0130 8860      		ori r24,lo8(8)
+ 476               	.L23:
+ 477               		.stabn	68,0,131,.LM53-.LFBB7
+ 478               	.LM53:
+ 479 0132 8093 C100 		sts 193,r24
+ 132:usart_tx.c    **** 
+ 133:usart_tx.c    ****  
+ 134:usart_tx.c    ****     LED_PIN |= (1<<LED_PINNBR);
+ 480               		.stabn	68,0,134,.LM54-.LFBB7
+ 481               	.LM54:
+ 482 0136 1D9A      		sbi 0x3,5
+ 483               	/* epilogue start */
+ 135:usart_tx.c    **** }
+ 484               		.stabn	68,0,135,.LM55-.LFBB7
+ 485               	.LM55:
+ 486 0138 8F91      		pop r24
+ 487 013a 0F90      		pop r0
+ 488 013c 0FBE      		out __SREG__,r0
+ 489 013e 0F90      		pop r0
+GAS LISTING /tmp/ccPZzpVV.s 			page 12
+
+
+ 490 0140 1F90      		pop r1
+ 491 0142 1895      		reti
+ 492               		.size	__vector_1, .-__vector_1
+ 493               	.Lscope7:
+ 494               		.stabs	"",36,0,0,.Lscope7-.LFBB7
+ 495               		.stabd	78,0,0
+ 496               		.section	.rodata.str1.1,"aMS",@progbits,1
+ 497               	.LC0:
+ 498 0000 4865 6C6C 		.string	"Hello, world\n"
+ 498      6F2C 2077 
+ 498      6F72 6C64 
+ 498      0A00 
+ 499               		.section	.text.startup,"ax",@progbits
+ 500               		.stabs	"main:F(0,1)",36,0,138,main
+ 501               	.global	main
+ 502               		.type	main, @function
+ 503               	main:
+ 504               		.stabd	46,0,0
+ 136:usart_tx.c    **** 
+ 137:usart_tx.c    **** /* -------------------------------------*/
+ 138:usart_tx.c    **** int main(void)
+ 139:usart_tx.c    **** {
+ 505               		.stabn	68,0,139,.LM56-.LFBB8
+ 506               	.LM56:
+ 507               	.LFBB8:
+ 508 0000 CF93      		push r28
+ 509 0002 DF93      		push r29
+ 510 0004 CDB7      		in r28,__SP_L__
+ 511 0006 DEB7      		in r29,__SP_H__
+ 512 0008 2E97      		sbiw r28,14
+ 513 000a 0FB6      		in __tmp_reg__,__SREG__
+ 514 000c F894      		cli
+ 515 000e DEBF      		out __SP_H__,r29
+ 516 0010 0FBE      		out __SREG__,__tmp_reg__
+ 517 0012 CDBF      		out __SP_L__,r28
+ 518               	/* prologue: function */
+ 519               	/* frame size = 14 */
+ 520               	/* stack size = 16 */
+ 521               	.L__stack_usage = 16
+ 140:usart_tx.c    ****     char msg[] = "Hello, world\n";
+ 522               		.stabn	68,0,140,.LM57-.LFBB8
+ 523               	.LM57:
+ 524 0014 8EE0      		ldi r24,lo8(14)
+ 525 0016 E0E0      		ldi r30,lo8(.LC0)
+ 526 0018 F0E0      		ldi r31,hi8(.LC0)
+ 527 001a 8E01      		movw r16,r28
+ 528 001c 0F5F      		subi r16,-1
+ 529 001e 1F4F      		sbci r17,-1
+ 530 0020 D801      		movw r26,r16
+ 531               		0:
+ 532 0022 0190      		ld r0,Z+
+ 533 0024 0D92      		st X+,r0
+ 534 0026 8A95      		dec r24
+ 535 0028 01F4      		brne 0b
+ 141:usart_tx.c    ****     uint8_t i;
+ 142:usart_tx.c    **** 
+ 143:usart_tx.c    **** 
+GAS LISTING /tmp/ccPZzpVV.s 			page 13
+
+
+ 144:usart_tx.c    ****     setup_int0();
+ 536               		.stabn	68,0,144,.LM58-.LFBB8
+ 537               	.LM58:
+ 538 002a 0E94 0000 		call setup_int0
+ 145:usart_tx.c    ****     setup_usart();
+ 539               		.stabn	68,0,145,.LM59-.LFBB8
+ 540               	.LM59:
+ 541 002e 0E94 0000 		call setup_usart
+ 146:usart_tx.c    ****     setup_main();
+ 542               		.stabn	68,0,146,.LM60-.LFBB8
+ 543               	.LM60:
+ 544 0032 0E94 0000 		call setup_main
+ 545 0036 8EE0      		ldi r24,lo8(14)
+ 546 0038 D82E      		mov r13,r24
+ 547 003a D00E      		add r13,r16
+ 548               	.L28:
+ 139:usart_tx.c    ****     char msg[] = "Hello, world\n";
+ 549               		.stabn	68,0,139,.LM61-.LFBB8
+ 550               	.LM61:
+ 551 003c 7801      		movw r14,r16
+ 552               	.L27:
+ 147:usart_tx.c    **** 
+ 148:usart_tx.c    ****     while(1) {
+ 149:usart_tx.c    ****         for(i=0; i<sizeof(msg); i++)
+ 150:usart_tx.c    ****             if(write(msg[i])){
+ 553               		.stabn	68,0,150,.LM62-.LFBB8
+ 554               	.LM62:
+ 555 003e F701      		movw r30,r14
+ 556 0040 8191      		ld r24,Z+
+ 557 0042 7F01      		movw r14,r30
+ 558 0044 0E94 0000 		call write
+ 559 0048 8823      		tst r24
+ 560 004a 01F0      		breq .L25
+ 151:usart_tx.c    ****             	PORTB |= (1<<LED_PINNBR);//caso buffer for pequeno demais acender LED
+ 561               		.stabn	68,0,151,.LM63-.LFBB8
+ 562               	.LM63:
+ 563 004c 2D9A      		sbi 0x5,5
+ 152:usart_tx.c    ****                 break;
+ 564               		.stabn	68,0,152,.LM64-.LFBB8
+ 565               	.LM64:
+ 566 004e 00C0      		rjmp .L26
+ 567               	.L25:
+ 149:usart_tx.c    ****             if(write(msg[i])){
+ 568               		.stabn	68,0,149,.LM65-.LFBB8
+ 569               	.LM65:
+ 570 0050 DE10      		cpse r13,r14
+ 571 0052 00C0      		rjmp .L27
+ 572               	.L26:
+ 153:usart_tx.c    ****             }
+ 154:usart_tx.c    ****             delay_ms(1500);
+ 573               		.stabn	68,0,154,.LM66-.LFBB8
+ 574               	.LM66:
+ 575 0054 8CED      		ldi r24,lo8(-36)
+ 576 0056 95E0      		ldi r25,lo8(5)
+ 577 0058 0E94 0000 		call delay_ms
+ 155:usart_tx.c    ****     }
+ 578               		.stabn	68,0,155,.LM67-.LFBB8
+GAS LISTING /tmp/ccPZzpVV.s 			page 14
+
+
+ 579               	.LM67:
+ 580 005c 00C0      		rjmp .L28
+ 581               		.size	main, .-main
+ 582               		.stabs	"msg:(0,48)=ar(0,49)=r(0,49);0;0177777;;0;13;(0,2)",128,0,140,1
+ 583               		.stabn	192,0,0,.LFBB8-.LFBB8
+ 584               		.stabn	224,0,0,.Lscope8-.LFBB8
+ 585               	.Lscope8:
+ 586               		.stabs	"",36,0,0,.Lscope8-.LFBB8
+ 587               		.stabd	78,0,0
+ 588               	.global	usart_transmitting
+ 589               		.section .bss
+ 590               		.type	usart_transmitting, @object
+ 591               		.size	usart_transmitting, 1
+ 592               	usart_transmitting:
+ 593 0000 00        		.zero	1
+ 594               		.comm	tx_tail,1,1
+ 595               		.comm	tx_head,1,1
+ 596               		.comm	tx_buffer,40,1
+ 597               		.stabs	"tx_buffer:G(0,50)=ar(0,49);0;19;(5,4)",32,0,79,0
+ 598               		.stabs	"tx_head:G(5,2)",32,0,80,0
+ 599               		.stabs	"tx_tail:G(5,2)",32,0,80,0
+ 600               		.stabs	"usart_transmitting:G(5,2)",32,0,81,0
+ 601               		.text
+ 602               		.stabs	"",100,0,0,.Letext0
+ 603               	.Letext0:
+ 604               		.ident	"GCC: (GNU) 4.9.2"
+ 605               	.global __do_copy_data
+ 606               	.global __do_clear_bss
+GAS LISTING /tmp/ccPZzpVV.s 			page 15
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 usart_tx.c
+     /tmp/ccPZzpVV.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccPZzpVV.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccPZzpVV.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccPZzpVV.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccPZzpVV.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccPZzpVV.s:105    .text:0000000000000000 setup_int0
+     /tmp/ccPZzpVV.s:132    .text:000000000000000c setup_usart
+     /tmp/ccPZzpVV.s:174    .text:000000000000002e setup_main
+     /tmp/ccPZzpVV.s:211    .text:000000000000003c delay_ms
+     /tmp/ccPZzpVV.s:266    .text:000000000000005a write
+     /tmp/ccPZzpVV.s:592    .bss:0000000000000000 usart_transmitting
+                            *COM*:0000000000000001 tx_head
+                            *COM*:0000000000000001 tx_tail
+                            *COM*:0000000000000028 tx_buffer
+     /tmp/ccPZzpVV.s:373    .text:00000000000000b0 __vector_19
+     /tmp/ccPZzpVV.s:446    .text:0000000000000110 __vector_1
+     /tmp/ccPZzpVV.s:503    .text.startup:0000000000000000 main
+
+UNDEFINED SYMBOLS
+__do_copy_data
+__do_clear_bss

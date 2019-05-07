@@ -1,0 +1,1930 @@
+GAS LISTING /tmp/ccOiTKuT.s 			page 1
+
+
+   1               		.file	"exercicio_sm.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.stabs	"/home/rcampello/Desktop/UFPE/6p/RTOs/12aula/",100,0,2,.Ltext0
+   8               		.stabs	"exercicio_sm.c",100,0,2,.Ltext0
+   9               		.text
+  10               	.Ltext0:
+  11               		.stabs	"gcc2_compiled.",60,0,0,0
+  12               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  13               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  14               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  15               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  16               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  17               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  18               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,0,0
+  19               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  20               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,0,0
+  21               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  22               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  23               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  24               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  25               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"short _Fract:t(0,15)=r(0,1);1;0;",128,0,0,0
+  27               		.stabs	"_Fract:t(0,16)=r(0,1);2;0;",128,0,0,0
+  28               		.stabs	"long _Fract:t(0,17)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"long long _Fract:t(0,18)=r(0,1);8;0;",128,0,0,0
+  30               		.stabs	"unsigned short _Fract:t(0,19)=r(0,1);1;0;",128,0,0,0
+  31               		.stabs	"unsigned _Fract:t(0,20)=r(0,1);2;0;",128,0,0,0
+  32               		.stabs	"unsigned long _Fract:t(0,21)=r(0,1);4;0;",128,0,0,0
+  33               		.stabs	"unsigned long long _Fract:t(0,22)=r(0,1);8;0;",128,0,0,0
+  34               		.stabs	"_Sat short _Fract:t(0,23)=r(0,1);1;0;",128,0,0,0
+  35               		.stabs	"_Sat _Fract:t(0,24)=r(0,1);2;0;",128,0,0,0
+  36               		.stabs	"_Sat long _Fract:t(0,25)=r(0,1);4;0;",128,0,0,0
+  37               		.stabs	"_Sat long long _Fract:t(0,26)=r(0,1);8;0;",128,0,0,0
+  38               		.stabs	"_Sat unsigned short _Fract:t(0,27)=r(0,1);1;0;",128,0,0,0
+  39               		.stabs	"_Sat unsigned _Fract:t(0,28)=r(0,1);2;0;",128,0,0,0
+  40               		.stabs	"_Sat unsigned long _Fract:t(0,29)=r(0,1);4;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned long long _Fract:t(0,30)=r(0,1);8;0;",128,0,0,0
+  42               		.stabs	"short _Accum:t(0,31)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Accum:t(0,32)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"long _Accum:t(0,33)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"long long _Accum:t(0,34)=r(0,1);8;0;",128,0,0,0
+  46               		.stabs	"unsigned short _Accum:t(0,35)=r(0,1);2;0;",128,0,0,0
+  47               		.stabs	"unsigned _Accum:t(0,36)=r(0,1);4;0;",128,0,0,0
+  48               		.stabs	"unsigned long _Accum:t(0,37)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned long long _Accum:t(0,38)=r(0,1);8;0;",128,0,0,0
+  50               		.stabs	"_Sat short _Accum:t(0,39)=r(0,1);2;0;",128,0,0,0
+  51               		.stabs	"_Sat _Accum:t(0,40)=r(0,1);4;0;",128,0,0,0
+  52               		.stabs	"_Sat long _Accum:t(0,41)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat long long _Accum:t(0,42)=r(0,1);8;0;",128,0,0,0
+  54               		.stabs	"_Sat unsigned short _Accum:t(0,43)=r(0,1);2;0;",128,0,0,0
+  55               		.stabs	"_Sat unsigned _Accum:t(0,44)=r(0,1);4;0;",128,0,0,0
+  56               		.stabs	"_Sat unsigned long _Accum:t(0,45)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned long long _Accum:t(0,46)=r(0,1);8;0;",128,0,0,0
+GAS LISTING /tmp/ccOiTKuT.s 			page 2
+
+
+  58               		.stabs	"void:t(0,47)=(0,47)",128,0,0,0
+  59               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+  60               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
+  61               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  62               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stdint.h",130,0,0,0
+  63               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  64               		.stabs	"int8_t:t(5,1)=(0,10)",128,0,121,0
+  65               		.stabs	"uint8_t:t(5,2)=(0,11)",128,0,122,0
+  66               		.stabs	"int16_t:t(5,3)=(0,1)",128,0,123,0
+  67               		.stabs	"uint16_t:t(5,4)=(0,4)",128,0,124,0
+  68               		.stabs	"int32_t:t(5,5)=(0,3)",128,0,125,0
+  69               		.stabs	"uint32_t:t(5,6)=(0,5)",128,0,126,0
+  70               		.stabs	"int64_t:t(5,7)=(0,6)",128,0,128,0
+  71               		.stabs	"uint64_t:t(5,8)=(0,7)",128,0,129,0
+  72               		.stabs	"intptr_t:t(5,9)=(5,3)",128,0,142,0
+  73               		.stabs	"uintptr_t:t(5,10)=(5,4)",128,0,147,0
+  74               		.stabs	"int_least8_t:t(5,11)=(5,1)",128,0,159,0
+  75               		.stabs	"uint_least8_t:t(5,12)=(5,2)",128,0,164,0
+  76               		.stabs	"int_least16_t:t(5,13)=(5,3)",128,0,169,0
+  77               		.stabs	"uint_least16_t:t(5,14)=(5,4)",128,0,174,0
+  78               		.stabs	"int_least32_t:t(5,15)=(5,5)",128,0,179,0
+  79               		.stabs	"uint_least32_t:t(5,16)=(5,6)",128,0,184,0
+  80               		.stabs	"int_least64_t:t(5,17)=(5,7)",128,0,192,0
+  81               		.stabs	"uint_least64_t:t(5,18)=(5,8)",128,0,199,0
+  82               		.stabs	"int_fast8_t:t(5,19)=(5,1)",128,0,213,0
+  83               		.stabs	"uint_fast8_t:t(5,20)=(5,2)",128,0,218,0
+  84               		.stabs	"int_fast16_t:t(5,21)=(5,3)",128,0,223,0
+  85               		.stabs	"uint_fast16_t:t(5,22)=(5,4)",128,0,228,0
+  86               		.stabs	"int_fast32_t:t(5,23)=(5,5)",128,0,233,0
+  87               		.stabs	"uint_fast32_t:t(5,24)=(5,6)",128,0,238,0
+  88               		.stabs	"int_fast64_t:t(5,25)=(5,7)",128,0,246,0
+  89               		.stabs	"uint_fast64_t:t(5,26)=(5,8)",128,0,253,0
+  90               		.stabs	"intmax_t:t(5,27)=(5,7)",128,0,273,0
+  91               		.stabs	"uintmax_t:t(5,28)=(5,8)",128,0,278,0
+  92               		.stabn	162,0,0,0
+  93               		.stabn	162,0,0,0
+  94               		.stabs	"int_farptr_t:t(3,1)=(5,5)",128,0,77,0
+  95               		.stabs	"uint_farptr_t:t(3,2)=(5,6)",128,0,81,0
+  96               		.stabn	162,0,0,0
+  97               		.stabn	162,0,0,0
+  98               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+  99               		.stabs	"__fuse_t:t(6,1)=(6,2)=s3low:(0,11),0,8;high:(0,11),8,8;extended:(0,11),16,8;;",128,0,244,0
+ 100               		.stabn	162,0,0,0
+ 101               		.stabn	162,0,0,0
+ 102               		.stabs	"/usr/lib/avr/include/stdio.h",130,0,0,0
+ 103               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stdarg.h",130,0,0,0
+ 104               		.stabs	"__gnuc_va_list:t(8,1)=(8,2)=*(0,47)",128,0,40,0
+ 105               		.stabs	"va_list:t(8,3)=(8,1)",128,0,98,0
+ 106               		.stabn	162,0,0,0
+ 107               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stddef.h",130,0,0,0
+ 108               		.stabs	"size_t:t(9,1)=(0,4)",128,0,212,0
+ 109               		.stabn	162,0,0,0
+ 110               		.stabs	"__file:T(7,1)=s14buf:(7,2)=*(0,2),0,16;unget:(0,11),16,8;flags:(5,2),24,8;size:(0,1),32,16
+ 111               		.stabn	162,0,0,0
+ 112               		.stabs	"event_t:t(0,48)=(5,4)",128,0,29,0
+ 113               		.stabs	" :T(0,49)=eEVENT0:1,EVENT1:2,EVENT2:4,EVENT3:8,EVENT4:16,EVENT5:32,EVENT6:64,EVENT7:128,EV
+ 114               		.stabs	" :T(0,50)=@s8;eestado1:0,estado2:1,estado3:2,estado4:3,;",128,0,0,0
+GAS LISTING /tmp/ccOiTKuT.s 			page 3
+
+
+ 115               		.stabs	"estados:t(0,51)=(0,50)",128,0,243,0
+ 116               		.stabs	" :T(0,52)=@s8;esaida1:0,saida2:1,saida3:2,saida4:3,;",128,0,0,0
+ 117               		.stabs	"saidas:t(0,53)=(0,52)",128,0,247,0
+ 118               		.stabs	"setup_main:F(0,47)",36,0,54,setup_main
+ 119               	.global	setup_main
+ 120               		.type	setup_main, @function
+ 121               	setup_main:
+ 122               		.stabd	46,0,0
+   1:exercicio_sm.c **** #include <avr/io.h>
+   2:exercicio_sm.c **** #include <avr/cpufunc.h>
+   3:exercicio_sm.c **** #include <avr/interrupt.h>
+   4:exercicio_sm.c **** #include <stdio.h>
+   5:exercicio_sm.c **** 
+   6:exercicio_sm.c **** #define FOSC 16000000ul  /* velocidade do relógio */
+   7:exercicio_sm.c **** #define FTIM FOSC/8/1000
+   8:exercicio_sm.c **** 
+   9:exercicio_sm.c **** #define BAUD 115200      /* velocidade desejada para a serial */
+  10:exercicio_sm.c **** #define MYUBRR (FOSC/(8*BAUD) - 1)  /* valor de 12 bits para configurar o clock da USART */
+  11:exercicio_sm.c **** 
+  12:exercicio_sm.c **** #define BUFFER_SIZE 20   /* Tamanho do buffer da USART */
+  13:exercicio_sm.c **** #define MAX_EVENTS 16
+  14:exercicio_sm.c **** 
+  15:exercicio_sm.c **** #define MS1L  3.0*FTIM
+  16:exercicio_sm.c **** #define MS1H 14.0*FTIM
+  17:exercicio_sm.c **** #define MS2L  2.5*FTIM
+  18:exercicio_sm.c **** #define MS2H  6.0*FTIM
+  19:exercicio_sm.c **** #define MS3L  0.4*FTIM
+  20:exercicio_sm.c **** #define MS3H  2.0*FTIM
+  21:exercicio_sm.c **** #define MS4L  1.05*FTIM
+  22:exercicio_sm.c **** #define MS4H  2.0*FTIM
+  23:exercicio_sm.c **** #define MS5L  0.2*FTIM
+  24:exercicio_sm.c **** #define MS5H  1.0*FTIM
+  25:exercicio_sm.c **** #define MS6L 12.0*FTIM
+  26:exercicio_sm.c **** #define MS6H 28.0*FTIM
+  27:exercicio_sm.c **** 
+  28:exercicio_sm.c **** 
+  29:exercicio_sm.c **** typedef uint16_t event_t;
+  30:exercicio_sm.c **** volatile event_t events;
+  31:exercicio_sm.c **** 
+  32:exercicio_sm.c **** enum {
+  33:exercicio_sm.c ****     EVENT0  = 0X0001,
+  34:exercicio_sm.c ****     EVENT1  = 0X0002,
+  35:exercicio_sm.c ****     EVENT2  = 0X0004,
+  36:exercicio_sm.c ****     EVENT3  = 0X0008,
+  37:exercicio_sm.c ****     EVENT4  = 0X0010,
+  38:exercicio_sm.c ****     EVENT5  = 0X0020,
+  39:exercicio_sm.c ****     EVENT6  = 0X0040,
+  40:exercicio_sm.c ****     EVENT7  = 0X0080,
+  41:exercicio_sm.c ****     EVENT8  = 0X0100,
+  42:exercicio_sm.c ****     EVENT9  = 0X0200,
+  43:exercicio_sm.c ****     EVENT10 = 0X0400,
+  44:exercicio_sm.c ****     EVENT11 = 0X0800,
+  45:exercicio_sm.c ****     EVENT12 = 0X1000,
+  46:exercicio_sm.c ****     EVENT13 = 0X2000,
+  47:exercicio_sm.c ****     EVENT14 = 0X4000,
+  48:exercicio_sm.c ****     EVENT15 = 0X8000
+  49:exercicio_sm.c **** };
+GAS LISTING /tmp/ccOiTKuT.s 			page 4
+
+
+  50:exercicio_sm.c **** 
+  51:exercicio_sm.c **** 
+  52:exercicio_sm.c **** 
+  53:exercicio_sm.c **** /* -------------------------------------*/
+  54:exercicio_sm.c **** void setup_main(void)
+  55:exercicio_sm.c **** {
+ 123               		.stabn	68,0,55,.LM0-.LFBB1
+ 124               	.LM0:
+ 125               	.LFBB1:
+ 126               	/* prologue: function */
+ 127               	/* frame size = 0 */
+ 128               	/* stack size = 0 */
+ 129               	.L__stack_usage = 0
+  56:exercicio_sm.c ****     LED_DDR |= (1 << LED_PINNBR);
+ 130               		.stabn	68,0,56,.LM1-.LFBB1
+ 131               	.LM1:
+ 132 0000 259A      		sbi 0x4,5
+  57:exercicio_sm.c ****   //  LED_PORT |= (1 << LED_PINNBR);
+  58:exercicio_sm.c **** 
+  59:exercicio_sm.c ****     DDRB  &= ~(1<<PB0);
+ 133               		.stabn	68,0,59,.LM2-.LFBB1
+ 134               	.LM2:
+ 135 0002 2098      		cbi 0x4,0
+  60:exercicio_sm.c ****     PORTB |= (1<<PB0);
+ 136               		.stabn	68,0,60,.LM3-.LFBB1
+ 137               	.LM3:
+ 138 0004 289A      		sbi 0x5,0
+  61:exercicio_sm.c **** 
+  62:exercicio_sm.c ****     sei(); 
+ 139               		.stabn	68,0,62,.LM4-.LFBB1
+ 140               	.LM4:
+ 141               	/* #APP */
+ 142               	 ;  62 "exercicio_sm.c" 1
+ 143 0006 7894      		sei
+ 144               	 ;  0 "" 2
+ 145               	/* #NOAPP */
+ 146 0008 0895      		ret
+ 147               		.size	setup_main, .-setup_main
+ 148               	.Lscope1:
+ 149               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 150               		.stabd	78,0,0
+ 151               		.stabs	"setup_usart:F(0,47)",36,0,65,setup_usart
+ 152               	.global	setup_usart
+ 153               		.type	setup_usart, @function
+ 154               	setup_usart:
+ 155               		.stabd	46,0,0
+  63:exercicio_sm.c **** }
+  64:exercicio_sm.c **** 
+  65:exercicio_sm.c **** void setup_usart(void)
+  66:exercicio_sm.c **** {
+ 156               		.stabn	68,0,66,.LM5-.LFBB2
+ 157               	.LM5:
+ 158               	.LFBB2:
+ 159               	/* prologue: function */
+ 160               	/* frame size = 0 */
+ 161               	/* stack size = 0 */
+ 162               	.L__stack_usage = 0
+GAS LISTING /tmp/ccOiTKuT.s 			page 5
+
+
+  67:exercicio_sm.c ****     /*
+  68:exercicio_sm.c ****      * Para as macros abaixo e outras, veja o arquivo
+  69:exercicio_sm.c ****      * /usr/lib/avr/include/avr/iom328p.h
+  70:exercicio_sm.c ****      */
+  71:exercicio_sm.c ****     /*
+  72:exercicio_sm.c ****      * Primeiro setamos a direção certa para os pinos RX e TX
+  73:exercicio_sm.c ****      */
+  74:exercicio_sm.c ****     DDRD &= ~(1 << PD0);  /* USART RX bit para a placa Nano */
+ 163               		.stabn	68,0,74,.LM6-.LFBB2
+ 164               	.LM6:
+ 165 000a 5098      		cbi 0xa,0
+  75:exercicio_sm.c ****     DDRD |= (1 << PD1);  /* USART TX bit para a placa Nano */
+ 166               		.stabn	68,0,75,.LM7-.LFBB2
+ 167               	.LM7:
+ 168 000c 519A      		sbi 0xa,1
+  76:exercicio_sm.c ****     
+  77:exercicio_sm.c ****     /*
+  78:exercicio_sm.c ****      * Agora configuramos a USART
+  79:exercicio_sm.c ****      */
+  80:exercicio_sm.c ****     UBRR0H = (MYUBRR >> 8) & 0xF;
+ 169               		.stabn	68,0,80,.LM8-.LFBB2
+ 170               	.LM8:
+ 171 000e 1092 C500 		sts 197,__zero_reg__
+  81:exercicio_sm.c ****     UBRR0L = MYUBRR & 0xFF;
+ 172               		.stabn	68,0,81,.LM9-.LFBB2
+ 173               	.LM9:
+ 174 0012 80E1      		ldi r24,lo8(16)
+ 175 0014 8093 C400 		sts 196,r24
+  82:exercicio_sm.c ****     UCSR0A = (1 << U2X0); /* double speed */
+ 176               		.stabn	68,0,82,.LM10-.LFBB2
+ 177               	.LM10:
+ 178 0018 82E0      		ldi r24,lo8(2)
+ 179 001a 8093 C000 		sts 192,r24
+  83:exercicio_sm.c ****     UCSR0B = (1 << TXEN0); /* habilita a transmissão mas não a interrupção (não ainda) */
+ 180               		.stabn	68,0,83,.LM11-.LFBB2
+ 181               	.LM11:
+ 182 001e 88E0      		ldi r24,lo8(8)
+ 183 0020 8093 C100 		sts 193,r24
+  84:exercicio_sm.c ****     UCSR0C = (1 << UCSZ00) | (1 << UCSZ01);  /* Asynchronous, 8-N-1 */
+ 184               		.stabn	68,0,84,.LM12-.LFBB2
+ 185               	.LM12:
+ 186 0024 86E0      		ldi r24,lo8(6)
+ 187 0026 8093 C200 		sts 194,r24
+ 188 002a 0895      		ret
+ 189               		.size	setup_usart, .-setup_usart
+ 190               	.Lscope2:
+ 191               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 192               		.stabd	78,0,0
+ 193               		.stabs	"delay_ms:F(0,47)",36,0,87,delay_ms
+ 194               		.stabs	"ms:P(5,4)",64,0,87,24
+ 195               	.global	delay_ms
+ 196               		.type	delay_ms, @function
+ 197               	delay_ms:
+ 198               		.stabd	46,0,0
+  85:exercicio_sm.c **** }
+  86:exercicio_sm.c **** 
+  87:exercicio_sm.c **** void delay_ms(uint16_t ms)
+GAS LISTING /tmp/ccOiTKuT.s 			page 6
+
+
+  88:exercicio_sm.c **** {
+ 199               		.stabn	68,0,88,.LM13-.LFBB3
+ 200               	.LM13:
+ 201               	.LFBB3:
+ 202               	/* prologue: function */
+ 203               	/* frame size = 0 */
+ 204               	/* stack size = 0 */
+ 205               	.L__stack_usage = 0
+  89:exercicio_sm.c ****     uint16_t i, j;
+  90:exercicio_sm.c ****     for(i=0; i<ms; i++)
+ 206               		.stabn	68,0,90,.LM14-.LFBB3
+ 207               	.LM14:
+ 208 002c 20E0      		ldi r18,0
+ 209 002e 30E0      		ldi r19,0
+ 210               	.L4:
+ 211               		.stabn	68,0,90,.LM15-.LFBB3
+ 212               	.LM15:
+ 213 0030 2817      		cp r18,r24
+ 214 0032 3907      		cpc r19,r25
+ 215 0034 01F0      		breq .L9
+ 216 0036 40EA      		ldi r20,lo8(-96)
+ 217 0038 5FE0      		ldi r21,lo8(15)
+ 218               	.L5:
+  91:exercicio_sm.c ****         for(j=0; j<4000; j++)
+  92:exercicio_sm.c ****             _NOP();
+ 219               		.stabn	68,0,92,.LM16-.LFBB3
+ 220               	.LM16:
+ 221               	/* #APP */
+ 222               	 ;  92 "exercicio_sm.c" 1
+ 223 003a 0000      		nop
+ 224               	 ;  0 "" 2
+ 225               	/* #NOAPP */
+ 226 003c 4150      		subi r20,1
+ 227 003e 5109      		sbc r21,__zero_reg__
+  91:exercicio_sm.c ****         for(j=0; j<4000; j++)
+ 228               		.stabn	68,0,91,.LM17-.LFBB3
+ 229               	.LM17:
+ 230 0040 01F4      		brne .L5
+  90:exercicio_sm.c ****         for(j=0; j<4000; j++)
+ 231               		.stabn	68,0,90,.LM18-.LFBB3
+ 232               	.LM18:
+ 233 0042 2F5F      		subi r18,-1
+ 234 0044 3F4F      		sbci r19,-1
+ 235 0046 00C0      		rjmp .L4
+ 236               	.L9:
+ 237               	/* epilogue start */
+  93:exercicio_sm.c **** }
+ 238               		.stabn	68,0,93,.LM19-.LFBB3
+ 239               	.LM19:
+ 240 0048 0895      		ret
+ 241               		.size	delay_ms, .-delay_ms
+ 242               		.stabs	"i:r(5,4)",64,0,89,18
+ 243               		.stabn	192,0,0,.LFBB3-.LFBB3
+ 244               		.stabn	224,0,0,.Lscope3-.LFBB3
+ 245               	.Lscope3:
+ 246               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 247               		.stabd	78,0,0
+GAS LISTING /tmp/ccOiTKuT.s 			page 7
+
+
+ 248               		.stabs	"write:F(5,2)",36,0,100,write
+ 249               		.stabs	"c:P(5,2)",64,0,100,24
+ 250               	.global	write
+ 251               		.type	write, @function
+ 252               	write:
+ 253               		.stabd	46,0,0
+  94:exercicio_sm.c **** 
+  95:exercicio_sm.c **** 
+  96:exercicio_sm.c **** uint16_t tx_buffer[BUFFER_SIZE];     /* buffer para transmissão */
+  97:exercicio_sm.c **** uint8_t tx_head, tx_tail;   /* ponteiros para o buffer circular */
+  98:exercicio_sm.c **** uint8_t usart_transmitting=0;
+  99:exercicio_sm.c **** 
+ 100:exercicio_sm.c **** uint8_t write(uint8_t c)
+ 101:exercicio_sm.c **** {
+ 254               		.stabn	68,0,101,.LM20-.LFBB4
+ 255               	.LM20:
+ 256               	.LFBB4:
+ 257               	/* prologue: function */
+ 258               	/* frame size = 0 */
+ 259               	/* stack size = 0 */
+ 260               	.L__stack_usage = 0
+ 102:exercicio_sm.c ****     uint8_t rc = 0;
+ 103:exercicio_sm.c **** 
+ 104:exercicio_sm.c ****     cli();
+ 261               		.stabn	68,0,104,.LM21-.LFBB4
+ 262               	.LM21:
+ 263               	/* #APP */
+ 264               	 ;  104 "exercicio_sm.c" 1
+ 265 004a F894      		cli
+ 266               	 ;  0 "" 2
+ 105:exercicio_sm.c ****     // primeiro if inicialmente sempre executado pois usart_transmitting começa 0, habilita a inte
+ 106:exercicio_sm.c ****     if (!usart_transmitting) {
+ 267               		.stabn	68,0,106,.LM22-.LFBB4
+ 268               	.LM22:
+ 269               	/* #NOAPP */
+ 270 004c 9091 0000 		lds r25,usart_transmitting
+ 271 0050 9111      		cpse r25,__zero_reg__
+ 272 0052 00C0      		rjmp .L11
+ 107:exercicio_sm.c ****         UDR0 = c;
+ 273               		.stabn	68,0,107,.LM23-.LFBB4
+ 274               	.LM23:
+ 275 0054 8093 C600 		sts 198,r24
+ 108:exercicio_sm.c ****         UCSR0B |= (1 << UDRIE0);
+ 276               		.stabn	68,0,108,.LM24-.LFBB4
+ 277               	.LM24:
+ 278 0058 8091 C100 		lds r24,193
+ 279 005c 8062      		ori r24,lo8(32)
+ 280 005e 8093 C100 		sts 193,r24
+ 109:exercicio_sm.c ****         usart_transmitting = 1;
+ 281               		.stabn	68,0,109,.LM25-.LFBB4
+ 282               	.LM25:
+ 283 0062 81E0      		ldi r24,lo8(1)
+ 284 0064 8093 0000 		sts usart_transmitting,r24
+ 285 0068 00C0      		rjmp .L15
+ 286               	.L11:
+ 287               	.LBB2:
+ 110:exercicio_sm.c ****     } else {
+GAS LISTING /tmp/ccOiTKuT.s 			page 8
+
+
+ 111:exercicio_sm.c ****         uint8_t next = tx_head + 1;
+ 288               		.stabn	68,0,111,.LM26-.LFBB4
+ 289               	.LM26:
+ 290 006a E091 0000 		lds r30,tx_head
+ 291 006e 91E0      		ldi r25,lo8(1)
+ 292 0070 9E0F      		add r25,r30
+ 112:exercicio_sm.c ****         if (next >= BUFFER_SIZE)
+ 293               		.stabn	68,0,112,.LM27-.LFBB4
+ 294               	.LM27:
+ 295 0072 9431      		cpi r25,lo8(20)
+ 296 0074 00F0      		brlo .L13
+ 113:exercicio_sm.c ****             next = 0;
+ 297               		.stabn	68,0,113,.LM28-.LFBB4
+ 298               	.LM28:
+ 299 0076 90E0      		ldi r25,0
+ 300               	.L13:
+ 114:exercicio_sm.c ****         if (next != tx_tail) { /* buffer cheio */
+ 301               		.stabn	68,0,114,.LM29-.LFBB4
+ 302               	.LM29:
+ 303 0078 2091 0000 		lds r18,tx_tail
+ 304 007c 9217      		cp r25,r18
+ 305 007e 01F0      		breq .L14
+ 115:exercicio_sm.c ****             tx_buffer[tx_head] = c;
+ 306               		.stabn	68,0,115,.LM30-.LFBB4
+ 307               	.LM30:
+ 308 0080 F0E0      		ldi r31,0
+ 309 0082 EE0F      		lsl r30
+ 310 0084 FF1F      		rol r31
+ 311 0086 E050      		subi r30,lo8(-(tx_buffer))
+ 312 0088 F040      		sbci r31,hi8(-(tx_buffer))
+ 313 008a 282F      		mov r18,r24
+ 314 008c 30E0      		ldi r19,0
+ 315 008e 3183      		std Z+1,r19
+ 316 0090 2083      		st Z,r18
+ 116:exercicio_sm.c ****             tx_head = next;
+ 317               		.stabn	68,0,116,.LM31-.LFBB4
+ 318               	.LM31:
+ 319 0092 9093 0000 		sts tx_head,r25
+ 320               	.L15:
+ 321               	.LBE2:
+ 102:exercicio_sm.c **** 
+ 322               		.stabn	68,0,102,.LM32-.LFBB4
+ 323               	.LM32:
+ 324 0096 80E0      		ldi r24,0
+ 325               	.LBB3:
+ 326 0098 00C0      		rjmp .L12
+ 327               	.L14:
+ 117:exercicio_sm.c ****         } else
+ 118:exercicio_sm.c ****             rc = 1;
+ 328               		.stabn	68,0,118,.LM33-.LFBB4
+ 329               	.LM33:
+ 330 009a 81E0      		ldi r24,lo8(1)
+ 331               	.L12:
+ 332               	.LBE3:
+ 119:exercicio_sm.c ****     }
+ 120:exercicio_sm.c ****     sei();
+ 333               		.stabn	68,0,120,.LM34-.LFBB4
+GAS LISTING /tmp/ccOiTKuT.s 			page 9
+
+
+ 334               	.LM34:
+ 335               	/* #APP */
+ 336               	 ;  120 "exercicio_sm.c" 1
+ 337 009c 7894      		sei
+ 338               	 ;  0 "" 2
+ 121:exercicio_sm.c ****     return rc;
+ 122:exercicio_sm.c **** }
+ 339               		.stabn	68,0,122,.LM35-.LFBB4
+ 340               	.LM35:
+ 341               	/* #NOAPP */
+ 342 009e 0895      		ret
+ 343               		.size	write, .-write
+ 344               		.stabs	"rc:r(5,2)",64,0,102,24
+ 345               		.stabn	192,0,0,.LFBB4-.LFBB4
+ 346               		.stabs	"next:r(5,2)",64,0,111,25
+ 347               		.stabn	192,0,0,.LBB2-.LFBB4
+ 348               		.stabn	224,0,0,.LBE2-.LFBB4
+ 349               		.stabs	"next:r(5,2)",64,0,111,25
+ 350               		.stabn	192,0,0,.LBB3-.LFBB4
+ 351               		.stabn	224,0,0,.LBE3-.LFBB4
+ 352               		.stabn	224,0,0,.Lscope4-.LFBB4
+ 353               	.Lscope4:
+ 354               		.stabs	"",36,0,0,.Lscope4-.LFBB4
+ 355               		.stabd	78,0,0
+ 356               		.stabs	"write_string:F(0,47)",36,0,125,write_string
+ 357               		.stabs	"string:P(0,54)=*(5,2)",64,0,125,24
+ 358               	.global	write_string
+ 359               		.type	write_string, @function
+ 360               	write_string:
+ 361               		.stabd	46,0,0
+ 123:exercicio_sm.c **** 
+ 124:exercicio_sm.c **** 
+ 125:exercicio_sm.c **** void write_string(uint8_t string[]){
+ 362               		.stabn	68,0,125,.LM36-.LFBB5
+ 363               	.LM36:
+ 364               	.LFBB5:
+ 365 00a0 CF93      		push r28
+ 366 00a2 DF93      		push r29
+ 367               	/* prologue: function */
+ 368               	/* frame size = 0 */
+ 369               	/* stack size = 2 */
+ 370               	.L__stack_usage = 2
+ 371 00a4 EC01      		movw r28,r24
+ 372               	.L17:
+ 126:exercicio_sm.c ****     
+ 127:exercicio_sm.c ****     int i;
+ 128:exercicio_sm.c ****     for (i=0; string[i]!='\0'; i++){
+ 373               		.stabn	68,0,128,.LM37-.LFBB5
+ 374               	.LM37:
+ 375 00a6 8991      		ld r24,Y+
+ 376 00a8 8823      		tst r24
+ 377 00aa 01F0      		breq .L19
+ 129:exercicio_sm.c ****         write(string[i]);
+ 378               		.stabn	68,0,129,.LM38-.LFBB5
+ 379               	.LM38:
+ 380 00ac 0E94 0000 		call write
+ 381 00b0 00C0      		rjmp .L17
+GAS LISTING /tmp/ccOiTKuT.s 			page 10
+
+
+ 382               	.L19:
+ 383               	/* epilogue start */
+ 130:exercicio_sm.c ****         
+ 131:exercicio_sm.c ****     }
+ 132:exercicio_sm.c ****     
+ 133:exercicio_sm.c **** }
+ 384               		.stabn	68,0,133,.LM39-.LFBB5
+ 385               	.LM39:
+ 386 00b2 DF91      		pop r29
+ 387 00b4 CF91      		pop r28
+ 388 00b6 0895      		ret
+ 389               		.size	write_string, .-write_string
+ 390               	.Lscope5:
+ 391               		.stabs	"",36,0,0,.Lscope5-.LFBB5
+ 392               		.stabd	78,0,0
+ 393               		.stabs	"__vector_19:F(0,47)",36,0,135,__vector_19
+ 394               	.global	__vector_19
+ 395               		.type	__vector_19, @function
+ 396               	__vector_19:
+ 397               		.stabd	46,0,0
+ 134:exercicio_sm.c **** 
+ 135:exercicio_sm.c **** ISR(USART_UDRE_vect)
+ 136:exercicio_sm.c **** {
+ 398               		.stabn	68,0,136,.LM40-.LFBB6
+ 399               	.LM40:
+ 400               	.LFBB6:
+ 401 00b8 1F92      		push r1
+ 402 00ba 0F92      		push r0
+ 403 00bc 0FB6      		in r0,__SREG__
+ 404 00be 0F92      		push r0
+ 405 00c0 1124      		clr __zero_reg__
+ 406 00c2 8F93      		push r24
+ 407 00c4 EF93      		push r30
+ 408 00c6 FF93      		push r31
+ 409               	/* prologue: Signal */
+ 410               	/* frame size = 0 */
+ 411               	/* stack size = 6 */
+ 412               	.L__stack_usage = 6
+ 137:exercicio_sm.c ****     if (tx_head == tx_tail) {
+ 413               		.stabn	68,0,137,.LM41-.LFBB6
+ 414               	.LM41:
+ 415 00c8 E091 0000 		lds r30,tx_tail
+ 416 00cc 8091 0000 		lds r24,tx_head
+ 417 00d0 8E13      		cpse r24,r30
+ 418 00d2 00C0      		rjmp .L21
+ 138:exercicio_sm.c ****         UCSR0B &= ~(1 << UDRIE0);
+ 419               		.stabn	68,0,138,.LM42-.LFBB6
+ 420               	.LM42:
+ 421 00d4 8091 C100 		lds r24,193
+ 422 00d8 8F7D      		andi r24,lo8(-33)
+ 423 00da 8093 C100 		sts 193,r24
+ 139:exercicio_sm.c ****         usart_transmitting = 0;
+ 424               		.stabn	68,0,139,.LM43-.LFBB6
+ 425               	.LM43:
+ 426 00de 1092 0000 		sts usart_transmitting,__zero_reg__
+ 427 00e2 00C0      		rjmp .L20
+ 428               	.L21:
+GAS LISTING /tmp/ccOiTKuT.s 			page 11
+
+
+ 140:exercicio_sm.c ****     } else {
+ 141:exercicio_sm.c ****         UDR0 = tx_buffer[tx_tail];
+ 429               		.stabn	68,0,141,.LM44-.LFBB6
+ 430               	.LM44:
+ 431 00e4 F0E0      		ldi r31,0
+ 432 00e6 EE0F      		lsl r30
+ 433 00e8 FF1F      		rol r31
+ 434 00ea E050      		subi r30,lo8(-(tx_buffer))
+ 435 00ec F040      		sbci r31,hi8(-(tx_buffer))
+ 436 00ee 8081      		ld r24,Z
+ 437 00f0 8093 C600 		sts 198,r24
+ 142:exercicio_sm.c ****         if (++tx_tail >= BUFFER_SIZE)
+ 438               		.stabn	68,0,142,.LM45-.LFBB6
+ 439               	.LM45:
+ 440 00f4 8091 0000 		lds r24,tx_tail
+ 441 00f8 8F5F      		subi r24,lo8(-(1))
+ 442 00fa 8431      		cpi r24,lo8(20)
+ 443 00fc 00F4      		brsh .L23
+ 444 00fe 8093 0000 		sts tx_tail,r24
+ 445 0102 00C0      		rjmp .L20
+ 446               	.L23:
+ 143:exercicio_sm.c ****             tx_tail = 0;
+ 447               		.stabn	68,0,143,.LM46-.LFBB6
+ 448               	.LM46:
+ 449 0104 1092 0000 		sts tx_tail,__zero_reg__
+ 450               	.L20:
+ 451               	/* epilogue start */
+ 144:exercicio_sm.c ****     }
+ 145:exercicio_sm.c **** }
+ 452               		.stabn	68,0,145,.LM47-.LFBB6
+ 453               	.LM47:
+ 454 0108 FF91      		pop r31
+ 455 010a EF91      		pop r30
+ 456 010c 8F91      		pop r24
+ 457 010e 0F90      		pop r0
+ 458 0110 0FBE      		out __SREG__,r0
+ 459 0112 0F90      		pop r0
+ 460 0114 1F90      		pop r1
+ 461 0116 1895      		reti
+ 462               		.size	__vector_19, .-__vector_19
+ 463               	.Lscope6:
+ 464               		.stabs	"",36,0,0,.Lscope6-.LFBB6
+ 465               		.stabd	78,0,0
+ 466               		.stabs	"wait_for_events:F(0,48)",36,0,148,wait_for_events
+ 467               	.global	wait_for_events
+ 468               		.type	wait_for_events, @function
+ 469               	wait_for_events:
+ 470               		.stabd	46,0,0
+ 146:exercicio_sm.c **** 
+ 147:exercicio_sm.c **** 
+ 148:exercicio_sm.c **** event_t wait_for_events(void)
+ 149:exercicio_sm.c **** {
+ 471               		.stabn	68,0,149,.LM48-.LFBB7
+ 472               	.LM48:
+ 473               	.LFBB7:
+ 474               	/* prologue: function */
+ 475               	/* frame size = 0 */
+GAS LISTING /tmp/ccOiTKuT.s 			page 12
+
+
+ 476               	/* stack size = 0 */
+ 477               	.L__stack_usage = 0
+ 478               	.L25:
+ 150:exercicio_sm.c ****     uint8_t ev;
+ 151:exercicio_sm.c ****     event_t copy;
+ 152:exercicio_sm.c **** 
+ 153:exercicio_sm.c ****     while(!events)
+ 479               		.stabn	68,0,153,.LM49-.LFBB7
+ 480               	.LM49:
+ 481 0118 8091 0000 		lds r24,events
+ 482 011c 9091 0000 		lds r25,events+1
+ 483 0120 892B      		or r24,r25
+ 484 0122 01F0      		breq .L25
+ 154:exercicio_sm.c ****         ;
+ 155:exercicio_sm.c **** 
+ 156:exercicio_sm.c ****     for(ev=0, copy=events; ev<MAX_EVENTS && copy; ev++, copy>>=1)
+ 485               		.stabn	68,0,156,.LM50-.LFBB7
+ 486               	.LM50:
+ 487 0124 2091 0000 		lds r18,events
+ 488 0128 3091 0000 		lds r19,events+1
+ 489 012c 90E0      		ldi r25,0
+ 490               	.L26:
+ 491               		.stabn	68,0,156,.LM51-.LFBB7
+ 492               	.LM51:
+ 493 012e 2115      		cp r18,__zero_reg__
+ 494 0130 3105      		cpc r19,__zero_reg__
+ 495 0132 01F0      		breq .L28
+ 157:exercicio_sm.c ****         if (copy & 0x1) {
+ 496               		.stabn	68,0,157,.LM52-.LFBB7
+ 497               	.LM52:
+ 498 0134 20FF      		sbrs r18,0
+ 499 0136 00C0      		rjmp .L27
+ 158:exercicio_sm.c ****             cli();
+ 500               		.stabn	68,0,158,.LM53-.LFBB7
+ 501               	.LM53:
+ 502               	/* #APP */
+ 503               	 ;  158 "exercicio_sm.c" 1
+ 504 0138 F894      		cli
+ 505               	 ;  0 "" 2
+ 159:exercicio_sm.c ****             events &= ~_BV(ev);
+ 506               		.stabn	68,0,159,.LM54-.LFBB7
+ 507               	.LM54:
+ 508               	/* #NOAPP */
+ 509 013a 4091 0000 		lds r20,events
+ 510 013e 5091 0000 		lds r21,events+1
+ 511 0142 21E0      		ldi r18,lo8(1)
+ 512 0144 30E0      		ldi r19,0
+ 513 0146 092E      		mov r0,r25
+ 514 0148 00C0      		rjmp 2f
+ 515               		1:
+ 516 014a 220F      		lsl r18
+ 517 014c 331F      		rol r19
+ 518               		2:
+ 519 014e 0A94      		dec r0
+ 520 0150 02F4      		brpl 1b
+ 521 0152 2095      		com r18
+ 522 0154 3095      		com r19
+GAS LISTING /tmp/ccOiTKuT.s 			page 13
+
+
+ 523 0156 2423      		and r18,r20
+ 524 0158 3523      		and r19,r21
+ 525 015a 3093 0000 		sts events+1,r19
+ 526 015e 2093 0000 		sts events,r18
+ 160:exercicio_sm.c ****             sei();
+ 527               		.stabn	68,0,160,.LM55-.LFBB7
+ 528               	.LM55:
+ 529               	/* #APP */
+ 530               	 ;  160 "exercicio_sm.c" 1
+ 531 0162 7894      		sei
+ 532               	 ;  0 "" 2
+ 161:exercicio_sm.c ****             break;
+ 533               		.stabn	68,0,161,.LM56-.LFBB7
+ 534               	.LM56:
+ 535               	/* #NOAPP */
+ 536 0164 00C0      		rjmp .L28
+ 537               	.L27:
+ 156:exercicio_sm.c ****         if (copy & 0x1) {
+ 538               		.stabn	68,0,156,.LM57-.LFBB7
+ 539               	.LM57:
+ 540 0166 9F5F      		subi r25,lo8(-(1))
+ 541 0168 3695      		lsr r19
+ 542 016a 2795      		ror r18
+ 543 016c 9031      		cpi r25,lo8(16)
+ 544 016e 01F4      		brne .L26
+ 545               	.L28:
+ 162:exercicio_sm.c ****         }
+ 163:exercicio_sm.c **** 
+ 164:exercicio_sm.c ****     return _BV(ev);
+ 165:exercicio_sm.c **** }
+ 546               		.stabn	68,0,165,.LM58-.LFBB7
+ 547               	.LM58:
+ 548 0170 21E0      		ldi r18,lo8(1)
+ 549 0172 30E0      		ldi r19,0
+ 550 0174 A901      		movw r20,r18
+ 551 0176 00C0      		rjmp 2f
+ 552               		1:
+ 553 0178 440F      		lsl r20
+ 554 017a 551F      		rol r21
+ 555               		2:
+ 556 017c 9A95      		dec r25
+ 557 017e 02F4      		brpl 1b
+ 558 0180 CA01      		movw r24,r20
+ 559 0182 0895      		ret
+ 560               		.size	wait_for_events, .-wait_for_events
+ 561               		.stabs	"copy:r(0,48)",64,0,151,18
+ 562               		.stabn	192,0,0,.LFBB7-.LFBB7
+ 563               		.stabn	224,0,0,.Lscope7-.LFBB7
+ 564               	.Lscope7:
+ 565               		.stabs	"",36,0,0,.Lscope7-.LFBB7
+ 566               		.stabd	78,0,0
+ 567               		.stabs	"setup_timer1:F(0,47)",36,0,175,setup_timer1
+ 568               	.global	setup_timer1
+ 569               		.type	setup_timer1, @function
+ 570               	setup_timer1:
+ 571               		.stabd	46,0,0
+ 166:exercicio_sm.c **** 
+GAS LISTING /tmp/ccOiTKuT.s 			page 14
+
+
+ 167:exercicio_sm.c **** volatile uint16_t t2, t1, delta;
+ 168:exercicio_sm.c **** volatile uint32_t big;
+ 169:exercicio_sm.c **** volatile uint8_t tmp;
+ 170:exercicio_sm.c **** 
+ 171:exercicio_sm.c **** volatile uint8_t flag = 0;
+ 172:exercicio_sm.c **** volatile uint8_t l_edge = 0;
+ 173:exercicio_sm.c **** 
+ 174:exercicio_sm.c **** 
+ 175:exercicio_sm.c **** void setup_timer1(void)
+ 176:exercicio_sm.c **** {
+ 572               		.stabn	68,0,176,.LM59-.LFBB8
+ 573               	.LM59:
+ 574               	.LFBB8:
+ 575               	/* prologue: function */
+ 576               	/* frame size = 0 */
+ 577               	/* stack size = 0 */
+ 578               	.L__stack_usage = 0
+ 177:exercicio_sm.c ****   
+ 178:exercicio_sm.c ****     TCCR1B = (1 << CS11) | (1<<WGM12);
+ 579               		.stabn	68,0,178,.LM60-.LFBB8
+ 580               	.LM60:
+ 581 0184 8AE0      		ldi r24,lo8(10)
+ 582 0186 8093 8100 		sts 129,r24
+ 179:exercicio_sm.c **** 
+ 180:exercicio_sm.c ****     OCR1A = 0xFFFF;
+ 583               		.stabn	68,0,180,.LM61-.LFBB8
+ 584               	.LM61:
+ 585 018a 8FEF      		ldi r24,lo8(-1)
+ 586 018c 9FEF      		ldi r25,lo8(-1)
+ 587 018e 9093 8900 		sts 136+1,r25
+ 588 0192 8093 8800 		sts 136,r24
+ 181:exercicio_sm.c **** 
+ 182:exercicio_sm.c ****     TIMSK1 |= (1<<ICIE1) | (1<<OCIE1A);
+ 589               		.stabn	68,0,182,.LM62-.LFBB8
+ 590               	.LM62:
+ 591 0196 EFE6      		ldi r30,lo8(111)
+ 592 0198 F0E0      		ldi r31,0
+ 593 019a 8081      		ld r24,Z
+ 594 019c 8262      		ori r24,lo8(34)
+ 595 019e 8083      		st Z,r24
+ 183:exercicio_sm.c ****     sei();
+ 596               		.stabn	68,0,183,.LM63-.LFBB8
+ 597               	.LM63:
+ 598               	/* #APP */
+ 599               	 ;  183 "exercicio_sm.c" 1
+ 600 01a0 7894      		sei
+ 601               	 ;  0 "" 2
+ 602               	/* #NOAPP */
+ 603 01a2 0895      		ret
+ 604               		.size	setup_timer1, .-setup_timer1
+ 605               	.Lscope8:
+ 606               		.stabs	"",36,0,0,.Lscope8-.LFBB8
+ 607               		.stabd	78,0,0
+ 608               	.global	__floatunsisf
+ 609               	.global	__ltsf2
+ 610               	.global	__gtsf2
+ 611               		.stabs	"__vector_10:F(0,47)",36,0,187,__vector_10
+GAS LISTING /tmp/ccOiTKuT.s 			page 15
+
+
+ 612               	.global	__vector_10
+ 613               		.type	__vector_10, @function
+ 614               	__vector_10:
+ 615               		.stabd	46,0,0
+ 184:exercicio_sm.c **** }
+ 185:exercicio_sm.c **** 
+ 186:exercicio_sm.c **** 
+ 187:exercicio_sm.c **** ISR(TIMER1_CAPT_vect){
+ 616               		.stabn	68,0,187,.LM64-.LFBB9
+ 617               	.LM64:
+ 618               	.LFBB9:
+ 619 01a4 1F92      		push r1
+ 620 01a6 0F92      		push r0
+ 621 01a8 0FB6      		in r0,__SREG__
+ 622 01aa 0F92      		push r0
+ 623 01ac 1124      		clr __zero_reg__
+ 624 01ae 2F93      		push r18
+ 625 01b0 3F93      		push r19
+ 626 01b2 4F93      		push r20
+ 627 01b4 5F93      		push r21
+ 628 01b6 6F93      		push r22
+ 629 01b8 7F93      		push r23
+ 630 01ba 8F93      		push r24
+ 631 01bc 9F93      		push r25
+ 632 01be AF93      		push r26
+ 633 01c0 BF93      		push r27
+ 634 01c2 EF93      		push r30
+ 635 01c4 FF93      		push r31
+ 636               	/* prologue: Signal */
+ 637               	/* frame size = 0 */
+ 638               	/* stack size = 15 */
+ 639               	.L__stack_usage = 15
+ 188:exercicio_sm.c **** 
+ 189:exercicio_sm.c ****     t2 = ICR1;
+ 640               		.stabn	68,0,189,.LM65-.LFBB9
+ 641               	.LM65:
+ 642 01c6 8091 8600 		lds r24,134
+ 643 01ca 9091 8700 		lds r25,134+1
+ 644 01ce 9093 0000 		sts t2+1,r25
+ 645 01d2 8093 0000 		sts t2,r24
+ 190:exercicio_sm.c ****     flag = 1;
+ 646               		.stabn	68,0,190,.LM66-.LFBB9
+ 647               	.LM66:
+ 648 01d6 81E0      		ldi r24,lo8(1)
+ 649 01d8 8093 0000 		sts flag,r24
+ 191:exercicio_sm.c **** 
+ 192:exercicio_sm.c ****     if (!l_edge){
+ 650               		.stabn	68,0,192,.LM67-.LFBB9
+ 651               	.LM67:
+ 652 01dc 9091 0000 		lds r25,l_edge
+ 653 01e0 9111      		cpse r25,__zero_reg__
+ 654 01e2 00C0      		rjmp .L37
+ 193:exercicio_sm.c ****     	l_edge = 1;
+ 655               		.stabn	68,0,193,.LM68-.LFBB9
+ 656               	.LM68:
+ 657 01e4 8093 0000 		sts l_edge,r24
+ 194:exercicio_sm.c ****     	t1 = t2;
+GAS LISTING /tmp/ccOiTKuT.s 			page 16
+
+
+ 658               		.stabn	68,0,194,.LM69-.LFBB9
+ 659               	.LM69:
+ 660 01e8 8091 0000 		lds r24,t2
+ 661 01ec 9091 0000 		lds r25,t2+1
+ 662 01f0 9093 0000 		sts t1+1,r25
+ 663 01f4 8093 0000 		sts t1,r24
+ 195:exercicio_sm.c ****     	TCCR1B ^= _BV(ICES1);
+ 664               		.stabn	68,0,195,.LM70-.LFBB9
+ 665               	.LM70:
+ 666 01f8 9091 8100 		lds r25,129
+ 667 01fc 80E4      		ldi r24,lo8(64)
+ 668 01fe 8927      		eor r24,r25
+ 669 0200 8093 8100 		sts 129,r24
+ 196:exercicio_sm.c ****     	return;
+ 670               		.stabn	68,0,196,.LM71-.LFBB9
+ 671               	.LM71:
+ 672 0204 00C0      		rjmp .L36
+ 673               	.L37:
+ 197:exercicio_sm.c ****     }
+ 198:exercicio_sm.c **** 
+ 199:exercicio_sm.c ****     if (t2 < t1) {
+ 674               		.stabn	68,0,199,.LM72-.LFBB9
+ 675               	.LM72:
+ 676 0206 2091 0000 		lds r18,t2
+ 677 020a 3091 0000 		lds r19,t2+1
+ 678 020e 8091 0000 		lds r24,t1
+ 679 0212 9091 0000 		lds r25,t1+1
+ 680 0216 2817      		cp r18,r24
+ 681 0218 3907      		cpc r19,r25
+ 682 021a 00F4      		brsh .L39
+ 200:exercicio_sm.c **** 		big = (1l << 16) + t2 - t1;
+ 683               		.stabn	68,0,200,.LM73-.LFBB9
+ 684               	.LM73:
+ 685 021c 8091 0000 		lds r24,t2
+ 686 0220 9091 0000 		lds r25,t2+1
+ 687 0224 2091 0000 		lds r18,t1
+ 688 0228 3091 0000 		lds r19,t1+1
+ 689 022c A0E0      		ldi r26,0
+ 690 022e B0E0      		ldi r27,0
+ 691 0230 1196      		adiw r26,1
+ 692 0232 821B      		sub r24,r18
+ 693 0234 930B      		sbc r25,r19
+ 694 0236 A109      		sbc r26,__zero_reg__
+ 695 0238 B109      		sbc r27,__zero_reg__
+ 696 023a 8093 0000 		sts big,r24
+ 697 023e 9093 0000 		sts big+1,r25
+ 698 0242 A093 0000 		sts big+2,r26
+ 699 0246 B093 0000 		sts big+3,r27
+ 201:exercicio_sm.c **** 		delta = big;
+ 700               		.stabn	68,0,201,.LM74-.LFBB9
+ 701               	.LM74:
+ 702 024a 8091 0000 		lds r24,big
+ 703 024e 9091 0000 		lds r25,big+1
+ 704 0252 A091 0000 		lds r26,big+2
+ 705 0256 B091 0000 		lds r27,big+3
+ 706 025a 00C0      		rjmp .L70
+ 707               	.L39:
+GAS LISTING /tmp/ccOiTKuT.s 			page 17
+
+
+ 202:exercicio_sm.c **** 	}
+ 203:exercicio_sm.c **** 	else
+ 204:exercicio_sm.c **** 		delta = t2 - t1;
+ 708               		.stabn	68,0,204,.LM75-.LFBB9
+ 709               	.LM75:
+ 710 025c 8091 0000 		lds r24,t2
+ 711 0260 9091 0000 		lds r25,t2+1
+ 712 0264 2091 0000 		lds r18,t1
+ 713 0268 3091 0000 		lds r19,t1+1
+ 714 026c 821B      		sub r24,r18
+ 715 026e 930B      		sbc r25,r19
+ 716               	.L70:
+ 717 0270 9093 0000 		sts delta+1,r25
+ 718 0274 8093 0000 		sts delta,r24
+ 205:exercicio_sm.c **** 	t1 = t2;
+ 719               		.stabn	68,0,205,.LM76-.LFBB9
+ 720               	.LM76:
+ 721 0278 8091 0000 		lds r24,t2
+ 722 027c 9091 0000 		lds r25,t2+1
+ 723 0280 9093 0000 		sts t1+1,r25
+ 724 0284 8093 0000 		sts t1,r24
+ 206:exercicio_sm.c **** 
+ 207:exercicio_sm.c **** 	tmp = TCCR1B;
+ 725               		.stabn	68,0,207,.LM77-.LFBB9
+ 726               	.LM77:
+ 727 0288 8091 8100 		lds r24,129
+ 728 028c 8093 0000 		sts tmp,r24
+ 208:exercicio_sm.c ****       
+ 209:exercicio_sm.c **** 	if (tmp & _BV(ICES1)) { /* Borda de subida, intervalo off */
+ 729               		.stabn	68,0,209,.LM78-.LFBB9
+ 730               	.LM78:
+ 731 0290 8091 0000 		lds r24,tmp
+ 732 0294 86FF      		sbrs r24,6
+ 733 0296 00C0      		rjmp .L41
+ 210:exercicio_sm.c **** 		TCCR1B = tmp & ~_BV(ICES1);
+ 734               		.stabn	68,0,210,.LM79-.LFBB9
+ 735               	.LM79:
+ 736 0298 8091 0000 		lds r24,tmp
+ 737 029c 8F7B      		andi r24,lo8(-65)
+ 738 029e 8093 8100 		sts 129,r24
+ 211:exercicio_sm.c **** 
+ 212:exercicio_sm.c **** 		if ((delta < MS1H) && (delta > MS1L))
+ 739               		.stabn	68,0,212,.LM80-.LFBB9
+ 740               	.LM80:
+ 741 02a2 6091 0000 		lds r22,delta
+ 742 02a6 7091 0000 		lds r23,delta+1
+ 743 02aa 80E0      		ldi r24,0
+ 744 02ac 90E0      		ldi r25,0
+ 745 02ae 0E94 0000 		call __floatunsisf
+ 746 02b2 20E0      		ldi r18,0
+ 747 02b4 30EC      		ldi r19,lo8(-64)
+ 748 02b6 4AED      		ldi r20,lo8(-38)
+ 749 02b8 56E4      		ldi r21,lo8(70)
+ 750 02ba 0E94 0000 		call __ltsf2
+ 751 02be 87FF      		sbrs r24,7
+ 752 02c0 00C0      		rjmp .L42
+ 753               		.stabn	68,0,212,.LM81-.LFBB9
+GAS LISTING /tmp/ccOiTKuT.s 			page 18
+
+
+ 754               	.LM81:
+ 755 02c2 6091 0000 		lds r22,delta
+ 756 02c6 7091 0000 		lds r23,delta+1
+ 757 02ca 80E0      		ldi r24,0
+ 758 02cc 90E0      		ldi r25,0
+ 759 02ce 0E94 0000 		call __floatunsisf
+ 760 02d2 20E0      		ldi r18,0
+ 761 02d4 30E8      		ldi r19,lo8(-128)
+ 762 02d6 4BEB      		ldi r20,lo8(-69)
+ 763 02d8 55E4      		ldi r21,lo8(69)
+ 764 02da 0E94 0000 		call __gtsf2
+ 765 02de 1816      		cp __zero_reg__,r24
+ 766 02e0 04F4      		brge .L42
+ 213:exercicio_sm.c **** 			events |= EVENT1;
+ 767               		.stabn	68,0,213,.LM82-.LFBB9
+ 768               	.LM82:
+ 769 02e2 8091 0000 		lds r24,events
+ 770 02e6 9091 0000 		lds r25,events+1
+ 771 02ea 8260      		ori r24,2
+ 772 02ec 00C0      		rjmp .L71
+ 773               	.L42:
+ 214:exercicio_sm.c **** 		else if ((delta < MS3H) && (delta > MS3L))
+ 774               		.stabn	68,0,214,.LM83-.LFBB9
+ 775               	.LM83:
+ 776 02ee 6091 0000 		lds r22,delta
+ 777 02f2 7091 0000 		lds r23,delta+1
+ 778 02f6 80E0      		ldi r24,0
+ 779 02f8 90E0      		ldi r25,0
+ 780 02fa 0E94 0000 		call __floatunsisf
+ 781 02fe 20E0      		ldi r18,0
+ 782 0300 30E0      		ldi r19,0
+ 783 0302 4AE7      		ldi r20,lo8(122)
+ 784 0304 55E4      		ldi r21,lo8(69)
+ 785 0306 0E94 0000 		call __ltsf2
+ 786 030a 87FF      		sbrs r24,7
+ 787 030c 00C0      		rjmp .L36
+ 788               		.stabn	68,0,214,.LM84-.LFBB9
+ 789               	.LM84:
+ 790 030e 6091 0000 		lds r22,delta
+ 791 0312 7091 0000 		lds r23,delta+1
+ 792 0316 80E0      		ldi r24,0
+ 793 0318 90E0      		ldi r25,0
+ 794 031a 0E94 0000 		call __floatunsisf
+ 795 031e 20E0      		ldi r18,0
+ 796 0320 30E0      		ldi r19,0
+ 797 0322 48E4      		ldi r20,lo8(72)
+ 798 0324 54E4      		ldi r21,lo8(68)
+ 799 0326 0E94 0000 		call __gtsf2
+ 800 032a 1816      		cp __zero_reg__,r24
+ 801 032c 04F0      		brlt .+2
+ 802 032e 00C0      		rjmp .L36
+ 215:exercicio_sm.c **** 			events |= EVENT3;
+ 803               		.stabn	68,0,215,.LM85-.LFBB9
+ 804               	.LM85:
+ 805 0330 8091 0000 		lds r24,events
+ 806 0334 9091 0000 		lds r25,events+1
+ 807 0338 8860      		ori r24,8
+GAS LISTING /tmp/ccOiTKuT.s 			page 19
+
+
+ 808 033a 00C0      		rjmp .L71
+ 809               	.L41:
+ 216:exercicio_sm.c **** 	} else { /* Borda de descida, intervalo on */
+ 217:exercicio_sm.c **** 		TCCR1B = tmp | _BV(ICES1);
+ 810               		.stabn	68,0,217,.LM86-.LFBB9
+ 811               	.LM86:
+ 812 033c 8091 0000 		lds r24,tmp
+ 813 0340 8064      		ori r24,lo8(64)
+ 814 0342 8093 8100 		sts 129,r24
+ 218:exercicio_sm.c **** 
+ 219:exercicio_sm.c **** 		if ((delta < MS2H) && (delta > MS2L))
+ 815               		.stabn	68,0,219,.LM87-.LFBB9
+ 816               	.LM87:
+ 817 0346 6091 0000 		lds r22,delta
+ 818 034a 7091 0000 		lds r23,delta+1
+ 819 034e 80E0      		ldi r24,0
+ 820 0350 90E0      		ldi r25,0
+ 821 0352 0E94 0000 		call __floatunsisf
+ 822 0356 20E0      		ldi r18,0
+ 823 0358 30E8      		ldi r19,lo8(-128)
+ 824 035a 4BE3      		ldi r20,lo8(59)
+ 825 035c 56E4      		ldi r21,lo8(70)
+ 826 035e 0E94 0000 		call __ltsf2
+ 827 0362 87FF      		sbrs r24,7
+ 828 0364 00C0      		rjmp .L48
+ 829               		.stabn	68,0,219,.LM88-.LFBB9
+ 830               	.LM88:
+ 831 0366 6091 0000 		lds r22,delta
+ 832 036a 7091 0000 		lds r23,delta+1
+ 833 036e 80E0      		ldi r24,0
+ 834 0370 90E0      		ldi r25,0
+ 835 0372 0E94 0000 		call __floatunsisf
+ 836 0376 20E0      		ldi r18,0
+ 837 0378 30E4      		ldi r19,lo8(64)
+ 838 037a 4CE9      		ldi r20,lo8(-100)
+ 839 037c 55E4      		ldi r21,lo8(69)
+ 840 037e 0E94 0000 		call __gtsf2
+ 841 0382 1816      		cp __zero_reg__,r24
+ 842 0384 04F4      		brge .L48
+ 220:exercicio_sm.c **** 			events |= EVENT2;
+ 843               		.stabn	68,0,220,.LM89-.LFBB9
+ 844               	.LM89:
+ 845 0386 8091 0000 		lds r24,events
+ 846 038a 9091 0000 		lds r25,events+1
+ 847 038e 8460      		ori r24,4
+ 848 0390 00C0      		rjmp .L71
+ 849               	.L48:
+ 221:exercicio_sm.c **** 		else if ((delta < MS4H) && (delta > MS4L))
+ 850               		.stabn	68,0,221,.LM90-.LFBB9
+ 851               	.LM90:
+ 852 0392 6091 0000 		lds r22,delta
+ 853 0396 7091 0000 		lds r23,delta+1
+ 854 039a 80E0      		ldi r24,0
+ 855 039c 90E0      		ldi r25,0
+ 856 039e 0E94 0000 		call __floatunsisf
+ 857 03a2 20E0      		ldi r18,0
+ 858 03a4 30E0      		ldi r19,0
+GAS LISTING /tmp/ccOiTKuT.s 			page 20
+
+
+ 859 03a6 4AE7      		ldi r20,lo8(122)
+ 860 03a8 55E4      		ldi r21,lo8(69)
+ 861 03aa 0E94 0000 		call __ltsf2
+ 862 03ae 87FF      		sbrs r24,7
+ 863 03b0 00C0      		rjmp .L51
+ 864               		.stabn	68,0,221,.LM91-.LFBB9
+ 865               	.LM91:
+ 866 03b2 6091 0000 		lds r22,delta
+ 867 03b6 7091 0000 		lds r23,delta+1
+ 868 03ba 80E0      		ldi r24,0
+ 869 03bc 90E0      		ldi r25,0
+ 870 03be 0E94 0000 		call __floatunsisf
+ 871 03c2 20E0      		ldi r18,0
+ 872 03c4 30E4      		ldi r19,lo8(64)
+ 873 03c6 43E0      		ldi r20,lo8(3)
+ 874 03c8 55E4      		ldi r21,lo8(69)
+ 875 03ca 0E94 0000 		call __gtsf2
+ 876 03ce 1816      		cp __zero_reg__,r24
+ 877 03d0 04F4      		brge .L51
+ 222:exercicio_sm.c **** 			events |= EVENT4;
+ 878               		.stabn	68,0,222,.LM92-.LFBB9
+ 879               	.LM92:
+ 880 03d2 8091 0000 		lds r24,events
+ 881 03d6 9091 0000 		lds r25,events+1
+ 882 03da 8061      		ori r24,16
+ 883 03dc 00C0      		rjmp .L71
+ 884               	.L51:
+ 223:exercicio_sm.c **** 		else if ((delta < MS5H) && (delta > MS5L))
+ 885               		.stabn	68,0,223,.LM93-.LFBB9
+ 886               	.LM93:
+ 887 03de 6091 0000 		lds r22,delta
+ 888 03e2 7091 0000 		lds r23,delta+1
+ 889 03e6 80E0      		ldi r24,0
+ 890 03e8 90E0      		ldi r25,0
+ 891 03ea 0E94 0000 		call __floatunsisf
+ 892 03ee 20E0      		ldi r18,0
+ 893 03f0 30E0      		ldi r19,0
+ 894 03f2 4AEF      		ldi r20,lo8(-6)
+ 895 03f4 54E4      		ldi r21,lo8(68)
+ 896 03f6 0E94 0000 		call __ltsf2
+ 897 03fa 87FF      		sbrs r24,7
+ 898 03fc 00C0      		rjmp .L54
+ 899               		.stabn	68,0,223,.LM94-.LFBB9
+ 900               	.LM94:
+ 901 03fe 6091 0000 		lds r22,delta
+ 902 0402 7091 0000 		lds r23,delta+1
+ 903 0406 80E0      		ldi r24,0
+ 904 0408 90E0      		ldi r25,0
+ 905 040a 0E94 0000 		call __floatunsisf
+ 906 040e 20E0      		ldi r18,0
+ 907 0410 30E0      		ldi r19,0
+ 908 0412 48EC      		ldi r20,lo8(-56)
+ 909 0414 53E4      		ldi r21,lo8(67)
+ 910 0416 0E94 0000 		call __gtsf2
+ 911 041a 1816      		cp __zero_reg__,r24
+ 912 041c 04F4      		brge .L54
+ 224:exercicio_sm.c **** 			events |= EVENT5;
+GAS LISTING /tmp/ccOiTKuT.s 			page 21
+
+
+ 913               		.stabn	68,0,224,.LM95-.LFBB9
+ 914               	.LM95:
+ 915 041e 8091 0000 		lds r24,events
+ 916 0422 9091 0000 		lds r25,events+1
+ 917 0426 8062      		ori r24,32
+ 918 0428 00C0      		rjmp .L71
+ 919               	.L54:
+ 225:exercicio_sm.c **** 		else if ((delta < MS6H) && (delta > MS6L))
+ 920               		.stabn	68,0,225,.LM96-.LFBB9
+ 921               	.LM96:
+ 922 042a 6091 0000 		lds r22,delta
+ 923 042e 7091 0000 		lds r23,delta+1
+ 924 0432 80E0      		ldi r24,0
+ 925 0434 90E0      		ldi r25,0
+ 926 0436 0E94 0000 		call __floatunsisf
+ 927 043a 20E0      		ldi r18,0
+ 928 043c 30EC      		ldi r19,lo8(-64)
+ 929 043e 4AE5      		ldi r20,lo8(90)
+ 930 0440 57E4      		ldi r21,lo8(71)
+ 931 0442 0E94 0000 		call __ltsf2
+ 932 0446 87FF      		sbrs r24,7
+ 933 0448 00C0      		rjmp .L36
+ 934               		.stabn	68,0,225,.LM97-.LFBB9
+ 935               	.LM97:
+ 936 044a 6091 0000 		lds r22,delta
+ 937 044e 7091 0000 		lds r23,delta+1
+ 938 0452 80E0      		ldi r24,0
+ 939 0454 90E0      		ldi r25,0
+ 940 0456 0E94 0000 		call __floatunsisf
+ 941 045a 20E0      		ldi r18,0
+ 942 045c 30E8      		ldi r19,lo8(-128)
+ 943 045e 4BEB      		ldi r20,lo8(-69)
+ 944 0460 56E4      		ldi r21,lo8(70)
+ 945 0462 0E94 0000 		call __gtsf2
+ 946 0466 1816      		cp __zero_reg__,r24
+ 947 0468 04F4      		brge .L36
+ 226:exercicio_sm.c **** 			events |= EVENT6;
+ 948               		.stabn	68,0,226,.LM98-.LFBB9
+ 949               	.LM98:
+ 950 046a 8091 0000 		lds r24,events
+ 951 046e 9091 0000 		lds r25,events+1
+ 952 0472 8064      		ori r24,64
+ 953               	.L71:
+ 954 0474 9093 0000 		sts events+1,r25
+ 955 0478 8093 0000 		sts events,r24
+ 956               	.L36:
+ 957               	/* epilogue start */
+ 227:exercicio_sm.c **** 	}  
+ 228:exercicio_sm.c **** }
+ 958               		.stabn	68,0,228,.LM99-.LFBB9
+ 959               	.LM99:
+ 960 047c FF91      		pop r31
+ 961 047e EF91      		pop r30
+ 962 0480 BF91      		pop r27
+ 963 0482 AF91      		pop r26
+ 964 0484 9F91      		pop r25
+ 965 0486 8F91      		pop r24
+GAS LISTING /tmp/ccOiTKuT.s 			page 22
+
+
+ 966 0488 7F91      		pop r23
+ 967 048a 6F91      		pop r22
+ 968 048c 5F91      		pop r21
+ 969 048e 4F91      		pop r20
+ 970 0490 3F91      		pop r19
+ 971 0492 2F91      		pop r18
+ 972 0494 0F90      		pop r0
+ 973 0496 0FBE      		out __SREG__,r0
+ 974 0498 0F90      		pop r0
+ 975 049a 1F90      		pop r1
+ 976 049c 1895      		reti
+ 977               		.size	__vector_10, .-__vector_10
+ 978               	.Lscope9:
+ 979               		.stabs	"",36,0,0,.Lscope9-.LFBB9
+ 980               		.stabd	78,0,0
+ 981               		.stabs	"__vector_11:F(0,47)",36,0,231,__vector_11
+ 982               	.global	__vector_11
+ 983               		.type	__vector_11, @function
+ 984               	__vector_11:
+ 985               		.stabd	46,0,0
+ 229:exercicio_sm.c **** 
+ 230:exercicio_sm.c **** 
+ 231:exercicio_sm.c **** ISR(TIMER1_COMPA_vect)
+ 232:exercicio_sm.c **** {
+ 986               		.stabn	68,0,232,.LM100-.LFBB10
+ 987               	.LM100:
+ 988               	.LFBB10:
+ 989 049e 1F92      		push r1
+ 990 04a0 0F92      		push r0
+ 991 04a2 0FB6      		in r0,__SREG__
+ 992 04a4 0F92      		push r0
+ 993 04a6 1124      		clr __zero_reg__
+ 994 04a8 8F93      		push r24
+ 995 04aa 9F93      		push r25
+ 996               	/* prologue: Signal */
+ 997               	/* frame size = 0 */
+ 998               	/* stack size = 5 */
+ 999               	.L__stack_usage = 5
+ 233:exercicio_sm.c **** 	if (!flag) {
+ 1000               		.stabn	68,0,233,.LM101-.LFBB10
+ 1001               	.LM101:
+ 1002 04ac 8091 0000 		lds r24,flag
+ 1003 04b0 8111      		cpse r24,__zero_reg__
+ 1004 04b2 00C0      		rjmp .L73
+ 234:exercicio_sm.c **** 		TCCR1B &= ~ (1<<ICES1);
+ 1005               		.stabn	68,0,234,.LM102-.LFBB10
+ 1006               	.LM102:
+ 1007 04b4 8091 8100 		lds r24,129
+ 1008 04b8 8F7B      		andi r24,lo8(-65)
+ 1009 04ba 8093 8100 		sts 129,r24
+ 235:exercicio_sm.c **** 		l_edge = 0;
+ 1010               		.stabn	68,0,235,.LM103-.LFBB10
+ 1011               	.LM103:
+ 1012 04be 1092 0000 		sts l_edge,__zero_reg__
+ 236:exercicio_sm.c **** 		events |= EVENT7;
+ 1013               		.stabn	68,0,236,.LM104-.LFBB10
+ 1014               	.LM104:
+GAS LISTING /tmp/ccOiTKuT.s 			page 23
+
+
+ 1015 04c2 8091 0000 		lds r24,events
+ 1016 04c6 9091 0000 		lds r25,events+1
+ 1017 04ca 8068      		ori r24,128
+ 1018 04cc 9093 0000 		sts events+1,r25
+ 1019 04d0 8093 0000 		sts events,r24
+ 1020               	.L73:
+ 237:exercicio_sm.c **** 	}
+ 238:exercicio_sm.c **** 	flag = 0;
+ 1021               		.stabn	68,0,238,.LM105-.LFBB10
+ 1022               	.LM105:
+ 1023 04d4 1092 0000 		sts flag,__zero_reg__
+ 1024               	/* epilogue start */
+ 239:exercicio_sm.c **** }
+ 1025               		.stabn	68,0,239,.LM106-.LFBB10
+ 1026               	.LM106:
+ 1027 04d8 9F91      		pop r25
+ 1028 04da 8F91      		pop r24
+ 1029 04dc 0F90      		pop r0
+ 1030 04de 0FBE      		out __SREG__,r0
+ 1031 04e0 0F90      		pop r0
+ 1032 04e2 1F90      		pop r1
+ 1033 04e4 1895      		reti
+ 1034               		.size	__vector_11, .-__vector_11
+ 1035               	.Lscope10:
+ 1036               		.stabs	"",36,0,0,.Lscope10-.LFBB10
+ 1037               		.stabd	78,0,0
+ 1038               		.stabs	"push_bit:F(0,47)",36,0,253,push_bit
+ 1039               		.stabs	"bit:P(5,2)",64,0,253,24
+ 1040               	.global	push_bit
+ 1041               		.type	push_bit, @function
+ 1042               	push_bit:
+ 1043               		.stabd	46,0,0
+ 240:exercicio_sm.c **** 
+ 241:exercicio_sm.c **** typedef enum{
+ 242:exercicio_sm.c ****     estado1 = 0, estado2, estado3, estado4
+ 243:exercicio_sm.c **** }estados;
+ 244:exercicio_sm.c **** 
+ 245:exercicio_sm.c **** typedef enum{
+ 246:exercicio_sm.c ****     saida1 = 0, saida2, saida3, saida4
+ 247:exercicio_sm.c **** }saidas;
+ 248:exercicio_sm.c **** 
+ 249:exercicio_sm.c **** 
+ 250:exercicio_sm.c **** uint8_t _bytes[5];
+ 251:exercicio_sm.c **** uint8_t _idx_byte, _idx_bit;
+ 252:exercicio_sm.c **** 
+ 253:exercicio_sm.c **** void push_bit(uint8_t bit){
+ 1044               		.stabn	68,0,253,.LM107-.LFBB11
+ 1045               	.LM107:
+ 1046               	.LFBB11:
+ 1047               	/* prologue: function */
+ 1048               	/* frame size = 0 */
+ 1049               	/* stack size = 0 */
+ 1050               	.L__stack_usage = 0
+ 1051 04e6 9091 0000 		lds r25,_idx_bit
+ 254:exercicio_sm.c ****     
+ 255:exercicio_sm.c ****     if (bit)
+ 1052               		.stabn	68,0,255,.LM108-.LFBB11
+GAS LISTING /tmp/ccOiTKuT.s 			page 24
+
+
+ 1053               	.LM108:
+ 1054 04ea 8823      		tst r24
+ 1055 04ec 01F0      		breq .L75
+ 256:exercicio_sm.c ****         _bytes[_idx_byte] = _BV(_idx_bit);
+ 1056               		.stabn	68,0,256,.LM109-.LFBB11
+ 1057               	.LM109:
+ 1058 04ee E091 0000 		lds r30,_idx_byte
+ 1059 04f2 F0E0      		ldi r31,0
+ 1060 04f4 E050      		subi r30,lo8(-(_bytes))
+ 1061 04f6 F040      		sbci r31,hi8(-(_bytes))
+ 1062 04f8 81E0      		ldi r24,lo8(1)
+ 1063 04fa 092E      		mov r0,r25
+ 1064 04fc 00C0      		rjmp 2f
+ 1065               		1:
+ 1066 04fe 880F      		lsl r24
+ 1067               		2:
+ 1068 0500 0A94      		dec r0
+ 1069 0502 02F4      		brpl 1b
+ 1070 0504 8083      		st Z,r24
+ 1071               	.L75:
+ 257:exercicio_sm.c ****     if(++_idx_bit >= 8){
+ 1072               		.stabn	68,0,257,.LM110-.LFBB11
+ 1073               	.LM110:
+ 1074 0506 9F5F      		subi r25,lo8(-(1))
+ 1075 0508 9093 0000 		sts _idx_bit,r25
+ 1076 050c 9830      		cpi r25,lo8(8)
+ 1077 050e 00F0      		brlo .L74
+ 1078               	.LBB6:
+ 1079               	.LBB7:
+ 258:exercicio_sm.c ****         _idx_byte++;
+ 1080               		.stabn	68,0,258,.LM111-.LFBB11
+ 1081               	.LM111:
+ 1082 0510 8091 0000 		lds r24,_idx_byte
+ 1083 0514 8F5F      		subi r24,lo8(-(1))
+ 1084 0516 8093 0000 		sts _idx_byte,r24
+ 259:exercicio_sm.c ****         _idx_bit = 0;
+ 1085               		.stabn	68,0,259,.LM112-.LFBB11
+ 1086               	.LM112:
+ 1087 051a 1092 0000 		sts _idx_bit,__zero_reg__
+ 1088               	.L74:
+ 1089 051e 0895      		ret
+ 1090               	.LBE7:
+ 1091               	.LBE6:
+ 1092               		.size	push_bit, .-push_bit
+ 1093               	.Lscope11:
+ 1094               		.stabs	"",36,0,0,.Lscope11-.LFBB11
+ 1095               		.stabd	78,0,0
+ 1096               		.stabs	"send_bytes:F(0,47)",36,0,263,send_bytes
+ 1097               	.global	send_bytes
+ 1098               		.type	send_bytes, @function
+ 1099               	send_bytes:
+ 1100               		.stabd	46,0,0
+ 260:exercicio_sm.c ****     }
+ 261:exercicio_sm.c **** }
+ 262:exercicio_sm.c **** 
+ 263:exercicio_sm.c **** void send_bytes(void){
+ 1101               		.stabn	68,0,263,.LM113-.LFBB12
+GAS LISTING /tmp/ccOiTKuT.s 			page 25
+
+
+ 1102               	.LM113:
+ 1103               	.LFBB12:
+ 1104 0520 1F93      		push r17
+ 1105 0522 CF93      		push r28
+ 1106 0524 DF93      		push r29
+ 1107               	/* prologue: function */
+ 1108               	/* frame size = 0 */
+ 1109               	/* stack size = 3 */
+ 1110               	.L__stack_usage = 3
+ 1111               		.stabn	68,0,263,.LM114-.LFBB12
+ 1112               	.LM114:
+ 1113 0526 C0E0      		ldi r28,lo8(_bytes)
+ 1114 0528 D0E0      		ldi r29,hi8(_bytes)
+ 1115 052a 1C2F      		mov r17,r28
+ 1116 052c 1B5F      		subi r17,lo8(-(5))
+ 1117               	.L81:
+ 264:exercicio_sm.c ****     
+ 265:exercicio_sm.c ****     uint8_t i;
+ 266:exercicio_sm.c ****     
+ 267:exercicio_sm.c ****     for(i=0; i<sizeof(_bytes); i++){
+ 268:exercicio_sm.c ****         write(_bytes[i]);
+ 1118               		.stabn	68,0,268,.LM115-.LFBB12
+ 1119               	.LM115:
+ 1120 052e 8881      		ld r24,Y
+ 1121 0530 0E94 0000 		call write
+ 269:exercicio_sm.c ****         _bytes[i] = 0;  
+ 1122               		.stabn	68,0,269,.LM116-.LFBB12
+ 1123               	.LM116:
+ 1124 0534 1992      		st Y+,__zero_reg__
+ 267:exercicio_sm.c ****         write(_bytes[i]);
+ 1125               		.stabn	68,0,267,.LM117-.LFBB12
+ 1126               	.LM117:
+ 1127 0536 1C13      		cpse r17,r28
+ 1128 0538 00C0      		rjmp .L81
+ 270:exercicio_sm.c ****     }
+ 271:exercicio_sm.c ****     _idx_byte = _idx_bit = 0;
+ 1129               		.stabn	68,0,271,.LM118-.LFBB12
+ 1130               	.LM118:
+ 1131 053a 1092 0000 		sts _idx_bit,__zero_reg__
+ 1132 053e 1092 0000 		sts _idx_byte,__zero_reg__
+ 1133               	/* epilogue start */
+ 272:exercicio_sm.c **** }
+ 1134               		.stabn	68,0,272,.LM119-.LFBB12
+ 1135               	.LM119:
+ 1136 0542 DF91      		pop r29
+ 1137 0544 CF91      		pop r28
+ 1138 0546 1F91      		pop r17
+ 1139 0548 0895      		ret
+ 1140               		.size	send_bytes, .-send_bytes
+ 1141               	.Lscope12:
+ 1142               		.stabs	"",36,0,0,.Lscope12-.LFBB12
+ 1143               		.stabd	78,0,0
+ 1144               		.section	.rodata.str1.1,"aMS",@progbits,1
+ 1145               	.LC0:
+ 1146 0000 636F 6D65 		.string	"comeco\n"
+ 1146      636F 0A00 
+ 1147               	.LC1:
+GAS LISTING /tmp/ccOiTKuT.s 			page 26
+
+
+ 1148 0008 3131 0A00 		.string	"11\n"
+ 1149               	.LC2:
+ 1150 000c 3232 0A00 		.string	"22\n"
+ 1151               	.LC3:
+ 1152 0010 3231 0A00 		.string	"21\n"
+ 1153               	.LC4:
+ 1154 0014 3333 0A00 		.string	"33\n"
+ 1155               	.LC5:
+ 1156 0018 3434 0A00 		.string	"44\n"
+ 1157               	.LC6:
+ 1158 001c 3435 0A00 		.string	"45\n"
+ 1159               	.LC7:
+ 1160 0020 3436 0A00 		.string	"46\n"
+ 1161               	.LC8:
+ 1162 0024 3437 0A00 		.string	"47\n"
+ 1163               		.section	.text.startup,"ax",@progbits
+ 1164               		.stabs	"main:F(0,1)",36,0,274,main
+ 1165               	.global	main
+ 1166               		.type	main, @function
+ 1167               	main:
+ 1168               		.stabd	46,0,0
+ 273:exercicio_sm.c **** 
+ 274:exercicio_sm.c **** int main(){
+ 1169               		.stabn	68,0,274,.LM120-.LFBB13
+ 1170               	.LM120:
+ 1171               	.LFBB13:
+ 1172               	/* prologue: function */
+ 1173               	/* frame size = 0 */
+ 1174               	/* stack size = 0 */
+ 1175               	.L__stack_usage = 0
+ 275:exercicio_sm.c ****        
+ 276:exercicio_sm.c ****     setup_usart();
+ 1176               		.stabn	68,0,276,.LM121-.LFBB13
+ 1177               	.LM121:
+ 1178 0000 0E94 0000 		call setup_usart
+ 277:exercicio_sm.c ****     setup_timer1();
+ 1179               		.stabn	68,0,277,.LM122-.LFBB13
+ 1180               	.LM122:
+ 1181 0004 0E94 0000 		call setup_timer1
+ 278:exercicio_sm.c ****     
+ 279:exercicio_sm.c ****     estados state = estado1;
+ 280:exercicio_sm.c ****     
+ 281:exercicio_sm.c ****     //inputs input = input1, input2, input3, input4, input5, input6, input7;
+ 282:exercicio_sm.c ****     saidas saida;
+ 283:exercicio_sm.c **** 
+ 284:exercicio_sm.c ****     event_t ev;
+ 285:exercicio_sm.c ****     
+ 286:exercicio_sm.c ****     
+ 287:exercicio_sm.c ****     write_string("comeco\n");
+ 1182               		.stabn	68,0,287,.LM123-.LFBB13
+ 1183               	.LM123:
+ 1184 0008 80E0      		ldi r24,lo8(.LC0)
+ 1185 000a 90E0      		ldi r25,hi8(.LC0)
+ 1186               	.L105:
+ 1187 000c 0E94 0000 		call write_string
+ 1188               	.L100:
+ 288:exercicio_sm.c ****     
+GAS LISTING /tmp/ccOiTKuT.s 			page 27
+
+
+ 289:exercicio_sm.c ****     //write('c');
+ 290:exercicio_sm.c ****     
+ 291:exercicio_sm.c ****    while(1){
+ 292:exercicio_sm.c ****             
+ 293:exercicio_sm.c ****             ev = wait_for_events();
+ 294:exercicio_sm.c ****             
+ 295:exercicio_sm.c ****             switch(state){
+ 296:exercicio_sm.c ****                 
+ 297:exercicio_sm.c ****                 case estado1:
+ 298:exercicio_sm.c ****                     switch (ev){
+ 299:exercicio_sm.c ****                         case EVENT1:{
+ 300:exercicio_sm.c ****                             state = estado2;
+ 301:exercicio_sm.c ****                             
+ 302:exercicio_sm.c ****                             write_string("11\n");
+ 303:exercicio_sm.c ****                             
+ 304:exercicio_sm.c ****                             break;
+ 305:exercicio_sm.c ****                     }
+ 306:exercicio_sm.c ****                         default:
+ 307:exercicio_sm.c ****                             {
+ 308:exercicio_sm.c ****                                 state = estado1;
+ 309:exercicio_sm.c ****                                 break;
+ 310:exercicio_sm.c ****                             }
+ 311:exercicio_sm.c ****                     }       
+ 312:exercicio_sm.c ****                     break;
+ 313:exercicio_sm.c ****                 
+ 314:exercicio_sm.c ****                 
+ 315:exercicio_sm.c ****                     
+ 316:exercicio_sm.c ****                 case estado2:
+ 317:exercicio_sm.c ****                     switch (ev){
+ 318:exercicio_sm.c **** 
+ 319:exercicio_sm.c ****                         case EVENT2:{
+ 320:exercicio_sm.c ****                             state = estado3;
+ 321:exercicio_sm.c ****                             write_string("22\n");
+ 322:exercicio_sm.c ****                             break;
+ 323:exercicio_sm.c ****                     }
+ 324:exercicio_sm.c ****                         default:
+ 325:exercicio_sm.c ****                             {
+ 326:exercicio_sm.c ****                                 state = estado1;
+ 327:exercicio_sm.c ****                                 write_string("21\n");
+ 328:exercicio_sm.c ****                                 break;
+ 329:exercicio_sm.c ****                             }
+ 330:exercicio_sm.c ****                     }       
+ 331:exercicio_sm.c ****                     break;
+ 332:exercicio_sm.c ****                 
+ 333:exercicio_sm.c ****                 
+ 334:exercicio_sm.c ****                 
+ 335:exercicio_sm.c ****                 case estado3:
+ 336:exercicio_sm.c ****                     switch (ev){
+ 337:exercicio_sm.c ****                         case EVENT3:{
+ 338:exercicio_sm.c ****                             state = estado4;
+ 339:exercicio_sm.c ****                             write_string("33\n");
+ 340:exercicio_sm.c ****                             break;
+ 341:exercicio_sm.c ****                     }
+ 342:exercicio_sm.c ****                         default:
+ 343:exercicio_sm.c ****                             {
+ 344:exercicio_sm.c ****                                 state = estado1;
+ 345:exercicio_sm.c ****                                 break;
+GAS LISTING /tmp/ccOiTKuT.s 			page 28
+
+
+ 346:exercicio_sm.c ****                             }
+ 347:exercicio_sm.c ****                     }       
+ 348:exercicio_sm.c ****                     break;
+ 349:exercicio_sm.c ****                 
+ 350:exercicio_sm.c ****                 
+ 351:exercicio_sm.c ****                     
+ 352:exercicio_sm.c ****                 case estado4:
+ 353:exercicio_sm.c ****                     switch (ev){
+ 354:exercicio_sm.c ****                         case EVENT4:{
+ 355:exercicio_sm.c ****                             state = estado3;
+ 356:exercicio_sm.c ****                             //saida = saida1;
+ 357:exercicio_sm.c ****                             write_string("44\n");
+ 358:exercicio_sm.c ****                             
+ 359:exercicio_sm.c ****                             push_bit(1);
+ 360:exercicio_sm.c ****                             
+ 361:exercicio_sm.c ****                             break;
+ 362:exercicio_sm.c ****                     }
+ 363:exercicio_sm.c ****                         case EVENT5:{
+ 364:exercicio_sm.c ****                             state = estado3;
+ 365:exercicio_sm.c ****                             
+ 366:exercicio_sm.c ****                             push_bit(0);
+ 367:exercicio_sm.c ****                             
+ 368:exercicio_sm.c ****                             write_string("45\n");
+ 369:exercicio_sm.c ****                             
+ 370:exercicio_sm.c ****                             //saida = saida2;
+ 371:exercicio_sm.c ****                             break;
+ 372:exercicio_sm.c ****                         }
+ 373:exercicio_sm.c ****                         case EVENT6:{
+ 374:exercicio_sm.c ****                             state = estado3;
+ 375:exercicio_sm.c ****                             
+ 376:exercicio_sm.c ****                             write_string("46\n");
+ 377:exercicio_sm.c ****                             
+ 378:exercicio_sm.c ****                             //saida = saida3;
+ 379:exercicio_sm.c ****                             break;
+ 380:exercicio_sm.c ****                         }
+ 381:exercicio_sm.c ****                         case EVENT7:{
+ 382:exercicio_sm.c ****                             state = estado1;
+ 383:exercicio_sm.c ****                             
+ 384:exercicio_sm.c ****                             write_string("47\n");
+ 385:exercicio_sm.c ****                           // saida = saida4;
+ 386:exercicio_sm.c ****                             
+ 387:exercicio_sm.c ****                           //  send_bytes();
+ 388:exercicio_sm.c ****                             break;
+ 389:exercicio_sm.c ****                         }
+ 390:exercicio_sm.c ****                         
+ 391:exercicio_sm.c ****                         default:
+ 392:exercicio_sm.c ****                             {
+ 393:exercicio_sm.c ****                             state = estado1;
+ 1189               		.stabn	68,0,393,.LM124-.LFBB13
+ 1190               	.LM124:
+ 1191 0010 C0E0      		ldi r28,0
+ 1192               	.L84:
+ 293:exercicio_sm.c ****             
+ 1193               		.stabn	68,0,293,.LM125-.LFBB13
+ 1194               	.LM125:
+ 1195 0012 0E94 0000 		call wait_for_events
+ 295:exercicio_sm.c ****                 
+GAS LISTING /tmp/ccOiTKuT.s 			page 29
+
+
+ 1196               		.stabn	68,0,295,.LM126-.LFBB13
+ 1197               	.LM126:
+ 1198 0016 C130      		cpi r28,lo8(1)
+ 1199 0018 01F0      		breq .L86
+ 1200 001a 00F0      		brlo .L87
+ 1201 001c C230      		cpi r28,lo8(2)
+ 1202 001e 01F0      		breq .L88
+ 1203 0020 C330      		cpi r28,lo8(3)
+ 1204 0022 01F0      		breq .L89
+ 1205 0024 00C0      		rjmp .L84
+ 1206               	.L87:
+ 298:exercicio_sm.c ****                         case EVENT1:{
+ 1207               		.stabn	68,0,298,.LM127-.LFBB13
+ 1208               	.LM127:
+ 1209 0026 0297      		sbiw r24,2
+ 1210 0028 01F4      		brne .L84
+ 302:exercicio_sm.c ****                             
+ 1211               		.stabn	68,0,302,.LM128-.LFBB13
+ 1212               	.LM128:
+ 1213 002a 80E0      		ldi r24,lo8(.LC1)
+ 1214 002c 90E0      		ldi r25,hi8(.LC1)
+ 1215 002e 0E94 0000 		call write_string
+ 300:exercicio_sm.c ****                             
+ 1216               		.stabn	68,0,300,.LM129-.LFBB13
+ 1217               	.LM129:
+ 1218 0032 C1E0      		ldi r28,lo8(1)
+ 304:exercicio_sm.c ****                     }
+ 1219               		.stabn	68,0,304,.LM130-.LFBB13
+ 1220               	.LM130:
+ 1221 0034 00C0      		rjmp .L84
+ 1222               	.L86:
+ 317:exercicio_sm.c **** 
+ 1223               		.stabn	68,0,317,.LM131-.LFBB13
+ 1224               	.LM131:
+ 1225 0036 0497      		sbiw r24,4
+ 1226 0038 01F4      		brne .L101
+ 321:exercicio_sm.c ****                             break;
+ 1227               		.stabn	68,0,321,.LM132-.LFBB13
+ 1228               	.LM132:
+ 1229 003a 80E0      		ldi r24,lo8(.LC2)
+ 1230 003c 90E0      		ldi r25,hi8(.LC2)
+ 1231 003e 00C0      		rjmp .L103
+ 1232               	.L101:
+ 327:exercicio_sm.c ****                                 break;
+ 1233               		.stabn	68,0,327,.LM133-.LFBB13
+ 1234               	.LM133:
+ 1235 0040 80E0      		ldi r24,lo8(.LC3)
+ 1236 0042 90E0      		ldi r25,hi8(.LC3)
+ 1237 0044 00C0      		rjmp .L105
+ 1238               	.L88:
+ 336:exercicio_sm.c ****                         case EVENT3:{
+ 1239               		.stabn	68,0,336,.LM134-.LFBB13
+ 1240               	.LM134:
+ 1241 0046 0897      		sbiw r24,8
+ 1242 0048 01F4      		brne .L100
+ 339:exercicio_sm.c ****                             break;
+ 1243               		.stabn	68,0,339,.LM135-.LFBB13
+GAS LISTING /tmp/ccOiTKuT.s 			page 30
+
+
+ 1244               	.LM135:
+ 1245 004a 80E0      		ldi r24,lo8(.LC4)
+ 1246 004c 90E0      		ldi r25,hi8(.LC4)
+ 1247 004e 0E94 0000 		call write_string
+ 338:exercicio_sm.c ****                             write_string("33\n");
+ 1248               		.stabn	68,0,338,.LM136-.LFBB13
+ 1249               	.LM136:
+ 1250 0052 C3E0      		ldi r28,lo8(3)
+ 340:exercicio_sm.c ****                     }
+ 1251               		.stabn	68,0,340,.LM137-.LFBB13
+ 1252               	.LM137:
+ 1253 0054 00C0      		rjmp .L84
+ 1254               	.L89:
+ 353:exercicio_sm.c ****                         case EVENT4:{
+ 1255               		.stabn	68,0,353,.LM138-.LFBB13
+ 1256               	.LM138:
+ 1257 0056 8032      		cpi r24,32
+ 1258 0058 9105      		cpc r25,__zero_reg__
+ 1259 005a 01F0      		breq .L94
+ 1260 005c 00F4      		brsh .L95
+ 1261 005e 4097      		sbiw r24,16
+ 1262 0060 01F4      		brne .L100
+ 357:exercicio_sm.c ****                             
+ 1263               		.stabn	68,0,357,.LM139-.LFBB13
+ 1264               	.LM139:
+ 1265 0062 80E0      		ldi r24,lo8(.LC5)
+ 1266 0064 90E0      		ldi r25,hi8(.LC5)
+ 1267 0066 0E94 0000 		call write_string
+ 359:exercicio_sm.c ****                             
+ 1268               		.stabn	68,0,359,.LM140-.LFBB13
+ 1269               	.LM140:
+ 1270 006a 81E0      		ldi r24,lo8(1)
+ 1271 006c 0E94 0000 		call push_bit
+ 1272 0070 00C0      		rjmp .L104
+ 1273               	.L95:
+ 353:exercicio_sm.c ****                         case EVENT4:{
+ 1274               		.stabn	68,0,353,.LM141-.LFBB13
+ 1275               	.LM141:
+ 1276 0072 8034      		cpi r24,64
+ 1277 0074 9105      		cpc r25,__zero_reg__
+ 1278 0076 01F0      		breq .L97
+ 1279 0078 8038      		cpi r24,-128
+ 1280 007a 9105      		cpc r25,__zero_reg__
+ 1281 007c 01F4      		brne .L100
+ 384:exercicio_sm.c ****                           // saida = saida4;
+ 1282               		.stabn	68,0,384,.LM142-.LFBB13
+ 1283               	.LM142:
+ 1284 007e 80E0      		ldi r24,lo8(.LC8)
+ 1285 0080 90E0      		ldi r25,hi8(.LC8)
+ 1286 0082 00C0      		rjmp .L105
+ 1287               	.L94:
+ 366:exercicio_sm.c ****                             
+ 1288               		.stabn	68,0,366,.LM143-.LFBB13
+ 1289               	.LM143:
+ 1290 0084 80E0      		ldi r24,0
+ 1291 0086 0E94 0000 		call push_bit
+ 368:exercicio_sm.c ****                             
+GAS LISTING /tmp/ccOiTKuT.s 			page 31
+
+
+ 1292               		.stabn	68,0,368,.LM144-.LFBB13
+ 1293               	.LM144:
+ 1294 008a 80E0      		ldi r24,lo8(.LC6)
+ 1295 008c 90E0      		ldi r25,hi8(.LC6)
+ 1296 008e 00C0      		rjmp .L103
+ 1297               	.L97:
+ 376:exercicio_sm.c ****                             
+ 1298               		.stabn	68,0,376,.LM145-.LFBB13
+ 1299               	.LM145:
+ 1300 0090 80E0      		ldi r24,lo8(.LC7)
+ 1301 0092 90E0      		ldi r25,hi8(.LC7)
+ 1302               	.L103:
+ 1303 0094 0E94 0000 		call write_string
+ 1304               	.L104:
+ 374:exercicio_sm.c ****                             
+ 1305               		.stabn	68,0,374,.LM146-.LFBB13
+ 1306               	.LM146:
+ 1307 0098 C2E0      		ldi r28,lo8(2)
+ 379:exercicio_sm.c ****                         }
+ 1308               		.stabn	68,0,379,.LM147-.LFBB13
+ 1309               	.LM147:
+ 1310 009a 00C0      		rjmp .L84
+ 1311               		.size	main, .-main
+ 1312               		.stabs	"state:r(0,51)",64,0,279,28
+ 1313               		.stabs	"ev:r(0,48)",64,0,284,24
+ 1314               		.stabn	192,0,0,.LFBB13-.LFBB13
+ 1315               		.stabn	224,0,0,.Lscope13-.LFBB13
+ 1316               	.Lscope13:
+ 1317               		.stabs	"",36,0,0,.Lscope13-.LFBB13
+ 1318               		.stabd	78,0,0
+ 1319               		.comm	_idx_bit,1,1
+ 1320               		.comm	_idx_byte,1,1
+ 1321               		.comm	_bytes,5,1
+ 1322               	.global	l_edge
+ 1323               		.section .bss
+ 1324               		.type	l_edge, @object
+ 1325               		.size	l_edge, 1
+ 1326               	l_edge:
+ 1327 0000 00        		.zero	1
+ 1328               	.global	flag
+ 1329               		.type	flag, @object
+ 1330               		.size	flag, 1
+ 1331               	flag:
+ 1332 0001 00        		.zero	1
+ 1333               		.comm	tmp,1,1
+ 1334               		.comm	big,4,1
+ 1335               		.comm	delta,2,1
+ 1336               		.comm	t1,2,1
+ 1337               		.comm	t2,2,1
+ 1338               	.global	usart_transmitting
+ 1339               		.type	usart_transmitting, @object
+ 1340               		.size	usart_transmitting, 1
+ 1341               	usart_transmitting:
+ 1342 0002 00        		.zero	1
+ 1343               		.comm	tx_tail,1,1
+ 1344               		.comm	tx_head,1,1
+ 1345               		.comm	tx_buffer,40,1
+GAS LISTING /tmp/ccOiTKuT.s 			page 32
+
+
+ 1346               		.comm	events,2,1
+ 1347               		.stabs	"events:G(0,55)=B(0,48)",32,0,30,0
+ 1348               		.stabs	"tx_buffer:G(0,56)=ar(0,57)=r(0,57);0;0177777;;0;19;(5,4)",32,0,96,0
+ 1349               		.stabs	"tx_head:G(5,2)",32,0,97,0
+ 1350               		.stabs	"tx_tail:G(5,2)",32,0,97,0
+ 1351               		.stabs	"usart_transmitting:G(5,2)",32,0,98,0
+ 1352               		.stabs	"t2:G(0,58)=B(5,4)",32,0,167,0
+ 1353               		.stabs	"t1:G(0,58)",32,0,167,0
+ 1354               		.stabs	"delta:G(0,58)",32,0,167,0
+ 1355               		.stabs	"big:G(0,59)=B(5,6)",32,0,168,0
+ 1356               		.stabs	"tmp:G(0,60)=B(5,2)",32,0,169,0
+ 1357               		.stabs	"flag:G(0,60)",32,0,171,0
+ 1358               		.stabs	"l_edge:G(0,60)",32,0,172,0
+ 1359               		.stabs	"_bytes:G(0,61)=ar(0,57);0;4;(5,2)",32,0,250,0
+ 1360               		.stabs	"_idx_byte:G(5,2)",32,0,251,0
+ 1361               		.stabs	"_idx_bit:G(5,2)",32,0,251,0
+ 1362               		.text
+ 1363               		.stabs	"",100,0,0,.Letext0
+ 1364               	.Letext0:
+ 1365               		.ident	"GCC: (GNU) 4.9.2"
+ 1366               	.global __do_copy_data
+ 1367               	.global __do_clear_bss
+GAS LISTING /tmp/ccOiTKuT.s 			page 33
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 exercicio_sm.c
+     /tmp/ccOiTKuT.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccOiTKuT.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccOiTKuT.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccOiTKuT.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccOiTKuT.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccOiTKuT.s:121    .text:0000000000000000 setup_main
+     /tmp/ccOiTKuT.s:154    .text:000000000000000a setup_usart
+     /tmp/ccOiTKuT.s:197    .text:000000000000002c delay_ms
+     /tmp/ccOiTKuT.s:252    .text:000000000000004a write
+     /tmp/ccOiTKuT.s:1341   .bss:0000000000000002 usart_transmitting
+                            *COM*:0000000000000001 tx_head
+                            *COM*:0000000000000001 tx_tail
+                            *COM*:0000000000000028 tx_buffer
+     /tmp/ccOiTKuT.s:360    .text:00000000000000a0 write_string
+     /tmp/ccOiTKuT.s:396    .text:00000000000000b8 __vector_19
+     /tmp/ccOiTKuT.s:469    .text:0000000000000118 wait_for_events
+                            *COM*:0000000000000002 events
+     /tmp/ccOiTKuT.s:570    .text:0000000000000184 setup_timer1
+     /tmp/ccOiTKuT.s:614    .text:00000000000001a4 __vector_10
+                            *COM*:0000000000000002 t2
+     /tmp/ccOiTKuT.s:1331   .bss:0000000000000001 flag
+     /tmp/ccOiTKuT.s:1326   .bss:0000000000000000 l_edge
+                            *COM*:0000000000000002 t1
+                            *COM*:0000000000000004 big
+                            *COM*:0000000000000002 delta
+                            *COM*:0000000000000001 tmp
+     /tmp/ccOiTKuT.s:984    .text:000000000000049e __vector_11
+     /tmp/ccOiTKuT.s:1042   .text:00000000000004e6 push_bit
+                            *COM*:0000000000000001 _idx_bit
+                            *COM*:0000000000000001 _idx_byte
+                            *COM*:0000000000000005 _bytes
+     /tmp/ccOiTKuT.s:1099   .text:0000000000000520 send_bytes
+     /tmp/ccOiTKuT.s:1167   .text.startup:0000000000000000 main
+
+UNDEFINED SYMBOLS
+__floatunsisf
+__ltsf2
+__gtsf2
+__do_copy_data
+__do_clear_bss

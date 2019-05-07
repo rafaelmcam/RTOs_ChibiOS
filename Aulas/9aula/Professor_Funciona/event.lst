@@ -1,0 +1,259 @@
+GAS LISTING /tmp/ccWOwJcg.s 			page 1
+
+
+   1               		.file	"event.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.stabs	"/home/rcampello/Desktop/UFPE/6p/RTOs/treinos/7de19(m\303\241quinas_de_estados)/Professor/"
+   8               		.stabs	"event.c",100,0,2,.Ltext0
+   9               		.text
+  10               	.Ltext0:
+  11               		.stabs	"gcc2_compiled.",60,0,0,0
+  12               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  13               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  14               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  15               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  16               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  17               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  18               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,0,0
+  19               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  20               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,0,0
+  21               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  22               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  23               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  24               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  25               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"short _Fract:t(0,15)=r(0,1);1;0;",128,0,0,0
+  27               		.stabs	"_Fract:t(0,16)=r(0,1);2;0;",128,0,0,0
+  28               		.stabs	"long _Fract:t(0,17)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"long long _Fract:t(0,18)=r(0,1);8;0;",128,0,0,0
+  30               		.stabs	"unsigned short _Fract:t(0,19)=r(0,1);1;0;",128,0,0,0
+  31               		.stabs	"unsigned _Fract:t(0,20)=r(0,1);2;0;",128,0,0,0
+  32               		.stabs	"unsigned long _Fract:t(0,21)=r(0,1);4;0;",128,0,0,0
+  33               		.stabs	"unsigned long long _Fract:t(0,22)=r(0,1);8;0;",128,0,0,0
+  34               		.stabs	"_Sat short _Fract:t(0,23)=r(0,1);1;0;",128,0,0,0
+  35               		.stabs	"_Sat _Fract:t(0,24)=r(0,1);2;0;",128,0,0,0
+  36               		.stabs	"_Sat long _Fract:t(0,25)=r(0,1);4;0;",128,0,0,0
+  37               		.stabs	"_Sat long long _Fract:t(0,26)=r(0,1);8;0;",128,0,0,0
+  38               		.stabs	"_Sat unsigned short _Fract:t(0,27)=r(0,1);1;0;",128,0,0,0
+  39               		.stabs	"_Sat unsigned _Fract:t(0,28)=r(0,1);2;0;",128,0,0,0
+  40               		.stabs	"_Sat unsigned long _Fract:t(0,29)=r(0,1);4;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned long long _Fract:t(0,30)=r(0,1);8;0;",128,0,0,0
+  42               		.stabs	"short _Accum:t(0,31)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Accum:t(0,32)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"long _Accum:t(0,33)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"long long _Accum:t(0,34)=r(0,1);8;0;",128,0,0,0
+  46               		.stabs	"unsigned short _Accum:t(0,35)=r(0,1);2;0;",128,0,0,0
+  47               		.stabs	"unsigned _Accum:t(0,36)=r(0,1);4;0;",128,0,0,0
+  48               		.stabs	"unsigned long _Accum:t(0,37)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned long long _Accum:t(0,38)=r(0,1);8;0;",128,0,0,0
+  50               		.stabs	"_Sat short _Accum:t(0,39)=r(0,1);2;0;",128,0,0,0
+  51               		.stabs	"_Sat _Accum:t(0,40)=r(0,1);4;0;",128,0,0,0
+  52               		.stabs	"_Sat long _Accum:t(0,41)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat long long _Accum:t(0,42)=r(0,1);8;0;",128,0,0,0
+  54               		.stabs	"_Sat unsigned short _Accum:t(0,43)=r(0,1);2;0;",128,0,0,0
+  55               		.stabs	"_Sat unsigned _Accum:t(0,44)=r(0,1);4;0;",128,0,0,0
+  56               		.stabs	"_Sat unsigned long _Accum:t(0,45)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned long long _Accum:t(0,46)=r(0,1);8;0;",128,0,0,0
+GAS LISTING /tmp/ccWOwJcg.s 			page 2
+
+
+  58               		.stabs	"void:t(0,47)=(0,47)",128,0,0,0
+  59               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+  60               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
+  61               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  62               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stdint.h",130,0,0,0
+  63               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  64               		.stabs	"int8_t:t(5,1)=(0,10)",128,0,121,0
+  65               		.stabs	"uint8_t:t(5,2)=(0,11)",128,0,122,0
+  66               		.stabs	"int16_t:t(5,3)=(0,1)",128,0,123,0
+  67               		.stabs	"uint16_t:t(5,4)=(0,4)",128,0,124,0
+  68               		.stabs	"int32_t:t(5,5)=(0,3)",128,0,125,0
+  69               		.stabs	"uint32_t:t(5,6)=(0,5)",128,0,126,0
+  70               		.stabs	"int64_t:t(5,7)=(0,6)",128,0,128,0
+  71               		.stabs	"uint64_t:t(5,8)=(0,7)",128,0,129,0
+  72               		.stabs	"intptr_t:t(5,9)=(5,3)",128,0,142,0
+  73               		.stabs	"uintptr_t:t(5,10)=(5,4)",128,0,147,0
+  74               		.stabs	"int_least8_t:t(5,11)=(5,1)",128,0,159,0
+  75               		.stabs	"uint_least8_t:t(5,12)=(5,2)",128,0,164,0
+  76               		.stabs	"int_least16_t:t(5,13)=(5,3)",128,0,169,0
+  77               		.stabs	"uint_least16_t:t(5,14)=(5,4)",128,0,174,0
+  78               		.stabs	"int_least32_t:t(5,15)=(5,5)",128,0,179,0
+  79               		.stabs	"uint_least32_t:t(5,16)=(5,6)",128,0,184,0
+  80               		.stabs	"int_least64_t:t(5,17)=(5,7)",128,0,192,0
+  81               		.stabs	"uint_least64_t:t(5,18)=(5,8)",128,0,199,0
+  82               		.stabs	"int_fast8_t:t(5,19)=(5,1)",128,0,213,0
+  83               		.stabs	"uint_fast8_t:t(5,20)=(5,2)",128,0,218,0
+  84               		.stabs	"int_fast16_t:t(5,21)=(5,3)",128,0,223,0
+  85               		.stabs	"uint_fast16_t:t(5,22)=(5,4)",128,0,228,0
+  86               		.stabs	"int_fast32_t:t(5,23)=(5,5)",128,0,233,0
+  87               		.stabs	"uint_fast32_t:t(5,24)=(5,6)",128,0,238,0
+  88               		.stabs	"int_fast64_t:t(5,25)=(5,7)",128,0,246,0
+  89               		.stabs	"uint_fast64_t:t(5,26)=(5,8)",128,0,253,0
+  90               		.stabs	"intmax_t:t(5,27)=(5,7)",128,0,273,0
+  91               		.stabs	"uintmax_t:t(5,28)=(5,8)",128,0,278,0
+  92               		.stabn	162,0,0,0
+  93               		.stabn	162,0,0,0
+  94               		.stabs	"int_farptr_t:t(3,1)=(5,5)",128,0,77,0
+  95               		.stabs	"uint_farptr_t:t(3,2)=(5,6)",128,0,81,0
+  96               		.stabn	162,0,0,0
+  97               		.stabn	162,0,0,0
+  98               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+  99               		.stabs	"__fuse_t:t(6,1)=(6,2)=s3low:(0,11),0,8;high:(0,11),8,8;extended:(0,11),16,8;;",128,0,244,0
+ 100               		.stabn	162,0,0,0
+ 101               		.stabn	162,0,0,0
+ 102               		.stabs	"event.h",130,0,0,0
+ 103               		.stabs	"event_t:t(7,1)=(5,4)",128,0,6,0
+ 104               		.stabs	" :T(7,2)=eEVENT0:1,EVENT1:2,EVENT2:4,EVENT3:8,EVENT4:16,EVENT5:32,EVENT6:64,EVENT7:128,EVE
+ 105               		.stabn	162,0,0,0
+ 106               		.stabs	"wait_for_events:F(7,1)",36,0,9,wait_for_events
+ 107               	.global	wait_for_events
+ 108               		.type	wait_for_events, @function
+ 109               	wait_for_events:
+ 110               		.stabd	46,0,0
+   1:event.c       **** #include <avr/io.h>
+   2:event.c       **** #include <avr/interrupt.h>
+   3:event.c       **** #include "event.h"
+   4:event.c       **** 
+GAS LISTING /tmp/ccWOwJcg.s 			page 3
+
+
+   5:event.c       **** 
+   6:event.c       **** volatile event_t events;
+   7:event.c       **** 
+   8:event.c       **** 
+   9:event.c       **** event_t wait_for_events(void)
+  10:event.c       **** {
+ 111               		.stabn	68,0,10,.LM0-.LFBB1
+ 112               	.LM0:
+ 113               	.LFBB1:
+ 114               	/* prologue: function */
+ 115               	/* frame size = 0 */
+ 116               	/* stack size = 0 */
+ 117               	.L__stack_usage = 0
+ 118               	.L2:
+  11:event.c       ****     uint8_t ev;
+  12:event.c       ****     event_t copy;
+  13:event.c       **** 
+  14:event.c       ****     while(!events)
+ 119               		.stabn	68,0,14,.LM1-.LFBB1
+ 120               	.LM1:
+ 121 0000 8091 0000 		lds r24,events
+ 122 0004 9091 0000 		lds r25,events+1
+ 123 0008 892B      		or r24,r25
+ 124 000a 01F0      		breq .L2
+  15:event.c       ****         ;
+  16:event.c       **** 
+  17:event.c       ****     for(ev=0, copy=events; ev<MAX_EVENTS && copy; ev++, copy>>=1)
+ 125               		.stabn	68,0,17,.LM2-.LFBB1
+ 126               	.LM2:
+ 127 000c 2091 0000 		lds r18,events
+ 128 0010 3091 0000 		lds r19,events+1
+ 129 0014 80E0      		ldi r24,0
+ 130               	.L3:
+ 131               		.stabn	68,0,17,.LM3-.LFBB1
+ 132               	.LM3:
+ 133 0016 2115      		cp r18,__zero_reg__
+ 134 0018 3105      		cpc r19,__zero_reg__
+ 135 001a 01F0      		breq .L5
+  18:event.c       ****         if (copy & 0x1) {
+ 136               		.stabn	68,0,18,.LM4-.LFBB1
+ 137               	.LM4:
+ 138 001c 20FF      		sbrs r18,0
+ 139 001e 00C0      		rjmp .L4
+  19:event.c       ****             cli();
+ 140               		.stabn	68,0,19,.LM5-.LFBB1
+ 141               	.LM5:
+ 142               	/* #APP */
+ 143               	 ;  19 "event.c" 1
+ 144 0020 F894      		cli
+ 145               	 ;  0 "" 2
+  20:event.c       ****             events &= ~_BV(ev);
+ 146               		.stabn	68,0,20,.LM6-.LFBB1
+ 147               	.LM6:
+ 148               	/* #NOAPP */
+ 149 0022 4091 0000 		lds r20,events
+ 150 0026 5091 0000 		lds r21,events+1
+ 151 002a 21E0      		ldi r18,lo8(1)
+GAS LISTING /tmp/ccWOwJcg.s 			page 4
+
+
+ 152 002c 30E0      		ldi r19,0
+ 153 002e 082E      		mov r0,r24
+ 154 0030 00C0      		rjmp 2f
+ 155               		1:
+ 156 0032 220F      		lsl r18
+ 157 0034 331F      		rol r19
+ 158               		2:
+ 159 0036 0A94      		dec r0
+ 160 0038 02F4      		brpl 1b
+ 161 003a 2095      		com r18
+ 162 003c 3095      		com r19
+ 163 003e 2423      		and r18,r20
+ 164 0040 3523      		and r19,r21
+ 165 0042 3093 0000 		sts events+1,r19
+ 166 0046 2093 0000 		sts events,r18
+  21:event.c       ****             sei();
+ 167               		.stabn	68,0,21,.LM7-.LFBB1
+ 168               	.LM7:
+ 169               	/* #APP */
+ 170               	 ;  21 "event.c" 1
+ 171 004a 7894      		sei
+ 172               	 ;  0 "" 2
+  22:event.c       ****             break;
+ 173               		.stabn	68,0,22,.LM8-.LFBB1
+ 174               	.LM8:
+ 175               	/* #NOAPP */
+ 176 004c 00C0      		rjmp .L5
+ 177               	.L4:
+  17:event.c       ****         if (copy & 0x1) {
+ 178               		.stabn	68,0,17,.LM9-.LFBB1
+ 179               	.LM9:
+ 180 004e 8F5F      		subi r24,lo8(-(1))
+ 181 0050 3695      		lsr r19
+ 182 0052 2795      		ror r18
+ 183 0054 8031      		cpi r24,lo8(16)
+ 184 0056 01F4      		brne .L3
+ 185               	.L5:
+  23:event.c       ****         }
+  24:event.c       ****     
+  25:event.c       ****     return ev;
+  26:event.c       **** }
+ 186               		.stabn	68,0,26,.LM10-.LFBB1
+ 187               	.LM10:
+ 188 0058 90E0      		ldi r25,0
+ 189 005a 0895      		ret
+ 190               		.size	wait_for_events, .-wait_for_events
+ 191               		.stabs	"copy:r(7,1)",64,0,12,18
+ 192               		.stabn	192,0,0,.LFBB1-.LFBB1
+ 193               		.stabn	224,0,0,.Lscope1-.LFBB1
+ 194               	.Lscope1:
+ 195               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 196               		.stabd	78,0,0
+ 197               		.comm	events,2,1
+ 198               		.stabs	"events:G(0,48)=B(7,1)",32,0,6,0
+ 199               		.stabs	"",100,0,0,.Letext0
+ 200               	.Letext0:
+ 201               		.ident	"GCC: (GNU) 4.9.2"
+GAS LISTING /tmp/ccWOwJcg.s 			page 5
+
+
+ 202               	.global __do_clear_bss
+GAS LISTING /tmp/ccWOwJcg.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 event.c
+     /tmp/ccWOwJcg.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccWOwJcg.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccWOwJcg.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccWOwJcg.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccWOwJcg.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccWOwJcg.s:109    .text:0000000000000000 wait_for_events
+                            *COM*:0000000000000002 events
+
+UNDEFINED SYMBOLS
+__do_clear_bss

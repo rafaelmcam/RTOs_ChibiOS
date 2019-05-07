@@ -1,0 +1,1086 @@
+GAS LISTING /tmp/ccyfYoNY.s 			page 1
+
+
+   1               		.file	"hoje.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.stabs	"/home/rcampello/Desktop/UFPE/6p/RTOs/8aula/",100,0,2,.Ltext0
+   8               		.stabs	"hoje.c",100,0,2,.Ltext0
+   9               		.text
+  10               	.Ltext0:
+  11               		.stabs	"gcc2_compiled.",60,0,0,0
+  12               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  13               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  14               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  15               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  16               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  17               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  18               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,0,0
+  19               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  20               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,0,0
+  21               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  22               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  23               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  24               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  25               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"short _Fract:t(0,15)=r(0,1);1;0;",128,0,0,0
+  27               		.stabs	"_Fract:t(0,16)=r(0,1);2;0;",128,0,0,0
+  28               		.stabs	"long _Fract:t(0,17)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"long long _Fract:t(0,18)=r(0,1);8;0;",128,0,0,0
+  30               		.stabs	"unsigned short _Fract:t(0,19)=r(0,1);1;0;",128,0,0,0
+  31               		.stabs	"unsigned _Fract:t(0,20)=r(0,1);2;0;",128,0,0,0
+  32               		.stabs	"unsigned long _Fract:t(0,21)=r(0,1);4;0;",128,0,0,0
+  33               		.stabs	"unsigned long long _Fract:t(0,22)=r(0,1);8;0;",128,0,0,0
+  34               		.stabs	"_Sat short _Fract:t(0,23)=r(0,1);1;0;",128,0,0,0
+  35               		.stabs	"_Sat _Fract:t(0,24)=r(0,1);2;0;",128,0,0,0
+  36               		.stabs	"_Sat long _Fract:t(0,25)=r(0,1);4;0;",128,0,0,0
+  37               		.stabs	"_Sat long long _Fract:t(0,26)=r(0,1);8;0;",128,0,0,0
+  38               		.stabs	"_Sat unsigned short _Fract:t(0,27)=r(0,1);1;0;",128,0,0,0
+  39               		.stabs	"_Sat unsigned _Fract:t(0,28)=r(0,1);2;0;",128,0,0,0
+  40               		.stabs	"_Sat unsigned long _Fract:t(0,29)=r(0,1);4;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned long long _Fract:t(0,30)=r(0,1);8;0;",128,0,0,0
+  42               		.stabs	"short _Accum:t(0,31)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Accum:t(0,32)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"long _Accum:t(0,33)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"long long _Accum:t(0,34)=r(0,1);8;0;",128,0,0,0
+  46               		.stabs	"unsigned short _Accum:t(0,35)=r(0,1);2;0;",128,0,0,0
+  47               		.stabs	"unsigned _Accum:t(0,36)=r(0,1);4;0;",128,0,0,0
+  48               		.stabs	"unsigned long _Accum:t(0,37)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned long long _Accum:t(0,38)=r(0,1);8;0;",128,0,0,0
+  50               		.stabs	"_Sat short _Accum:t(0,39)=r(0,1);2;0;",128,0,0,0
+  51               		.stabs	"_Sat _Accum:t(0,40)=r(0,1);4;0;",128,0,0,0
+  52               		.stabs	"_Sat long _Accum:t(0,41)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat long long _Accum:t(0,42)=r(0,1);8;0;",128,0,0,0
+  54               		.stabs	"_Sat unsigned short _Accum:t(0,43)=r(0,1);2;0;",128,0,0,0
+  55               		.stabs	"_Sat unsigned _Accum:t(0,44)=r(0,1);4;0;",128,0,0,0
+  56               		.stabs	"_Sat unsigned long _Accum:t(0,45)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned long long _Accum:t(0,46)=r(0,1);8;0;",128,0,0,0
+GAS LISTING /tmp/ccyfYoNY.s 			page 2
+
+
+  58               		.stabs	"void:t(0,47)=(0,47)",128,0,0,0
+  59               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+  60               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
+  61               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  62               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stdint.h",130,0,0,0
+  63               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  64               		.stabs	"int8_t:t(5,1)=(0,10)",128,0,121,0
+  65               		.stabs	"uint8_t:t(5,2)=(0,11)",128,0,122,0
+  66               		.stabs	"int16_t:t(5,3)=(0,1)",128,0,123,0
+  67               		.stabs	"uint16_t:t(5,4)=(0,4)",128,0,124,0
+  68               		.stabs	"int32_t:t(5,5)=(0,3)",128,0,125,0
+  69               		.stabs	"uint32_t:t(5,6)=(0,5)",128,0,126,0
+  70               		.stabs	"int64_t:t(5,7)=(0,6)",128,0,128,0
+  71               		.stabs	"uint64_t:t(5,8)=(0,7)",128,0,129,0
+  72               		.stabs	"intptr_t:t(5,9)=(5,3)",128,0,142,0
+  73               		.stabs	"uintptr_t:t(5,10)=(5,4)",128,0,147,0
+  74               		.stabs	"int_least8_t:t(5,11)=(5,1)",128,0,159,0
+  75               		.stabs	"uint_least8_t:t(5,12)=(5,2)",128,0,164,0
+  76               		.stabs	"int_least16_t:t(5,13)=(5,3)",128,0,169,0
+  77               		.stabs	"uint_least16_t:t(5,14)=(5,4)",128,0,174,0
+  78               		.stabs	"int_least32_t:t(5,15)=(5,5)",128,0,179,0
+  79               		.stabs	"uint_least32_t:t(5,16)=(5,6)",128,0,184,0
+  80               		.stabs	"int_least64_t:t(5,17)=(5,7)",128,0,192,0
+  81               		.stabs	"uint_least64_t:t(5,18)=(5,8)",128,0,199,0
+  82               		.stabs	"int_fast8_t:t(5,19)=(5,1)",128,0,213,0
+  83               		.stabs	"uint_fast8_t:t(5,20)=(5,2)",128,0,218,0
+  84               		.stabs	"int_fast16_t:t(5,21)=(5,3)",128,0,223,0
+  85               		.stabs	"uint_fast16_t:t(5,22)=(5,4)",128,0,228,0
+  86               		.stabs	"int_fast32_t:t(5,23)=(5,5)",128,0,233,0
+  87               		.stabs	"uint_fast32_t:t(5,24)=(5,6)",128,0,238,0
+  88               		.stabs	"int_fast64_t:t(5,25)=(5,7)",128,0,246,0
+  89               		.stabs	"uint_fast64_t:t(5,26)=(5,8)",128,0,253,0
+  90               		.stabs	"intmax_t:t(5,27)=(5,7)",128,0,273,0
+  91               		.stabs	"uintmax_t:t(5,28)=(5,8)",128,0,278,0
+  92               		.stabn	162,0,0,0
+  93               		.stabn	162,0,0,0
+  94               		.stabs	"int_farptr_t:t(3,1)=(5,5)",128,0,77,0
+  95               		.stabs	"uint_farptr_t:t(3,2)=(5,6)",128,0,81,0
+  96               		.stabn	162,0,0,0
+  97               		.stabn	162,0,0,0
+  98               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+  99               		.stabs	"__fuse_t:t(6,1)=(6,2)=s3low:(0,11),0,8;high:(0,11),8,8;extended:(0,11),16,8;;",128,0,244,0
+ 100               		.stabn	162,0,0,0
+ 101               		.stabn	162,0,0,0
+ 102               		.stabs	"setup_adc:F(0,47)",36,0,17,setup_adc
+ 103               	.global	setup_adc
+ 104               		.type	setup_adc, @function
+ 105               	setup_adc:
+ 106               		.stabd	46,0,0
+   1:hoje.c        **** #include <avr/io.h>
+   2:hoje.c        **** #include <avr/cpufunc.h>
+   3:hoje.c        **** #include <avr/interrupt.h>
+   4:hoje.c        **** 
+   5:hoje.c        **** 
+   6:hoje.c        **** 
+   7:hoje.c        **** #define FOSC 16000000ul  /* velocidade do relógio */
+   8:hoje.c        **** #define BAUD 115200      /* velocidade desejada para a serial */
+GAS LISTING /tmp/ccyfYoNY.s 			page 3
+
+
+   9:hoje.c        **** #define MYUBRR (FOSC/(8*BAUD) - 1)  /* valor de 12 bits para configurar o clock da USART */
+  10:hoje.c        **** 
+  11:hoje.c        **** #define BUFFER_SIZE 20   /* Tamanho do buffer da USART */
+  12:hoje.c        **** 
+  13:hoje.c        **** 
+  14:hoje.c        **** 
+  15:hoje.c        **** 
+  16:hoje.c        **** 
+  17:hoje.c        **** void setup_adc(void){
+ 107               		.stabn	68,0,17,.LM0-.LFBB1
+ 108               	.LM0:
+ 109               	.LFBB1:
+ 110               	/* prologue: function */
+ 111               	/* frame size = 0 */
+ 112               	/* stack size = 0 */
+ 113               	.L__stack_usage = 0
+  18:hoje.c        ****     
+  19:hoje.c        ****     
+  20:hoje.c        ****     ADCSRA |= (1<<ADPS2) | (1<<ADPS1) | (1<<ADPS0) | (1<<ADEN)  | (1<<ADSC) | (1<<ADIE) | (1<<ADATE
+ 114               		.stabn	68,0,20,.LM1-.LFBB1
+ 115               	.LM1:
+ 116 0000 EAE7      		ldi r30,lo8(122)
+ 117 0002 F0E0      		ldi r31,0
+ 118 0004 8081      		ld r24,Z
+ 119 0006 8F6E      		ori r24,lo8(-17)
+ 120 0008 8083      		st Z,r24
+  21:hoje.c        **** 
+  22:hoje.c        **** 
+  23:hoje.c        ****   //  ADCSRB |= (1<<ADTS0);
+  24:hoje.c        ****     
+  25:hoje.c        ****     ADMUX |=  (1<<REFS0);
+ 121               		.stabn	68,0,25,.LM2-.LFBB1
+ 122               	.LM2:
+ 123 000a ECE7      		ldi r30,lo8(124)
+ 124 000c F0E0      		ldi r31,0
+ 125 000e 8081      		ld r24,Z
+ 126 0010 8064      		ori r24,lo8(64)
+ 127 0012 8083      		st Z,r24
+  26:hoje.c        **** 
+  27:hoje.c        ****   //  ADMUX &= 0xf0;
+  28:hoje.c        ****     
+  29:hoje.c        ****     DIDR0 |= (1<<ADC0D);
+ 128               		.stabn	68,0,29,.LM3-.LFBB1
+ 129               	.LM3:
+ 130 0014 EEE7      		ldi r30,lo8(126)
+ 131 0016 F0E0      		ldi r31,0
+ 132 0018 8081      		ld r24,Z
+ 133 001a 8160      		ori r24,lo8(1)
+ 134 001c 8083      		st Z,r24
+ 135 001e 0895      		ret
+ 136               		.size	setup_adc, .-setup_adc
+ 137               	.Lscope1:
+ 138               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 139               		.stabd	78,0,0
+ 140               		.stabs	"setup_timer0:F(0,47)",36,0,33,setup_timer0
+ 141               	.global	setup_timer0
+ 142               		.type	setup_timer0, @function
+GAS LISTING /tmp/ccyfYoNY.s 			page 4
+
+
+ 143               	setup_timer0:
+ 144               		.stabd	46,0,0
+  30:hoje.c        ****     
+  31:hoje.c        **** }
+  32:hoje.c        **** 
+  33:hoje.c        **** void setup_timer0(void)
+  34:hoje.c        **** {
+ 145               		.stabn	68,0,34,.LM4-.LFBB2
+ 146               	.LM4:
+ 147               	.LFBB2:
+ 148               	/* prologue: function */
+ 149               	/* frame size = 0 */
+ 150               	/* stack size = 0 */
+ 151               	.L__stack_usage = 0
+  35:hoje.c        ****   
+  36:hoje.c        **** 
+  37:hoje.c        ****     //usar sempre o H na frente do L se for dividir o OCR1A em OCR1AH e OCR1AL
+  38:hoje.c        **** 
+  39:hoje.c        ****   //  OCR1A = 0xFFFF;
+  40:hoje.c        **** 
+  41:hoje.c        ****     //TCCR1A = 0; NUNCA FAÇA ISSO! TEM BITS RESERVADOS, QUE VC NAO PODE DIZER QUE É 0
+  42:hoje.c        **** 
+  43:hoje.c        ****     TCCR0B = (1 << CS02) | (1<<CS00);
+ 152               		.stabn	68,0,43,.LM5-.LFBB2
+ 153               	.LM5:
+ 154 0020 85E0      		ldi r24,lo8(5)
+ 155 0022 85BD      		out 0x25,r24
+  44:hoje.c        ****     TIMSK0 |= (1<<TOIE0);
+ 156               		.stabn	68,0,44,.LM6-.LFBB2
+ 157               	.LM6:
+ 158 0024 EEE6      		ldi r30,lo8(110)
+ 159 0026 F0E0      		ldi r31,0
+ 160 0028 8081      		ld r24,Z
+ 161 002a 8160      		ori r24,lo8(1)
+ 162 002c 8083      		st Z,r24
+  45:hoje.c        ****     sei();
+ 163               		.stabn	68,0,45,.LM7-.LFBB2
+ 164               	.LM7:
+ 165               	/* #APP */
+ 166               	 ;  45 "hoje.c" 1
+ 167 002e 7894      		sei
+ 168               	 ;  0 "" 2
+ 169               	/* #NOAPP */
+ 170 0030 0895      		ret
+ 171               		.size	setup_timer0, .-setup_timer0
+ 172               	.Lscope2:
+ 173               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 174               		.stabd	78,0,0
+ 175               		.stabs	"setup_main:F(0,47)",36,0,50,setup_main
+ 176               	.global	setup_main
+ 177               		.type	setup_main, @function
+ 178               	setup_main:
+ 179               		.stabd	46,0,0
+  46:hoje.c        **** }
+  47:hoje.c        **** 
+  48:hoje.c        **** 
+  49:hoje.c        **** /* -------------------------------------*/
+GAS LISTING /tmp/ccyfYoNY.s 			page 5
+
+
+  50:hoje.c        **** void setup_main(void)
+  51:hoje.c        **** {
+ 180               		.stabn	68,0,51,.LM8-.LFBB3
+ 181               	.LM8:
+ 182               	.LFBB3:
+ 183               	/* prologue: function */
+ 184               	/* frame size = 0 */
+ 185               	/* stack size = 0 */
+ 186               	.L__stack_usage = 0
+  52:hoje.c        ****     LED_DDR |= (1 << LED_PINNBR);
+ 187               		.stabn	68,0,52,.LM9-.LFBB3
+ 188               	.LM9:
+ 189 0032 259A      		sbi 0x4,5
+  53:hoje.c        ****   //  LED_PORT |= (1 << LED_PINNBR);
+  54:hoje.c        **** 
+  55:hoje.c        ****     DDRB  &= ~(1<<PB0);
+ 190               		.stabn	68,0,55,.LM10-.LFBB3
+ 191               	.LM10:
+ 192 0034 2098      		cbi 0x4,0
+  56:hoje.c        ****     PORTB |= (1<<PB0);
+ 193               		.stabn	68,0,56,.LM11-.LFBB3
+ 194               	.LM11:
+ 195 0036 289A      		sbi 0x5,0
+  57:hoje.c        ****     
+  58:hoje.c        ****     
+  59:hoje.c        ****     DDRC &= ~(1<<PC0);
+ 196               		.stabn	68,0,59,.LM12-.LFBB3
+ 197               	.LM12:
+ 198 0038 3898      		cbi 0x7,0
+  60:hoje.c        ****    // PORTC &= ~(1<<PC0);
+  61:hoje.c        **** 
+  62:hoje.c        ****     sei(); 
+ 199               		.stabn	68,0,62,.LM13-.LFBB3
+ 200               	.LM13:
+ 201               	/* #APP */
+ 202               	 ;  62 "hoje.c" 1
+ 203 003a 7894      		sei
+ 204               	 ;  0 "" 2
+ 205               	/* #NOAPP */
+ 206 003c 0895      		ret
+ 207               		.size	setup_main, .-setup_main
+ 208               	.Lscope3:
+ 209               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 210               		.stabd	78,0,0
+ 211               		.stabs	"setup_usart:F(0,47)",36,0,65,setup_usart
+ 212               	.global	setup_usart
+ 213               		.type	setup_usart, @function
+ 214               	setup_usart:
+ 215               		.stabd	46,0,0
+  63:hoje.c        **** }
+  64:hoje.c        **** 
+  65:hoje.c        **** void setup_usart(void)
+  66:hoje.c        **** {
+ 216               		.stabn	68,0,66,.LM14-.LFBB4
+ 217               	.LM14:
+ 218               	.LFBB4:
+ 219               	/* prologue: function */
+GAS LISTING /tmp/ccyfYoNY.s 			page 6
+
+
+ 220               	/* frame size = 0 */
+ 221               	/* stack size = 0 */
+ 222               	.L__stack_usage = 0
+  67:hoje.c        ****     /*
+  68:hoje.c        ****      * Para as macros abaixo e outras, veja o arquivo
+  69:hoje.c        ****      * /usr/lib/avr/include/avr/iom328p.h
+  70:hoje.c        ****      */
+  71:hoje.c        ****     /*
+  72:hoje.c        ****      * Primeiro setamos a direção certa para os pinos RX e TX
+  73:hoje.c        ****      */
+  74:hoje.c        ****     DDRD &= ~(1 << PD0);  /* USART RX bit para a placa Nano */
+ 223               		.stabn	68,0,74,.LM15-.LFBB4
+ 224               	.LM15:
+ 225 003e 5098      		cbi 0xa,0
+  75:hoje.c        ****     DDRD |= (1 << PD1);  /* USART TX bit para a placa Nano */
+ 226               		.stabn	68,0,75,.LM16-.LFBB4
+ 227               	.LM16:
+ 228 0040 519A      		sbi 0xa,1
+  76:hoje.c        ****     
+  77:hoje.c        ****     /*
+  78:hoje.c        ****      * Agora configuramos a USART
+  79:hoje.c        ****      */
+  80:hoje.c        ****     UBRR0H = (MYUBRR >> 8) & 0xF;
+ 229               		.stabn	68,0,80,.LM17-.LFBB4
+ 230               	.LM17:
+ 231 0042 1092 C500 		sts 197,__zero_reg__
+  81:hoje.c        ****     UBRR0L = MYUBRR & 0xFF;
+ 232               		.stabn	68,0,81,.LM18-.LFBB4
+ 233               	.LM18:
+ 234 0046 80E1      		ldi r24,lo8(16)
+ 235 0048 8093 C400 		sts 196,r24
+  82:hoje.c        ****     UCSR0A = (1 << U2X0); /* double speed */
+ 236               		.stabn	68,0,82,.LM19-.LFBB4
+ 237               	.LM19:
+ 238 004c 82E0      		ldi r24,lo8(2)
+ 239 004e 8093 C000 		sts 192,r24
+  83:hoje.c        ****     UCSR0B = (1 << TXEN0); /* habilita a transmissão mas não a interrupção (não ainda) */
+ 240               		.stabn	68,0,83,.LM20-.LFBB4
+ 241               	.LM20:
+ 242 0052 88E0      		ldi r24,lo8(8)
+ 243 0054 8093 C100 		sts 193,r24
+  84:hoje.c        ****     UCSR0C = (1 << UCSZ00) | (1 << UCSZ01);  /* Asynchronous, 8-N-1 */
+ 244               		.stabn	68,0,84,.LM21-.LFBB4
+ 245               	.LM21:
+ 246 0058 86E0      		ldi r24,lo8(6)
+ 247 005a 8093 C200 		sts 194,r24
+ 248 005e 0895      		ret
+ 249               		.size	setup_usart, .-setup_usart
+ 250               	.Lscope4:
+ 251               		.stabs	"",36,0,0,.Lscope4-.LFBB4
+ 252               		.stabd	78,0,0
+ 253               		.stabs	"delay_ms:F(0,47)",36,0,87,delay_ms
+ 254               		.stabs	"ms:P(5,4)",64,0,87,24
+ 255               	.global	delay_ms
+ 256               		.type	delay_ms, @function
+ 257               	delay_ms:
+ 258               		.stabd	46,0,0
+GAS LISTING /tmp/ccyfYoNY.s 			page 7
+
+
+  85:hoje.c        **** }
+  86:hoje.c        **** 
+  87:hoje.c        **** void delay_ms(uint16_t ms)
+  88:hoje.c        **** {
+ 259               		.stabn	68,0,88,.LM22-.LFBB5
+ 260               	.LM22:
+ 261               	.LFBB5:
+ 262               	/* prologue: function */
+ 263               	/* frame size = 0 */
+ 264               	/* stack size = 0 */
+ 265               	.L__stack_usage = 0
+  89:hoje.c        ****     uint16_t i, j;
+  90:hoje.c        ****     for(i=0; i<ms; i++)
+ 266               		.stabn	68,0,90,.LM23-.LFBB5
+ 267               	.LM23:
+ 268 0060 20E0      		ldi r18,0
+ 269 0062 30E0      		ldi r19,0
+ 270               	.L6:
+ 271               		.stabn	68,0,90,.LM24-.LFBB5
+ 272               	.LM24:
+ 273 0064 2817      		cp r18,r24
+ 274 0066 3907      		cpc r19,r25
+ 275 0068 01F0      		breq .L11
+ 276 006a 40EA      		ldi r20,lo8(-96)
+ 277 006c 5FE0      		ldi r21,lo8(15)
+ 278               	.L7:
+  91:hoje.c        ****         for(j=0; j<4000; j++)
+  92:hoje.c        ****             _NOP();
+ 279               		.stabn	68,0,92,.LM25-.LFBB5
+ 280               	.LM25:
+ 281               	/* #APP */
+ 282               	 ;  92 "hoje.c" 1
+ 283 006e 0000      		nop
+ 284               	 ;  0 "" 2
+ 285               	/* #NOAPP */
+ 286 0070 4150      		subi r20,1
+ 287 0072 5109      		sbc r21,__zero_reg__
+  91:hoje.c        ****         for(j=0; j<4000; j++)
+ 288               		.stabn	68,0,91,.LM26-.LFBB5
+ 289               	.LM26:
+ 290 0074 01F4      		brne .L7
+  90:hoje.c        ****         for(j=0; j<4000; j++)
+ 291               		.stabn	68,0,90,.LM27-.LFBB5
+ 292               	.LM27:
+ 293 0076 2F5F      		subi r18,-1
+ 294 0078 3F4F      		sbci r19,-1
+ 295 007a 00C0      		rjmp .L6
+ 296               	.L11:
+ 297               	/* epilogue start */
+  93:hoje.c        **** }
+ 298               		.stabn	68,0,93,.LM28-.LFBB5
+ 299               	.LM28:
+ 300 007c 0895      		ret
+ 301               		.size	delay_ms, .-delay_ms
+ 302               		.stabs	"i:r(5,4)",64,0,89,18
+ 303               		.stabn	192,0,0,.LFBB5-.LFBB5
+ 304               		.stabn	224,0,0,.Lscope5-.LFBB5
+GAS LISTING /tmp/ccyfYoNY.s 			page 8
+
+
+ 305               	.Lscope5:
+ 306               		.stabs	"",36,0,0,.Lscope5-.LFBB5
+ 307               		.stabd	78,0,0
+ 308               		.stabs	"write:F(5,2)",36,0,100,write
+ 309               		.stabs	"c:P(5,2)",64,0,100,24
+ 310               	.global	write
+ 311               		.type	write, @function
+ 312               	write:
+ 313               		.stabd	46,0,0
+  94:hoje.c        **** 
+  95:hoje.c        **** 
+  96:hoje.c        **** uint16_t tx_buffer[BUFFER_SIZE];     /* buffer para transmissão */
+  97:hoje.c        **** uint8_t tx_head, tx_tail;   /* ponteiros para o buffer circular */
+  98:hoje.c        **** uint8_t usart_transmitting=0;
+  99:hoje.c        **** 
+ 100:hoje.c        **** uint8_t write(uint8_t c)
+ 101:hoje.c        **** {
+ 314               		.stabn	68,0,101,.LM29-.LFBB6
+ 315               	.LM29:
+ 316               	.LFBB6:
+ 317               	/* prologue: function */
+ 318               	/* frame size = 0 */
+ 319               	/* stack size = 0 */
+ 320               	.L__stack_usage = 0
+ 102:hoje.c        ****     uint8_t rc = 0;
+ 103:hoje.c        **** 
+ 104:hoje.c        ****     cli();
+ 321               		.stabn	68,0,104,.LM30-.LFBB6
+ 322               	.LM30:
+ 323               	/* #APP */
+ 324               	 ;  104 "hoje.c" 1
+ 325 007e F894      		cli
+ 326               	 ;  0 "" 2
+ 105:hoje.c        ****     // primeiro if inicialmente sempre executado pois usart_transmitting começa 0, habilita a inte
+ 106:hoje.c        ****     if (!usart_transmitting) {
+ 327               		.stabn	68,0,106,.LM31-.LFBB6
+ 328               	.LM31:
+ 329               	/* #NOAPP */
+ 330 0080 9091 0000 		lds r25,usart_transmitting
+ 331 0084 9111      		cpse r25,__zero_reg__
+ 332 0086 00C0      		rjmp .L13
+ 107:hoje.c        ****         UDR0 = c;
+ 333               		.stabn	68,0,107,.LM32-.LFBB6
+ 334               	.LM32:
+ 335 0088 8093 C600 		sts 198,r24
+ 108:hoje.c        ****         UCSR0B |= (1 << UDRIE0);
+ 336               		.stabn	68,0,108,.LM33-.LFBB6
+ 337               	.LM33:
+ 338 008c 8091 C100 		lds r24,193
+ 339 0090 8062      		ori r24,lo8(32)
+ 340 0092 8093 C100 		sts 193,r24
+ 109:hoje.c        ****         usart_transmitting = 1;
+ 341               		.stabn	68,0,109,.LM34-.LFBB6
+ 342               	.LM34:
+ 343 0096 81E0      		ldi r24,lo8(1)
+ 344 0098 8093 0000 		sts usart_transmitting,r24
+ 345 009c 00C0      		rjmp .L17
+GAS LISTING /tmp/ccyfYoNY.s 			page 9
+
+
+ 346               	.L13:
+ 347               	.LBB2:
+ 110:hoje.c        ****     } else {
+ 111:hoje.c        ****         uint8_t next = tx_head + 1;
+ 348               		.stabn	68,0,111,.LM35-.LFBB6
+ 349               	.LM35:
+ 350 009e E091 0000 		lds r30,tx_head
+ 351 00a2 91E0      		ldi r25,lo8(1)
+ 352 00a4 9E0F      		add r25,r30
+ 112:hoje.c        ****         if (next >= BUFFER_SIZE)
+ 353               		.stabn	68,0,112,.LM36-.LFBB6
+ 354               	.LM36:
+ 355 00a6 9431      		cpi r25,lo8(20)
+ 356 00a8 00F0      		brlo .L15
+ 113:hoje.c        ****             next = 0;
+ 357               		.stabn	68,0,113,.LM37-.LFBB6
+ 358               	.LM37:
+ 359 00aa 90E0      		ldi r25,0
+ 360               	.L15:
+ 114:hoje.c        ****         if (next != tx_tail) { /* buffer cheio */
+ 361               		.stabn	68,0,114,.LM38-.LFBB6
+ 362               	.LM38:
+ 363 00ac 2091 0000 		lds r18,tx_tail
+ 364 00b0 9217      		cp r25,r18
+ 365 00b2 01F0      		breq .L16
+ 115:hoje.c        ****             tx_buffer[tx_head] = c;
+ 366               		.stabn	68,0,115,.LM39-.LFBB6
+ 367               	.LM39:
+ 368 00b4 F0E0      		ldi r31,0
+ 369 00b6 EE0F      		lsl r30
+ 370 00b8 FF1F      		rol r31
+ 371 00ba E050      		subi r30,lo8(-(tx_buffer))
+ 372 00bc F040      		sbci r31,hi8(-(tx_buffer))
+ 373 00be 282F      		mov r18,r24
+ 374 00c0 30E0      		ldi r19,0
+ 375 00c2 3183      		std Z+1,r19
+ 376 00c4 2083      		st Z,r18
+ 116:hoje.c        ****             tx_head = next;
+ 377               		.stabn	68,0,116,.LM40-.LFBB6
+ 378               	.LM40:
+ 379 00c6 9093 0000 		sts tx_head,r25
+ 380               	.L17:
+ 381               	.LBE2:
+ 102:hoje.c        **** 
+ 382               		.stabn	68,0,102,.LM41-.LFBB6
+ 383               	.LM41:
+ 384 00ca 80E0      		ldi r24,0
+ 385               	.LBB3:
+ 386 00cc 00C0      		rjmp .L14
+ 387               	.L16:
+ 117:hoje.c        ****         } else
+ 118:hoje.c        ****             rc = 1;
+ 388               		.stabn	68,0,118,.LM42-.LFBB6
+ 389               	.LM42:
+ 390 00ce 81E0      		ldi r24,lo8(1)
+ 391               	.L14:
+ 392               	.LBE3:
+GAS LISTING /tmp/ccyfYoNY.s 			page 10
+
+
+ 119:hoje.c        ****     }
+ 120:hoje.c        ****     sei();
+ 393               		.stabn	68,0,120,.LM43-.LFBB6
+ 394               	.LM43:
+ 395               	/* #APP */
+ 396               	 ;  120 "hoje.c" 1
+ 397 00d0 7894      		sei
+ 398               	 ;  0 "" 2
+ 121:hoje.c        ****     return rc;
+ 122:hoje.c        **** }
+ 399               		.stabn	68,0,122,.LM44-.LFBB6
+ 400               	.LM44:
+ 401               	/* #NOAPP */
+ 402 00d2 0895      		ret
+ 403               		.size	write, .-write
+ 404               		.stabs	"rc:r(5,2)",64,0,102,24
+ 405               		.stabn	192,0,0,.LFBB6-.LFBB6
+ 406               		.stabs	"next:r(5,2)",64,0,111,25
+ 407               		.stabn	192,0,0,.LBB2-.LFBB6
+ 408               		.stabn	224,0,0,.LBE2-.LFBB6
+ 409               		.stabs	"next:r(5,2)",64,0,111,25
+ 410               		.stabn	192,0,0,.LBB3-.LFBB6
+ 411               		.stabn	224,0,0,.LBE3-.LFBB6
+ 412               		.stabn	224,0,0,.Lscope6-.LFBB6
+ 413               	.Lscope6:
+ 414               		.stabs	"",36,0,0,.Lscope6-.LFBB6
+ 415               		.stabd	78,0,0
+ 416               		.stabs	"__vector_19:F(0,47)",36,0,124,__vector_19
+ 417               	.global	__vector_19
+ 418               		.type	__vector_19, @function
+ 419               	__vector_19:
+ 420               		.stabd	46,0,0
+ 123:hoje.c        **** 
+ 124:hoje.c        **** ISR(USART_UDRE_vect)
+ 125:hoje.c        **** {
+ 421               		.stabn	68,0,125,.LM45-.LFBB7
+ 422               	.LM45:
+ 423               	.LFBB7:
+ 424 00d4 1F92      		push r1
+ 425 00d6 0F92      		push r0
+ 426 00d8 0FB6      		in r0,__SREG__
+ 427 00da 0F92      		push r0
+ 428 00dc 1124      		clr __zero_reg__
+ 429 00de 8F93      		push r24
+ 430 00e0 EF93      		push r30
+ 431 00e2 FF93      		push r31
+ 432               	/* prologue: Signal */
+ 433               	/* frame size = 0 */
+ 434               	/* stack size = 6 */
+ 435               	.L__stack_usage = 6
+ 126:hoje.c        ****     if (tx_head == tx_tail) {
+ 436               		.stabn	68,0,126,.LM46-.LFBB7
+ 437               	.LM46:
+ 438 00e4 E091 0000 		lds r30,tx_tail
+ 439 00e8 8091 0000 		lds r24,tx_head
+ 440 00ec 8E13      		cpse r24,r30
+ 441 00ee 00C0      		rjmp .L19
+GAS LISTING /tmp/ccyfYoNY.s 			page 11
+
+
+ 127:hoje.c        ****         UCSR0B &= ~(1 << UDRIE0);
+ 442               		.stabn	68,0,127,.LM47-.LFBB7
+ 443               	.LM47:
+ 444 00f0 8091 C100 		lds r24,193
+ 445 00f4 8F7D      		andi r24,lo8(-33)
+ 446 00f6 8093 C100 		sts 193,r24
+ 128:hoje.c        ****         usart_transmitting = 0;
+ 447               		.stabn	68,0,128,.LM48-.LFBB7
+ 448               	.LM48:
+ 449 00fa 1092 0000 		sts usart_transmitting,__zero_reg__
+ 450 00fe 00C0      		rjmp .L18
+ 451               	.L19:
+ 129:hoje.c        ****     } else {
+ 130:hoje.c        ****         UDR0 = tx_buffer[tx_tail];
+ 452               		.stabn	68,0,130,.LM49-.LFBB7
+ 453               	.LM49:
+ 454 0100 F0E0      		ldi r31,0
+ 455 0102 EE0F      		lsl r30
+ 456 0104 FF1F      		rol r31
+ 457 0106 E050      		subi r30,lo8(-(tx_buffer))
+ 458 0108 F040      		sbci r31,hi8(-(tx_buffer))
+ 459 010a 8081      		ld r24,Z
+ 460 010c 8093 C600 		sts 198,r24
+ 131:hoje.c        ****         if (++tx_tail >= BUFFER_SIZE)
+ 461               		.stabn	68,0,131,.LM50-.LFBB7
+ 462               	.LM50:
+ 463 0110 8091 0000 		lds r24,tx_tail
+ 464 0114 8F5F      		subi r24,lo8(-(1))
+ 465 0116 8431      		cpi r24,lo8(20)
+ 466 0118 00F4      		brsh .L21
+ 467 011a 8093 0000 		sts tx_tail,r24
+ 468 011e 00C0      		rjmp .L18
+ 469               	.L21:
+ 132:hoje.c        ****             tx_tail = 0;
+ 470               		.stabn	68,0,132,.LM51-.LFBB7
+ 471               	.LM51:
+ 472 0120 1092 0000 		sts tx_tail,__zero_reg__
+ 473               	.L18:
+ 474               	/* epilogue start */
+ 133:hoje.c        ****     }
+ 134:hoje.c        **** }
+ 475               		.stabn	68,0,134,.LM52-.LFBB7
+ 476               	.LM52:
+ 477 0124 FF91      		pop r31
+ 478 0126 EF91      		pop r30
+ 479 0128 8F91      		pop r24
+ 480 012a 0F90      		pop r0
+ 481 012c 0FBE      		out __SREG__,r0
+ 482 012e 0F90      		pop r0
+ 483 0130 1F90      		pop r1
+ 484 0132 1895      		reti
+ 485               		.size	__vector_19, .-__vector_19
+ 486               	.Lscope7:
+ 487               		.stabs	"",36,0,0,.Lscope7-.LFBB7
+ 488               		.stabd	78,0,0
+ 489               		.stabs	"toArray:F(0,48)=*(5,2)",36,0,145,toArray
+ 490               		.stabs	"number:P(5,2)",64,0,145,20
+GAS LISTING /tmp/ccyfYoNY.s 			page 12
+
+
+ 491               	.global	toArray
+ 492               		.type	toArray, @function
+ 493               	toArray:
+ 494               		.stabd	46,0,0
+ 135:hoje.c        **** 
+ 136:hoje.c        **** 
+ 137:hoje.c        **** // volatile uint16_t contar=0;
+ 138:hoje.c        **** 
+ 139:hoje.c        **** // ISR(TIMER1_COMPA_vect)
+ 140:hoje.c        **** // {
+ 141:hoje.c        **** //     contar++;
+ 142:hoje.c        **** // }
+ 143:hoje.c        **** 
+ 144:hoje.c        **** 
+ 145:hoje.c        **** uint8_t * toArray(uint8_t number, uint8_t* numberArray)
+ 146:hoje.c        ****     {
+ 495               		.stabn	68,0,146,.LM53-.LFBB8
+ 496               	.LM53:
+ 497               	.LFBB8:
+ 498               	/* prologue: function */
+ 499               	/* frame size = 0 */
+ 500               	/* stack size = 0 */
+ 501               	.L__stack_usage = 0
+ 502 0134 482F      		mov r20,r24
+ 503 0136 CB01      		movw r24,r22
+ 504 0138 FB01      		movw r30,r22
+ 147:hoje.c        ****         
+ 148:hoje.c        ****         int i;
+ 149:hoje.c        ****     
+ 150:hoje.c        **** 
+ 151:hoje.c        ****         for ( i = 7; i >=0; i--)
+ 505               		.stabn	68,0,151,.LM54-.LFBB8
+ 506               	.LM54:
+ 507 013a 27E0      		ldi r18,lo8(7)
+ 508 013c 30E0      		ldi r19,0
+ 152:hoje.c        ****         {
+ 153:hoje.c        ****             numberArray[7-i] = (number&(1u<<i))?'1':'0';
+ 509               		.stabn	68,0,153,.LM55-.LFBB8
+ 510               	.LM55:
+ 511 013e 50E0      		ldi r21,0
+ 512               	.L24:
+ 513 0140 BA01      		movw r22,r20
+ 514 0142 022E      		mov r0,r18
+ 515 0144 00C0      		rjmp 2f
+ 516               		1:
+ 517 0146 7695      		lsr r23
+ 518 0148 6795      		ror r22
+ 519               		2:
+ 520 014a 0A94      		dec r0
+ 521 014c 02F4      		brpl 1b
+ 522 014e 60FD      		sbrc r22,0
+ 523 0150 00C0      		rjmp .L25
+ 524 0152 60E3      		ldi r22,lo8(48)
+ 525 0154 00C0      		rjmp .L23
+ 526               	.L25:
+ 527 0156 61E3      		ldi r22,lo8(49)
+ 528               	.L23:
+GAS LISTING /tmp/ccyfYoNY.s 			page 13
+
+
+ 529               		.stabn	68,0,153,.LM56-.LFBB8
+ 530               	.LM56:
+ 531 0158 6193      		st Z+,r22
+ 151:hoje.c        ****         {
+ 532               		.stabn	68,0,151,.LM57-.LFBB8
+ 533               	.LM57:
+ 534 015a 2150      		subi r18,1
+ 535 015c 3109      		sbc r19,__zero_reg__
+ 536 015e 00F4      		brcc .L24
+ 537               	/* epilogue start */
+ 154:hoje.c        ****         }
+ 155:hoje.c        ****         return numberArray;
+ 156:hoje.c        ****     }
+ 538               		.stabn	68,0,156,.LM58-.LFBB8
+ 539               	.LM58:
+ 540 0160 0895      		ret
+ 541               		.size	toArray, .-toArray
+ 542               		.stabs	"i:r(0,1)",64,0,148,18
+ 543               		.stabn	192,0,0,.LFBB8-.LFBB8
+ 544               		.stabn	224,0,0,.Lscope8-.LFBB8
+ 545               	.Lscope8:
+ 546               		.stabs	"",36,0,0,.Lscope8-.LFBB8
+ 547               		.stabd	78,0,0
+ 548               		.stabs	"__vector_16:F(0,47)",36,0,167,__vector_16
+ 549               	.global	__vector_16
+ 550               		.type	__vector_16, @function
+ 551               	__vector_16:
+ 552               		.stabd	46,0,0
+ 157:hoje.c        **** 
+ 158:hoje.c        **** 
+ 159:hoje.c        **** volatile uint8_t capturado=0;
+ 160:hoje.c        **** volatile uint8_t capturado2=0;
+ 161:hoje.c        **** 
+ 162:hoje.c        **** volatile char msg[8];
+ 163:hoje.c        **** volatile char msg2[8];
+ 164:hoje.c        **** 
+ 165:hoje.c        **** volatile uint8_t flag = 0;
+ 166:hoje.c        **** 
+ 167:hoje.c        **** ISR(TIMER0_OVF_vect){
+ 553               		.stabn	68,0,167,.LM59-.LFBB9
+ 554               	.LM59:
+ 555               	.LFBB9:
+ 556 0162 1F92      		push r1
+ 557 0164 0F92      		push r0
+ 558 0166 0FB6      		in r0,__SREG__
+ 559 0168 0F92      		push r0
+ 560 016a 1124      		clr __zero_reg__
+ 561 016c 8F93      		push r24
+ 562               	/* prologue: Signal */
+ 563               	/* frame size = 0 */
+ 564               	/* stack size = 4 */
+ 565               	.L__stack_usage = 4
+ 168:hoje.c        ****     
+ 169:hoje.c        ****     flag++;
+ 566               		.stabn	68,0,169,.LM60-.LFBB9
+ 567               	.LM60:
+ 568 016e 8091 0000 		lds r24,flag
+GAS LISTING /tmp/ccyfYoNY.s 			page 14
+
+
+ 569 0172 8F5F      		subi r24,lo8(-(1))
+ 570 0174 8093 0000 		sts flag,r24
+ 571               	/* epilogue start */
+ 170:hoje.c        ****     
+ 171:hoje.c        ****     
+ 172:hoje.c        **** }
+ 572               		.stabn	68,0,172,.LM61-.LFBB9
+ 573               	.LM61:
+ 574 0178 8F91      		pop r24
+ 575 017a 0F90      		pop r0
+ 576 017c 0FBE      		out __SREG__,r0
+ 577 017e 0F90      		pop r0
+ 578 0180 1F90      		pop r1
+ 579 0182 1895      		reti
+ 580               		.size	__vector_16, .-__vector_16
+ 581               	.Lscope9:
+ 582               		.stabs	"",36,0,0,.Lscope9-.LFBB9
+ 583               		.stabd	78,0,0
+ 584               		.stabs	"__vector_21:F(0,47)",36,0,179,__vector_21
+ 585               	.global	__vector_21
+ 586               		.type	__vector_21, @function
+ 587               	__vector_21:
+ 588               		.stabd	46,0,0
+ 173:hoje.c        **** 
+ 174:hoje.c        **** 
+ 175:hoje.c        **** 
+ 176:hoje.c        **** uint8_t flag_adc = 0 ;
+ 177:hoje.c        **** 
+ 178:hoje.c        **** 
+ 179:hoje.c        **** ISR(ADC_vect){
+ 589               		.stabn	68,0,179,.LM62-.LFBB10
+ 590               	.LM62:
+ 591               	.LFBB10:
+ 592 0184 1F92      		push r1
+ 593 0186 0F92      		push r0
+ 594 0188 0FB6      		in r0,__SREG__
+ 595 018a 0F92      		push r0
+ 596 018c 1124      		clr __zero_reg__
+ 597 018e 8F93      		push r24
+ 598               	/* prologue: Signal */
+ 599               	/* frame size = 0 */
+ 600               	/* stack size = 4 */
+ 601               	.L__stack_usage = 4
+ 180:hoje.c        ****     
+ 181:hoje.c        ****     
+ 182:hoje.c        ****     flag_adc = 1;
+ 602               		.stabn	68,0,182,.LM63-.LFBB10
+ 603               	.LM63:
+ 604 0190 81E0      		ldi r24,lo8(1)
+ 605 0192 8093 0000 		sts flag_adc,r24
+ 606               	/* epilogue start */
+ 183:hoje.c        ****    // LED_PORT |= (1<<LED_PINNBR);
+ 184:hoje.c        ****     
+ 185:hoje.c        ****     
+ 186:hoje.c        **** }
+ 607               		.stabn	68,0,186,.LM64-.LFBB10
+ 608               	.LM64:
+GAS LISTING /tmp/ccyfYoNY.s 			page 15
+
+
+ 609 0196 8F91      		pop r24
+ 610 0198 0F90      		pop r0
+ 611 019a 0FBE      		out __SREG__,r0
+ 612 019c 0F90      		pop r0
+ 613 019e 1F90      		pop r1
+ 614 01a0 1895      		reti
+ 615               		.size	__vector_21, .-__vector_21
+ 616               	.Lscope10:
+ 617               		.stabs	"",36,0,0,.Lscope10-.LFBB10
+ 618               		.stabd	78,0,0
+ 619               		.section	.text.startup,"ax",@progbits
+ 620               		.stabs	"main:F(0,1)",36,0,196,main
+ 621               	.global	main
+ 622               		.type	main, @function
+ 623               	main:
+ 624               		.stabd	46,0,0
+ 187:hoje.c        **** 
+ 188:hoje.c        **** 
+ 189:hoje.c        **** /* -------------------------------------*/
+ 190:hoje.c        **** 
+ 191:hoje.c        **** 
+ 192:hoje.c        **** uint8_t bit1, bit2;
+ 193:hoje.c        **** uint16_t bit_geral;
+ 194:hoje.c        **** 
+ 195:hoje.c        **** 
+ 196:hoje.c        **** int main(void)
+ 197:hoje.c        **** {   
+ 625               		.stabn	68,0,197,.LM65-.LFBB11
+ 626               	.LM65:
+ 627               	.LFBB11:
+ 628               	/* prologue: function */
+ 629               	/* frame size = 0 */
+ 630               	/* stack size = 0 */
+ 631               	.L__stack_usage = 0
+ 198:hoje.c        **** 
+ 199:hoje.c        ****     uint16_t ms = 2000;
+ 200:hoje.c        ****    
+ 201:hoje.c        ****     
+ 202:hoje.c        ****     setup_adc();
+ 632               		.stabn	68,0,202,.LM66-.LFBB11
+ 633               	.LM66:
+ 634 0000 0E94 0000 		call setup_adc
+ 203:hoje.c        ****     setup_usart();
+ 635               		.stabn	68,0,203,.LM67-.LFBB11
+ 636               	.LM67:
+ 637 0004 0E94 0000 		call setup_usart
+ 204:hoje.c        ****     setup_timer0();
+ 638               		.stabn	68,0,204,.LM68-.LFBB11
+ 639               	.LM68:
+ 640 0008 0E94 0000 		call setup_timer0
+ 205:hoje.c        ****     setup_main();
+ 641               		.stabn	68,0,205,.LM69-.LFBB11
+ 642               	.LM69:
+ 643 000c 0E94 0000 		call setup_main
+ 644               	.L30:
+ 206:hoje.c        **** 
+ 207:hoje.c        **** 
+GAS LISTING /tmp/ccyfYoNY.s 			page 16
+
+
+ 208:hoje.c        ****     uint8_t i;
+ 209:hoje.c        ****     
+ 210:hoje.c        ****     
+ 211:hoje.c        ****     while(1) {
+ 212:hoje.c        ****         
+ 213:hoje.c        ****         if (flag>=30){
+ 645               		.stabn	68,0,213,.LM70-.LFBB11
+ 646               	.LM70:
+ 647 0010 8091 0000 		lds r24,flag
+ 648 0014 8E31      		cpi r24,lo8(30)
+ 649 0016 00F0      		brlo .L30
+ 214:hoje.c        ****             
+ 215:hoje.c        **** 
+ 216:hoje.c        ****               //  ADCSRA |= ( 1 << ADSC );
+ 217:hoje.c        **** 
+ 218:hoje.c        ****                 if (flag_adc){
+ 650               		.stabn	68,0,218,.LM71-.LFBB11
+ 651               	.LM71:
+ 652 0018 8091 0000 		lds r24,flag_adc
+ 653 001c 8823      		tst r24
+ 654 001e 01F0      		breq .L31
+ 219:hoje.c        **** 
+ 220:hoje.c        ****                 bit_geral=ADC;
+ 655               		.stabn	68,0,220,.LM72-.LFBB11
+ 656               	.LM72:
+ 657 0020 8091 7800 		lds r24,120
+ 658 0024 9091 7900 		lds r25,120+1
+ 659 0028 9093 0000 		sts bit_geral+1,r25
+ 660 002c 8093 0000 		sts bit_geral,r24
+ 221:hoje.c        **** 
+ 222:hoje.c        ****                 bit1 = (bit_geral>>8);
+ 661               		.stabn	68,0,222,.LM73-.LFBB11
+ 662               	.LM73:
+ 663 0030 9093 0000 		sts bit1,r25
+ 223:hoje.c        ****                 bit2 = bit_geral & 0xFF;
+ 664               		.stabn	68,0,223,.LM74-.LFBB11
+ 665               	.LM74:
+ 666 0034 8093 0000 		sts bit2,r24
+ 224:hoje.c        **** 
+ 225:hoje.c        ****                 write(bit2);
+ 667               		.stabn	68,0,225,.LM75-.LFBB11
+ 668               	.LM75:
+ 669 0038 0E94 0000 		call write
+ 226:hoje.c        ****                 write(bit1);
+ 670               		.stabn	68,0,226,.LM76-.LFBB11
+ 671               	.LM76:
+ 672 003c 8091 0000 		lds r24,bit1
+ 673 0040 0E94 0000 		call write
+ 227:hoje.c        ****                 
+ 228:hoje.c        ****             //     toArray(bit1, msg);
+ 229:hoje.c        ****             //     toArray(bit2, msg2);
+ 230:hoje.c        ****                 
+ 231:hoje.c        ****                 
+ 232:hoje.c        ****             //     for(i=0; i<sizeof(msg); i++)
+ 233:hoje.c        ****             //         if(write(msg[i])){
+ 234:hoje.c        ****             //             PORTB |= (1<<LED_PINNBR);//caso buffer for pequeno demais acender LED
+ 235:hoje.c        ****             //             break;
+GAS LISTING /tmp/ccyfYoNY.s 			page 17
+
+
+ 236:hoje.c        ****             // }
+ 237:hoje.c        **** 
+ 238:hoje.c        ****             //     for(i=0; i<sizeof(msg2); i++)
+ 239:hoje.c        ****             //         if(write(msg2[i])){
+ 240:hoje.c        ****             //             PORTB |= (1<<LED_PINNBR);//caso buffer for pequeno demais acender LED
+ 241:hoje.c        ****             //             break;
+ 242:hoje.c        ****             //     }
+ 243:hoje.c        **** 
+ 244:hoje.c        ****             // write('\n');
+ 245:hoje.c        **** 
+ 246:hoje.c        ****                  //   ADCSRA |= ( 1 << ADIF );
+ 247:hoje.c        **** 
+ 248:hoje.c        **** 
+ 249:hoje.c        ****               flag_adc=0;  
+ 674               		.stabn	68,0,249,.LM77-.LFBB11
+ 675               	.LM77:
+ 676 0044 1092 0000 		sts flag_adc,__zero_reg__
+ 677               	.L31:
+ 250:hoje.c        ****              }
+ 251:hoje.c        **** 
+ 252:hoje.c        ****             
+ 253:hoje.c        ****           //  LED_PIN |= (1<<LED_PINNBR);
+ 254:hoje.c        ****             flag=0;
+ 678               		.stabn	68,0,254,.LM78-.LFBB11
+ 679               	.LM78:
+ 680 0048 1092 0000 		sts flag,__zero_reg__
+ 681 004c 00C0      		rjmp .L30
+ 682               		.size	main, .-main
+ 683               	.Lscope11:
+ 684               		.stabs	"",36,0,0,.Lscope11-.LFBB11
+ 685               		.stabd	78,0,0
+ 686               		.comm	bit_geral,2,1
+ 687               		.comm	bit2,1,1
+ 688               		.comm	bit1,1,1
+ 689               	.global	flag_adc
+ 690               		.section .bss
+ 691               		.type	flag_adc, @object
+ 692               		.size	flag_adc, 1
+ 693               	flag_adc:
+ 694 0000 00        		.zero	1
+ 695               	.global	flag
+ 696               		.type	flag, @object
+ 697               		.size	flag, 1
+ 698               	flag:
+ 699 0001 00        		.zero	1
+ 700               		.comm	msg2,8,1
+ 701               		.comm	msg,8,1
+ 702               	.global	capturado2
+ 703               		.type	capturado2, @object
+ 704               		.size	capturado2, 1
+ 705               	capturado2:
+ 706 0002 00        		.zero	1
+ 707               	.global	capturado
+ 708               		.type	capturado, @object
+ 709               		.size	capturado, 1
+ 710               	capturado:
+ 711 0003 00        		.zero	1
+GAS LISTING /tmp/ccyfYoNY.s 			page 18
+
+
+ 712               	.global	usart_transmitting
+ 713               		.type	usart_transmitting, @object
+ 714               		.size	usart_transmitting, 1
+ 715               	usart_transmitting:
+ 716 0004 00        		.zero	1
+ 717               		.comm	tx_tail,1,1
+ 718               		.comm	tx_head,1,1
+ 719               		.comm	tx_buffer,40,1
+ 720               		.stabs	"tx_buffer:G(0,49)=ar(0,50)=r(0,50);0;0177777;;0;19;(5,4)",32,0,96,0
+ 721               		.stabs	"tx_head:G(5,2)",32,0,97,0
+ 722               		.stabs	"tx_tail:G(5,2)",32,0,97,0
+ 723               		.stabs	"usart_transmitting:G(5,2)",32,0,98,0
+ 724               		.stabs	"capturado:G(0,51)=B(5,2)",32,0,159,0
+ 725               		.stabs	"capturado2:G(0,51)",32,0,160,0
+ 726               		.stabs	"msg:G(0,52)=ar(0,50);0;7;(0,53)=B(0,2)",32,0,162,0
+ 727               		.stabs	"msg2:G(0,52)",32,0,163,0
+ 728               		.stabs	"flag:G(0,51)",32,0,165,0
+ 729               		.stabs	"flag_adc:G(5,2)",32,0,176,0
+ 730               		.stabs	"bit1:G(5,2)",32,0,192,0
+ 731               		.stabs	"bit2:G(5,2)",32,0,192,0
+ 732               		.stabs	"bit_geral:G(5,4)",32,0,193,0
+ 733               		.text
+ 734               		.stabs	"",100,0,0,.Letext0
+ 735               	.Letext0:
+ 736               		.ident	"GCC: (GNU) 4.9.2"
+ 737               	.global __do_clear_bss
+GAS LISTING /tmp/ccyfYoNY.s 			page 19
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 hoje.c
+     /tmp/ccyfYoNY.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccyfYoNY.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccyfYoNY.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccyfYoNY.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccyfYoNY.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccyfYoNY.s:105    .text:0000000000000000 setup_adc
+     /tmp/ccyfYoNY.s:143    .text:0000000000000020 setup_timer0
+     /tmp/ccyfYoNY.s:178    .text:0000000000000032 setup_main
+     /tmp/ccyfYoNY.s:214    .text:000000000000003e setup_usart
+     /tmp/ccyfYoNY.s:257    .text:0000000000000060 delay_ms
+     /tmp/ccyfYoNY.s:312    .text:000000000000007e write
+     /tmp/ccyfYoNY.s:715    .bss:0000000000000004 usart_transmitting
+                            *COM*:0000000000000001 tx_head
+                            *COM*:0000000000000001 tx_tail
+                            *COM*:0000000000000028 tx_buffer
+     /tmp/ccyfYoNY.s:419    .text:00000000000000d4 __vector_19
+     /tmp/ccyfYoNY.s:493    .text:0000000000000134 toArray
+     /tmp/ccyfYoNY.s:551    .text:0000000000000162 __vector_16
+     /tmp/ccyfYoNY.s:698    .bss:0000000000000001 flag
+     /tmp/ccyfYoNY.s:587    .text:0000000000000184 __vector_21
+     /tmp/ccyfYoNY.s:693    .bss:0000000000000000 flag_adc
+     /tmp/ccyfYoNY.s:623    .text.startup:0000000000000000 main
+                            *COM*:0000000000000002 bit_geral
+                            *COM*:0000000000000001 bit1
+                            *COM*:0000000000000001 bit2
+                            *COM*:0000000000000008 msg2
+                            *COM*:0000000000000008 msg
+     /tmp/ccyfYoNY.s:705    .bss:0000000000000002 capturado2
+     /tmp/ccyfYoNY.s:710    .bss:0000000000000003 capturado
+
+UNDEFINED SYMBOLS
+__do_clear_bss

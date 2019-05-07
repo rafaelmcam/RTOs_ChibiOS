@@ -1,0 +1,707 @@
+GAS LISTING /tmp/ccY594uu.s 			page 1
+
+
+   1               		.file	"timer.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.stabs	"/home/aluno/RTOs - N apagar, \343\201\217\343\201\240\343\201\225\343\201\204/13aula/remot
+   8               		.stabs	"timer.c",100,0,2,.Ltext0
+   9               		.text
+  10               	.Ltext0:
+  11               		.stabs	"gcc2_compiled.",60,0,0,0
+  12               		.stabs	"int:t(0,1)=r(0,1);-32768;32767;",128,0,0,0
+  13               		.stabs	"char:t(0,2)=@s8;r(0,2);0;255;",128,0,0,0
+  14               		.stabs	"long int:t(0,3)=@s32;r(0,3);020000000000;017777777777;",128,0,0,0
+  15               		.stabs	"unsigned int:t(0,4)=r(0,4);0;0177777;",128,0,0,0
+  16               		.stabs	"long unsigned int:t(0,5)=@s32;r(0,5);0;037777777777;",128,0,0,0
+  17               		.stabs	"long long int:t(0,6)=@s64;r(0,6);01000000000000000000000;0777777777777777777777;",128,0,0,
+  18               		.stabs	"long long unsigned int:t(0,7)=@s64;r(0,7);0;01777777777777777777777;",128,0,0,0
+  19               		.stabs	"short int:t(0,8)=r(0,8);-32768;32767;",128,0,0,0
+  20               		.stabs	"short unsigned int:t(0,9)=r(0,9);0;0177777;",128,0,0,0
+  21               		.stabs	"signed char:t(0,10)=@s8;r(0,10);-128;127;",128,0,0,0
+  22               		.stabs	"unsigned char:t(0,11)=@s8;r(0,11);0;255;",128,0,0,0
+  23               		.stabs	"float:t(0,12)=r(0,1);4;0;",128,0,0,0
+  24               		.stabs	"double:t(0,13)=r(0,1);4;0;",128,0,0,0
+  25               		.stabs	"long double:t(0,14)=r(0,1);4;0;",128,0,0,0
+  26               		.stabs	"short _Fract:t(0,15)=r(0,1);1;0;",128,0,0,0
+  27               		.stabs	"_Fract:t(0,16)=r(0,1);2;0;",128,0,0,0
+  28               		.stabs	"long _Fract:t(0,17)=r(0,1);4;0;",128,0,0,0
+  29               		.stabs	"long long _Fract:t(0,18)=r(0,1);8;0;",128,0,0,0
+  30               		.stabs	"unsigned short _Fract:t(0,19)=r(0,1);1;0;",128,0,0,0
+  31               		.stabs	"unsigned _Fract:t(0,20)=r(0,1);2;0;",128,0,0,0
+  32               		.stabs	"unsigned long _Fract:t(0,21)=r(0,1);4;0;",128,0,0,0
+  33               		.stabs	"unsigned long long _Fract:t(0,22)=r(0,1);8;0;",128,0,0,0
+  34               		.stabs	"_Sat short _Fract:t(0,23)=r(0,1);1;0;",128,0,0,0
+  35               		.stabs	"_Sat _Fract:t(0,24)=r(0,1);2;0;",128,0,0,0
+  36               		.stabs	"_Sat long _Fract:t(0,25)=r(0,1);4;0;",128,0,0,0
+  37               		.stabs	"_Sat long long _Fract:t(0,26)=r(0,1);8;0;",128,0,0,0
+  38               		.stabs	"_Sat unsigned short _Fract:t(0,27)=r(0,1);1;0;",128,0,0,0
+  39               		.stabs	"_Sat unsigned _Fract:t(0,28)=r(0,1);2;0;",128,0,0,0
+  40               		.stabs	"_Sat unsigned long _Fract:t(0,29)=r(0,1);4;0;",128,0,0,0
+  41               		.stabs	"_Sat unsigned long long _Fract:t(0,30)=r(0,1);8;0;",128,0,0,0
+  42               		.stabs	"short _Accum:t(0,31)=r(0,1);2;0;",128,0,0,0
+  43               		.stabs	"_Accum:t(0,32)=r(0,1);4;0;",128,0,0,0
+  44               		.stabs	"long _Accum:t(0,33)=r(0,1);8;0;",128,0,0,0
+  45               		.stabs	"long long _Accum:t(0,34)=r(0,1);8;0;",128,0,0,0
+  46               		.stabs	"unsigned short _Accum:t(0,35)=r(0,1);2;0;",128,0,0,0
+  47               		.stabs	"unsigned _Accum:t(0,36)=r(0,1);4;0;",128,0,0,0
+  48               		.stabs	"unsigned long _Accum:t(0,37)=r(0,1);8;0;",128,0,0,0
+  49               		.stabs	"unsigned long long _Accum:t(0,38)=r(0,1);8;0;",128,0,0,0
+  50               		.stabs	"_Sat short _Accum:t(0,39)=r(0,1);2;0;",128,0,0,0
+  51               		.stabs	"_Sat _Accum:t(0,40)=r(0,1);4;0;",128,0,0,0
+  52               		.stabs	"_Sat long _Accum:t(0,41)=r(0,1);8;0;",128,0,0,0
+  53               		.stabs	"_Sat long long _Accum:t(0,42)=r(0,1);8;0;",128,0,0,0
+  54               		.stabs	"_Sat unsigned short _Accum:t(0,43)=r(0,1);2;0;",128,0,0,0
+  55               		.stabs	"_Sat unsigned _Accum:t(0,44)=r(0,1);4;0;",128,0,0,0
+  56               		.stabs	"_Sat unsigned long _Accum:t(0,45)=r(0,1);8;0;",128,0,0,0
+  57               		.stabs	"_Sat unsigned long long _Accum:t(0,46)=r(0,1);8;0;",128,0,0,0
+GAS LISTING /tmp/ccY594uu.s 			page 2
+
+
+  58               		.stabs	"void:t(0,47)=(0,47)",128,0,0,0
+  59               		.stabs	"/usr/lib/avr/include/avr/io.h",130,0,0,0
+  60               		.stabs	"/usr/lib/avr/include/avr/sfr_defs.h",130,0,0,0
+  61               		.stabs	"/usr/lib/avr/include/inttypes.h",130,0,0,0
+  62               		.stabs	"/usr/lib/gcc/avr/4.9.2/include/stdint.h",130,0,0,0
+  63               		.stabs	"/usr/lib/avr/include/stdint.h",130,0,0,0
+  64               		.stabs	"int8_t:t(5,1)=(0,10)",128,0,121,0
+  65               		.stabs	"uint8_t:t(5,2)=(0,11)",128,0,122,0
+  66               		.stabs	"int16_t:t(5,3)=(0,1)",128,0,123,0
+  67               		.stabs	"uint16_t:t(5,4)=(0,4)",128,0,124,0
+  68               		.stabs	"int32_t:t(5,5)=(0,3)",128,0,125,0
+  69               		.stabs	"uint32_t:t(5,6)=(0,5)",128,0,126,0
+  70               		.stabs	"int64_t:t(5,7)=(0,6)",128,0,128,0
+  71               		.stabs	"uint64_t:t(5,8)=(0,7)",128,0,129,0
+  72               		.stabs	"intptr_t:t(5,9)=(5,3)",128,0,142,0
+  73               		.stabs	"uintptr_t:t(5,10)=(5,4)",128,0,147,0
+  74               		.stabs	"int_least8_t:t(5,11)=(5,1)",128,0,159,0
+  75               		.stabs	"uint_least8_t:t(5,12)=(5,2)",128,0,164,0
+  76               		.stabs	"int_least16_t:t(5,13)=(5,3)",128,0,169,0
+  77               		.stabs	"uint_least16_t:t(5,14)=(5,4)",128,0,174,0
+  78               		.stabs	"int_least32_t:t(5,15)=(5,5)",128,0,179,0
+  79               		.stabs	"uint_least32_t:t(5,16)=(5,6)",128,0,184,0
+  80               		.stabs	"int_least64_t:t(5,17)=(5,7)",128,0,192,0
+  81               		.stabs	"uint_least64_t:t(5,18)=(5,8)",128,0,199,0
+  82               		.stabs	"int_fast8_t:t(5,19)=(5,1)",128,0,213,0
+  83               		.stabs	"uint_fast8_t:t(5,20)=(5,2)",128,0,218,0
+  84               		.stabs	"int_fast16_t:t(5,21)=(5,3)",128,0,223,0
+  85               		.stabs	"uint_fast16_t:t(5,22)=(5,4)",128,0,228,0
+  86               		.stabs	"int_fast32_t:t(5,23)=(5,5)",128,0,233,0
+  87               		.stabs	"uint_fast32_t:t(5,24)=(5,6)",128,0,238,0
+  88               		.stabs	"int_fast64_t:t(5,25)=(5,7)",128,0,246,0
+  89               		.stabs	"uint_fast64_t:t(5,26)=(5,8)",128,0,253,0
+  90               		.stabs	"intmax_t:t(5,27)=(5,7)",128,0,273,0
+  91               		.stabs	"uintmax_t:t(5,28)=(5,8)",128,0,278,0
+  92               		.stabn	162,0,0,0
+  93               		.stabn	162,0,0,0
+  94               		.stabs	"int_farptr_t:t(3,1)=(5,5)",128,0,77,0
+  95               		.stabs	"uint_farptr_t:t(3,2)=(5,6)",128,0,81,0
+  96               		.stabn	162,0,0,0
+  97               		.stabn	162,0,0,0
+  98               		.stabs	"/usr/lib/avr/include/avr/fuse.h",130,0,0,0
+  99               		.stabs	"__fuse_t:t(6,1)=(6,2)=s3low:(0,11),0,8;high:(0,11),8,8;extended:(0,11),16,8;;",128,0,244,0
+ 100               		.stabn	162,0,0,0
+ 101               		.stabn	162,0,0,0
+ 102               		.stabs	"event.h",130,0,0,0
+ 103               		.stabs	"event_t:t(7,1)=(5,4)",128,0,6,0
+ 104               		.stabs	" :T(7,2)=eEVENT0:1,EVENT1:2,EVENT2:4,EVENT3:8,EVENT4:16,EVENT5:32,EVENT6:64,EVENT7:128,EVE
+ 105               		.stabn	162,0,0,0
+ 106               		.stabs	"setup_timer1_timer:F(0,47)",36,0,25,setup_timer1_timer
+ 107               	.global	setup_timer1_timer
+ 108               		.type	setup_timer1_timer, @function
+ 109               	setup_timer1_timer:
+ 110               		.stabd	46,0,0
+   1:timer.c       **** #include <avr/io.h>
+   2:timer.c       **** #include <avr/interrupt.h>
+   3:timer.c       **** #include "timer.h"
+   4:timer.c       **** #include "event.h"
+GAS LISTING /tmp/ccY594uu.s 			page 3
+
+
+   5:timer.c       **** 
+   6:timer.c       **** #define FOSC 16000000
+   7:timer.c       **** /* Nbr of timer clock pulses per ms assuming a prescaler factor of 8 */
+   8:timer.c       **** #define FTIM FOSC/8/1000
+   9:timer.c       **** 
+  10:timer.c       **** #define MS1L  3.0*FTIM
+  11:timer.c       **** #define MS1H 14.0*FTIM
+  12:timer.c       **** #define MS2L  2.5*FTIM
+  13:timer.c       **** #define MS2H  6.0*FTIM
+  14:timer.c       **** #define MS3L  0.4*FTIM
+  15:timer.c       **** #define MS3H  2.0*FTIM
+  16:timer.c       **** #define MS4L  1.05*FTIM
+  17:timer.c       **** #define MS4H  2.0*FTIM
+  18:timer.c       **** #define MS5L  0.2*FTIM
+  19:timer.c       **** #define MS5H  1.0*FTIM
+  20:timer.c       **** #define MS6L 12.0*FTIM
+  21:timer.c       **** #define MS6H 28.0*FTIM
+  22:timer.c       **** 
+  23:timer.c       **** 
+  24:timer.c       **** /* -------------------------------------*/
+  25:timer.c       **** void setup_timer1_timer(void)
+  26:timer.c       **** {
+ 111               		.stabn	68,0,26,.LM0-.LFBB1
+ 112               	.LM0:
+ 113               	.LFBB1:
+ 114               	/* prologue: function */
+ 115               	/* frame size = 0 */
+ 116               	/* stack size = 0 */
+ 117               	.L__stack_usage = 0
+  27:timer.c       **** 	TCCR1A = 0;
+ 118               		.stabn	68,0,27,.LM1-.LFBB1
+ 119               	.LM1:
+ 120 0000 1092 8000 		sts 128,__zero_reg__
+  28:timer.c       **** 	OCR1A = 0xFFFF;
+ 121               		.stabn	68,0,28,.LM2-.LFBB1
+ 122               	.LM2:
+ 123 0004 8FEF      		ldi r24,lo8(-1)
+ 124 0006 9FEF      		ldi r25,lo8(-1)
+ 125 0008 9093 8900 		sts 136+1,r25
+ 126 000c 8093 8800 		sts 136,r24
+  29:timer.c       **** 	TCCR1B |= _BV(CS11) | _BV(WGM12); // CLOCK/8, CTC mode
+ 127               		.stabn	68,0,29,.LM3-.LFBB1
+ 128               	.LM3:
+ 129 0010 E1E8      		ldi r30,lo8(-127)
+ 130 0012 F0E0      		ldi r31,0
+ 131 0014 8081      		ld r24,Z
+ 132 0016 8A60      		ori r24,lo8(10)
+ 133 0018 8083      		st Z,r24
+  30:timer.c       **** 	TIMSK1 |= _BV(ICIE1) | _BV(OCIE1A);
+ 134               		.stabn	68,0,30,.LM4-.LFBB1
+ 135               	.LM4:
+ 136 001a EFE6      		ldi r30,lo8(111)
+ 137 001c F0E0      		ldi r31,0
+ 138 001e 8081      		ld r24,Z
+ 139 0020 8262      		ori r24,lo8(34)
+ 140 0022 8083      		st Z,r24
+ 141 0024 0895      		ret
+GAS LISTING /tmp/ccY594uu.s 			page 4
+
+
+ 142               		.size	setup_timer1_timer, .-setup_timer1_timer
+ 143               	.Lscope1:
+ 144               		.stabs	"",36,0,0,.Lscope1-.LFBB1
+ 145               		.stabd	78,0,0
+ 146               	.global	__floatunsisf
+ 147               	.global	__ltsf2
+ 148               	.global	__gtsf2
+ 149               		.stabs	"__vector_10:F(0,47)",36,0,38,__vector_10
+ 150               	.global	__vector_10
+ 151               		.type	__vector_10, @function
+ 152               	__vector_10:
+ 153               		.stabd	46,0,0
+  31:timer.c       **** }
+  32:timer.c       **** 
+  33:timer.c       **** /* -------------------------------------*/
+  34:timer.c       **** uint8_t _later_edge;
+  35:timer.c       **** uint8_t _flag;
+  36:timer.c       **** uint16_t _t1, _t2;
+  37:timer.c       **** 
+  38:timer.c       **** ISR(TIMER1_CAPT_vect)
+  39:timer.c       **** {
+ 154               		.stabn	68,0,39,.LM5-.LFBB2
+ 155               	.LM5:
+ 156               	.LFBB2:
+ 157 0026 1F92      		push r1
+ 158 0028 0F92      		push r0
+ 159 002a 0FB6      		in r0,__SREG__
+ 160 002c 0F92      		push r0
+ 161 002e 1124      		clr __zero_reg__
+ 162 0030 CF92      		push r12
+ 163 0032 DF92      		push r13
+ 164 0034 EF92      		push r14
+ 165 0036 FF92      		push r15
+ 166 0038 2F93      		push r18
+ 167 003a 3F93      		push r19
+ 168 003c 4F93      		push r20
+ 169 003e 5F93      		push r21
+ 170 0040 6F93      		push r22
+ 171 0042 7F93      		push r23
+ 172 0044 8F93      		push r24
+ 173 0046 9F93      		push r25
+ 174 0048 AF93      		push r26
+ 175 004a BF93      		push r27
+ 176 004c EF93      		push r30
+ 177 004e FF93      		push r31
+ 178               	/* prologue: Signal */
+ 179               	/* frame size = 0 */
+ 180               	/* stack size = 19 */
+ 181               	.L__stack_usage = 19
+  40:timer.c       **** 	uint16_t delta;
+  41:timer.c       **** 	uint8_t tmp;
+  42:timer.c       **** 	uint32_t big;
+  43:timer.c       **** 
+  44:timer.c       **** 	_t2 = ICR1;
+ 182               		.stabn	68,0,44,.LM6-.LFBB2
+ 183               	.LM6:
+ 184 0050 2091 8600 		lds r18,134
+GAS LISTING /tmp/ccY594uu.s 			page 5
+
+
+ 185 0054 3091 8700 		lds r19,134+1
+ 186 0058 3093 0000 		sts _t2+1,r19
+ 187 005c 2093 0000 		sts _t2,r18
+  45:timer.c       **** 	_flag = 1;
+ 188               		.stabn	68,0,45,.LM7-.LFBB2
+ 189               	.LM7:
+ 190 0060 81E0      		ldi r24,lo8(1)
+ 191 0062 8093 0000 		sts _flag,r24
+  46:timer.c       **** 	if (!_later_edge) {
+ 192               		.stabn	68,0,46,.LM8-.LFBB2
+ 193               	.LM8:
+ 194 0066 9091 0000 		lds r25,_later_edge
+ 195 006a 9111      		cpse r25,__zero_reg__
+ 196 006c 00C0      		rjmp .L3
+  47:timer.c       **** 		_later_edge = 1;
+ 197               		.stabn	68,0,47,.LM9-.LFBB2
+ 198               	.LM9:
+ 199 006e 8093 0000 		sts _later_edge,r24
+  48:timer.c       **** 		_t1 = _t2;
+ 200               		.stabn	68,0,48,.LM10-.LFBB2
+ 201               	.LM10:
+ 202 0072 3093 0000 		sts _t1+1,r19
+ 203 0076 2093 0000 		sts _t1,r18
+  49:timer.c       **** 		TCCR1B ^= _BV(ICES1);
+ 204               		.stabn	68,0,49,.LM11-.LFBB2
+ 205               	.LM11:
+ 206 007a 9091 8100 		lds r25,129
+ 207 007e 80E4      		ldi r24,lo8(64)
+ 208 0080 8927      		eor r24,r25
+ 209 0082 8093 8100 		sts 129,r24
+  50:timer.c       **** 		return;
+ 210               		.stabn	68,0,50,.LM12-.LFBB2
+ 211               	.LM12:
+ 212 0086 00C0      		rjmp .L2
+ 213               	.L3:
+  51:timer.c       **** 	}
+  52:timer.c       **** 	if (_t2 < _t1) {
+ 214               		.stabn	68,0,52,.LM13-.LFBB2
+ 215               	.LM13:
+ 216 0088 4091 0000 		lds r20,_t1
+ 217 008c 5091 0000 		lds r21,_t1+1
+  53:timer.c       **** 		big = (1l << 16) + _t2 - _t1;
+ 218               		.stabn	68,0,53,.LM14-.LFBB2
+ 219               	.LM14:
+ 220 0090 C901      		movw r24,r18
+  52:timer.c       **** 		big = (1l << 16) + _t2 - _t1;
+ 221               		.stabn	68,0,52,.LM15-.LFBB2
+ 222               	.LM15:
+ 223 0092 2417      		cp r18,r20
+ 224 0094 3507      		cpc r19,r21
+ 225 0096 00F4      		brsh .L5
+ 226               		.stabn	68,0,53,.LM16-.LFBB2
+ 227               	.LM16:
+ 228 0098 A0E0      		ldi r26,0
+ 229 009a B0E0      		ldi r27,0
+ 230 009c 1196      		adiw r26,1
+ 231 009e 841B      		sub r24,r20
+GAS LISTING /tmp/ccY594uu.s 			page 6
+
+
+ 232 00a0 950B      		sbc r25,r21
+ 233 00a2 A109      		sbc r26,__zero_reg__
+ 234 00a4 B109      		sbc r27,__zero_reg__
+ 235 00a6 00C0      		rjmp .L6
+ 236               	.L5:
+  54:timer.c       **** 		delta = big;
+  55:timer.c       **** 	}
+  56:timer.c       **** 	else
+  57:timer.c       **** 		delta = _t2 - _t1;
+ 237               		.stabn	68,0,57,.LM17-.LFBB2
+ 238               	.LM17:
+ 239 00a8 841B      		sub r24,r20
+ 240 00aa 950B      		sbc r25,r21
+ 241               	.L6:
+  58:timer.c       **** 	_t1 = _t2;
+ 242               		.stabn	68,0,58,.LM18-.LFBB2
+ 243               	.LM18:
+ 244 00ac 3093 0000 		sts _t1+1,r19
+ 245 00b0 2093 0000 		sts _t1,r18
+  59:timer.c       **** 
+  60:timer.c       **** 	tmp = TCCR1B;
+ 246               		.stabn	68,0,60,.LM19-.LFBB2
+ 247               	.LM19:
+ 248 00b4 2091 8100 		lds r18,129
+ 249 00b8 BC01      		movw r22,r24
+ 250 00ba 80E0      		ldi r24,0
+ 251 00bc 90E0      		ldi r25,0
+  61:timer.c       **** 	if (tmp & _BV(ICES1)) { /* Borda de subida, intervalo off */
+ 252               		.stabn	68,0,61,.LM20-.LFBB2
+ 253               	.LM20:
+ 254 00be 26FF      		sbrs r18,6
+ 255 00c0 00C0      		rjmp .L7
+  62:timer.c       **** 		TCCR1B = tmp & ~_BV(ICES1);
+ 256               		.stabn	68,0,62,.LM21-.LFBB2
+ 257               	.LM21:
+ 258 00c2 2F7B      		andi r18,lo8(-65)
+ 259 00c4 2093 8100 		sts 129,r18
+  63:timer.c       **** 
+  64:timer.c       **** 		if ((delta < MS1H) && (delta > MS1L))
+ 260               		.stabn	68,0,64,.LM22-.LFBB2
+ 261               	.LM22:
+ 262 00c8 0E94 0000 		call __floatunsisf
+ 263 00cc 6B01      		movw r12,r22
+ 264 00ce 7C01      		movw r14,r24
+ 265 00d0 20E0      		ldi r18,0
+ 266 00d2 30EC      		ldi r19,lo8(-64)
+ 267 00d4 4AED      		ldi r20,lo8(-38)
+ 268 00d6 56E4      		ldi r21,lo8(70)
+ 269 00d8 0E94 0000 		call __ltsf2
+ 270 00dc 87FF      		sbrs r24,7
+ 271 00de 00C0      		rjmp .L8
+ 272               		.stabn	68,0,64,.LM23-.LFBB2
+ 273               	.LM23:
+ 274 00e0 20E0      		ldi r18,0
+ 275 00e2 30E8      		ldi r19,lo8(-128)
+ 276 00e4 4BEB      		ldi r20,lo8(-69)
+ 277 00e6 55E4      		ldi r21,lo8(69)
+GAS LISTING /tmp/ccY594uu.s 			page 7
+
+
+ 278 00e8 C701      		movw r24,r14
+ 279 00ea B601      		movw r22,r12
+ 280 00ec 0E94 0000 		call __gtsf2
+ 281 00f0 1816      		cp __zero_reg__,r24
+ 282 00f2 04F4      		brge .L8
+  65:timer.c       **** 			set_event(EVENT1);
+ 283               		.stabn	68,0,65,.LM24-.LFBB2
+ 284               	.LM24:
+ 285 00f4 82E0      		ldi r24,lo8(2)
+ 286 00f6 90E0      		ldi r25,0
+ 287 00f8 00C0      		rjmp .L36
+ 288               	.L8:
+  66:timer.c       **** 		else if ((delta < MS3H) && (delta > MS3L))
+ 289               		.stabn	68,0,66,.LM25-.LFBB2
+ 290               	.LM25:
+ 291 00fa 20E0      		ldi r18,0
+ 292 00fc 30E0      		ldi r19,0
+ 293 00fe 4AE7      		ldi r20,lo8(122)
+ 294 0100 55E4      		ldi r21,lo8(69)
+ 295 0102 C701      		movw r24,r14
+ 296 0104 B601      		movw r22,r12
+ 297 0106 0E94 0000 		call __ltsf2
+ 298 010a 87FF      		sbrs r24,7
+ 299 010c 00C0      		rjmp .L2
+ 300               		.stabn	68,0,66,.LM26-.LFBB2
+ 301               	.LM26:
+ 302 010e 20E0      		ldi r18,0
+ 303 0110 30E0      		ldi r19,0
+ 304 0112 48E4      		ldi r20,lo8(72)
+ 305 0114 54E4      		ldi r21,lo8(68)
+ 306 0116 C701      		movw r24,r14
+ 307 0118 B601      		movw r22,r12
+ 308 011a 0E94 0000 		call __gtsf2
+ 309 011e 1816      		cp __zero_reg__,r24
+ 310 0120 04F0      		brlt .+2
+ 311 0122 00C0      		rjmp .L2
+  67:timer.c       **** 			set_event(EVENT3);
+ 312               		.stabn	68,0,67,.LM27-.LFBB2
+ 313               	.LM27:
+ 314 0124 88E0      		ldi r24,lo8(8)
+ 315 0126 90E0      		ldi r25,0
+ 316 0128 00C0      		rjmp .L36
+ 317               	.L7:
+  68:timer.c       **** 	} else { /* Borda de descida, intervalo on */
+  69:timer.c       **** 		TCCR1B = tmp | _BV(ICES1);
+ 318               		.stabn	68,0,69,.LM28-.LFBB2
+ 319               	.LM28:
+ 320 012a 2064      		ori r18,lo8(64)
+ 321 012c 2093 8100 		sts 129,r18
+  70:timer.c       **** 
+  71:timer.c       **** 		if ((delta < MS2H) && (delta > MS2L))
+ 322               		.stabn	68,0,71,.LM29-.LFBB2
+ 323               	.LM29:
+ 324 0130 0E94 0000 		call __floatunsisf
+ 325 0134 6B01      		movw r12,r22
+ 326 0136 7C01      		movw r14,r24
+ 327 0138 20E0      		ldi r18,0
+GAS LISTING /tmp/ccY594uu.s 			page 8
+
+
+ 328 013a 30E8      		ldi r19,lo8(-128)
+ 329 013c 4BE3      		ldi r20,lo8(59)
+ 330 013e 56E4      		ldi r21,lo8(70)
+ 331 0140 0E94 0000 		call __ltsf2
+ 332 0144 87FF      		sbrs r24,7
+ 333 0146 00C0      		rjmp .L14
+ 334               		.stabn	68,0,71,.LM30-.LFBB2
+ 335               	.LM30:
+ 336 0148 20E0      		ldi r18,0
+ 337 014a 30E4      		ldi r19,lo8(64)
+ 338 014c 4CE9      		ldi r20,lo8(-100)
+ 339 014e 55E4      		ldi r21,lo8(69)
+ 340 0150 C701      		movw r24,r14
+ 341 0152 B601      		movw r22,r12
+ 342 0154 0E94 0000 		call __gtsf2
+ 343 0158 1816      		cp __zero_reg__,r24
+ 344 015a 04F4      		brge .L14
+  72:timer.c       **** 			set_event(EVENT2);
+ 345               		.stabn	68,0,72,.LM31-.LFBB2
+ 346               	.LM31:
+ 347 015c 84E0      		ldi r24,lo8(4)
+ 348 015e 90E0      		ldi r25,0
+ 349 0160 00C0      		rjmp .L36
+ 350               	.L14:
+  73:timer.c       **** 		else if ((delta < MS4H) && (delta > MS4L))
+ 351               		.stabn	68,0,73,.LM32-.LFBB2
+ 352               	.LM32:
+ 353 0162 20E0      		ldi r18,0
+ 354 0164 30E0      		ldi r19,0
+ 355 0166 4AE7      		ldi r20,lo8(122)
+ 356 0168 55E4      		ldi r21,lo8(69)
+ 357 016a C701      		movw r24,r14
+ 358 016c B601      		movw r22,r12
+ 359 016e 0E94 0000 		call __ltsf2
+ 360 0172 87FF      		sbrs r24,7
+ 361 0174 00C0      		rjmp .L17
+ 362               		.stabn	68,0,73,.LM33-.LFBB2
+ 363               	.LM33:
+ 364 0176 20E0      		ldi r18,0
+ 365 0178 30E4      		ldi r19,lo8(64)
+ 366 017a 43E0      		ldi r20,lo8(3)
+ 367 017c 55E4      		ldi r21,lo8(69)
+ 368 017e C701      		movw r24,r14
+ 369 0180 B601      		movw r22,r12
+ 370 0182 0E94 0000 		call __gtsf2
+ 371 0186 1816      		cp __zero_reg__,r24
+ 372 0188 04F4      		brge .L17
+  74:timer.c       **** 			set_event(EVENT4);
+ 373               		.stabn	68,0,74,.LM34-.LFBB2
+ 374               	.LM34:
+ 375 018a 80E1      		ldi r24,lo8(16)
+ 376 018c 90E0      		ldi r25,0
+ 377 018e 00C0      		rjmp .L36
+ 378               	.L17:
+  75:timer.c       **** 		else if ((delta < MS5H) && (delta > MS5L))
+ 379               		.stabn	68,0,75,.LM35-.LFBB2
+ 380               	.LM35:
+GAS LISTING /tmp/ccY594uu.s 			page 9
+
+
+ 381 0190 20E0      		ldi r18,0
+ 382 0192 30E0      		ldi r19,0
+ 383 0194 4AEF      		ldi r20,lo8(-6)
+ 384 0196 54E4      		ldi r21,lo8(68)
+ 385 0198 C701      		movw r24,r14
+ 386 019a B601      		movw r22,r12
+ 387 019c 0E94 0000 		call __ltsf2
+ 388 01a0 87FF      		sbrs r24,7
+ 389 01a2 00C0      		rjmp .L20
+ 390               		.stabn	68,0,75,.LM36-.LFBB2
+ 391               	.LM36:
+ 392 01a4 20E0      		ldi r18,0
+ 393 01a6 30E0      		ldi r19,0
+ 394 01a8 48EC      		ldi r20,lo8(-56)
+ 395 01aa 53E4      		ldi r21,lo8(67)
+ 396 01ac C701      		movw r24,r14
+ 397 01ae B601      		movw r22,r12
+ 398 01b0 0E94 0000 		call __gtsf2
+ 399 01b4 1816      		cp __zero_reg__,r24
+ 400 01b6 04F4      		brge .L20
+  76:timer.c       **** 			set_event(EVENT5);
+ 401               		.stabn	68,0,76,.LM37-.LFBB2
+ 402               	.LM37:
+ 403 01b8 80E2      		ldi r24,lo8(32)
+ 404 01ba 90E0      		ldi r25,0
+ 405 01bc 00C0      		rjmp .L36
+ 406               	.L20:
+  77:timer.c       **** 		else if ((delta < MS6H) && (delta > MS6L))
+ 407               		.stabn	68,0,77,.LM38-.LFBB2
+ 408               	.LM38:
+ 409 01be 20E0      		ldi r18,0
+ 410 01c0 30EC      		ldi r19,lo8(-64)
+ 411 01c2 4AE5      		ldi r20,lo8(90)
+ 412 01c4 57E4      		ldi r21,lo8(71)
+ 413 01c6 C701      		movw r24,r14
+ 414 01c8 B601      		movw r22,r12
+ 415 01ca 0E94 0000 		call __ltsf2
+ 416 01ce 87FF      		sbrs r24,7
+ 417 01d0 00C0      		rjmp .L2
+ 418               		.stabn	68,0,77,.LM39-.LFBB2
+ 419               	.LM39:
+ 420 01d2 20E0      		ldi r18,0
+ 421 01d4 30E8      		ldi r19,lo8(-128)
+ 422 01d6 4BEB      		ldi r20,lo8(-69)
+ 423 01d8 56E4      		ldi r21,lo8(70)
+ 424 01da C701      		movw r24,r14
+ 425 01dc B601      		movw r22,r12
+ 426 01de 0E94 0000 		call __gtsf2
+ 427 01e2 1816      		cp __zero_reg__,r24
+ 428 01e4 04F4      		brge .L2
+  78:timer.c       **** 			set_event(EVENT6);
+ 429               		.stabn	68,0,78,.LM40-.LFBB2
+ 430               	.LM40:
+ 431 01e6 80E4      		ldi r24,lo8(64)
+ 432 01e8 90E0      		ldi r25,0
+ 433               	.L36:
+ 434 01ea 0E94 0000 		call set_event
+GAS LISTING /tmp/ccY594uu.s 			page 10
+
+
+ 435               	.L2:
+ 436               	/* epilogue start */
+  79:timer.c       **** 	}
+  80:timer.c       **** }
+ 437               		.stabn	68,0,80,.LM41-.LFBB2
+ 438               	.LM41:
+ 439 01ee FF91      		pop r31
+ 440 01f0 EF91      		pop r30
+ 441 01f2 BF91      		pop r27
+ 442 01f4 AF91      		pop r26
+ 443 01f6 9F91      		pop r25
+ 444 01f8 8F91      		pop r24
+ 445 01fa 7F91      		pop r23
+ 446 01fc 6F91      		pop r22
+ 447 01fe 5F91      		pop r21
+ 448 0200 4F91      		pop r20
+ 449 0202 3F91      		pop r19
+ 450 0204 2F91      		pop r18
+ 451 0206 FF90      		pop r15
+ 452 0208 EF90      		pop r14
+ 453 020a DF90      		pop r13
+ 454 020c CF90      		pop r12
+ 455 020e 0F90      		pop r0
+ 456 0210 0FBE      		out __SREG__,r0
+ 457 0212 0F90      		pop r0
+ 458 0214 1F90      		pop r1
+ 459 0216 1895      		reti
+ 460               		.size	__vector_10, .-__vector_10
+ 461               		.stabs	"delta:r(5,4)",64,0,40,24
+ 462               		.stabs	"tmp:r(5,2)",64,0,41,18
+ 463               		.stabn	192,0,0,.LFBB2-.LFBB2
+ 464               		.stabn	224,0,0,.Lscope2-.LFBB2
+ 465               	.Lscope2:
+ 466               		.stabs	"",36,0,0,.Lscope2-.LFBB2
+ 467               		.stabd	78,0,0
+ 468               		.stabs	"__vector_11:F(0,47)",36,0,84,__vector_11
+ 469               	.global	__vector_11
+ 470               		.type	__vector_11, @function
+ 471               	__vector_11:
+ 472               		.stabd	46,0,0
+  81:timer.c       **** 
+  82:timer.c       **** 
+  83:timer.c       **** /* -------------------------------------*/
+  84:timer.c       **** ISR(TIMER1_COMPA_vect)
+  85:timer.c       **** {
+ 473               		.stabn	68,0,85,.LM42-.LFBB3
+ 474               	.LM42:
+ 475               	.LFBB3:
+ 476 0218 1F92      		push r1
+ 477 021a 0F92      		push r0
+ 478 021c 0FB6      		in r0,__SREG__
+ 479 021e 0F92      		push r0
+ 480 0220 1124      		clr __zero_reg__
+ 481 0222 2F93      		push r18
+ 482 0224 3F93      		push r19
+ 483 0226 4F93      		push r20
+ 484 0228 5F93      		push r21
+GAS LISTING /tmp/ccY594uu.s 			page 11
+
+
+ 485 022a 6F93      		push r22
+ 486 022c 7F93      		push r23
+ 487 022e 8F93      		push r24
+ 488 0230 9F93      		push r25
+ 489 0232 AF93      		push r26
+ 490 0234 BF93      		push r27
+ 491 0236 EF93      		push r30
+ 492 0238 FF93      		push r31
+ 493               	/* prologue: Signal */
+ 494               	/* frame size = 0 */
+ 495               	/* stack size = 15 */
+ 496               	.L__stack_usage = 15
+  86:timer.c       **** 	if (!_flag) {
+ 497               		.stabn	68,0,86,.LM43-.LFBB3
+ 498               	.LM43:
+ 499 023a 8091 0000 		lds r24,_flag
+ 500 023e 8111      		cpse r24,__zero_reg__
+ 501 0240 00C0      		rjmp .L39
+  87:timer.c       **** 		TCCR1B &= ~_BV(ICES1);
+ 502               		.stabn	68,0,87,.LM44-.LFBB3
+ 503               	.LM44:
+ 504 0242 8091 8100 		lds r24,129
+ 505 0246 8F7B      		andi r24,lo8(-65)
+ 506 0248 8093 8100 		sts 129,r24
+  88:timer.c       **** 		_later_edge = 0;
+ 507               		.stabn	68,0,88,.LM45-.LFBB3
+ 508               	.LM45:
+ 509 024c 1092 0000 		sts _later_edge,__zero_reg__
+  89:timer.c       **** 		set_event(EVENT7);
+ 510               		.stabn	68,0,89,.LM46-.LFBB3
+ 511               	.LM46:
+ 512 0250 80E8      		ldi r24,lo8(-128)
+ 513 0252 90E0      		ldi r25,0
+ 514 0254 0E94 0000 		call set_event
+ 515               	.L39:
+  90:timer.c       **** 	}
+  91:timer.c       **** 	_flag = 0;
+ 516               		.stabn	68,0,91,.LM47-.LFBB3
+ 517               	.LM47:
+ 518 0258 1092 0000 		sts _flag,__zero_reg__
+ 519               	/* epilogue start */
+  92:timer.c       **** }
+ 520               		.stabn	68,0,92,.LM48-.LFBB3
+ 521               	.LM48:
+ 522 025c FF91      		pop r31
+ 523 025e EF91      		pop r30
+ 524 0260 BF91      		pop r27
+ 525 0262 AF91      		pop r26
+ 526 0264 9F91      		pop r25
+ 527 0266 8F91      		pop r24
+ 528 0268 7F91      		pop r23
+ 529 026a 6F91      		pop r22
+ 530 026c 5F91      		pop r21
+ 531 026e 4F91      		pop r20
+ 532 0270 3F91      		pop r19
+ 533 0272 2F91      		pop r18
+ 534 0274 0F90      		pop r0
+GAS LISTING /tmp/ccY594uu.s 			page 12
+
+
+ 535 0276 0FBE      		out __SREG__,r0
+ 536 0278 0F90      		pop r0
+ 537 027a 1F90      		pop r1
+ 538 027c 1895      		reti
+ 539               		.size	__vector_11, .-__vector_11
+ 540               	.Lscope3:
+ 541               		.stabs	"",36,0,0,.Lscope3-.LFBB3
+ 542               		.stabd	78,0,0
+ 543               		.comm	_t2,2,1
+ 544               		.comm	_t1,2,1
+ 545               		.comm	_flag,1,1
+ 546               		.comm	_later_edge,1,1
+ 547               		.stabs	"_later_edge:G(5,2)",32,0,34,0
+ 548               		.stabs	"_flag:G(5,2)",32,0,35,0
+ 549               		.stabs	"_t1:G(5,4)",32,0,36,0
+ 550               		.stabs	"_t2:G(5,4)",32,0,36,0
+ 551               		.stabs	"",100,0,0,.Letext0
+ 552               	.Letext0:
+ 553               		.ident	"GCC: (GNU) 4.9.2"
+ 554               	.global __do_clear_bss
+GAS LISTING /tmp/ccY594uu.s 			page 13
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 timer.c
+     /tmp/ccY594uu.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccY594uu.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccY594uu.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccY594uu.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccY594uu.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccY594uu.s:109    .text:0000000000000000 setup_timer1_timer
+     /tmp/ccY594uu.s:152    .text:0000000000000026 __vector_10
+                            *COM*:0000000000000002 _t2
+                            *COM*:0000000000000001 _flag
+                            *COM*:0000000000000001 _later_edge
+                            *COM*:0000000000000002 _t1
+     /tmp/ccY594uu.s:471    .text:0000000000000218 __vector_11
+
+UNDEFINED SYMBOLS
+__floatunsisf
+__ltsf2
+__gtsf2
+set_event
+__do_clear_bss
